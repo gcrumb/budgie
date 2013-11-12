@@ -1,4 +1,12 @@
 {
+    "name": "PNG Budget 2013",
+    "data": {
+	"devel": 1000000000,
+        "recur": 1000000000,
+        "aggr": null,
+        "keynotes": "Important points here",
+	"more": "data as needed"
+    },
     "level": "Departmental Expenditure",
     "categories": [
         {
@@ -7,7 +15,8 @@
                 "devel": 1000000,
                 "recur": 1000000,
                 "aggr": 1000000,
-                "keynotes": "Important points here"
+                "keynotes": "Important points here",
+		"more": "data as needed"
             },
             "level": "Program Expenditure",
             "categories": [
@@ -17,7 +26,8 @@
                         "devel": 1000000,
                         "recur": 1000000,
                         "aggr": 1000000,
-                        "keynotes": "Important points here"
+                        "keynotes": "Important points here",
+			"more": "data as needed"
                     },
                     "level": "Sub-program Expenditure",
                     "categories": [
