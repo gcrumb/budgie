@@ -11,4 +11,11 @@ angular.module('pippDataApp.controllers.main', [])
 	];
 
 	console.log($location.path());
+    }])    
+    .controller('TestCtrl', ['$scope', '$location', 'MetaFactory', function ($scope, $location, MetaFactory) {
+
+	$scope.info = MetaFactory.query();
+	console.log($scope.info);
+	console.log($location.path());
+
     }]);
