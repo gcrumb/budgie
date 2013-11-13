@@ -27,8 +27,6 @@ dev_conf = {
     # Configure which host is allowed cross origin access to the backend
     # Can take exact strings and regexes
     'allowed' : (
-        'http://localhost',
-        'http://localhost:5000',
-        'http://data.pacificpolicy.org.vu',
+        'http://localhost:9000',
         ),
 }
