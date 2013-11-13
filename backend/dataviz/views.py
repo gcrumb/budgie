@@ -62,3 +62,17 @@ def create_budget(budget_id):
         return "Budget Successfully Added"
     except Exception, e:
         abort(500) # Server error
+
+@app.route("/budgets/<budget_id>", methods=['GET'])
+def get_budget(budget_id):
+    """
+    REST view to get a specific budget from DB.
+    """
+
+#    import pdb; pdb.set_trace()
+
+    try:
+        doc = g.couch[budget_id]
+        return jsonify(**doc)
+    except Exception, e:
+        abort(400) # Bad request
