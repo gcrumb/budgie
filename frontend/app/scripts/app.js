@@ -2,8 +2,9 @@
 
 // Create a new module for the PiPP Data Application
 var pippDataApp = angular.module('pippDataApp',
-                                 ['ngRoute', 'ngResource',
-				  'pippDataApp.controllers.main']);
+                                 ['pippDataApp.services.resources',
+				  'pippDataApp.controllers.main',
+				  'ngRoute', 'ngResource']);
 
 // Add configuration and routes to the module
 pippDataApp.config(['$routeProvider',  function ($routeProvider) {
@@ -13,6 +14,7 @@ pippDataApp.config(['$routeProvider',  function ($routeProvider) {
 
     $routeProvider
 	.when('/', {templateUrl: 'views/main.html', controller: 'MainCtrl'})
+	.when('/test', {templateUrl: 'views/test.html', controller: 'TestCtrl'})
 	.otherwise({redirectTo: '/'});
 
 }]);
