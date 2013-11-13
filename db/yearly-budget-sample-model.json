@@ -1,116 +1,109 @@
 {
     "name": "PNG Budget",
-    "data": {
-        [
-	    {2013 : {
-		"devel": 1000000000,
-		"recur": 1000000000,
-		"aggr": null,
-		'change': 4.2, //percent
-		"notes": "Important points here",
-		"more": "data as needed"
-	    }},
-	    {2012 : {
-		"devel": 0,
-		"recur": 1000000000,
-		"aggr": 12300000000, // these two should align - now what?
-		"notes": "Important points here",
-		"more": "data as needed"
-	    }},
-	    {2011 : {
-		// in some cases, there might be no record, rather than simply null
-		"recur": 1000000000,
-		"aggr": null,
-		"notes": "Important points here",
-		"more": "data as needed"
-	    }},
-	]},
+    "data": [
+	{"2013" : {
+	    "devel": 1000000000,
+	    "recur": 1000000000,
+	    "aggr": null,
+	    "change": 4.2,
+	    "notes": "Important points here",
+	    "more": "data as needed"
+	}},
+	{"2012" : {
+	    "devel": 0,
+	    "recur": 1000000000,
+	    "aggr": 12300000000, 
+	    "notes": "Important points here",
+	    "more": "data as needed"
+	}},
+	{"2011" : {
+	    "recur": 1000000000,
+	    "aggr": null,
+	    "notes": "Important points here",
+	    "more": "data as needed"
+	}}
+    ],
     "level": "Departmental Expenditure",
     "categories": [
         {
             "name": "Department for Health",
-            "data": {
-		[
-		    {2013 : {
-			"devel": 1000000000,
-			"recur": 1000000000,
-			"aggr": null,
-			'change': 4.2, //percent
-			"notes": "Important points here",
-			"more": "data as needed"
-		    }},
-		    {2012 : {
-			"devel": 0,
-			"recur": 1000000000,
-			"aggr": 12300000000, // these two should align - now what?
-			"notes": "Important points here",
-			"more": "data as needed"
-		    }},
-		    {2011 : {
-			// in some cases, there might be no record, rather than simply null
-			"recur": 1000000000,
-			"aggr": null,
-			"notes": "Important points here",
-			"more": "data as needed"
-		    }},
-		]            
-	    },
+            "data": [
+		{"2013" : {
+		    "devel": 1000000000,
+		    "recur": 1000000000,
+		    "aggr": null,
+		    "change": 4.2,
+		    "notes": "Important points here",
+		    "more": "data as needed"
+		}},
+		{"2012" : {
+		    "devel": 0,
+		    "recur": 1000000000,
+		    "aggr": 12300000000,
+		    "notes": "Important points here",
+		    "more": "data as needed"
+		}},
+		{"2011" : {
+		    "recur": 1000000000,
+		    "aggr": null,
+		    "notes": "Important points here",
+		    "more": "data as needed"
+		}}
+	    ],
             "level": "Program Expenditure",
             "categories": [
                 {
                     "name": "Program for Curry Eating",
-                    "data": {
-			2013: {
+                    "data": [
+			{"2013" : {
                             "aggr": 1000000,
-			    "program_type": 'recurrent', //  or 'development'
+			    "program_type": "recurrent",
                             "notes": "Important points here",
 			    "more": "data as needed"
-			},
-			2012: {
+			}},
+			{"2012" : {
                             "aggr": 1000000,
-			    "program_type": 'recurrent', //  or 'development'
+			    "program_type": "development",
                             "notes": "Important points here",
 			    "more": "data as needed"
-			},
-			2011: {
+			}},
+			{"2011" : {
                             "aggr": 1000000,
-			    "program_type": 'recurrent', //  or 'development'
+			    "program_type": "recurrent",
                             "notes": "Important points here",
 			    "more": "data as needed"
-			},
-		    },
+			}}
+		    ],
                     "level": "Sub-program Expenditure",
-                    "categories": {
-                        "name": "Sub-program for Spicy Curry",
-                        "data": 
+                    "categories": [
 			{
-			    2013: {
-				"aggr": 1000000,
-				"notes": "Important points here"
-			    },
-			    2011: {
-				"aggr": 1000000,
-				"notes": "Important points here"
-			    }
-			},
-                        {
+                            "name": "Sub-program for Spicy Curry",
+                            "data": [
+				{"2013" : {
+				    "aggr": 1000000,
+				    "notes": "Important points here"
+				}},
+				{"2011" : {
+				    "aggr": 1000000,
+				    "notes": "Important points here"
+				}}
+			    ]},
+			{
                             "name": "Sub-program for Mild Curry",
-                            "data": 
-			    {
-				2013: {
+                            "data": [
+				{"2013" : {
 				    "aggr": 1000000,
 				    "notes": "Important points here"
-				},
-				2011: {
+				}},
+				{"2011" : {
 				    "aggr": 1000000,
 				    "notes": "Important points here"
-				}
-			    }
-                        }
+				}}
+			    ]
+			}
                     ]
-                }
+		}
 	    ]
 	}
     ]
-};
-        
+}
