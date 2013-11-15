@@ -1,5 +1,6 @@
 /**
  * Deep pluck mixins provided by furf <https://gist.github.com/furf/3208381>
+ * Example usage are available in the github page.
  */
 
 _.mixin({

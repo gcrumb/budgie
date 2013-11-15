@@ -1,6 +1,78 @@
-["root","depart-health","progr-curry-eating"]
+/**
+ * @license Put name and version
+ * (c) 2013-2014 Nasara Holdings. http://nasara.com
+ * License: Put license here.
+ */
 
-{
+'use strict';
+
+/**
+ * @description
+ *
+ * This drill function takes the full model and the path to the area
+ * of interest in the deeply nested budget model and returns the
+ * necessary data to draw the chart, summary text and previous year's
+ * bar chart data along with convenient flags indicating where further
+ * drilling can and cannot be done.
+ *
+ * For example, let's say you are within the highest level (i.e the
+ * Departmental Expenditure) looking at the departments distribution
+ * in the donut (i.e. Department of Health, Department of
+ * Education...) and you click on Department of Health to drill down
+ * further. This drill function would take the following arguments:
+ * 
+ * @param {Object} budget Object the full yearly budget model for a
+ * given Pacific country
+ * 
+ * @param {String} path String representing the path to the are of
+ * interest. For example, 'root.categories.depart-health'
+ */
+var drill = function (budget, path) {
+
+    // Extract budget segment of interest in its raw form. This will
+    // contain all raw data from point of interest all the way up the
+    // tree.
+    var budget_segment = _.deep(budget,path);
+
+    // Go through categories of this segment of interest, mash-up data
+    // in a convenient way for use in controller: only include name,
+    // current data and a boolean drillable flag.
+
+    var raw_categories = budget_segment.categories;
+    var categories = [];
+
+    for (var category in raw_categories) {
+	// cat is a local variable to hold the newly mashed-up data
+	// for a given category. It will populate the categories
+	// variable above
+	var cat = {}; 
+	cat['name'] = raw_categories[category].name;
+	cat['current-data'] = raw_categories[category]['data']['2013'];
+	cat['level'] = raw_categories[category].level;
+	if (_.has(raw_categories[category], "categories")) {
+	    cat['drillable'] = true;
+	} else {
+	    cat['drillable'] = false;
+	}
+	categories.push(cat);
+    }
+
+    // Replace raw categories with only the necessary information to
+    // draw the view. In other words, all data further up the tree
+    // that is not needed will not be included. The mashed-up
+    // categories above will be set instead of the raw categories
+    // (which may or may not contain an arbitrary number of data
+    // further up the tree)
+
+    return _.deep(budget_segment, 'categories', categories);
+
+};
+
+/**
+ * Simple usage examples with sample PNG budget.
+ **/
+
+budget = {
     "root": {
         "name": "PNG Budget",
         "data": {
@@ -192,4 +264,8 @@
             }
         }
     }
-}
+};
+
+//drill(budget,'root.categories.depart-edu.categories.progr-arts');
+//drill(budget,'root.categories.depart-edu');
+//drill(budget,'root.categories.depart-health.categories.progr-curry-eating');

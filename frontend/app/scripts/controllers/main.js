@@ -18,4 +18,8 @@ angular.module('pippDataApp.controllers.main', [])
 	console.log($scope.info);
 	console.log($location.path());
 
+    }]).controller('DrillCtrl', ['$scope', '$location', function ($scope, $location) {
+
+	
+	
     }]);
