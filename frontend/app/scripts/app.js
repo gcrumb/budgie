@@ -4,7 +4,9 @@
 var pippDataApp = angular.module('pippDataApp',
                                  ['pippDataApp.services.resources',
 				  'pippDataApp.controllers.main',
-				  'ngRoute', 'ngResource']);
+				  'pippDataApp.controllers.budget',
+				  'ngRoute', 'ngResource',
+				  'nvd3ChartDirectives']);
 
 // Add configuration and routes to the module
 pippDataApp.config(['$routeProvider',  function ($routeProvider) {
@@ -15,6 +17,7 @@ pippDataApp.config(['$routeProvider',  function ($routeProvider) {
     $routeProvider
 	.when('/', {templateUrl: 'views/main.html', controller: 'MainCtrl'})
 	.when('/test', {templateUrl: 'views/test.html', controller: 'TestCtrl'})
+	.when('/budget', {templateUrl: 'views/budget.html', controller: 'BudgetCtrl'})
 	.otherwise({redirectTo: '/'});
 
 }]);

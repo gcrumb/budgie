@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="span12">
+    <h1>Budgie</h1>
+    <p>Budgie in action.</p>
+  </div>
+
+  <div class="span8">
+
+    <h2>Departmental Expenditure</h2>
+    <p>Blablabla.</p>
+
+    <nvd3-pie-chart
+       data="budgetData"
+       id="budget"
+       showLabels="true"
+       x="xFunction()"
+       y="yFunction()"
+       margin="{left:0,top:0,bottom:0,right:0}"
+       donut="true"
+       donutRatio="1.5"
+       donutLabelsOutside="false">
+      <svg></svg>
+    </nvd3-pie-chart>
+
+  </div>
+  
+  <div class="span4">
+    <h2>Information Box</h2>
+    <p>This is where the information box will be</p>
+  </div>
+
+</div>
