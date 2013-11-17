@@ -72,7 +72,7 @@ var drill = function (budget, path) {
  * Simple usage examples with sample PNG budget.
  **/
 
-budget = {
+var budget = {
     "root": {
         "name": "PNG Budget",
         "data": {

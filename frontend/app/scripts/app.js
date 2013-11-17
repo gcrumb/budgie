@@ -4,7 +4,7 @@
 var pippDataApp = angular.module('pippDataApp',
                                  ['pippDataApp.services.resources',
 				  'pippDataApp.controllers.main',
-				  'pippDataApp.controllers.budget',
+				  'pippDataApp.controllers.budgets',
 				  'ngRoute', 'ngResource',
 				  'nvd3ChartDirectives']);
 

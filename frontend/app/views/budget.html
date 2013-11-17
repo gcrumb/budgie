@@ -1,12 +1,12 @@
 <div class="row">
   <div class="span12">
-    <h1>Budgie</h1>
+    <h2>Budgie</h2>
     <p>Budgie in action.</p>
   </div>
 
   <div class="span8">
 
-    <h2>Departmental Expenditure</h2>
+    <h3>{{ country }} &mdash; {{ title1 }}</h3>
     <p>Blablabla.</p>
 
     <nvd3-pie-chart
@@ -15,17 +15,21 @@
        showLabels="true"
        x="xFunction()"
        y="yFunction()"
-       margin="{left:0,top:0,bottom:0,right:0}"
+       width="800"
+       height="800"
        donut="true"
        donutRatio="1.5"
-       donutLabelsOutside="false">
-      <svg></svg>
+       donutLabelsOutside="false"
+       margin="{left:100,top:100,bottom:100,right:100}">
+
+      <svg id="budget"></svg>
+
     </nvd3-pie-chart>
 
   </div>
   
   <div class="span4">
-    <h2>Information Box</h2>
+    <h3>{{ title2 }}</h3>
     <p>This is where the information box will be</p>
   </div>
 
