@@ -3,7 +3,7 @@
 /* HTTP resource services */
 
 //var wsUrl = 'https://candy.pacificpolicy.org';
-var wsUrl = 'http://localhost\\:5000'; // for dev, don't commit
+var wsUrl = 'http://localhost:5000'; // for dev, don't commit
 
 angular.module('pippDataApp.services.resources', [])
     .factory('MetaFactory', ['$resource', function ($resource) {
@@ -17,13 +17,13 @@ angular.module('pippDataApp.services.resources', [])
     }])
     .factory('BudgetFactory', ['$http', function ($http) {
 
-	var baseUrl = wsUrl + '/budgets';
+	var budgetUrl = wsUrl + '/budgets';
 
 	return {
 	    get: function(budget_id) {
 		return $http.get(budgetUrl + '/' + budget_id);
 	    },
-	    save: function(budget, budget_id) { // Can only add new as it is...
+	    save: function(budget, budget_id) { // Will be removed...
 		var url = baseUrl + '/' + budget_id;
 		return $http.put(url, budget);
 	    }
