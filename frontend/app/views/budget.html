@@ -1,17 +1,17 @@
 <div class="row">
   <div class="span12">
-    <h2>Budgie</h2>
+    <h2>{{ name }}</h2>
     <p>Budgie in action.</p>
   </div>
 
   <div class="span8">
 
-    <h3>{{ country }} &mdash; {{ title1 }}</h3>
+    <h3>{{ level }}</h3>
     <p>Blablabla.</p>
 
     <nvd3-pie-chart
-       data="budgetData"
-       id="budget"
+       data="pieChartData"
+       id="pieChartBudget"
        showLabels="true"
        x="xFunction()"
        y="yFunction()"
@@ -29,7 +29,7 @@
   </div>
   
   <div class="span4">
-    <h3>{{ title2 }}</h3>
+    <h3>{{ level }} Summary</h3>
     <p>This is where the information box will be</p>
   </div>
 
