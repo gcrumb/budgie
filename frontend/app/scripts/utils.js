@@ -73,6 +73,7 @@ var drill = function (budget, path) {
  **/
 
 var budget = {
+    "_id": "png-2013",
     "root": {
         "name": "PNG Budget",
         "data": {
