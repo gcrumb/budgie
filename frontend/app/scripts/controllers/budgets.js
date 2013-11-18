@@ -2,240 +2,49 @@
 
 /* Budget controller(s) */
 
-/* Change this to a backend REST call */
-var budget = {
-    "root": {
-        "name": "PNG Budget",
-        "data": {
-            "2013": {
-                "devel": 1000000000,
-                "recur": 1000000000,
-                "aggr": null,
-                "change": 4.2,
-                "notes": "Important points here",
-                "more": "data as needed"
-            },
-            "2012": {
-                "devel": 0,
-                "recur": 1000000000,
-                "aggr": 12300000000,
-                "notes": "Important points here",
-                "more": "data as needed"
-            },
-            "2011": {
-                "recur": 1000000000,
-                "aggr": null,
-                "notes": "Important points here",
-                "more": "data as needed"
-            }
-        },
-        "level": "Departmental Expenditure",
-        "categories": {
-            "depart-health": {
-                "name": "Department for Health",
-                "data": {
-                    "2013": {
-                        "devel": 1000000000,
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "change": 4.2,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2012": {
-                        "devel": 0,
-                        "recur": 1000000000,
-                        "aggr": 12300000000,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2011": {
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    }
-                },
-                "level": "Program Expenditure",
-                "categories": {
-                    "progr-curry-eating": {
-                        "name": "Program for Curry Eating",
-                        "data": {
-                            "2013": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2012": {
-                                "aggr": 1000000,
-                                "program_type": "development",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2011": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            }
-                        },
-                        "level": "Sub-program Expenditure",
-                        "categories": {
-                            "sub-progr-spicy-curry": {
-                                "name": "Sub-program for Spicy Curry",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            },
-                            "sub-progr-mild-curry": {
-                                "name": "Sub-program for Mild Curry",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "depart-edu": {
-                "name": "Department for Education",
-                "data": {
-                    "2013": {
-                        "devel": 1000000000,
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "change": 4.2,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2012": {
-                        "devel": 0,
-                        "recur": 1000000000,
-                        "aggr": 12300000000,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2011": {
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    }
-                },
-                "level": "Program Expenditure",
-                "categories": {
-                    "progr-arts": {
-                        "name": "Program for Arts",
-                        "data": {
-                            "2013": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2012": {
-                                "aggr": 1000000,
-                                "program_type": "development",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2011": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            }
-                        },
-                        "level": "Sub-program Expenditure",
-                        "categories": {
-                            "sub-progr-painting": {
-                                "name": "Sub-program for Painting",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            },
-                            "sub-progr-lang": {
-                                "name": "Sub-program for Languages",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-
 angular.module('pippDataApp.controllers.budgets', [])
-    .controller('BudgetCtrl', ['$scope', '$location', function ($scope, $location) {
+    .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
 
-	$scope.title1 = "Departmental Expenditure";
-	$scope.title2 = "Departmental Expenditure Summary";
-	$scope.country = "Papua New Guinea";
+	var budgetRawData = {};
 
-	var budgetDataRaw = drill(budget,'root');
+	var budget = BudgetFactory.get('png-2013').
+		success(function(data, status, headers, config) {
+		    // this callback will be called asynchronously
+		    // when the response is available
+		    console.log("Data as stored in CouchDB: ", data);
 
-        $scope.budgetData = [
-            {
-                key: "One",
-                y: 5
-            },
-            {
-                key: "Two",
-                y: 2
-            },
-            {
-                key: "Three",
-                y: 9
-            },
-            {
-                key: "Four",
-                y: 7
-            },
-            {
-                key: "Five",
-                y: 4
-            },
-            {
-                key: "Six",
-                y: 3
-            },
-            {
-                key: "Seven",
-                y: 9
-            }
-        ];
+		    // The drill function returns some raw data which
+		    // is used within this controller to fullfil the
+		    // features (chart data, further drill paths,
+		    // information box summary data...).
+		    budgetRawData = drill(data,'root');
+		    console.log("Data as processed by drill: ", budgetRawData);
+		    process();
+		}).
+		error(function(data, status, headers, config) {
+		    // called asynchronously if an error occurs
+		    // or server returns response with an error status.
+		});
+
+	var process = function () {
+
+	    // Prepare the chart data here before passing to scope
+	    var chartData = []; 
+
+	    /* Just using 'recur' for now to get the logic working */
+	    for(var i=0; i<budgetRawData.categories.length; i++) {
+		chartData.push(
+		    {key: budgetRawData.categories[i].name, 
+		     y: budgetRawData.categories[i]['current-data'].recur
+		    }
+		);
+	    }
+
+	    $scope.name = budgetRawData.name;
+	    $scope.level = budgetRawData.level;
+	    $scope.pieChartData = chartData;
+
+	};
 
         $scope.xFunction = function(){
             return function(d) {
@@ -248,8 +57,5 @@ angular.module('pippDataApp.controllers.budgets', [])
                 return d.y;
             };
         };
-
-
-	console.log($location.path());
 
     }]);
