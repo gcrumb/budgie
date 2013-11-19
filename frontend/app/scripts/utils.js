@@ -267,6 +267,178 @@ var budget = {
     }
 };
 
+var sample_data = [
+    {
+        "2013": {
+            "devel": 1000000000,
+            "recur": 1000000000,
+            "aggr": null,
+            "change": 4.2,
+            "notes": "Important points here",
+            "more": "data as needed"
+        }
+    },
+    {
+        "2012": {
+            "devel": 0,
+            "recur": 1000000000,
+            "aggr": 12300000000,
+            "notes": "Important points here",
+            "more": "data as needed"
+        }
+    },
+    {
+        "2011": {
+            "recur": 1000000000,
+            "aggr": null,
+            "notes": "Important points here",
+            "more": "data as needed"
+        }
+    }
+];
+
 //drill(budget,'root.categories.depart-edu.categories.progr-arts');
 //drill(budget,'root.categories.depart-edu');
 //drill(budget,'root.categories.depart-health.categories.progr-curry-eating');
+
+/**
+ * @description
+ *
+ * This utility function is used mash data from model into D3 pie
+ * chart ready data. 
+ *
+ * Test it with sample data.
+
+input: 
+[
+    {
+        "name": "Department for Education",
+        "current-data": {
+            "aggr": null,
+            "change": 4.2,
+            "devel": 1000000000,
+            "more": "data as needed",
+            "notes": "Important points here",
+            "recur": 1000000000
+        },
+        "level": "Program Expenditure",
+        "drillable": true
+    },
+    {
+        "name": "Department for Health",
+        "current-data": {
+            "aggr": null,
+            "change": 4.2,
+            "devel": 1000000000,
+            "more": "data as needed",
+            "notes": "Important points here",
+            "recur": 1000000000
+        },
+        "level": "Program Expenditure",
+        "drillable": true
+    }
+]
+
+output:
+
+[
+    {
+        "key": "Department for Education",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Health",
+        "y": 1000000000
+    }
+]
+
+ * 
+ * @param {Array} categories Array of categories (any level)
+ * 
+ * @param {Array} pieData Array ready for use in D3 pie charts.
+ */
+var getPieChartData = function(categories) {
+  
+    var pieData = [];
+
+    /* Just using 'recur' for now to get the logic working */
+    for(var i=0; i<categories.length; i++) {
+	pieData.push(
+	    {key: categories[i].name, 
+	     y: categories[i]['current-data'].recur
+	    }
+	);
+    }
+   
+    return pieData;
+  
+}
+
+/**
+ * @description
+ *
+ * This utility function is used in a map function to prepare data for
+ * D3 bar charts. At the moment is only prepares bar chart data suing
+ * the recur costs but this can later be refined to do what we want.
+ * 
+ * Test it with sample data.
+
+input: 
+[
+    {
+        "2013": {
+            "devel": 1000000000,
+            "recur": 1000000000,
+            "aggr": null,
+            "change": 4.2,
+            "notes": "Important points here",
+            "more": "data as needed"
+        }
+    },
+    {
+        "2012": {
+            "devel": 0,
+            "recur": 1000000000,
+            "aggr": 12300000000,
+            "notes": "Important points here",
+            "more": "data as needed"
+        }
+    },
+    {
+        "2011": {
+            "recur": 1000000000,
+            "aggr": null,
+            "notes": "Important points here",
+            "more": "data as needed"
+        }
+    }
+]
+
+output:
+[
+    {
+        "key": "Recurring Costs",
+        "values": [ [ "2013" , 1000000000] , [ "2012" , 1000000000] , [ "2011" , 1000000000] ]
+    }
+]
+
+ * @param {Array} data Array containing the last three years worth of
+ * data for a given Department, Program, Sub-program...
+ * 
+ * @param {Array} barData ready for use in D3 charts.
+ */
+var getBarChartData = function(data) {
+    var barData = [];
+    // not yet implemented
+    barData = [
+	{
+            "key": "Recurring Costs",
+            "values": [ [ "2013" , 1000000] , 
+			[ "2012" , 2000000] , 
+			[ "2011" , 3000000] ]
+	}
+    ];
+
+    return barData;
+
+}

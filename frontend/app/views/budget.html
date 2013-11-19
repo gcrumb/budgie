@@ -30,7 +30,15 @@
   
   <div class="span4">
     <h3>{{ level }} Summary</h3>
-    <p>This is where the information box will be</p>
+    
+    {{ notes }}
+
+    <nvd3-multi-bar-chart
+       data="stackedBarChartData"
+       id="stackedBarChart">
+        <svg></svg>
+    </nvd3-multi-bar-chart>
+
   </div>
 
 </div>

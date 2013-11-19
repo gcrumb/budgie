@@ -28,21 +28,20 @@ angular.module('pippDataApp.controllers.budgets', [])
 
 	var process = function () {
 
-	    // Prepare the chart data here before passing to scope
-	    var chartData = []; 
-
-	    /* Just using 'recur' for now to get the logic working */
-	    for(var i=0; i<budgetRawData.categories.length; i++) {
-		chartData.push(
-		    {key: budgetRawData.categories[i].name, 
-		     y: budgetRawData.categories[i]['current-data'].recur
-		    }
-		);
-	    }
-
+	    // Pie chart side
 	    $scope.name = budgetRawData.name;
 	    $scope.level = budgetRawData.level;
-	    $scope.pieChartData = chartData;
+	    $scope.pieChartData = getPieChartData(budgetRawData.categories);
+
+	    // Information box and bar chart side. 
+
+	    // At the moment the model can take notes for every year
+	    // so I am just extracting most recent notes here. This
+	    // will change; again, just to get the thing going.
+	    $scope.notes = budgetRawData.data['2013'].notes;
+
+	    // Start with sample data first...
+	    $scope.stackedBarChartData = getBarChartData(budgetRawData.data);
 
 	};
 
