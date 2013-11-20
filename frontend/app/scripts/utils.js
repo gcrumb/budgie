@@ -304,7 +304,7 @@ var sample_data = [
 /**
  * @description
  *
- * This utility function is used mash data from model into D3 pie
+ * This utility function is used mash-up data from model into D3 pie
  * chart ready data. 
  *
  * Test it with sample data.
@@ -377,9 +377,10 @@ var getPieChartData = function(categories) {
 /**
  * @description
  *
- * This utility function is used in a map function to prepare data for
- * D3 bar charts. At the moment is only prepares bar chart data suing
- * the recur costs but this can later be refined to do what we want.
+ * This utility function is used to mash-up data from model into D3
+ * bar chart ready data. At the moment is only prepares bar chart data
+ * suing the recur costs but this can later be refined to do what we
+ * want.
  * 
  * Test it with sample data.
 
