@@ -355,7 +355,7 @@ output:
  * 
  * @param {Array} categories Array of categories (any level)
  * 
- * @param {Array} pieData Array ready for use in D3 pie charts.
+ * @return {Array} pieData Array ready for use in D3 pie charts.
  */
 var getPieChartData = function(categories) {
   
@@ -379,67 +379,166 @@ var getPieChartData = function(categories) {
  *
  * This utility function is used to mash-up data from model into D3
  * bar chart ready data. At the moment is only prepares bar chart data
- * suing the recur costs but this can later be refined to do what we
+ * using the aggregate costs but this can later be refined to do what we
  * want.
  * 
  * Test it with sample data.
 
 input: 
-[
-    {
-        "2013": {
-            "devel": 1000000000,
-            "recur": 1000000000,
-            "aggr": null,
-            "change": 4.2,
-            "notes": "Important points here",
-            "more": "data as needed"
-        }
+{
+    "2013": {
+        "aggr": 1000000,
+        "program_type": "recurrent",
+        "notes": "Important points here",
+        "more": "data as needed"
     },
-    {
-        "2012": {
-            "devel": 0,
-            "recur": 1000000000,
-            "aggr": 12300000000,
-            "notes": "Important points here",
-            "more": "data as needed"
-        }
+    "2012": {
+        "aggr": 1200000,
+        "program_type": "development",
+        "notes": "Important points here",
+        "more": "data as needed"
     },
-    {
-        "2011": {
-            "recur": 1000000000,
-            "aggr": null,
-            "notes": "Important points here",
-            "more": "data as needed"
-        }
+    "2011": {
+        "aggr": 1300000,
+        "program_type": "recurrent",
+        "notes": "Important points here",
+        "more": "data as needed"
     }
-]
+}
 
 output:
 [
     {
-        "key": "Recurring Costs",
-        "values": [ [ "2013" , 1000000000] , [ "2012" , 1000000000] , [ "2011" , 1000000000] ]
+        "key": "Costs",
+        "values": [ [ "2013" , 1000000] , 
+	            [ "2012" , 1200000] , 
+		    [ "2011" , 1300000] ]
     }
 ]
 
  * @param {Array} data Array containing the last three years worth of
  * data for a given Department, Program, Sub-program...
  * 
- * @param {Array} barData ready for use in D3 charts.
+ * @return {Array} barData ready for use in D3 charts.
  */
 var getBarChartData = function(data) {
-    var barData = [];
-    // not yet implemented
-    barData = [
+
+    // First turn the object into array so it can easily be reduced to
+    // a form convenient for D3 charts.
+    var data_as_array = objectToArray(data);
+
+    var barValues = [];
+    var barData = [
 	{
-            "key": "Recurring Costs",
-            "values": [ [ "2013" , 1000000] , 
-			[ "2012" , 2000000] , 
-			[ "2011" , 3000000] ]
+            "key": "Costs",
+            "values": barValues
 	}
     ];
 
-    return barData;
+    /**
+     * Reduce function that consolidates new bar chart data from the next 
+     * object (i.e. next year)
+     * 
+     * Eventually will have to check for the existance of cost figures 
+     * before trying to get values and pushing them to the set.
+     */
+    var reduceFunction = function(memory, object) {
+	var prop = getFirstProperty(object); // the year
+	var cost = object[prop]['aggr']; // the cost figure
+	
+	barValues = memory[0]['values'].push([prop,cost]);
+	
+	return 	barData;
+    }
 
+    return _.reduce(data_as_array, reduceFunction, barData);
+
+}
+
+/**
+ * @description
+ *
+ * Small utility to return the first property name for an object
+ * 
+ * @param {Object} obj Object to iterate
+ * @return {String} prop String property name
+ */
+var getFirstProperty = function (obj) {
+    for (var prop in obj) {
+        if (obj.hasOwnProperty(prop)) {
+	    return prop;
+	}
+    }
+}
+
+/**
+ * @description
+ *
+ * Small utility to return an object turned into an array of
+ * objects. For example,
+
+[input]
+var sample_data = {
+    "2013": {
+        "aggr": 1000000,
+        "program_type": "recurrent",
+        "notes": "Important points here",
+        "more": "data as needed"
+    },
+    "2012": {
+        "aggr": 1000000,
+        "program_type": "development",
+        "notes": "Important points here",
+        "more": "data as needed"
+    },
+    "2011": {
+        "aggr": 1000000,
+        "program_type": "recurrent",
+        "notes": "Important points here",
+        "more": "data as needed"
+    }
+}
+
+[output]
+[
+  {
+    "2013": {
+      "aggr": 1000000,
+      "program_type": "recurrent",
+      "notes": "Important points here",
+      "more": "data as needed"
+    }
+  },
+  {
+    "2012": {
+      "aggr": 1000000,
+      "program_type": "development",
+      "notes": "Important points here",
+      "more": "data as needed"
+    }
+  },
+  {
+    "2011": {
+      "aggr": 1000000,
+      "program_type": "recurrent",
+      "notes": "Important points here",
+      "more": "data as needed"
+    }
+  }
+]
+
+ * 
+ * @param {Object} obj Object to iterate
+ * @return {String} prop String property name
+ */
+var objectToArray = function (obj) {
+    var obj_as_array = [];
+    for (var prop in obj) {
+        if (obj.hasOwnProperty(prop)) { // skip inherited properties
+	    var new_obj = {};
+	    new_obj[prop] = obj[prop];
+	    obj_as_array.push(new_obj);
+	}
+    }
+    return obj_as_array;
 }
