@@ -9,7 +9,9 @@
     "angular-resource": "1.2.0",
     "angular-cookies": "1.2.0",
     "angular-sanitize": "1.2.0",
-    "angular-route": "1.2.0"
+    "angular-route": "1.2.0",
+    "underscore": "~1.5.2",
+    "angularjs-nvd3-directives": "~0.0.2-beta"
   },
   "devDependencies": {
     "angular-mocks": "1.2.0",
