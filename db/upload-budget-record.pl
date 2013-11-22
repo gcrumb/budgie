@@ -56,7 +56,8 @@ while (<CSV>){
     my $categories = $upload_rec{categories};
     my $sect       = $categories->{$sector} || {};
 
-    $sect->{name} = $name;
+    $sect->{level}                   ="Departmental Expenditure";
+    $sect->{name}                    = $name;
     $sect->{data}->{$year}->{$type}  = $value;
     $sect->{data}->{$year}->{change} = $change ? $change : 0;
 
@@ -75,7 +76,8 @@ while (<CSV>){
     my $sect       = $categories->{$sector}          || {};
     my $department = $sect->{categories}->{$dept}    || {};
 
-    $department->{name} = $name;
+    $department->{level}                   ="Programme Expenditure";
+    $department->{name}                    = $name;
     $department->{data}->{$year}->{$type}  = $value;
     $department->{data}->{$year}->{change} = $change ? $change : 0;
 
