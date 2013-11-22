@@ -1,15 +1,378 @@
 {
     "_id": "png-2014",
     "categories": {
-        "education": {
+        "01-provincial-sector": {
+            "data": {
+                "2011": {
+                    "change": 0,
+                    "devel": "313140",
+                    "recur": "1318411"
+                },
+                "2012": {
+                    "change": 0,
+                    "devel": "365104",
+                    "recur": "1304374"
+                },
+                "2013": {
+                    "change": 0,
+                    "devel": "1955953",
+                    "recur": "1501457"
+                }
+            },
+            "level": "Departmental Expenditure",
+            "name": "Provincial Government-Development Spending"
+        },
+        "02-health-sector": {
             "categories": {
-                "education": {
+                "02.1-health-dept": {
+                    "categories": {
+                        "dadminheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "665"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "30508"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "31035"
+                                }
+                            },
+                            "name": "Rural Health Support Services"
+                        },
+                        "ddiseaseheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "7330"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "10048"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "1862"
+                                }
+                            },
+                            "name": "Disease Control"
+                        },
+                        "denvironheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "13490"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "20072"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "0"
+                                }
+                            },
+                            "name": "Environmental Health and Water Supply"
+                        },
+                        "dfamilyheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "1591"
+                                }
+                            },
+                            "name": "Family Health Services"
+                        },
+                        "dhumanresourceheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "7000"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "6800"
+                                }
+                            },
+                            "name": "Human Resource Development"
+                        },
+                        "dmedsuppliesheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "12200"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "10000"
+                                }
+                            },
+                            "name": "Medical Supplies and Equipment"
+                        },
+                        "dmissheal": {
+                            "data": {
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "189764"
+                                }
+                            },
+                            "name": "Missing Data"
+                        },
+                        "dpromotionheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "4183"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "21951"
+                                }
+                            },
+                            "name": "Health Promotion and Education"
+                        },
+                        "druralheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "0"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "38292"
+                                }
+                            },
+                            "name": "Hiv / Aids"
+                        },
+                        "durbanheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "devel": "4443"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "devel": "185539"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "devel": "79392"
+                                }
+                            },
+                            "name": "Top Management and General Administration"
+                        },
+                        "radminheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "33364"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "25550"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "24206"
+                                }
+                            },
+                            "name": "Top Management and General Administration"
+                        },
+                        "rdiseaseheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "3423"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "8113"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "7233"
+                                }
+                            },
+                            "name": "Disease Control"
+                        },
+                        "renvironheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "785"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "1101"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "1209"
+                                }
+                            },
+                            "name": "Environmental Health and Water Supply"
+                        },
+                        "rfamilyheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "1994"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "3390"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "3016"
+                                }
+                            },
+                            "name": "Family Health Services"
+                        },
+                        "rhrheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "25527"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "27043"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "27715"
+                                }
+                            },
+                            "name": "Human Resource Development"
+                        },
+                        "rmedsuppliesheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "159913"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "161608"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "164695"
+                                }
+                            },
+                            "name": "Medical Supplies and Equipment"
+                        },
+                        "rpromotionheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "1033"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "1138"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "1052"
+                                }
+                            },
+                            "name": "Health Promotion and Education"
+                        },
+                        "rruralheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "3618"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "5201"
+                                },
+                                "2014": {
+                                    "change": 0,
+                                    "recur": "13295"
+                                }
+                            },
+                            "name": "Rural Health Support Services"
+                        },
+                        "rurbanheal": {
+                            "data": {
+                                "2011": {
+                                    "change": 0,
+                                    "recur": "23912"
+                                },
+                                "2012": {
+                                    "change": 0,
+                                    "recur": "39005"
+                                },
+                                "2013": {
+                                    "change": 0,
+                                    "recur": "33220"
+                                }
+                            },
+                            "name": "Urban Health Facilities"
+                        }
+                    },
+                    "data": {
+                        "2011": {
+                            "change": 0,
+                            "devel": "219874",
+                            "recur": "253569"
+                        },
+                        "2012": {
+                            "change": 0,
+                            "devel": "265367",
+                            "recur": "272148"
+                        },
+                        "2013": {
+                            "change": 0,
+                            "devel": "190923",
+                            "recur": "275641"
+                        }
+                    },
+                    "level": "Programme Expenditure",
+                    "name": "Dept of Health"
+                }
+            }
+        },
+        "03-education-sector": {
+            "categories": {
+                "03.1-education-dept": {
                     "categories": {
                         "dbasiced": {
                             "data": {
                                 "2011": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2012": {
                                     "change": 0,
@@ -43,7 +406,7 @@
                             "data": {
                                 "2011": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2012": {
                                     "change": 0,
@@ -51,7 +414,7 @@
                                 },
                                 "2013": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 }
                             },
                             "name": "Library Services"
@@ -60,7 +423,7 @@
                             "data": {
                                 "2011": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2012": {
                                     "change": 0,
@@ -77,11 +440,11 @@
                             "data": {
                                 "2011": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2012": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2013": {
                                     "change": 0,
@@ -120,7 +483,7 @@
                             "data": {
                                 "2011": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2012": {
                                     "change": 0,
@@ -154,7 +517,7 @@
                             "data": {
                                 "2011": {
                                     "change": 0,
-                                    "devel": ""
+                                    "devel": "0"
                                 },
                                 "2012": {
                                     "change": 0,
@@ -359,369 +722,6 @@
                     "name": "Dept of Education- Development Spending"
                 }
             }
-        },
-        "health": {
-            "categories": {
-                "health": {
-                    "categories": {
-                        "dadminheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": "665"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "30508"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "31035"
-                                }
-                            },
-                            "name": "Rural Health Support Services"
-                        },
-                        "ddiseaseheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": "7330"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "10048"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "1862"
-                                }
-                            },
-                            "name": "Disease Control"
-                        },
-                        "denvironheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": "13490"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "20072"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": ""
-                                }
-                            },
-                            "name": "Environmental Health and Water Supply"
-                        },
-                        "dfamilyheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "1591"
-                                }
-                            },
-                            "name": "Family Health Services"
-                        },
-                        "dhumanresourceheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "7000"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "6800"
-                                }
-                            },
-                            "name": "Human Resource Development"
-                        },
-                        "dmedsuppliesheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "12200"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "10000"
-                                }
-                            },
-                            "name": "Medical Supplies and Equipment"
-                        },
-                        "dmissheal": {
-                            "data": {
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "189764"
-                                }
-                            },
-                            "name": "Missing Data"
-                        },
-                        "dpromotionheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": "4183"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "21951"
-                                }
-                            },
-                            "name": "Health Promotion and Education"
-                        },
-                        "druralheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": ""
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "38292"
-                                }
-                            },
-                            "name": "Hiv / Aids"
-                        },
-                        "durbanheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "devel": "4443"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "devel": "185539"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "devel": "79392"
-                                }
-                            },
-                            "name": "Top Management and General Administration"
-                        },
-                        "radminheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "33364"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "25550"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "24206"
-                                }
-                            },
-                            "name": "Top Management and General Administration"
-                        },
-                        "rdiseaseheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "3423"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "8113"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "7233"
-                                }
-                            },
-                            "name": "Disease Control"
-                        },
-                        "renvironheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "785"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "1101"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "1209"
-                                }
-                            },
-                            "name": "Environmental Health and Water Supply"
-                        },
-                        "rfamilyheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "1994"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "3390"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "3016"
-                                }
-                            },
-                            "name": "Family Health Services"
-                        },
-                        "rhrheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "25527"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "27043"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "27715"
-                                }
-                            },
-                            "name": "Human Resource Development"
-                        },
-                        "rmedsuppliesheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "159913"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "161608"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "164695"
-                                }
-                            },
-                            "name": "Medical Supplies and Equipment"
-                        },
-                        "rpromotionheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "1033"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "1138"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "1052"
-                                }
-                            },
-                            "name": "Health Promotion and Education"
-                        },
-                        "rruralheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "3618"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "5201"
-                                },
-                                "2014": {
-                                    "change": 0,
-                                    "recur": "13295"
-                                }
-                            },
-                            "name": "Rural Health Support Services"
-                        },
-                        "rurbanheal": {
-                            "data": {
-                                "2011": {
-                                    "change": 0,
-                                    "recur": "23912"
-                                },
-                                "2012": {
-                                    "change": 0,
-                                    "recur": "39005"
-                                },
-                                "2013": {
-                                    "change": 0,
-                                    "recur": "33220"
-                                }
-                            },
-                            "name": "Urban Health Facilities"
-                        }
-                    },
-                    "data": {
-                        "2011": {
-                            "change": 0,
-                            "devel": "219874",
-                            "recur": "253569"
-                        },
-                        "2012": {
-                            "change": 0,
-                            "devel": "265367",
-                            "recur": "272148"
-                        },
-                        "2013": {
-                            "change": 0,
-                            "devel": "190923",
-                            "recur": "275641"
-                        }
-                    },
-                    "level": "Programme Expenditure",
-                    "name": "Dept of Health"
-                }
-            }
-        },
-        "provinces": {
-            "data": {
-                "2011": {
-                    "change": 0,
-                    "devel": "313140",
-                    "recur": "1318411"
-                },
-                "2012": {
-                    "change": 0,
-                    "devel": "365104",
-                    "recur": "1304374"
-                },
-                "2013": {
-                    "change": 0,
-                    "devel": "1955953",
-                    "recur": "1501457"
-                }
-            },
-            "level": "Departmental Expenditure",
-            "name": "Provincial Government-Development Spending"
         }
     },
     "level": "Sectors",
