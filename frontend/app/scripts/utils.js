@@ -363,11 +363,14 @@ var getPieChartData = function(categories) {
 
     /* Just using 'recur' for now to get the logic working */
     for(var i=0; i<categories.length; i++) {
-	pieData.push(
-	    {key: categories[i].name, 
-	     y: categories[i]['current-data'].recur
-	    }
-	);
+	var aggr = categories[i]['current-data'].aggr;
+	if (aggr) { // Only push data if there is some
+	    pieData.push(
+		{key: categories[i].name, 
+		 y: aggr
+		}
+	    );
+	}
     }
    
     return pieData;
@@ -451,6 +454,8 @@ var getBarChartData = function(data) {
 	return 	barData;
     }
 
+    // Not the most purest use of reduce with some imperative stuff
+    // mixed in, but working for now
     return _.reduce(data_as_array, reduceFunction, barData);
 
 }
@@ -542,3 +547,62 @@ var objectToArray = function (obj) {
     }
     return obj_as_array;
 }
+
+
+/**
+ * @description
+ *
+ * Utility to return a convenient mapping of all possible paths in a JSON budget
+ * 
+ * @param {Object} budget Object the full yearly budget model for a
+ * given Pacific country
+ * @return {Object} paths Object of all possible path mapping
+ * (e.g. {'Department of Health': 'root.depart-health',
+ *        'Program of Public Health': 'root.depart-health.prg-pub-hea'})
+ */
+var getPathMappings = function (budget) {
+    var mapping = {};
+
+    function process(obj, mapping, current){
+	var ikey, value;
+	for(key in obj){
+            if(obj.hasOwnProperty(key)){
+		value = obj[key];
+		ikey = current ? current + '.' + key : key;
+		if(typeof value == 'object'){
+                    process(value, mapping, ikey) // recurse deeper
+		} else {
+		    // All paths in the tree are processed, the ones
+		    // ending with .names are the paths of interest
+		    if (ikey.endsWith('.name')) {
+			mapping[value] = ikey.replace('.name','');
+		    }
+		}
+            }
+	}
+	return mapping;
+    }    
+
+    process(budget, mapping, '');
+
+    return mapping;
+
+}
+
+// Normally shouldn't modify base objects I don't own. But fuck it,
+// whoever works on this code base will have to pay attention so I can
+// get my convenient and clear methods :)
+
+/**
+ * Modify the prototype to add builtin endsWith method
+ */
+String.prototype.endsWith = function (s) {
+    return this.length >= s.length && this.substr(this.length - s.length) == s;
+};
+
+/**
+ * Modify the prototype to add builtin contains method
+ */
+String.prototype.contains = function(s) {
+    return this.indexOf(s) != -1;
+};
