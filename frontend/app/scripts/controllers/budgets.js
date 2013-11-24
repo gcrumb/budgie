@@ -7,6 +7,11 @@ angular.module('pippDataApp.controllers.budgets', [])
 
 	var budgetRawData = {};
 
+	// Convenient mapping of paths
+	// (e.g. {'Department of Health': 'root.depart-health',
+        //        'Program of Public Health': 'root.depart-health.prg-pub-hea'})
+	var pathMappings = {};
+
 	var budget = BudgetFactory.get('png-2013').
 		success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
@@ -32,6 +37,7 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    $scope.name = budgetRawData.name;
 	    $scope.level = budgetRawData.level;
 	    $scope.pieChartData = getPieChartData(budgetRawData.categories);
+	    console.log("Pie Data:", getPieChartData(budgetRawData.categories));
 
 	    // Information box and bar chart side. 
 
@@ -40,7 +46,6 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    // will change; again, just to get the thing going.
 	    $scope.notes = budgetRawData.data['2013'].notes;
 
-	    // Start with sample data first...
 	    $scope.stackedBarChartData = getBarChartData(budgetRawData.data);
 
 	};
@@ -56,5 +61,17 @@ angular.module('pippDataApp.controllers.budgets', [])
                 return d.y;
             };
         };
+
+        $scope.$on('tooltipShow.directive', function(event){
+            //console.log('scope.tooltipShow', event);
+        });
+
+        $scope.$on('tooltipHide.directive', function(event){
+            //console.log('scope.tooltipHide', event);
+        });
+
+        $scope.$on('elementClick.directive', function(event,data){
+            console.log('elementClick.directive', data);
+        });
 
     }]);
