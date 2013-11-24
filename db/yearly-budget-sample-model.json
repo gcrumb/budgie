@@ -2,26 +2,24 @@
     "_id": "png-2013",
     "root": {
         "name": "PNG Budget",
+        "notes": "Important points here",
         "data": {
             "2013": {
                 "devel": 1000000000,
                 "recur": 1000000000,
-                "aggr": null,
+                "aggr": 1000000000,
                 "change": 4.2,
-                "notes": "Important points here",
                 "more": "data as needed"
             },
             "2012": {
                 "devel": 0,
                 "recur": 1000000000,
                 "aggr": 12300000000,
-                "notes": "Important points here",
                 "more": "data as needed"
             },
             "2011": {
                 "recur": 1000000000,
-                "aggr": null,
-                "notes": "Important points here",
+                "aggr": 1000000000,
                 "more": "data as needed"
             }
         },
@@ -29,26 +27,24 @@
         "categories": {
             "depart-health": {
                 "name": "Department for Health",
+                "notes": "Important points here",
                 "data": {
                     "2013": {
                         "devel": 1000000000,
                         "recur": 1000000000,
-                        "aggr": null,
+                        "aggr": 1000000000,
                         "change": 4.2,
-                        "notes": "Important points here",
                         "more": "data as needed"
                     },
                     "2012": {
                         "devel": 0,
                         "recur": 1000000000,
                         "aggr": 12300000000,
-                        "notes": "Important points here",
                         "more": "data as needed"
                     },
                     "2011": {
                         "recur": 1000000000,
-                        "aggr": null,
-                        "notes": "Important points here",
+                        "aggr": 1000000000,
                         "more": "data as needed"
                     }
                 },
@@ -56,23 +52,21 @@
                 "categories": {
                     "progr-curry-eating": {
                         "name": "Program for Curry Eating",
+                        "notes": "Important points here",
                         "data": {
                             "2013": {
                                 "aggr": 1000000,
                                 "program_type": "recurrent",
-                                "notes": "Important points here",
                                 "more": "data as needed"
                             },
                             "2012": {
                                 "aggr": 1000000,
                                 "program_type": "development",
-                                "notes": "Important points here",
                                 "more": "data as needed"
                             },
                             "2011": {
                                 "aggr": 1000000,
                                 "program_type": "recurrent",
-                                "notes": "Important points here",
                                 "more": "data as needed"
                             }
                         },
@@ -80,27 +74,25 @@
                         "categories": {
                             "sub-progr-spicy-curry": {
                                 "name": "Sub-program for Spicy Curry",
+                                "notes": "Important points here",
                                 "data": {
                                     "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     },
                                     "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     }
                                 }
                             },
                             "sub-progr-mild-curry": {
                                 "name": "Sub-program for Mild Curry",
+                                "notes": null,
                                 "data": {
                                     "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     },
                                     "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     }
                                 }
                             }
@@ -110,26 +102,24 @@
             },
             "depart-edu": {
                 "name": "Department for Education",
+                "notes": "Important points here",
                 "data": {
                     "2013": {
                         "devel": 1000000000,
                         "recur": 1000000000,
-                        "aggr": null,
+                        "aggr": 1000000000,
                         "change": 4.2,
-                        "notes": "Important points here",
                         "more": "data as needed"
                     },
                     "2012": {
                         "devel": 0,
                         "recur": 1000000000,
                         "aggr": 12300000000,
-                        "notes": "Important points here",
                         "more": "data as needed"
                     },
                     "2011": {
                         "recur": 1000000000,
-                        "aggr": null,
-                        "notes": "Important points here",
+                        "aggr": 1000000000,
                         "more": "data as needed"
                     }
                 },
@@ -137,23 +127,21 @@
                 "categories": {
                     "progr-arts": {
                         "name": "Program for Arts",
+                        "notes": "Important points here",
                         "data": {
                             "2013": {
                                 "aggr": 1000000,
                                 "program_type": "recurrent",
-                                "notes": "Important points here",
                                 "more": "data as needed"
                             },
                             "2012": {
                                 "aggr": 1000000,
                                 "program_type": "development",
-                                "notes": "Important points here",
                                 "more": "data as needed"
                             },
                             "2011": {
                                 "aggr": 1000000,
                                 "program_type": "recurrent",
-                                "notes": "Important points here",
                                 "more": "data as needed"
                             }
                         },
@@ -161,27 +149,25 @@
                         "categories": {
                             "sub-progr-painting": {
                                 "name": "Sub-program for Painting",
+                                "notes": "Important points here",
                                 "data": {
                                     "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     },
                                     "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     }
                                 }
                             },
                             "sub-progr-lang": {
                                 "name": "Sub-program for Languages",
+                                "notes": "Important points here",
                                 "data": {
                                     "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     },
                                     "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
+                                        "aggr": 1000000
                                     }
                                 }
                             }
