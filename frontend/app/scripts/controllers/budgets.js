@@ -5,9 +5,9 @@
 angular.module('pippDataApp.controllers.budgets', [])
     .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
 
-	var rawFromCouch = {}; // Keep the complete data in frontend
+	var rawFromCouch = {}; // Keep the complete data set in frontend
 	var rawFromDrill = {}; // Current mashed-up reduced data of interest
-	var pathMappings = {}; 	// Convenient mapping paths
+	var pathMappings = {}; // Convenient path mappings
 	var path = 'root'; // Initialize path to root of budget data tree
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 

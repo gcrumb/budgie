@@ -29,6 +29,8 @@
  */
 var drill = function (budget, path) {
 
+    var current_year = budget['_id'].match('[0-9]{4}');
+
     // Work on a copy of the data to not mutate original.
     var budget_copy = JSON.parse(JSON.stringify(budget));
 
@@ -51,7 +53,7 @@ var drill = function (budget, path) {
 	var cat = {}; 
 	cat['name'] = raw_categories[category].name;
 	cat['notes'] = raw_categories[category].notes;
-	cat['current-data'] = raw_categories[category]['data']['2013'];
+	cat['current-data'] = raw_categories[category]['data'][current_year];
 	cat['level'] = raw_categories[category].level;
 	if (_.has(raw_categories[category], "categories")) {
 	    cat['drillable'] = true;
@@ -272,36 +274,6 @@ var sample_budget = {
     }
 };
 
-var sample_data = [
-    {
-        "2013": {
-            "devel": 1000000000,
-            "recur": 1000000000,
-            "aggr": null,
-            "change": 4.2,
-            "notes": "Important points here",
-            "more": "data as needed"
-        }
-    },
-    {
-        "2012": {
-            "devel": 0,
-            "recur": 1000000000,
-            "aggr": 12300000000,
-            "notes": "Important points here",
-            "more": "data as needed"
-        }
-    },
-    {
-        "2011": {
-            "recur": 1000000000,
-            "aggr": null,
-            "notes": "Important points here",
-            "more": "data as needed"
-        }
-    }
-];
-
 //drill(budget,'root.categories.depart-edu.categories.progr-arts');
 //drill(budget,'root.categories.depart-edu');
 //drill(budget,'root.categories.depart-health.categories.progr-curry-eating');
@@ -485,7 +457,8 @@ var getFirstProperty = function (obj) {
  * @description
  *
  * Small utility to return an object turned into an array of
- * objects. For example,
+ * objects. This is only a convenience function to produce bar charts
+ * data. For example,
 
 [input]
 var sample_data = {
