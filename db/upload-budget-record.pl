@@ -40,8 +40,8 @@ while (<CSV>){
   unless ($sector){
 
     my $root = $upload_rec{root};
-    $root->{data}->{$year}->{$type}  = $value;
-    $root->{data}->{$year}->{change} = $change ? $change : 0;;
+    $root->{data}->{$year}->{$type}  = $value ? $value : 0;
+    $root->{data}->{$year}->{change} = $change ? $change : 0;
 #    $root->{data}=>{$year}->{notes}  .= "\n$notes";
 
     $upload_rec{root} = $root;
@@ -58,7 +58,7 @@ while (<CSV>){
 
     $sect->{level}                   ="Departmental Expenditure";
     $sect->{name}                    = $name;
-    $sect->{data}->{$year}->{$type}  = $value;
+    $sect->{data}->{$year}->{$type}  = $value ? $value : 0;
     $sect->{data}->{$year}->{change} = $change ? $change : 0;
 
     $categories->{$sector}             = $sect;
@@ -78,7 +78,7 @@ while (<CSV>){
 
     $department->{level}                   ="Programme Expenditure";
     $department->{name}                    = $name;
-    $department->{data}->{$year}->{$type}  = $value;
+    $department->{data}->{$year}->{$type}  = $value ? $value : 0;
     $department->{data}->{$year}->{change} = $change ? $change : 0;
 
     $sect->{categories}->{$dept}           = $department;
@@ -97,8 +97,8 @@ while (<CSV>){
   my $prog       = $department->{categories}->{$programme} || {};
 
   $prog->{name} = $name;
-  $prog->{data}->{$year}->{$type}         = $value;
-  $prog->{data}->{$year}->{change}        = $change ? $change : 0;;
+  $prog->{data}->{$year}->{$type}         = $value ? $value : 0;
+  $prog->{data}->{$year}->{change}        = $change ? $change : 0;
 
   $department->{categories}->{$programme} = $prog;
   $sect->{categories}->{$dept}            = $department;
