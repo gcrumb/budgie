@@ -5,26 +5,35 @@
 angular.module('pippDataApp.controllers.budgets', [])
     .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
 
-	var budgetRawData = {};
-
-	// Convenient mapping of paths
-	// (e.g. {'Department of Health': 'root.depart-health',
-        //        'Program of Public Health': 'root.depart-health.prg-pub-hea'})
-	var pathMappings = {};
+	var rawFromCouch = {}; // Keep the complete data in frontend
+	var rawFromDrill = {}; // Current mashed-up reduced data of interest
+	// Convenient mapping paths (e.g.
+	// {'Department of Health': 'root.depart-health',
+	//  'Program of Public Health': 'root.depart-health.prg-pub-hea'})
+	var pathMappings = {}; 
+	var path = 'root'; // Initialize path to root of budget data tree
 
 	var budget = BudgetFactory.get('png-2013').
 		success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
 		    // when the response is available
-		    console.log("Data as stored in CouchDB: ", data);
+
+		    pathMappings = getPathMappings(data);
+		    console.log("Path mappings: ", pathMappings);
+
+		    rawFromCouch = data; 
+		    console.log("Data as stored in CouchDB: ",rawFromCouch);
 
 		    // The drill function returns some raw data which
 		    // is used within this controller to fullfil the
 		    // features (chart data, further drill paths,
 		    // information box summary data...).
-		    budgetRawData = drill(data,'root');
-		    console.log("Data as processed by drill: ", budgetRawData);
+		    
+		    rawFromDrill = drill(rawFromCouch,path);
+		    console.log("Data as processed by drill: ",rawFromDrill);
+
 		    process();
+
 		}).
 		error(function(data, status, headers, config) {
 		    // called asynchronously if an error occurs
@@ -32,21 +41,18 @@ angular.module('pippDataApp.controllers.budgets', [])
 		});
 
 	var process = function () {
+	    
+	    console.log("Processing data for display...");
 
 	    // Pie chart side
-	    $scope.name = budgetRawData.name;
-	    $scope.level = budgetRawData.level;
-	    $scope.pieChartData = getPieChartData(budgetRawData.categories);
-	    console.log("Pie Data:", getPieChartData(budgetRawData.categories));
+	    $scope.name = rawFromDrill.name;
+	    $scope.level = rawFromDrill.level;
+	    $scope.pieChartData = getPieChartData(rawFromDrill.categories);
+	    console.log("Pie Data:", getPieChartData(rawFromDrill.categories));
 
 	    // Information box and bar chart side. 
-
-	    // At the moment the model can take notes for every year
-	    // so I am just extracting most recent notes here. This
-	    // will change; again, just to get the thing going.
-	    $scope.notes = budgetRawData.data['2013'].notes;
-
-	    $scope.stackedBarChartData = getBarChartData(budgetRawData.data);
+	    $scope.notes = rawFromDrill.notes;
+	    $scope.stackedBarChartData = getBarChartData(rawFromDrill.data);
 
 	};
 
@@ -70,8 +76,15 @@ angular.module('pippDataApp.controllers.budgets', [])
             //console.log('scope.tooltipHide', event);
         });
 
+        $scope.$on('stateChange.directive', function(event){
+            console.log('stateChange.directive', event);
+        });
+
         $scope.$on('elementClick.directive', function(event,data){
-            console.log('elementClick.directive', data);
+	    path = pathMappings[data.label];
+            console.log("Clicked: ", data.label, " Path: ", path);
+	    rawFromDrill = drill(rawFromCouch,path);
+	    process();
         });
 
     }]);

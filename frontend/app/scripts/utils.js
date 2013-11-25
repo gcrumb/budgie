@@ -29,10 +29,13 @@
  */
 var drill = function (budget, path) {
 
+    // Work on a copy of the data to not mutate original.
+    var budget_copy = JSON.parse(JSON.stringify(budget));
+
     // Extract budget segment of interest in its raw form. This will
     // contain all raw data from point of interest all the way up the
     // tree.
-    var budget_segment = _.deep(budget,path);
+    var budget_segment = _.deep(budget_copy,path);
 
     // Go through categories of this segment of interest, mash-up data
     // in a convenient way for use in controller: only include name,
@@ -47,6 +50,7 @@ var drill = function (budget, path) {
 	// variable above
 	var cat = {}; 
 	cat['name'] = raw_categories[category].name;
+	cat['notes'] = raw_categories[category].notes;
 	cat['current-data'] = raw_categories[category]['data']['2013'];
 	cat['level'] = raw_categories[category].level;
 	if (_.has(raw_categories[category], "categories")) {
@@ -72,8 +76,9 @@ var drill = function (budget, path) {
  * Simple usage examples with sample PNG budget.
  **/
 
-var budget = {
+var sample_budget = {
     "_id": "png-2013",
+    "_rev": "1-521793c5646a4f9e4da35e9404717662",
     "root": {
         "name": "PNG Budget",
         "data": {
@@ -361,7 +366,7 @@ var getPieChartData = function(categories) {
   
     var pieData = [];
 
-    /* Just using 'recur' for now to get the logic working */
+    // Just using 'aggr' for now...
     for(var i=0; i<categories.length; i++) {
 	var aggr = categories[i]['current-data'].aggr;
 	if (aggr) { // Only push data if there is some
@@ -565,7 +570,7 @@ var getPathMappings = function (budget) {
 
     function process(obj, mapping, current){
 	var ikey, value;
-	for(key in obj){
+	for(var key in obj){
             if(obj.hasOwnProperty(key)){
 		value = obj[key];
 		ikey = current ? current + '.' + key : key;
@@ -589,6 +594,18 @@ var getPathMappings = function (budget) {
 
 }
 
+/**
+ * Cloning technique describe at <oranlooney.com/functional-javascript>.
+ * 
+ * Note that assigning a new value to a property of the clone won't
+ * interfere with the original, but assigning values to the clone's
+ * object properties will.
+ */
+var clone = (function() { 
+    return function (obj) { Clone.prototype=obj; return new Clone() };
+    function Clone(){}
+}());
+
 // Normally shouldn't modify base objects I don't own. But fuck it,
 // whoever works on this code base will have to pay attention so I can
 // get my convenient and clear methods :)
@@ -605,4 +622,187 @@ String.prototype.endsWith = function (s) {
  */
 String.prototype.contains = function(s) {
     return this.indexOf(s) != -1;
+};
+
+
+var sample_data2 = {
+  "_id": "png-2013",
+  "_rev": "1-521793c5646a4f9e4da35e9404717662",
+  "root": {
+    "categories": {
+      "depart-edu": {
+        "categories": {
+          "progr-arts": {
+            "categories": {
+              "sub-progr-lang": {
+                "data": {
+                  "2011": {
+                    "aggr": 1000000
+                  },
+                  "2013": {
+                    "aggr": 1000000
+                  }
+                },
+                "name": "Sub-program for Languages",
+                "notes": "Important points here"
+              },
+              "sub-progr-painting": {
+                "data": {
+                  "2011": {
+                    "aggr": 1000000
+                  },
+                  "2013": {
+                    "aggr": 1000000
+                  }
+                },
+                "name": "Sub-program for Painting",
+                "notes": "Important points here"
+              }
+            },
+            "data": {
+              "2011": {
+                "aggr": 1000000,
+                "more": "data as needed",
+                "program_type": "recurrent"
+              },
+              "2012": {
+                "aggr": 1000000,
+                "more": "data as needed",
+                "program_type": "development"
+              },
+              "2013": {
+                "aggr": 1000000,
+                "more": "data as needed",
+                "program_type": "recurrent"
+              }
+            },
+            "level": "Sub-program Expenditure",
+            "name": "Program for Arts",
+            "notes": "Important points here"
+          }
+        },
+        "data": {
+          "2011": {
+            "aggr": 1000000000,
+            "more": "data as needed",
+            "recur": 1000000000
+          },
+          "2012": {
+            "aggr": 12300000000,
+            "devel": 0,
+            "more": "data as needed",
+            "recur": 1000000000
+          },
+          "2013": {
+            "aggr": 1000000000,
+            "change": 4.2,
+            "devel": 1000000000,
+            "more": "data as needed",
+            "recur": 1000000000
+          }
+        },
+        "level": "Program Expenditure",
+        "name": "Department for Education",
+        "notes": "Important points here"
+      },
+      "depart-health": {
+        "categories": {
+          "progr-curry-eating": {
+            "categories": {
+              "sub-progr-mild-curry": {
+                "data": {
+                  "2011": {
+                    "aggr": 1000000
+                  },
+                  "2013": {
+                    "aggr": 1000000
+                  }
+                },
+                "name": "Sub-program for Mild Curry",
+                "notes": null
+              },
+              "sub-progr-spicy-curry": {
+                "data": {
+                  "2011": {
+                    "aggr": 1000000
+                  },
+                  "2013": {
+                    "aggr": 1000000
+                  }
+                },
+                "name": "Sub-program for Spicy Curry",
+                "notes": "Important points here"
+              }
+            },
+            "data": {
+              "2011": {
+                "aggr": 1000000,
+                "more": "data as needed",
+                "program_type": "recurrent"
+              },
+              "2012": {
+                "aggr": 1000000,
+                "more": "data as needed",
+                "program_type": "development"
+              },
+              "2013": {
+                "aggr": 1000000,
+                "more": "data as needed",
+                "program_type": "recurrent"
+              }
+            },
+            "level": "Sub-program Expenditure",
+            "name": "Program for Curry Eating",
+            "notes": "Important points here"
+          }
+        },
+        "data": {
+          "2011": {
+            "aggr": 1000000000,
+            "more": "data as needed",
+            "recur": 1000000000
+          },
+          "2012": {
+            "aggr": 12300000000,
+            "devel": 0,
+            "more": "data as needed",
+            "recur": 1000000000
+          },
+          "2013": {
+            "aggr": 1000000000,
+            "change": 4.2,
+            "devel": 1000000000,
+            "more": "data as needed",
+            "recur": 1000000000
+          }
+        },
+        "level": "Program Expenditure",
+        "name": "Department for Health",
+        "notes": "Important points here"
+      }
+    },
+    "data": {
+      "2011": {
+        "aggr": 1000000000,
+        "more": "data as needed",
+        "recur": 1000000000
+      },
+      "2012": {
+        "aggr": 12300000000,
+        "devel": 0,
+        "more": "data as needed",
+        "recur": 1000000000
+      },
+      "2013": {
+        "aggr": 1000000000,
+        "change": 4.2,
+        "devel": 1000000000,
+        "more": "data as needed",
+        "recur": 1000000000
+      }
+    },
+    "level": "Departmental Expenditure",
+    "name": "PNG Budget",
+    "notes": "Important points here"
+  }
 };
