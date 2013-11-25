@@ -9,6 +9,12 @@
     <h3>{{ level }}</h3>
     <p>Blablabla.</p>
 
+    <p>
+      <ul class="breadcrumbs" ng-repeat="b in breadcrumbs">
+	<li ng-click="reloadBreadcrumbs(b)">{{ b }}</li>
+      </ul>
+    </p>
+
     <nvd3-pie-chart
        data="pieChartData"
        id="pieChartBudget"

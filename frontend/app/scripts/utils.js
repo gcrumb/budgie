@@ -606,6 +606,43 @@ var clone = (function() {
     function Clone(){}
 }());
 
+
+/**
+ * @description
+ *
+ * Small utility to slice an array of string based on string elements
+ * instead of indices.
+ * 
+ * @param {Array} arr Array to slice
+ * @param {String} start String to start slice
+ * @param {String} end String to end slice
+ * @return {Array} arr Array sliced
+ */
+var sliceByStringElement = function (arr,end,start) {
+
+    var start = (typeof start === "undefined") ? arr[0] : start;
+    var new_arr = [];
+
+    if (!_.contains(arr,start) || !_.contains(arr,end)) {
+	throw "Element not present in array"
+    }
+
+    for(var i=0; i<arr.length; i++) {
+        if (arr[i] === start) {
+	    for (var j=i; j<arr.length; j++) {
+		if (arr[j] === end) {
+		    new_arr.push(arr[j]);
+		    break;
+		}
+		new_arr.push(arr[j]);
+	    }
+        }
+    }
+
+    return new_arr;
+
+}
+
 // Normally shouldn't modify base objects I don't own. But fuck it,
 // whoever works on this code base will have to pay attention so I can
 // get my convenient and clear methods :)
@@ -622,187 +659,4 @@ String.prototype.endsWith = function (s) {
  */
 String.prototype.contains = function(s) {
     return this.indexOf(s) != -1;
-};
-
-
-var sample_data2 = {
-  "_id": "png-2013",
-  "_rev": "1-521793c5646a4f9e4da35e9404717662",
-  "root": {
-    "categories": {
-      "depart-edu": {
-        "categories": {
-          "progr-arts": {
-            "categories": {
-              "sub-progr-lang": {
-                "data": {
-                  "2011": {
-                    "aggr": 1000000
-                  },
-                  "2013": {
-                    "aggr": 1000000
-                  }
-                },
-                "name": "Sub-program for Languages",
-                "notes": "Important points here"
-              },
-              "sub-progr-painting": {
-                "data": {
-                  "2011": {
-                    "aggr": 1000000
-                  },
-                  "2013": {
-                    "aggr": 1000000
-                  }
-                },
-                "name": "Sub-program for Painting",
-                "notes": "Important points here"
-              }
-            },
-            "data": {
-              "2011": {
-                "aggr": 1000000,
-                "more": "data as needed",
-                "program_type": "recurrent"
-              },
-              "2012": {
-                "aggr": 1000000,
-                "more": "data as needed",
-                "program_type": "development"
-              },
-              "2013": {
-                "aggr": 1000000,
-                "more": "data as needed",
-                "program_type": "recurrent"
-              }
-            },
-            "level": "Sub-program Expenditure",
-            "name": "Program for Arts",
-            "notes": "Important points here"
-          }
-        },
-        "data": {
-          "2011": {
-            "aggr": 1000000000,
-            "more": "data as needed",
-            "recur": 1000000000
-          },
-          "2012": {
-            "aggr": 12300000000,
-            "devel": 0,
-            "more": "data as needed",
-            "recur": 1000000000
-          },
-          "2013": {
-            "aggr": 1000000000,
-            "change": 4.2,
-            "devel": 1000000000,
-            "more": "data as needed",
-            "recur": 1000000000
-          }
-        },
-        "level": "Program Expenditure",
-        "name": "Department for Education",
-        "notes": "Important points here"
-      },
-      "depart-health": {
-        "categories": {
-          "progr-curry-eating": {
-            "categories": {
-              "sub-progr-mild-curry": {
-                "data": {
-                  "2011": {
-                    "aggr": 1000000
-                  },
-                  "2013": {
-                    "aggr": 1000000
-                  }
-                },
-                "name": "Sub-program for Mild Curry",
-                "notes": null
-              },
-              "sub-progr-spicy-curry": {
-                "data": {
-                  "2011": {
-                    "aggr": 1000000
-                  },
-                  "2013": {
-                    "aggr": 1000000
-                  }
-                },
-                "name": "Sub-program for Spicy Curry",
-                "notes": "Important points here"
-              }
-            },
-            "data": {
-              "2011": {
-                "aggr": 1000000,
-                "more": "data as needed",
-                "program_type": "recurrent"
-              },
-              "2012": {
-                "aggr": 1000000,
-                "more": "data as needed",
-                "program_type": "development"
-              },
-              "2013": {
-                "aggr": 1000000,
-                "more": "data as needed",
-                "program_type": "recurrent"
-              }
-            },
-            "level": "Sub-program Expenditure",
-            "name": "Program for Curry Eating",
-            "notes": "Important points here"
-          }
-        },
-        "data": {
-          "2011": {
-            "aggr": 1000000000,
-            "more": "data as needed",
-            "recur": 1000000000
-          },
-          "2012": {
-            "aggr": 12300000000,
-            "devel": 0,
-            "more": "data as needed",
-            "recur": 1000000000
-          },
-          "2013": {
-            "aggr": 1000000000,
-            "change": 4.2,
-            "devel": 1000000000,
-            "more": "data as needed",
-            "recur": 1000000000
-          }
-        },
-        "level": "Program Expenditure",
-        "name": "Department for Health",
-        "notes": "Important points here"
-      }
-    },
-    "data": {
-      "2011": {
-        "aggr": 1000000000,
-        "more": "data as needed",
-        "recur": 1000000000
-      },
-      "2012": {
-        "aggr": 12300000000,
-        "devel": 0,
-        "more": "data as needed",
-        "recur": 1000000000
-      },
-      "2013": {
-        "aggr": 1000000000,
-        "change": 4.2,
-        "devel": 1000000000,
-        "more": "data as needed",
-        "recur": 1000000000
-      }
-    },
-    "level": "Departmental Expenditure",
-    "name": "PNG Budget",
-    "notes": "Important points here"
-  }
 };
