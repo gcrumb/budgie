@@ -21,7 +21,7 @@ my $first = 0;
 # Initialise the record
 $upload_rec{_id}                = $budget_key;
 $upload_rec{root}->{name}       = $budget_name;
-$upload_rec{level}              = 'Sectors';
+$upload_rec{level}              = 'National Expenditure';
 $upload_rec{root}->{data}       = {};
 $upload_rec{categories}         = {};
 
@@ -56,7 +56,7 @@ while (<CSV>){
     my $categories = $upload_rec{categories};
     my $sect       = $categories->{$sector} || {};
 
-    $sect->{level}                   ="Departmental Expenditure";
+    $sect->{level}                   ="Sectoral Expenditure";
     $sect->{name}                    = $name;
     $sect->{data}->{$year}->{$type}  = $value ? $value : 0;
     $sect->{data}->{$year}->{change} = $change ? $change : 0;
@@ -76,7 +76,7 @@ while (<CSV>){
     my $sect       = $categories->{$sector}          || {};
     my $department = $sect->{categories}->{$dept}    || {};
 
-    $department->{level}                   ="Programme Expenditure";
+    $department->{level}                   ="Departmental Expenditure";
     $department->{name}                    = $name;
     $department->{data}->{$year}->{$type}  = $value ? $value : 0;
     $department->{data}->{$year}->{change} = $change ? $change : 0;
@@ -96,7 +96,8 @@ while (<CSV>){
   my $department = $sect->{categories}->{$dept}            || {};
   my $prog       = $department->{categories}->{$programme} || {};
 
-  $prog->{name} = $name;
+  $prog->{level}                          = 'Programme Expenditure';
+  $prog->{name}                           = $name;
   $prog->{data}->{$year}->{$type}         = $value ? $value : 0;
   $prog->{data}->{$year}->{change}        = $change ? $change : 0;
 
