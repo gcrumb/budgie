@@ -3,7 +3,7 @@
     "level": "National Expenditure",
     "root": {
         "categories": {
-            "administration": {
+            "Administration": {
                 "categories": {
                     "201": {
                         "data": {
@@ -345,7 +345,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "General administration"
+                                "name": "General Administration"
                             },
                             "2062": {
                                 "data": {
@@ -402,7 +402,7 @@
                                 "change": 0
                             },
                             "2013": {
-                                "aggr": "153300",
+                                "aggr": "1583200",
                                 "change": 0
                             },
                             "2014": {
@@ -411,7 +411,7 @@
                             }
                         },
                         "level": "Departmental Expenditure",
-                        "name": "Treasury and Misc"
+                        "name": "Treasury and Finance Misc"
                     },
                     "208": {
                         "categories": {
@@ -449,7 +449,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "General administration"
+                                "name": "General Administration"
                             },
                             "2083": {
                                 "data": {
@@ -503,7 +503,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "General administration"
+                                "name": "General Administration"
                             },
                             "2086": {
                                 "data": {
@@ -1155,7 +1155,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "General administration"
+                                "name": "General Administration"
                             }
                         },
                         "data": {
@@ -1483,7 +1483,7 @@
                             }
                         },
                         "level": "Departmental Expenditure",
-                        "name": "PNG Institute of Public administration"
+                        "name": "PNG Institute of Public Administration"
                     },
                     "220": {
                         "categories": {
@@ -2097,7 +2097,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Election administration"
+                                "name": "Election Administration"
                             },
                             "2307": {
                                 "data": {
@@ -2212,110 +2212,110 @@
                             "2321": {
                                 "data": {
                                     "2012": {
-                                        "aggr": "3489.4",
+                                        "aggr": "664.4",
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": "3808.9",
+                                        "aggr": "1083.1",
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": "3851",
+                                        "aggr": "989.6",
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Industrial Relations & International Co-operation"
+                                "name": "\"Border Administration"
                             },
                             "2322": {
                                 "data": {
                                     "2012": {
-                                        "aggr": "2825",
+                                        "aggr": "6424.1",
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": "4155.9",
+                                        "aggr": "6884.6",
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": "13972.8",
+                                        "aggr": "6869.9",
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Labour administration"
+                                "name": "General Administration"
                             },
                             "2323": {
                                 "data": {
                                     "2012": {
-                                        "aggr": "478.4",
+                                        "aggr": "10441.1",
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": "92.1",
+                                        "aggr": "3108.7",
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": "94.4",
+                                        "aggr": "3162.8",
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Ministerial Services"
+                                "name": "National Disaster Management Services"
                             },
                             "2324": {
                                 "data": {
                                     "2012": {
-                                        "aggr": "94.4",
+                                        "aggr": "397.9",
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": "1311.9",
+                                        "aggr": "53887",
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": "1316.9",
+                                        "aggr": "48295",
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Occupational Safety & Health"
+                                "name": "Sub-National Strategy"
                             },
                             "2325": {
                                 "data": {
                                     "2012": {
-                                        "aggr": "3650",
+                                        "aggr": 0,
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": "3978.8",
+                                        "aggr": "5057",
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": "4011.2",
+                                        "aggr": "3715",
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Top Management and General administration"
+                                "name": "PNG Disaster Risk Management Program 2010-2014"
                             },
                             "2326": {
                                 "data": {
                                     "2012": {
-                                        "aggr": "3273.8",
+                                        "aggr": "3548.5",
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": "3837.3",
+                                        "aggr": "4544.5",
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": "3847",
+                                        "aggr": "4484.9",
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Human Resource Development & Employment Promotion"
+                                "name": "Support Services to Provincial Governments"
                             },
                             "2327": {
                                 "data": {
@@ -2352,6 +2352,134 @@
                                 },
                                 "level": "Programme Expenditure",
                                 "name": "Rural Development Programme"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "21695.7",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "74765.4",
+                                "change": "2.4"
+                            },
+                            "2014": {
+                                "aggr": "74723.7",
+                                "change": "0.0"
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department for Local and Provincial Affairs"
+                    },
+                    "262": {
+                        "categories": {
+                            "2621": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "3489.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3808.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3851",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Industrial Relations & International Co-operation"
+                            },
+                            "2622": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2825",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "4155.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "13972.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Labour Administration"
+                            },
+                            "2623": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "478.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "92.1",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "94.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Ministerial Services"
+                            },
+                            "2624": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "94.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1311.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1316.9",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Occupational Safety & Health"
+                            },
+                            "2625": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "3650",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3978.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4011.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Top Management and General Administration"
+                            },
+                            "2626": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "3273.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3837.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3847",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Human Resource Development & Employment Promotion"
                             }
                         },
                         "data": {
@@ -2513,9 +2641,1681 @@
                     }
                 },
                 "level": "Sectoral Expenditure",
-                "name": "administration "
+                "name": "Administration "
             },
-            "education": {
+            "EconomicandAgriculture": {
+                "categories": {
+                    "207": {
+                        "categories": {
+                            "2071": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "40000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Agriculture Commercialisation Equity Fund"
+                            },
+                            "2072": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "15000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Outstanding MOA-NOGOLI agreement"
+                            },
+                            "2073": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "5000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Petroleum & Energy LNG Support"
+                            },
+                            "2074": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "6700",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "SGS (Log Monitoring) Payment to National Forest"
+                            },
+                            "2075": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "5000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Timber Royalty Payment"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "80200",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Treasury and Finance Misc."
+                    },
+                    "245": {
+                        "categories": {
+                            "2451": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "5000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Climate Change and Environment Sustainability"
+                            },
+                            "2452": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "5562",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "13428.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3803.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Environment Protection & Pollution Control"
+                            },
+                            "2453": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "6582.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "5031.4",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "16164.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "General Administration"
+                            },
+                            "2454": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "956.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "23660.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "25441.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Nature Conservation & Wildlife Protection Services"
+                            },
+                            "2455": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1157.3",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1232.4",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1449.1",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Policy Co-ordination and Evaluation"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "14257.7",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "43353.1",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "51858.6",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Environment & Conservation"
+                    },
+                    "247": {
+                        "categories": {
+                            "2471": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "\"National Rubber Rehabilitation"
+                            },
+                            "2472": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "4408.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "4836.4",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1590.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "\"Policy"
+                            },
+                            "2473": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "7023.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1335.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1388.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Technical & Field Services"
+                            },
+                            "2474": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2414.5",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "619.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "603.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Provincial & Industry Support Services"
+                            },
+                            "2475": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2237.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1528.4",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1490.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "\"Food Security"
+                            },
+                            "2476": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "7949.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "947.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "934.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Rubber Industry Development"
+                            },
+                            "2477": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1502.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "614.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "614.9",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Prov Industry & Support Services-Momase"
+                            },
+                            "2478": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1342.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "645.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "649.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Prov Industry Support Services-Highlands"
+                            },
+                            "2479": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1558.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "636.4",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "631.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Prov Industry Support Services-Islands"
+                            },
+                            "24791": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "13435.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "15445",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "12219",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Productive Partnership for Agriculture Development"
+                            },
+                            "24792": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "500",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "2982",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3023",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Smallholder Rice Project Phase II"
+                            },
+                            "24793": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "31160.5",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "4583.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4617.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Top Management and General Administration"
+                            },
+                            "24794": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "4774.5",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3537.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3818.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Training and Extension Services Support"
+                            },
+                            "24795": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "12000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Agriculture Extension"
+                            },
+                            "24796": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1846",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Export Crops Promotion & Development"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "78307.2",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "39558.4",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "46581.5",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Agriculture and Livestock"
+                    },
+                    "252": {
+                        "categories": {
+                            "2521": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "5516",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "6865.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "6807",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Land Administration Standards and Quality Control"
+                            },
+                            "2522": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "31728",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "22109.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "22120.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Land Resource Information and Development"
+                            },
+                            "2523": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "266.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "438.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "393.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Ministerial Services"
+                            },
+                            "2524": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "7250.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "4900",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4784",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Operational Efficiency"
+                            },
+                            "2525": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1133.3",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1200",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "26211.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Policy Analysis and Development"
+                            },
+                            "2526": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1404.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1700",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1711.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Top Management and General Administration"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "47299.6",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "37214.2",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "62028.2",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Lands & Physical Planning"
+                    },
+                    "254": {
+                        "categories": {
+                            "2541": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "4761.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "4111.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4166.3",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Corporate Services"
+                            },
+                            "2542": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "834.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1149.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1154.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Volcanological Observatory"
+                            },
+                            "2543": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "369.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "703.2",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "708.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Engineering Geology"
+                            },
+                            "2544": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Rabaul Volcanological Observatory Relocation"
+                            },
+                            "2545": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "2338",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1600",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Landslides Hazard Mapping - Highlands Highway Project"
+                            },
+                            "2546": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "16",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Exploration & Mining Assessment & Regulation"
+                            },
+                            "2547": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "938.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "869.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "876.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Geological Survey"
+                            },
+                            "2548": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "699.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "948.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "954.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Mineral Policy Advisory Services"
+                            },
+                            "2549": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "276.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "484",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "488.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Legal Advisory Services"
+                            },
+                            "25491": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "487.5",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Exploration And Mining Assessment And Regulation"
+                            },
+                            "25492": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "327",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Finalizing the Geothermal Research Policy"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "8383.3",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "13605.3",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "13276.6",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Mineral Policy and Geohazards Management"
+                    },
+                    "255": {
+                        "categories": {
+                            "2551": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "17670.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "5494.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4795.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Corporate Services"
+                            },
+                            "2552": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "16208.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "13251.2",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "7781.1",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Development and Regulation of Petroleum Resources"
+                            },
+                            "2553": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1610",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "4250",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4081.9",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Energy Planning Services"
+                            },
+                            "2554": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "73.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "253",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "259.3",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Minor Power Houses"
+                            },
+                            "2555": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "750",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "634.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Electricity Management Committee Secretariat"
+                            },
+                            "2556": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "2000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Independent Issues Committee"
+                            },
+                            "2557": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "7235",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Energy Sector Development Project"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "35563.2",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "23999",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "26787.1",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Petroleum and Energy"
+                    },
+                    "261": {
+                        "categories": {
+                            "2611": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "15000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "People's Microbank"
+                            },
+                            "2612": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "8724.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "7409.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "7640.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Direction & General Administration"
+                            },
+                            "2613": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "995.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1000.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1018",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Commercial Operations"
+                            },
+                            "2614": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1178.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1395.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1404.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Cooperative Societies"
+                            },
+                            "2615": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2000",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "2000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "2050",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "PNG LNG Support Project"
+                            },
+                            "2616": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2000",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Simbu Limestone Mine Feasibility Study"
+                            },
+                            "2617": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "38311.3",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "60484",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "53800",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Pacific Marine Industrial Zone"
+                            },
+                            "2618": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2650.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "18179",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "7001",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "SME Access Risk Financing Facility"
+                            },
+                            "2619": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Ulaveo Industrial Centre"
+                            },
+                            "26191": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "3480.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Trade Policy Formulation and Co-ordination"
+                            },
+                            "26192": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "377",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "377",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "386.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Ministerial Services"
+                            },
+                            "26193": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "50000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Special Economic Zone - Corridor Development"
+                            },
+                            "26194": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "608.3",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "876.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "723.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Construction Industry Services"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "60326.4",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "91721.5",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "140023.5",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Commerce and Industry"
+                    },
+                    "269": {
+                        "data": {
+                            "2012": {
+                                "aggr": "1940",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "1993.9",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "1998.6",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Office of Tourism Arts and Culture"
+                    },
+                    "511": {
+                        "data": {
+                            "2012": {
+                                "aggr": "8475",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "9991",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "15392",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Papua New Guinea Climate Change Authority"
+                    },
+                    "530": {
+                        "data": {
+                            "2012": {
+                                "aggr": "5279",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "2852",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "2852",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Investment Promotion Authority"
+                    },
+                    "531": {
+                        "data": {
+                            "2012": {
+                                "aggr": "8975",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "7802",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "6402",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Small Business Development Corporation"
+                    },
+                    "532": {
+                        "data": {
+                            "2012": {
+                                "aggr": "5362",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "3308",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "3308",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Institute of Standards & Industrial Technology"
+                    },
+                    "533": {
+                        "data": {
+                            "2012": {
+                                "aggr": "2239",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "2346",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "2346",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Industrial Centres Development Corporation"
+                    },
+                    "535": {
+                        "data": {
+                            "2012": {
+                                "aggr": "25333",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "30417",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "5876",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Mineral Resources Authority"
+                    },
+                    "536": {
+                        "data": {
+                            "2012": {
+                                "aggr": "1040",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "8114",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "13079",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Kokonas Indasty Kopration"
+                    },
+                    "543": {
+                        "data": {
+                            "2012": {
+                                "aggr": "80000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "85000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Development Bank"
+                    },
+                    "549": {
+                        "data": {
+                            "2012": {
+                                "aggr": "2393",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "17546",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "42446",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Office of Coastal Fisheries Development Agency"
+                    },
+                    "550": {
+                        "data": {
+                            "2012": {
+                                "aggr": "12315",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "9650",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "16550",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Cocoa Coconut Institute Ltd"
+                    },
+                    "551": {
+                        "data": {
+                            "2012": {
+                                "aggr": "8000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "4000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Fisheries Project"
+                    },
+                    "553": {
+                        "data": {
+                            "2012": {
+                                "aggr": "10086",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "5823",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "11533",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Fresh Produce Development Corporation"
+                    },
+                    "554": {
+                        "data": {
+                            "2012": {
+                                "aggr": "9184",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "7223",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "32423",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "PNG Coffee Industry Corporation"
+                    },
+                    "557": {
+                        "data": {
+                            "2012": {
+                                "aggr": "49075",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "70046",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "31827",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "PNG National Forest Authority"
+                    },
+                    "558": {
+                        "data": {
+                            "2012": {
+                                "aggr": "10710",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "10710",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "13710",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Tourism Promotion Authority"
+                    },
+                    "559": {
+                        "data": {
+                            "2012": {
+                                "aggr": "18695",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "10600",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "10168",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "PNG Oil Palm Industry Corporation"
+                    },
+                    "562": {
+                        "data": {
+                            "2012": {
+                                "aggr": "11392",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "15661",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "16747",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Agriculture Research Institute"
+                    },
+                    "563": {
+                        "data": {
+                            "2012": {
+                                "aggr": "7130",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "5741",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "7241",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Agriculture Quarantine & Inspection Authority"
+                    },
+                    "566": {
+                        "data": {
+                            "2012": {
+                                "aggr": "1000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "16800",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "PNG Cocoa Board"
+                    },
+                    "568": {
+                        "data": {
+                            "2012": {
+                                "aggr": "6000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "5000",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "8000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Livestock Development Corporation"
+                    },
+                    "569": {
+                        "data": {
+                            "2012": {
+                                "aggr": "9904",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "9729",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "9631",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Independent Consumer and Competition Commission"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": "111111",
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": "491700",
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": "777900",
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Economic and Agriculture"
+            },
+            "Education": {
                 "categories": {
                     "207": {
                         "data": {
@@ -2625,7 +4425,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Top Management and General administration"
+                                "name": "Top Management and General Administration"
                             },
                             "2356": {
                                 "data": {
@@ -3189,7 +4989,7 @@
                 "level": "Sectoral Expenditure",
                 "name": "Education Spending"
             },
-            "health": {
+            "Heath": {
                 "categories": {
                     "207": {
                         "categories": {
@@ -3481,7 +5281,7 @@
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Top Management and General administration"
+                                "name": "Top Management and General Administration"
                             },
                             "2409": {
                                 "data": {
@@ -3664,6 +5464,1966 @@
                 },
                 "level": "Sectoral Expenditure",
                 "name": "Health Spending"
+            },
+            "Infrastructure": {
+                "categories": {
+                    "207": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "20000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Treasury and Finance Misc"
+                    },
+                    "257": {
+                        "data": {
+                            "2012": {
+                                "aggr": "292.2",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "3781.4",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "3822.2",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Public Enterprises"
+                    },
+                    "258": {
+                        "categories": {
+                            "2581": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "3583",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3984.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "3941.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Office of State Enterprises & Comms"
+                            },
+                            "2582": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "232.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "300",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "307.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Minister's Admin Support Services"
+                            },
+                            "2583": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "14478.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "38570",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "45500",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Government Information Systems"
+                            },
+                            "2584": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "14488.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "13786",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "12068",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Rural Telecommunication"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "32782.7",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "56640.7",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "61817.2",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Information and Communication"
+                    },
+                    "259": {
+                        "categories": {
+                            "2591": {
+                                "data": {
+                                    "2013": {
+                                        "aggr": "2356.5",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "7153.9",
+                                        "change": 0
+                                    },
+                                    "2015": {
+                                        "aggr": "7712.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Construction Regulation and Technical Services"
+                            },
+                            "2592": {
+                                "data": {
+                                    "2013": {
+                                        "aggr": "7665.1",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "12616.8",
+                                        "change": 0
+                                    },
+                                    "2015": {
+                                        "aggr": "14881.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Road Transport Services"
+                            },
+                            "2593": {
+                                "data": {
+                                    "2013": {
+                                        "aggr": "14945.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1870.9",
+                                        "change": 0
+                                    },
+                                    "2015": {
+                                        "aggr": "1493",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Water Transport Services"
+                            },
+                            "2594": {
+                                "data": {
+                                    "2013": {
+                                        "aggr": "524.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "926.3",
+                                        "change": 0
+                                    },
+                                    "2015": {
+                                        "aggr": "709.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Air Transport Services"
+                            },
+                            "2595": {
+                                "data": {
+                                    "2013": {
+                                        "aggr": "3940.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4931.2",
+                                        "change": 0
+                                    },
+                                    "2015": {
+                                        "aggr": "5187.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Weather Forecasting"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "29432.6",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "27499.1",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "29984.5",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Transport"
+                    },
+                    "264": {
+                        "categories": {
+                            "2641": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "60653.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "69794.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "74918.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Construction Regulation and Technical Services"
+                            },
+                            "2642": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "15000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Provincial Roads Transport Support"
+                            },
+                            "2643": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "10000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Land Transport"
+                            },
+                            "2644": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "23802.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "67939",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "181303",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Construction and Rehabilitation of Bridges"
+                            },
+                            "2645": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "6795.5",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "110000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "310524",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Construction and Upgrading of National Roads"
+                            },
+                            "2646": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "48782.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "35000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "10600",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Provincial Roads Transport Support"
+                            },
+                            "2647": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "72297.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "2074",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "186000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Rural Transport Development Program"
+                            },
+                            "2648": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "85423.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "297743.4",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "458992.3",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Maintenance of National Roads"
+                            },
+                            "2649": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "51758.7",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "400068",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "461737",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Maintenance of National Roads"
+                            },
+                            "26491": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "14000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Water Transport Services"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "349513.7",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "992619.1",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "1713074.8",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Works and Implementation"
+                    },
+                    "267": {
+                        "data": {
+                            "2012": {
+                                "aggr": "6368",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "6790",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "62264.4",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Office of Rural Development"
+                    },
+                    "509": {
+                        "data": {
+                            "2012": {
+                                "aggr": "5868",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "21884",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "20209",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "509 Border Development Authority"
+                    },
+                    "524": {
+                        "data": {
+                            "2012": {
+                                "aggr": "15217",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "220247",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "514489",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "524 Independent Public Business Corporation"
+                    },
+                    "525": {
+                        "data": {
+                            "2012": {
+                                "aggr": "36100",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "37170",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "36889",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "525 National Broadcasting Commission"
+                    },
+                    "526": {
+                        "data": {
+                            "2012": {
+                                "aggr": "6704",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "1704",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "13575",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "526 National Maritime Safety Authority"
+                    },
+                    "537": {
+                        "data": {
+                            "2012": {
+                                "aggr": "15000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "199457",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "149692",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "537 National Airports Corporation"
+                    },
+                    "538": {
+                        "data": {
+                            "2012": {
+                                "aggr": "5000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "14300",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "16338",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "538 Papua New Guinea Air Services Limited"
+                    },
+                    "541": {
+                        "data": {
+                            "2012": {
+                                "aggr": "245",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "245",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "245",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "541 National Housing Corporation"
+                    },
+                    "546": {
+                        "data": {
+                            "2012": {
+                                "aggr": "3000",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "50467",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "125296",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "546 PNG Power Limited"
+                    },
+                    "565": {
+                        "data": {
+                            "2012": {
+                                "aggr": "10519",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "11112",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "11112",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "565 Civil Aviation Authority"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": "1111111",
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": "1882000",
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": "2723300",
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Infrastructure"
+            },
+            "LawandOrder": {
+                "categories": {
+                    "207": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "219000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Treasury and Finance Misc"
+                    },
+                    "218": {
+                        "data": {
+                            "2012": {
+                                "aggr": "6695.3",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "6845.8",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "6896.9",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Office of the Public Prosecutor"
+                    },
+                    "222": {
+                        "data": {
+                            "2012": {
+                                "aggr": "9464.3",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "11731.4",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "11828.3",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Office of the Public Solicitor"
+                    },
+                    "223": {
+                        "data": {
+                            "2012": {
+                                "aggr": "86717",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "85116.5",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "86994.4",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Judiciary Services"
+                    },
+                    "224": {
+                        "data": {
+                            "2012": {
+                                "aggr": "46461.6",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "37618.2",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "49202.1",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Magisterial Services"
+                    },
+                    "225": {
+                        "categories": {
+                            "2251": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "25731.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "84758.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "79957.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Administration & Improvement of Laws and the Legal  System"
+                            },
+                            "2252": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "30635.3",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "21732.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "21858.9",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Top Management and General Administration"
+                            },
+                            "2253": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "4634.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3669.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "4212.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Community Based Corrections"
+                            },
+                            "2254": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1276.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1322.8",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1292",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Community Courts"
+                            },
+                            "2255": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1108.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1235.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1195.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Land Titles Commission"
+                            },
+                            "2256": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1011.2",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1015.1",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "974.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "National Lands Commission"
+                            },
+                            "2257": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "451.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "711.6",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "483.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Land Mediation"
+                            },
+                            "2258": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2000",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "2000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "2050",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "PNG LNG Support"
+                            },
+                            "2259": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "220.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "661.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "673.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Parole Board Secretariat"
+                            },
+                            "22591": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "438.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "886.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "898.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Juvenile Justice"
+                            },
+                            "22592": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "361.5",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "839.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "912.8",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Restorative Justice"
+                            },
+                            "22593": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "341.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "321.9",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "329.4",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Miscellaneous Law and Order Services"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "68212.4",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "119155.9",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "114838.7",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Attorney-General"
+                    },
+                    "226": {
+                        "categories": {
+                            "2261": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "9604",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Pre-2010 activities and Programmes"
+                            },
+                            "2262": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "31217.9",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "30815.5",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "38909.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "General Administration"
+                            },
+                            "2263": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "104132.3",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "71293.2",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "70883.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Prison Administration and Improvement"
+                            },
+                            "2264": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "3239.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "3216.7",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "5764.2",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Training"
+                            },
+                            "2265": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "450",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "450",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "500.7",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Ministerial Services"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "148643.8",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "105775.4",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "116057.8",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Corrective Institutional Services"
+                    },
+                    "234": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "777",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Administration & Improvement of Laws and the Legal"
+                    },
+                    "510": {
+                        "data": {
+                            "2012": {
+                                "aggr": "2366",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "2453",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "2453",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Legal Training Institute"
+                    },
+                    "517": {
+                        "data": {
+                            "2012": {
+                                "aggr": "7412",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "4440",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "4440",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Narcotics Bureau"
+                    },
+                    "522": {
+                        "data": {
+                            "2012": {
+                                "aggr": "4261",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "13007",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "4007",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Constitutional and Law Reform Commission"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": "1111111",
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": "1022600",
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": "1296000",
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Law and Order"
+            },
+            "Provinces": {
+                "categories": {
+                    "207": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "15000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Treasury and Finance Misc."
+                    },
+                    "571": {
+                        "data": {
+                            "2012": {
+                                "aggr": "67479",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "116835",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "122881",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Fly River Provincial Government"
+                    },
+                    "572": {
+                        "data": {
+                            "2012": {
+                                "aggr": "49434",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "85328",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "89462",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Gulf Provincial Government"
+                    },
+                    "573": {
+                        "data": {
+                            "2012": {
+                                "aggr": "70024",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "142072",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "146998",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Central Provincial Government"
+                    },
+                    "574": {
+                        "data": {
+                            "2012": {
+                                "aggr": "8101",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "57129",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "62120",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " National Capital District"
+                    },
+                    "575": {
+                        "data": {
+                            "2012": {
+                                "aggr": "75765",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "136839",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "140083",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Milne Bay Provincial Government"
+                    },
+                    "576": {
+                        "data": {
+                            "2012": {
+                                "aggr": "41541",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "81104",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "82089",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Oro Provincial Government"
+                    },
+                    "577": {
+                        "data": {
+                            "2012": {
+                                "aggr": "143735",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "204466",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "235614",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Southern Highlands Provincial Government"
+                    },
+                    "578": {
+                        "data": {
+                            "2012": {
+                                "aggr": "89156",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "161961",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "222048",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Enga Provincial Government"
+                    },
+                    "579": {
+                        "data": {
+                            "2012": {
+                                "aggr": "139105",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "201326",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "190409",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Western Highlands Provincial Government"
+                    },
+                    "580": {
+                        "data": {
+                            "2012": {
+                                "aggr": "90457",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "188826",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "198421",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Simbu Provincial Government"
+                    },
+                    "581": {
+                        "data": {
+                            "2012": {
+                                "aggr": "97221",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "223524",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "246299",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Eastern Highlands Provincial Government"
+                    },
+                    "582": {
+                        "data": {
+                            "2012": {
+                                "aggr": "135437",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "263703",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "268420",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Morobe Provincial Government"
+                    },
+                    "583": {
+                        "data": {
+                            "2012": {
+                                "aggr": "105626",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "199386",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "223091",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Madang Provincial Government"
+                    },
+                    "584": {
+                        "data": {
+                            "2012": {
+                                "aggr": "104638",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "204441",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "222215",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "East Sepik Provincial Government"
+                    },
+                    "585": {
+                        "data": {
+                            "2012": {
+                                "aggr": "64627",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "151217",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "161314",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Sandaun Provincial Government"
+                    },
+                    "586": {
+                        "data": {
+                            "2012": {
+                                "aggr": "34020",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "62187",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "65209",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Manus Provincial Government"
+                    },
+                    "587": {
+                        "data": {
+                            "2012": {
+                                "aggr": "67117",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "96269",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "96221",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " New Ireland Provincial Government"
+                    },
+                    "588": {
+                        "data": {
+                            "2012": {
+                                "aggr": "82102",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "161241",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "160978",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "East New Britain Provincial Government"
+                    },
+                    "589": {
+                        "data": {
+                            "2012": {
+                                "aggr": "66130",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "103944",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "109020",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " West New Britain Provincial Government"
+                    },
+                    "590": {
+                        "data": {
+                            "2012": {
+                                "aggr": "179894",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "158548",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "262505",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Bougainville Autonomous Government"
+                    },
+                    "591": {
+                        "data": {
+                            "2012": {
+                                "aggr": "7800",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "90263",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "138923",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": " Hela Provincial Government"
+                    },
+                    "592": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "90735",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "123612",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Jiwaka Provincial Government"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": "1111111",
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": "3456200",
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": "3683400",
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Provinces"
+            },
+            "Social": {
+                "categories": {
+                    "207": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "20000",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Treasury and Finance Misc"
+                    },
+                    "242": {
+                        "categories": {
+                            "2421": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "857.4",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1061.2",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1093.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Civil Registration Services"
+                            },
+                            "2422": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1187.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1368.1",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1377.3",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Support for Persons and Groups With Special Needs"
+                            },
+                            "2423": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "53361",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "58039",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Community Development Services"
+                            },
+                            "2424": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "1750.1",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "9355.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "27309.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Expansion of Women's Role in Development"
+                            },
+                            "2425": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2592.6",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "1475.3",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "1481.6",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Films Publications Regulations and Classifications"
+                            },
+                            "2426": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "257.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "626.5",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "599",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Human Rights Desk"
+                            },
+                            "2427": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "2510",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "18062",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "24000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Non-Government Organisations"
+                            },
+                            "2428": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "8455.8",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "8912",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "7353.1",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Top Management and General Administration"
+                            },
+                            "2429": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "456",
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": "216",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "220.5",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Ministerial Services"
+                            },
+                            "24291": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": "4000",
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": "5000",
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Welfare Services"
+                            }
+                        },
+                        "data": {
+                            "2012": {
+                                "aggr": "22067.3",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "94437.4",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "126473.6",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department for Community Development"
+                    },
+                    "243": {
+                        "data": {
+                            "2012": {
+                                "aggr": "1307.3",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "1379.9",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "1246.2",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Volunteer Services"
+                    },
+                    "505": {
+                        "data": {
+                            "2012": {
+                                "aggr": "4861",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "5142",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "4842",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Research Institute"
+                    },
+                    "516": {
+                        "data": {
+                            "2012": {
+                                "aggr": "189917",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "15164",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "20164",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Papua New Guinea Sports Foundation"
+                    },
+                    "518": {
+                        "data": {
+                            "2012": {
+                                "aggr": "3179",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "3253",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "3253",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "PNG Maritime College"
+                    },
+                    "521": {
+                        "data": {
+                            "2012": {
+                                "aggr": "11497",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "4386",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "9286",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Youth Commission"
+                    },
+                    "539": {
+                        "data": {
+                            "2012": {
+                                "aggr": "12896",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "29708",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "35008",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Museum and Art Gallary"
+                    },
+                    "542": {
+                        "data": {
+                            "2012": {
+                                "aggr": "9704",
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": "5644",
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": "5174",
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Cultural Commission"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": "1111111",
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": "227100",
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": "174800",
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Social"
             }
         },
         "data": {
