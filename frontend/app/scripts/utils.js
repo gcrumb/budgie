@@ -651,3 +651,4 @@ String.prototype.endsWith = function (s) {
 String.prototype.contains = function(s) {
     return this.indexOf(s) != -1;
 };
+
