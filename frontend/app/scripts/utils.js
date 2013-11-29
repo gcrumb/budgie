@@ -29,7 +29,8 @@
  */
 var drill = function (budget, path) {
 
-    var current_year = budget['_id'].match('[0-9]{4}');
+    //var current_year = budget['_id'].match('[0-9]{4}');
+    var current_year = 2014;
 
     // Work on a copy of the data to not mutate original.
     var budget_copy = JSON.parse(JSON.stringify(budget));
@@ -37,6 +38,7 @@ var drill = function (budget, path) {
     // Extract budget segment of interest in its raw form. This will
     // contain all raw data from point of interest all the way up the
     // tree.
+    console.debug('PATH: ' + path);
     var budget_segment = _.deep(budget_copy,path);
 
     // Go through categories of this segment of interest, mash-up data
@@ -45,6 +47,7 @@ var drill = function (budget, path) {
 
     var raw_categories = budget_segment.categories;
     var categories = [];
+    console.log('Raw categories: ', raw_categories);
 
     for (var category in raw_categories) {
 	// cat is a local variable to hold the newly mashed-up data
@@ -63,6 +66,8 @@ var drill = function (budget, path) {
 	categories.push(cat);
     }
 
+    categories.sort(sort_categories);
+
     // Replace raw categories with only the necessary information to
     // draw the view. In other words, all data further up the tree
     // that is not needed will not be included. The mashed-up
@@ -73,6 +78,24 @@ var drill = function (budget, path) {
     return _.deep(budget_segment, 'categories', categories);
 
 };
+
+var sort_categories = function (a,b){
+
+    var year = 2014; // Need to figure out where to maintain this
+
+    if (parseFloat(a['current-data']['aggr']) < parseFloat(b['current-data']['aggr'])){
+	console.log('Nup');
+	return 1;
+    }
+    if (parseFloat(a['current-data']['aggr']) == parseFloat(b['current-data']['aggr'])){
+	console.log("Ummm");
+	return 0;
+    }
+
+    console.log ('Yup');
+    return -1;
+    
+}
 
 /**
  * Simple usage examples with sample PNG budget.
