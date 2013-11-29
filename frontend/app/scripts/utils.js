@@ -81,18 +81,13 @@ var drill = function (budget, path) {
 
 var sort_categories = function (a,b){
 
-    var year = 2014; // Need to figure out where to maintain this
-
     if (parseFloat(a['current-data']['aggr']) < parseFloat(b['current-data']['aggr'])){
-	console.log('Nup');
 	return 1;
     }
     if (parseFloat(a['current-data']['aggr']) == parseFloat(b['current-data']['aggr'])){
-	console.log("Ummm");
 	return 0;
     }
 
-    console.log ('Yup');
     return -1;
     
 }
