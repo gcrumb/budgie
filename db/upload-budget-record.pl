@@ -36,6 +36,8 @@ while (<CSV>){
   $programme =~ s!\s+!!g;
   $value     =~ s!\s+!!g;
 
+  chomp $change if ($change && defined $change);
+
   # Top level data
   unless ($sector){
 

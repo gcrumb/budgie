@@ -1,1 +1,14 @@
 /* Custom styles to NVD3 charts should come here */
+
+g.nv-label text {
+    font-family: 'helvetica neue light',helvetica,sans-serif;
+    font-size: 12pt;
+    fill: #FFF;
+    text-shadow: 0px 1px rgba(255,255,255,0.2);
+    z-index: 5000;
+}
+
+g.tick text {
+    color: #468;
+    fill: #468;
+}
