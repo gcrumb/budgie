@@ -573,6 +573,9 @@ var getPathMappings = function (budget) {
  * Note that assigning a new value to a property of the clone won't
  * interfere with the original, but assigning values to the clone's
  * object properties will.
+ *
+ * A shallow copy was chosen instead of this cloning approach, but
+ * keeping it here anyway; it might prove useful.
  */
 var clone = (function() { 
     return function (obj) { Clone.prototype=obj; return new Clone() };
