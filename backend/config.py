@@ -27,6 +27,7 @@ dev_conf = {
     # Configure which host is allowed cross origin access to the backend
     # Can take exact strings and regexes
     'allowed' : (
+	'http://localhost:8080',
         'http://localhost:9000',
         ),
 }

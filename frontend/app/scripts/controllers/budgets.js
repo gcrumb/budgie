@@ -57,6 +57,13 @@ angular.module('pippDataApp.controllers.budgets', [])
 
 	};
 
+	$scope.tooltipContent = function(key, x, y, e, graph) {
+	    // This is just here so I have a placeholder 
+	    // for actual, you know, not fugly code
+            return '<h3>' + key + '</h3>' +
+		'<p>' + (parseFloat(y.value) * 1000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '<br />KINA</p>';
+	};
+
         $scope.xFunction = function(){
             return function(d) {
                 return d.key;
@@ -78,12 +85,12 @@ angular.module('pippDataApp.controllers.budgets', [])
         });
 
         $scope.$on('stateChange.directive', function(event){
-            console.log('stateChange.directive', event);
+            //console.log('stateChange.directive', event);
         });
 
         $scope.$on('elementClick.directive', function(event,data){
 	    path = pathMappings[data.label];
-            console.log("Clicked: ", data.label, " Path: ", path);
+            //console.log("Clicked: ", data.label, " Path: ", path);
 	    $scope.breadcrumbs.push(data.label);
 	    rawFromDrill = drill(rawFromCouch,path);
 	    process();

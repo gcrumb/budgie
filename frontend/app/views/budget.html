@@ -1,13 +1,16 @@
+<script type="javascript">
+var tooltipContent = function(key, x, y, e, graph) {
+    return '<h3>' + key + '</h3>' +'<p>X: ' + x + '</p>'+'<p>Y: ' + y + '</p>'+'<p>e: ' + e + '</p>' ;
+}
+</script>
 <div class="row">
   <div class="span12">
     <h2>{{ name }}</h2>
-    <p>Budgie in action.</p>
   </div>
 
   <div class="span8">
 
     <h3>{{ level }}</h3>
-    <p>Blablabla.</p>
 
     <p>
       <ul class="breadcrumbs" ng-repeat="b in breadcrumbs">
@@ -17,13 +20,15 @@
 
     <nvd3-pie-chart
        data="pieChartData"
+       noData=""
        id="pieChartBudget"
-       showLabels="true"
+       showLabels="false"
        tooltips="true"
+       tooltipContent="tooltipContent"
        x="xFunction()"
        y="yFunction()"
-       width="800"
-       height="800"
+       width="700"
+       height="700"
        donut="true"
        donutRatio="1.5"
        donutLabelsOutside="false"
@@ -36,7 +41,7 @@
   </div>
   
   <div class="span4">
-    <h3>{{ level }} Summary</h3>
+    <h3>{{ level }} History</h3>
     
     {{ notes }}
 
@@ -44,7 +49,7 @@
        data="stackedBarChartData"
        id="stackedBarChart"
        tooltips="true">
-        <svg></svg>
+        <svg style="padding: 3em; height: 400px;"></svg>
     </nvd3-multi-bar-chart>
 
   </div>
