@@ -637,6 +637,156 @@ var sliceByStringElement = function (arr,end,start) {
 
 }
 
+
+/**
+ * @description
+ *
+ * Small utility to group a number of categories together. It is
+ * useful when a pie chart is used but has too many slices to
+ * display. At the moment is takes a fixed constant number of slice
+ * and groups the remaining. Eventually, if a good method is found it
+ * could be implemented by passing in a function as argument. The only
+ * important thing is that the input and output of this function
+ * remains the same and everything else should just work.
+
+input: 
+[
+    {
+        "key": "Department for Education",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Health",
+        "y": 1000000000
+    },
+    ... (many more groups)
+]
+
+output:
+
+{
+  "top": [
+    {
+        "key": "Department for Education",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Health",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Justice",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Women",
+        "y": 1000000000
+    },
+    {
+        "key": "Others",
+        "y": 1000000000
+    }
+  ],
+ 
+  "others": [
+    {
+        "key": "Department for Education",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Health",
+        "y": 1000000000
+    },
+    ... (many more groups)
+  ]
+
+}
+
+ * 
+ * @param {Array} arr array of group objects
+ * @param {Number} num Number of slices
+ * @return {Object} obj Object containing the top and others separately
+ */
+var groupOthers = function (arr,num) {
+
+    if (arr.length <= num) {
+	return arr;
+    }
+
+    var top = arr.slice(0,num);
+    var others = arr.slice(num,arr.length);
+
+    var others_aggregated = _.reduce(others, 
+				     function(memory,group) {
+					 return 0 + group['y'];},
+				     0);
+
+    top.push({"key": "others",
+	      "y": others_aggregated});
+
+    return {
+	"top" : top,
+	"others" : others
+    };
+
+}
+
+var sample_pie_slices = [
+    {
+        "key": "Department1",
+        "y": 1000000000
+    },
+    {
+        "key": "Department2",
+        "y": 900000000
+    },
+    {
+        "key": "Department3",
+        "y": 800000000
+    },
+    {
+        "key": "Department4",
+        "y": 700000000
+    },
+    {
+        "key": "Department5",
+        "y": 600000000
+    },
+    {
+        "key": "Department6",
+        "y": 400000000
+    },
+    {
+        "key": "Department7",
+        "y": 300000000
+    },
+    {
+        "key": "Department8",
+        "y": 200000000
+    },
+    {
+        "key": "Department7",
+        "y": 100000000
+    },
+    {
+        "key": "Department8",
+        "y": 90000000
+    },
+    {
+        "key": "Department9",
+        "y": 80000000
+    },
+    {
+        "key": "Department10",
+        "y": 70000000
+    },
+    {
+        "key": "Department11",
+        "y": 60000000
+    }
+
+]
+
 // Normally shouldn't modify base objects I don't own. But fuck it,
 // whoever works on this code base will have to pay attention so I can
 // get my convenient and clear methods :)
