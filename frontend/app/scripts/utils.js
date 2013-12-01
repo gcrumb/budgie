@@ -428,7 +428,7 @@ var getBarChartData = function(data) {
     var barValues = [];
     var barData = [
 	{
-            "key": "Costs",
+            "key": "Expenditure",
             "values": barValues
 	}
     ];
@@ -444,7 +444,7 @@ var getBarChartData = function(data) {
 	var prop = getFirstProperty(object); // the year
 	var cost = object[prop]['aggr']; // the cost figure
 	
-	barValues = memory[0]['values'].push([prop,cost]);
+	barValues = memory[0]['values'].push([prop,(parseFloat(cost)*1000)]);
 	
 	return 	barData;
     }
