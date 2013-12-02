@@ -442,7 +442,7 @@ var getBarChartData = function(data) {
      */
     var reduceFunction = function(memory, object) {
 	var prop = getFirstProperty(object); // the year
-	var cost = object[prop]['aggr']; // the cost figure
+	var cost = parseInt(object[prop]['aggr']) * 1000; // the cost figure
 
 	barValues = memory[0]['values'].push([prop,cost]);
 	
@@ -822,7 +822,7 @@ var int2roundKMG = function(val) {
 
     val = val.replace (/\,/g,'');
     val = val.replace (/\.0/,'');
-    val *= 1000;
+//    val *= 1000;
 
     if (val >= 1e9)        { 
 	_str = truncNb((val/1e9), 1) + ' Billion';
