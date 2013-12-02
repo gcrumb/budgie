@@ -28,6 +28,7 @@ $upload_rec{root}->{categories}  = {};
 while (<CSV>){
   my ($country, $year, $type, $value, $sector, $dept, $programme, $name, $notes, $change, @etc) = split (/\,/, $_);
 
+  next unless ($country && $year);
   # Check for column headings
   next if $year =~ /year/i;
 
@@ -36,6 +37,7 @@ while (<CSV>){
   $programme =~ s!\s+!!g;
   $value     =~ s!\s+!!g;
 
+  $value = $value ? $value : 0;
   $value += 0;
 
   chomp $change if ($change && defined $change);
