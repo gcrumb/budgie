@@ -362,13 +362,13 @@ var getPieChartData = function(categories) {
 	if (aggr) { // Only push data if there is some
 	    pieData.push(
 		{key: categories[i].name, 
-		 y: aggr
+		 y: parseFloat(aggr) // Still receiving string; GRRRRRRR...
 		}
 	    );
 	}
     }
-   
-    return pieData;
+    
+    return groupOthers(pieData,15); // will only group if needed
   
 }
 
@@ -717,8 +717,8 @@ var groupOthers = function (arr,num) {
     var others = arr.slice(num,arr.length);
 
     var others_aggregated = _.reduce(others, 
-				     function(memory,group) {
-					 return 0 + group['y'];},
+				     function(memory,obj) {
+					 return memory + obj['y'];},
 				     0);
 
     top.push({"key": "others",
@@ -732,60 +732,135 @@ var groupOthers = function (arr,num) {
 }
 
 var sample_pie_slices = [
-    {
-        "key": "Department1",
-        "y": 1000000000
-    },
-    {
-        "key": "Department2",
-        "y": 900000000
-    },
-    {
-        "key": "Department3",
-        "y": 800000000
-    },
-    {
-        "key": "Department4",
-        "y": 700000000
-    },
-    {
-        "key": "Department5",
-        "y": 600000000
-    },
-    {
-        "key": "Department6",
-        "y": 400000000
-    },
-    {
-        "key": "Department7",
-        "y": 300000000
-    },
-    {
-        "key": "Department8",
-        "y": 200000000
-    },
-    {
-        "key": "Department7",
-        "y": 100000000
-    },
-    {
-        "key": "Department8",
-        "y": 90000000
-    },
-    {
-        "key": "Department9",
-        "y": 80000000
-    },
-    {
-        "key": "Department10",
-        "y": 70000000
-    },
-    {
-        "key": "Department11",
-        "y": 60000000
-    }
-
-]
+  {
+    "key": "Treasury and Finance Misc",
+    "y": 1130200
+  },
+  {
+    "key": "Public Debt Charges",
+    "y": 751300
+  },
+  {
+    "key": "Department of National Planning and Monitoring",
+    "y": 516712.9
+  },
+  {
+    "key": "Department of Treasury",
+    "y": 220498.5
+  },
+  {
+    "key": "Department of Prime Minister & NEC",
+    "y": 189336.2
+  },
+  {
+    "key": "Department of Personnel Management",
+    "y": 169657.8
+  },
+  {
+    "key": "National Parliament",
+    "y": 130724.6
+  },
+  {
+    "key": "Department of Foreign Affairs and Trade",
+    "y": 127110.1
+  },
+  {
+    "key": "Internal Revenue Commission",
+    "y": 76235
+  },
+  {
+    "key": "Department for Local and Provincial Affairs",
+    "y": 74723.7
+  },
+  {
+    "key": "PNG Customs Service",
+    "y": 63498.2
+  },
+  {
+    "key": "Department of Finance",
+    "y": 52326.2
+  },
+  {
+    "key": "Provincial Treasuries",
+    "y": 40059.1
+  },
+  {
+    "key": "Electoral Commission",
+    "y": 36981.2
+  },
+  {
+    "key": "Department of Industrial Relations",
+    "y": 27093.3
+  },
+  {
+    "key": "PNG Fire Services",
+    "y": 22616.4
+  },
+  {
+    "key": "Information Technology Division",
+    "y": 19778.8
+  },
+  {
+    "key": "Ombudsman Commission",
+    "y": 18115
+  },
+  {
+    "key": "Office of the Auditor-General",
+    "y": 18001
+  },
+  {
+    "key": "PNG Immigration and Citizenship Services",
+    "y": 8665.5
+  },
+  {
+    "key": "Registrar For Politcal Parties",
+    "y": 7472.3
+  },
+  {
+    "key": "PNG Institute of Public Administration",
+    "y": 6819.1
+  },
+  {
+    "key": "Public Service Commission",
+    "y": 6188.8
+  },
+  {
+    "key": "National Statistical Office ",
+    "y": 6008.1
+  },
+  {
+    "key": "Papua New Guinea Accidents Investigation Commission",
+    "y": 5566
+  },
+  {
+    "key": "Office of Governor-General",
+    "y": 4706.5
+  },
+  {
+    "key": "National Intelligence Organisation",
+    "y": 4372.5
+  },
+  {
+    "key": "Office of Bougainville Affairs",
+    "y": 3293.7
+  },
+  {
+    "key": "National Training Council",
+    "y": 3125
+  },
+  {
+    "key": "National Economic & Fiscal Commission",
+    "y": 2920
+  },
+  {
+    "key": "Central Supply & Tenders Board",
+    "y": 2636.9
+  },
+  {
+    "key": "National Tripartite Consultative Council",
+    "y": 850.4
+  }
+];
 
 // Normally shouldn't modify base objects I don't own. But fuck it,
 // whoever works on this code base will have to pay attention so I can
