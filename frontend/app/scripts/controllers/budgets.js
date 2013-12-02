@@ -61,7 +61,7 @@ angular.module('pippDataApp.controllers.budgets', [])
 		// With "others" group
 		$scope.pieChartData = pie['top'];
 		// Others bar chart
-		$scope.othersBarChartData = pie['others'];
+		$scope.othersBarChartData = pie['Other'];
 	    }
 
 	    // Information box and bar chart side. 

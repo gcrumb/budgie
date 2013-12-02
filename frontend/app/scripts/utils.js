@@ -492,9 +492,9 @@ output:
  * @return {Array} barData ready for use in D3 charts.
  */
 var convertPieToBarData = function(arr) {    
-    var values = _.map(arr,function(item){return [item['key'], item['y']];});
+    var values = _.map(arr,function(item){return [item['key'], item['y'] * 1000];});
     
-    return [{"key": "Others", "values": values}];
+    return [{"key": "Other", "values": values}];
     
 }
 
@@ -731,7 +731,7 @@ output:
     }
   ],
  
-  "others": [
+  "Other": [
     {
         "key": "Department for Education",
         "y": 1000000000
@@ -764,12 +764,12 @@ var groupOthers = function (arr,num) {
 					 return memory + obj['y'];},
 				     0);
 
-    top.push({"key": "others",
+    top.push({"key": "Other",
 	      "y": others_aggregated});
 
     return {
 	"top" : top,
-	"others" : convertPieToBarData(others)
+	"Other" : convertPieToBarData(others)
     };
 
 }

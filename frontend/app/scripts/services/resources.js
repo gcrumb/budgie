@@ -3,8 +3,8 @@
 /* HTTP resource services */
 
 //var wsUrl = 'https://candy.pacificpolicy.org';
-//var wsUrl = 'http://localhost:5000'; // for dev, don't commit
-var wsUrl = 'http://freswota:5000';
+var wsUrl = 'http://localhost:5000'; // for dev, don't commit
+//var wsUrl = 'http://freswota:5000';
 
 angular.module('pippDataApp.services.resources', [])
     .factory('MetaFactory', ['$resource', function ($resource) {
