@@ -21,15 +21,29 @@ body {
     letter-spacing: -1px;
 }
 
+ul.breadcrumbs {
+    margin-left: 0;
+    padding-left: 0;
+    background: #ddd;
+}
+
 li.breadcrumb-trail {
     color: #468;
     display: inline;
     margin-right: 1em;
     list-style-type: none;
-    text-decoration: underline;
+}
+
+li.breadcrumb-trail span {
+    color: #468;
+    line-height: 0.75em;
 }
 
 li.breadcrumb-trail:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
 
+li.breadcrumb-trail:before {
+    content: '\2022 ';
+}

@@ -13,8 +13,8 @@ var tooltipContent = function(key, x, y, e, graph) {
     <h3>{{ level }}</h3>
 
     <p>
-      <ul class="breadcrumbs" ng-repeat="b in breadcrumbs">
-	<li class="breadcrumb-trail" ng-click="reloadBreadcrumbs(b)">{{ b }}</li>
+      <ul class="breadcrumbs">
+	<li class="breadcrumb-trail" ng-repeat="b in breadcrumbs" ng-click="reloadBreadcrumbs(b)">&nbsp;<span class="trail-item">{{ b }}</span></li>
       </ul>
     </p>
 
