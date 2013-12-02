@@ -20,3 +20,20 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+li.breadcrumb-trail {
+    color: #468;
+    display: inline;
+    margin-right: 1em;
+    list-style-type: none;
+    text-decoration: underline;
+}
+
+li.breadcrumb-trail:hover {
+    cursor: pointer;
+}
+
+li.breadcrumb-trail:last-of-type {
+    text-decoration: none;
+    cursor: normal;
+}

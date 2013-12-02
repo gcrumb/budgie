@@ -443,7 +443,7 @@ var getBarChartData = function(data) {
     var reduceFunction = function(memory, object) {
 	var prop = getFirstProperty(object); // the year
 	var cost = object[prop]['aggr']; // the cost figure
-	console.debug('Cost: ' , cost);
+
 	barValues = memory[0]['values'].push([prop,cost]);
 	
 	return 	barData;
