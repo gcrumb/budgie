@@ -48,17 +48,20 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    // Pie chart side
 	    $scope.name = rawFromDrill.name;
 	    $scope.level = rawFromDrill.level;
-	    console.log("Pie Data:", JSON.stringify(getPieChartData(rawFromDrill.categories),null,'  '));
+	    console.log("Pie Data:", getPieChartData(rawFromDrill.categories));
 	    
 	    var pie = getPieChartData(rawFromDrill.categories);
 
 	    if( Object.prototype.toString.call( pie ) === '[object Array]' ) {
 		// No grouping into "others"
 		$scope.pieChartData = pie;
+		// No gat "others" bar chart data
+		$scope.othersBarChartData = undefined;
 	    } else {
-		console.log("Pie temp: ", pie['top']);		
-		console.log("Before Others: ", pie['top'][14]);
+		// With "others" group
 		$scope.pieChartData = pie['top'];
+		// Others bar chart
+		$scope.othersBarChartData = pie['others'];
 	    }
 
 	    // Information box and bar chart side. 

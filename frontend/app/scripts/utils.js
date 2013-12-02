@@ -458,6 +458,49 @@ var getBarChartData = function(data) {
 /**
  * @description
  *
+ * This utility function is to go from pie chart data to a simple one
+ * series bar chart data. It is used mainly to display the "others"
+ * slice in a pie chart as bar chart.
+ *
+ * Test it with sample data.
+
+input:
+
+[
+    {
+        "key": "Department for Education",
+        "y": 1000000000
+    },
+    {
+        "key": "Department for Health",
+        "y": 1000000000
+    }
+]
+
+output:
+[
+    {
+        "key": "Others",
+        "values": [ [ "Department for Education" , 1000000000] , 
+	            [ "Department for Health" , 1000000000] ]
+    }
+]
+
+ * 
+ * @param {Array} arr Array of pie chart objects
+ * 
+ * @return {Array} barData ready for use in D3 charts.
+ */
+var convertPieToBarData = function(arr) {    
+    var values = _.map(arr,function(item){return [item['key'], item['y']];});
+    
+    return [{"key": "Others", "values": values}];
+    
+}
+
+/**
+ * @description
+ *
  * Small utility to return the first property name for an object
  * 
  * @param {Object} obj Object to iterate
@@ -726,7 +769,7 @@ var groupOthers = function (arr,num) {
 
     return {
 	"top" : top,
-	"others" : others
+	"others" : convertPieToBarData(others)
     };
 
 }
