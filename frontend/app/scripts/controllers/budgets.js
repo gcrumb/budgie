@@ -12,7 +12,7 @@ angular.module('pippDataApp.controllers.budgets', [])
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
 
-	var budget = BudgetFactory.get('png-2013').
+	var budget = BudgetFactory.get('png-2014').
 		success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
 		    // when the response is available
