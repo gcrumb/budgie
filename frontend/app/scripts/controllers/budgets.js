@@ -64,6 +64,11 @@ angular.module('pippDataApp.controllers.budgets', [])
 		'<p>' + (parseFloat(y.value) * 1000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '<br />KINA</p>';
 	};
 
+	$scope.barChartTooltips = function(key, x, y, e, graph) {
+            return '<h3>' + x + '</h3>' +
+		'<p>' + int2roundKMG(y) + '<br />KINA</p>';
+	};
+
         $scope.xFunction = function(){
             return function(d) {
                 return d.key;
