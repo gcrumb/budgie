@@ -1,16 +1,12 @@
-<script type="javascript">
-var tooltipContent = function(key, x, y, e, graph) {
-    return '<h3>' + key + '</h3>' +'<p>X: ' + x + '</p>'+'<p>Y: ' + y + '</p>'+'<p>e: ' + e + '</p>' ;
-}
-</script>
+
 <div class="row">
   <div class="span12">
-    <h2>{{ name }}</h2>
+    <h2>{{ level }}</h2>
   </div>
 
   <div class="span8">
 
-    <h3>{{ level }}</h3>
+    <h3>{{ name }}</h3>
 
     <p>
       <ul class="breadcrumbs">
@@ -42,7 +38,7 @@ var tooltipContent = function(key, x, y, e, graph) {
   </div>
   
   <div class="span4">
-    <h3>{{ level }} History</h3>
+    <h3>{{ name }} History</h3>
     
     {{ notes }}
 
@@ -57,14 +53,19 @@ var tooltipContent = function(key, x, y, e, graph) {
   </div>
 
   <div class="span12" ng-show="showOthers">
-    <h3>Others</h3>
-    <nvd3-multi-bar-chart
+    <h3>Other</h3>
+    <nvd3-multi-bar-horizontal-chart
        data="othersBarChartData"
        id="othersBarChart"
        tooltips="true"
-       tooltipContent="barChartTooltips"
-       rotatelabels="30">
-        <svg style="padding: 3em; padding-left: 3.5em; height: 400px;"></svg>
+       tooltipContent="barChartTooltips">
+        <svg style="
+		    padding: 3em;
+		    padding-left: 20em;
+		    height: 500px;
+		    width: 800px;
+		    margin-left: -12em;
+		    margin-top: -5em;"></svg>
     </nvd3-multi-bar-chart>
   </div>
 
