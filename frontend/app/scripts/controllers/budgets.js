@@ -111,15 +111,18 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    
 	    $scope.showOthers = false;
 
-	    if (data.label === 'others') {
-		rawFromDrill = drill(rawFromCouch,path);
+	    // change if logic here...but first get things working
+	    if (data.label === 'Other') {
+		console.log("Path: ", path);
 		$scope.showOthers = true;
 	    } else {
 		$scope.breadcrumbs.push(data.label);
 		path = pathMappings[data.label];
+		console.log("Path: ", path);
 		rawFromDrill = drill(rawFromCouch,path);
-	    }
+	    }	    
 	    process();
+
         });
 
         $scope.reloadBreadcrumbs = function(crumb){

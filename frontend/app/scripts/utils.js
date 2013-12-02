@@ -29,7 +29,7 @@
  */
 var drill = function (budget, path) {
 
-    //var current_year = budget['_id'].match('[0-9]{4}');
+    // var current_year = budget['_id'].match('[0-9]{4}');
     var current_year = 2014;
 
     // Work on a copy of the data to not mutate original.
