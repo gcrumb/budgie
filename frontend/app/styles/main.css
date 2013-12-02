@@ -33,7 +33,3 @@ li.breadcrumb-trail:hover {
     cursor: pointer;
 }
 
-li.breadcrumb-trail:last-of-type {
-    text-decoration: none;
-    cursor: normal;
-}
