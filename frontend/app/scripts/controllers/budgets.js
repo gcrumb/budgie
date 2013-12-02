@@ -11,6 +11,7 @@ angular.module('pippDataApp.controllers.budgets', [])
 	var path = 'root'; // Initialize path to root of budget data tree
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
+	$scope.showOthers = false;
 
 	var budget = BudgetFactory.get('png-2014').
 		success(function(data, status, headers, config) {
@@ -107,15 +108,22 @@ angular.module('pippDataApp.controllers.budgets', [])
         });
 
         $scope.$on('elementClick.directive', function(event,data){
-	    path = pathMappings[data.label];
-            //console.log("Clicked: ", data.label, " Path: ", path);
-	    $scope.breadcrumbs.push(data.label);
-	    rawFromDrill = drill(rawFromCouch,path);
+	    
+	    $scope.showOthers = false;
+
+	    if (data.label === 'others') {
+		rawFromDrill = drill(rawFromCouch,path);
+		$scope.showOthers = true;
+	    } else {
+		$scope.breadcrumbs.push(data.label);
+		path = pathMappings[data.label];
+		rawFromDrill = drill(rawFromCouch,path);
+	    }
 	    process();
         });
 
         $scope.reloadBreadcrumbs = function(crumb){
-
+	    $scope.showOthers = false;
 	    $scope.breadcrumbs = sliceByStringElement($scope.breadcrumbs,crumb);
 	    path = pathMappings[crumb];
 	    rawFromDrill = drill(rawFromCouch, path);

@@ -56,13 +56,14 @@ var tooltipContent = function(key, x, y, e, graph) {
 
   </div>
 
-  <div class="span12">
+  <div class="span12" ng-show="showOthers">
     <h3>Others</h3>
     <nvd3-multi-bar-chart
        data="othersBarChartData"
        id="othersBarChart"
        tooltips="true"
-       tooltipContent="barChartTooltips">
+       tooltipContent="barChartTooltips"
+       rotatelabels="30">
         <svg style="padding: 3em; padding-left: 3.5em; height: 400px;"></svg>
     </nvd3-multi-bar-chart>
   </div>
