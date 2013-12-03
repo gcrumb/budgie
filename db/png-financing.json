@@ -1,0 +1,59 @@
+{
+    "_id": "png-2014-financing",
+    "level": "National Expenditure",
+    "root": {
+        "categories": {
+            "Domestic": {
+                "data": {
+                    "2012": {
+                        "aggr": 1216000,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 2254900,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 1705200,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Net Domestic Financing"
+            },
+            "External": {
+                "data": {
+                    "2012": {
+                        "aggr": 161900,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 482100,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 647800,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Net External Financing"
+            }
+        },
+        "data": {
+            "2012": {
+                "aggr": 1377900,
+                "change": 0
+            },
+            "2013": {
+                "aggr": 2737000,
+                "change": 0
+            },
+            "2014": {
+                "aggr": 2353000,
+                "change": 0
+            }
+        },
+        "name": "Papua New Guinea Financing 2014"
+    }
+}
