@@ -124,25 +124,21 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    
 	    $scope.showOthers = false;
 
-	    // Check if drillable
-	    if (drillableMappings[data.label] === true) {
-
-		// change if logic here...but first get things working
-		if (data.label === 'Other') {
-		    console.log("Path: ", path);
-		    $scope.showOthers = true;
-		} else {
-		    console.log("Before push: ", rawFromDrill);
-		    $scope.breadcrumbs.push(data.label);
-		    path = pathMappings[data.label];
-		    console.log("Path: ", path);
-		    rawFromDrill = drill(rawFromCouch,path);
-		}	    
-		process();
+	    // change if logic here...but first get things working
+	    if (data.label === 'Other') {
+		console.log("Path: ", path);
+		$scope.showOthers = true;
 	    } else {
-		alert("Want more? Call Dan. How do you want to handle this");
-	    }
-
+		console.log("Before push: ", rawFromDrill);
+		
+		if (drillableMappings[data.label] === true) {
+		    $scope.breadcrumbs.push(data.label);
+		}
+		path = pathMappings[data.label];
+		rawFromDrill = drill(rawFromCouch,path);
+	    }	    
+	    process();
+	    
         });
 
         $scope.reloadBreadcrumbs = function(crumb){
