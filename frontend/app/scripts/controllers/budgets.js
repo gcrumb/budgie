@@ -2,7 +2,7 @@
 
 /* Budget controller(s) */
 
-angular.module('pippDataApp.controllers.budgets', [])
+angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap'])
     .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
 
 	var rawFromCouch = {}; // Keep the complete data set in frontend
