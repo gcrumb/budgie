@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="span12">
-    <h2>{{ level }}</h2>
+    <h2>{{ level || 'National Budget' }}</h2>
   </div>
 
   <div class="span8">
@@ -38,7 +38,7 @@
   </div>
   
   <div class="span4">
-    <h3>{{ name }} History</h3>
+    <h4>{{ name.length ? name + ' History' : '' }}</h4>
     
     {{ notes }}
 
