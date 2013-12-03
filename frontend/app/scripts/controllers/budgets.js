@@ -10,11 +10,14 @@ angular.module('pippDataApp.controllers.budgets', [])
 	var pathMappings = {}; // Convenient path mappings
 	var path = 'root'; // Initialize path to root of budget data tree
 	var drillableMappings = {"Other": true}; // Current drillable mappings
+	var country = 'png';
+	var current_year = '2014';
+	var currentDocument = country + '-' + current_year;
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
 	$scope.showOthers = false;
 
-	var budget = BudgetFactory.get('png-2014').
+	var budget = BudgetFactory.get(currentDocument).
 		success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
 		    // when the response is available
@@ -140,6 +143,41 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    process();
 	    
         });
+
+	$scope.radioModel =  'spending';
+
+	// Handle the choice of spending, revenue or finance data
+	//$scope.$on('recordSelect.directive', function (data){
+	$scope.recordSelect = function (which){
+
+	    $scope.radioModel = which;
+	    console.debug("WHICH: " , $scope.radioModel);
+
+	    currentDocument = country + '-' + current_year;
+	    currentDocument = which !== 'spending' ? currentDocument + '-' + which : currentDocument;
+
+	    console.debug("USING: " , currentDocument);
+
+	    var my_budget = BudgetFactory.get(currentDocument).
+		success(function(data, status, headers, config) {
+		    pathMappings = getPathMappings(data);
+		    path = 'root';
+		    rawFromCouch = data; 
+
+		    rawFromDrill = drill(rawFromCouch,path);
+		    console.log("Data as processed by drill: ",rawFromDrill);
+
+		    $scope.breadcrumbs = [rawFromDrill.name];
+
+		    process();
+
+		}).
+		error(function(data, status, headers, config) {
+		    // called asynchronously if an error occurs
+		    // or server returns response with an error status.
+		});
+
+	};
 
         $scope.reloadBreadcrumbs = function(crumb){
 	    $scope.showOthers = false;

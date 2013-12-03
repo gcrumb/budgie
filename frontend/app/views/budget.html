@@ -1,15 +1,16 @@
 <div class="row">
     <div style="margin-left: 1em;" class="choose-your-poison">
       <div class="btn-group">
-        <button type="button" class="btn btn-primary btn-small" ng-model="radioModel" btn-radio="'Left'">Spending</button>
-        <button type="button" class="btn btn-primary btn-small" ng-model="radioModel" btn-radio="'Middle'">Revenue</button>
-        <button type="button" class="btn btn-primary btn-small" ng-model="radioModel" btn-radio="'Right'">Borrowing</button>
+        <button type="button" btn-radio="'spending'"  ng-model="radioModel" class="btn btn-primary" ng-click="recordSelect('spending')">Spending</button>
+        <button type="button" btn-radio="'revenue'"   ng-model="radioModel" class="btn btn-primary" ng-click="recordSelect('revenue')">Revenue</button>
+        <button type="button" btn-radio="'financing'" ng-model="radioModel" class="btn btn-primary" ng-click="recordSelect('financing')">Borrowing</button>
       </div>
     </div>
 </div>
 <div class="row">
   <div class="span12">
-    <h2>{{ level || 'National Budget' }}</h2>
+    <!-- h2>{{ level || 'National Budget' }}</h2 -->
+    <h2>Budget Visualiser</h2>
   </div>
 
   <div class="span8">
