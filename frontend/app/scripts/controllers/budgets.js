@@ -151,12 +151,8 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap'])
 	$scope.recordSelect = function (which){
 
 	    $scope.radioModel = which;
-	    console.debug("WHICH: " , $scope.radioModel);
-
 	    currentDocument = country + '-' + current_year;
 	    currentDocument = which !== 'spending' ? currentDocument + '-' + which : currentDocument;
-
-	    console.debug("USING: " , currentDocument);
 
 	    var my_budget = BudgetFactory.get(currentDocument).
 		success(function(data, status, headers, config) {
@@ -165,8 +161,6 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap'])
 		    rawFromCouch = data; 
 
 		    rawFromDrill = drill(rawFromCouch,path);
-		    console.log("Data as processed by drill: ",rawFromDrill);
-
 		    $scope.breadcrumbs = [rawFromDrill.name];
 
 		    process();
