@@ -1,0 +1,468 @@
+{
+    "_id": "png-2014-revenue",
+    "level": "National Expenditure",
+    "root": {
+        "categories": {
+            "AssetSales": {
+                "data": {
+                    "2012": {
+                        "aggr": 0,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 0,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 600,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Asset Sales"
+            },
+            "Dom.TaxesonGoodsandServices": {
+                "categories": {
+                    "311": {
+                        "data": {
+                            "2012": {
+                                "aggr": 560.5,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 606.1,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 689.3,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Excise"
+                    },
+                    "312": {
+                        "data": {
+                            "2012": {
+                                "aggr": 1010,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 1107.5,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 1181.4,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "GST"
+                    },
+                    "313": {
+                        "data": {
+                            "2012": {
+                                "aggr": 5,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 8,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 8.7,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Other Indirect"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 1575.5,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 1721.7,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 1879.4,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Dom. Taxes on Goods and Services"
+            },
+            "Grants": {
+                "data": {
+                    "2012": {
+                        "aggr": 930.8,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 1211.2,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 1555,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Grants"
+            },
+            "InfrastructureTaxCredits": {
+                "data": {
+                    "2012": {
+                        "aggr": 63.8,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 130,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 130,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Infrastructure Tax Credits"
+            },
+            "InterestandFeesfromLending": {
+                "data": {
+                    "2012": {
+                        "aggr": 0.1,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 4,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 4,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Interest and Fees from Lending"
+            },
+            "InterestfromTrustAccounts": {
+                "data": {
+                    "2012": {
+                        "aggr": 144.4,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 36,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 36,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Interest from Trust Accounts"
+            },
+            "Othernontaxrevenue": {
+                "data": {
+                    "2012": {
+                        "aggr": 106.4,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 230,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 200,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Other non tax revenue"
+            },
+            "PropertyIncome": {
+                "categories": {
+                    "314": {
+                        "data": {
+                            "2012": {
+                                "aggr": 50,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 132,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 287,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Dividends"
+                    },
+                    "315": {
+                        "data": {
+                            "2012": {
+                                "aggr": 122.3,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 132.8,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 133,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Mining and Petroleum Dividends"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 172.3,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 264.8,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 420,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Property Income"
+            },
+            "TaxesonIncomeandProfits": {
+                "categories": {
+                    "301": {
+                        "data": {
+                            "2012": {
+                                "aggr": 2648.7,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 2740.4,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 2852,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Personal Income Tax"
+                    },
+                    "302": {
+                        "data": {
+                            "2012": {
+                                "aggr": 1744.5,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 2061.6,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 2647.4,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Company tax"
+                    },
+                    "303": {
+                        "data": {
+                            "2012": {
+                                "aggr": 190.7,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 232.8,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 261.3,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "DWT"
+                    },
+                    "304": {
+                        "data": {
+                            "2012": {
+                                "aggr": 981.1,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 815.7,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 1001.8,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Mining and Petroleum Taxes"
+                    },
+                    "305": {
+                        "data": {
+                            "2012": {
+                                "aggr": 67.4,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 49,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 49,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Interest withholding tax"
+                    },
+                    "306": {
+                        "data": {
+                            "2012": {
+                                "aggr": 108.8,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 115.6,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 125,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Other Direct"
+                    },
+                    "307": {
+                        "data": {
+                            "2012": {
+                                "aggr": 133.9,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 170.6,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 180.8,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Gaming Tax"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 5875.1,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 6185.8,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 7117.2,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Taxes on Income and Profits"
+            },
+            "TaxesonInternationalTrade": {
+                "categories": {
+                    "308": {
+                        "data": {
+                            "2012": {
+                                "aggr": 223,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 240.7,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 288.8,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Import Duty"
+                    },
+                    "309": {
+                        "data": {
+                            "2012": {
+                                "aggr": 179.9,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 190,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 176.5,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Export Duty"
+                    },
+                    "310": {
+                        "data": {
+                            "2012": {
+                                "aggr": 294.8,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 267.5,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 281.6,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Excise Duty on Imports"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 697.7,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 698.2,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 746.9,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Taxes on International Trade"
+            }
+        },
+        "data": {},
+        "name": "Papua New Guinea Revenue 2014"
+    }
+}

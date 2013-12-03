@@ -40,7 +40,10 @@ while (<CSV>){
   $value = $value ? $value : 0;
   $value += 0;
 
-  chomp $change if ($change && defined $change);
+  # We're not using this for now....
+  $change = '';
+#  chomp $change if ($change && defined $change);
+#  $change =~ s!\\r!!g;
 
   # Top level data
   unless ($sector){
