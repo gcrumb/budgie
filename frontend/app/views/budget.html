@@ -1,4 +1,12 @@
-
+<div class="row">
+    <div style="margin-left: 1em;" class="choose-your-poison">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary btn-small" ng-model="radioModel" btn-radio="'Left'">Spending</button>
+        <button type="button" class="btn btn-primary btn-small" ng-model="radioModel" btn-radio="'Middle'">Revenue</button>
+        <button type="button" class="btn btn-primary btn-small" ng-model="radioModel" btn-radio="'Right'">Borrowing</button>
+      </div>
+    </div>
+</div>
 <div class="row">
   <div class="span12">
     <h2>{{ level || 'National Budget' }}</h2>
@@ -10,7 +18,7 @@
 
     <p>
       <ul class="breadcrumbs">
-	<li class="breadcrumb-trail" ng-repeat="b in breadcrumbs" ng-click="reloadBreadcrumbs(b)">&nbsp;<span class="trail-item">{{ b }}</span></li>
+	<li class="breadcrumb-trail" ng-repeat="b in breadcrumbs" ng-click="reloadBreadcrumbs(b)"><i class="icon-hand-right"></i> <span class="trail-item">{{ b }}</span></li>
       </ul>
     </p>
 
