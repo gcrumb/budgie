@@ -9,6 +9,7 @@ angular.module('pippDataApp.controllers.budgets', [])
 	var rawFromDrill = {}; // Current mashed-up reduced data of interest
 	var pathMappings = {}; // Convenient path mappings
 	var path = 'root'; // Initialize path to root of budget data tree
+	var drillableMappings = {"Other": true}; // Current drillable mappings
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
 	$scope.showOthers = false;
@@ -52,6 +53,18 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    console.log("Pie Data:", getPieChartData(rawFromDrill.categories));
 	    
 	    var pie = getPieChartData(rawFromDrill.categories);
+
+	    // This will continuously populate (well, update when
+	    // property is present) so it is not quite the most
+	    // efficient approach. However, it does not cost much and
+	    // works for now. Better to eventually get all the
+	    // drillable mappings once on page load and be done with
+	    // it. In Dan's words, I took the path of least resistance :)
+	    rawFromDrill.categories.forEach(function(elem) {
+		drillableMappings[elem.name] = elem.drillable;
+	    });
+
+	    console.log("Drillables: ", drillableMappings);
 
 	    if( Object.prototype.toString.call( pie ) === '[object Array]' ) {
 		// No grouping into "others"
@@ -111,17 +124,24 @@ angular.module('pippDataApp.controllers.budgets', [])
 	    
 	    $scope.showOthers = false;
 
-	    // change if logic here...but first get things working
-	    if (data.label === 'Other') {
-		console.log("Path: ", path);
-		$scope.showOthers = true;
+	    // Check if drillable
+	    if (drillableMappings[data.label] === true) {
+
+		// change if logic here...but first get things working
+		if (data.label === 'Other') {
+		    console.log("Path: ", path);
+		    $scope.showOthers = true;
+		} else {
+		    console.log("Before push: ", rawFromDrill);
+		    $scope.breadcrumbs.push(data.label);
+		    path = pathMappings[data.label];
+		    console.log("Path: ", path);
+		    rawFromDrill = drill(rawFromCouch,path);
+		}	    
+		process();
 	    } else {
-		$scope.breadcrumbs.push(data.label);
-		path = pathMappings[data.label];
-		console.log("Path: ", path);
-		rawFromDrill = drill(rawFromCouch,path);
-	    }	    
-	    process();
+		alert("Want more? Call Dan. How do you want to handle this");
+	    }
 
         });
 
