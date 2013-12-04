@@ -2,7 +2,7 @@
 
 /* Budget controller(s) */
 
-angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap'])
+angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate'])
     .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
 
 	var rawFromCouch = {}; // Keep the complete data set in frontend
@@ -84,6 +84,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap'])
 	    // Information box and bar chart side. 
 	    $scope.notes = rawFromDrill.notes;
 	    $scope.stackedBarChartData = getBarChartData(rawFromDrill.data);
+
 
 	};
 

@@ -15,11 +15,11 @@
 
   <div class="span8">
 
-    <h3>{{ name }}</h3>
+    <h3 class="fade-in">{{ name }}</h3>
 
     <p>
       <ul class="breadcrumbs">
-	<li class="breadcrumb-trail" ng-repeat="b in breadcrumbs" ng-click="reloadBreadcrumbs(b)"><i class="icon-hand-right"></i> <span class="trail-item">{{ b }}</span></li>
+	<li class="breadcrumb-trail fade-in" ng-repeat="b in breadcrumbs" ng-click="reloadBreadcrumbs(b)"><i class="icon-hand-right"></i> <span class="trail-item">{{ b }}</span></li>
       </ul>
     </p>
 
@@ -28,9 +28,11 @@
        noData=""
        id="pieChartBudget"
        showLabels="false"
+       showValues="true"
+       labelType="percent"
        tooltips="true"
        tooltipContent="tooltipContent"
-       transitionDuration="600"
+       transitionDuration="700"
        x="xFunction()"
        y="yFunction()"
        width="700"
@@ -38,7 +40,8 @@
        donut="true"
        donutRatio="1.5"
        donutLabelsOutside="false"
-       margin="{left:100,top:100,bottom:100,right:100}">
+       showLegend="false"
+       margin="{left:-50,top:100,bottom:100,right:100}">
 
       <svg id="budget"></svg>
 
@@ -47,7 +50,7 @@
   </div>
   
   <div class="span4">
-    <h4>{{ name.length ? name + ' History' : '' }}</h4>
+    <h4 class="fade-in">{{ name.length ? name + ' History' : '' }}</h4>
     
     {{ notes }}
 
@@ -61,7 +64,7 @@
 
   </div>
 
-  <div class="span12" ng-show="showOthers">
+  <div class="span12 other" ng-show="showOthers">
     <h3>Other</h3>
     <nvd3-multi-bar-horizontal-chart
        data="othersBarChartData"

@@ -61,3 +61,40 @@ li.breadcrumb-trail span:hover {
  /* The animation code itself */
  opacity: 1;
 }
+
+.nv-legendWrap {
+    position: relative;
+    top: 900px;
+}
+
+/* Animations */
+.fade-in.ng-enter.ng-enter-active {
+  -webkit-animation: enter_sequence 0.3s linear; /* Safari/Chrome */
+  animation: enter_sequence 0.3s linear; /* IE10+ and Future Browsers */
+}
+@-webkit-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.other {
+  -webkit-transition:all linear 0.4s;
+  transition:all linear 0.4s;
+  opacity:1;
+  padding:10px;
+}
+ 
+.other.ng-hide-add,
+.other.ng-hide-remove {
+  display:block!important;
+}
+ 
+.other.ng-hide {
+  opacity:0;
+  padding:0 10px;
+}
+ 
