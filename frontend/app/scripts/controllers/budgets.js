@@ -2,7 +2,7 @@
 
 /* Budget controller(s) */
 
-angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate'])
+angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
     .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
 
 	var rawFromCouch = {}; // Keep the complete data set in frontend
@@ -182,4 +182,20 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate'])
 	    process();
         };	
 
+
+        $scope.LegendController = function($scope){
+	    //NOOP
+	    console.debug("FOO");
+
+        };
+
+	$scope.getLabels = function(args){
+
+	    args = args ? args : ['Foo','Bar','Baz','Quux'];
+
+	    console.debug("Just stoppin' by...");
+	    return args;
+
+	};
     }]);
+

@@ -97,4 +97,24 @@ li.breadcrumb-trail span:hover {
   opacity:0;
   padding:0 10px;
 }
+
+
+/* Legend */
  
+.legend-bullet-1 {
+    display: inline;
+    color: #FF0000;
+    height: 300px;
+}
+.legend-bullet-2 {
+    display: inline;
+    color: #00FF00;
+}
+.legend-bullet-3 {
+    display: inline;
+    color: #0000FF;
+}
+.legend-bullet-4 {
+    display: inline;
+    color: #000;
+}
