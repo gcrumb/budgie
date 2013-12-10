@@ -21,6 +21,22 @@ body {
     letter-spacing: -1px;
 }
 
+.header {
+
+    background-color: #fff;
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#FFFFFF));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #FFFFFF, #f7fafc);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #FFFFFF, #f7fafc);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #FFFFFF, #f7fafc);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #FFFFFF, #f7fafc);
+
+}
+
 .footer {
     height: 120px;
     margin-top: 4em;
