@@ -39,6 +39,7 @@ body {
 
 .footer {
     height: 120px;
+    width: 960px;
     margin-top: 4em;
     background: #f7fafc url(/img/pipp-white-logo.svg) no-repeat;
 
@@ -53,6 +54,9 @@ body {
     color: #444;
     text-align: right;
     text-shadow: 0px 1px 1px #fff;
+
+    bottom: 0;
+    position: fixed;
 }
 
 .footer p {
