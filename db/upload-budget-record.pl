@@ -26,7 +26,7 @@ $upload_rec{root}->{data}        = {};
 $upload_rec{root}->{categories}  = {};
 
 while (<CSV>){
-  my ($country, $year, $type, $value, $sector, $dept, $programme, $name, $notes, $change, @etc) = split (/\,/, $_);
+  my ($country, $year, $type, $value, $sector, $dept, $programme, $subprogramme, $name, $notes, $change, @etc) = split (/\,/, $_);
 
   next unless ($country && $year);
   # Check for column headings
@@ -98,22 +98,43 @@ while (<CSV>){
   }
 
   # Programme data
-  die "Missing programme data from line '$_'!\n" unless (defined $programme && $programme);
+  unless ($subprogramme){
+    die "Missing programme data from line '$_'!\n" unless (defined $programme && $programme);
+    
+    my $categories = $upload_rec{root}->{categories}                 || {};
+    my $sect       = $categories->{$sector}                  || {};
+    my $department = $sect->{categories}->{$dept}            || {};
+    my $prog       = $department->{categories}->{$programme} || {};
 
-  my $categories = $upload_rec{root}->{categories}                 || {};
-  my $sect       = $categories->{$sector}                  || {};
-  my $department = $sect->{categories}->{$dept}            || {};
-  my $prog       = $department->{categories}->{$programme} || {};
+    $prog->{level}                          = 'Programme Expenditure';
+    $prog->{name}                           = $name;
+    $prog->{data}->{$year}->{$type}         = $value ? $value : 0;
+    $prog->{data}->{$year}->{change}        = $change ? $change : 0;
 
-  $prog->{level}                          = 'Programme Expenditure';
-  $prog->{name}                           = $name;
-  $prog->{data}->{$year}->{$type}         = $value ? $value : 0;
-  $prog->{data}->{$year}->{change}        = $change ? $change : 0;
+    $department->{categories}->{$programme} = $prog;
+    $sect->{categories}->{$dept}            = $department;
+    $categories->{$sector}                  = $sect;
+    $upload_rec{root}->{categories}                 = $categories;
+  }
 
-  $department->{categories}->{$programme} = $prog;
-  $sect->{categories}->{$dept}            = $department;
-  $categories->{$sector}                  = $sect;
-  $upload_rec{root}->{categories}                 = $categories;
+  die "Missing subprogramme data from line '$_'!\n" unless (defined $subprogramme && $subprogramme);
+
+  my $categories = $upload_rec{root}->{categories}              || {};
+  my $sect       = $categories->{$sector}                       || {};
+  my $department = $sect->{categories}->{$dept}                 || {};
+  my $prog       = $department->{categories}->{$programme}      || {};
+  my $subprog    = $programme->{categories}->{$subprogramme}    || {};
+
+  $subprog->{level}                          = 'Subprogramme Expenditure';
+  $subprog->{name}                           = $name;
+  $subprog->{data}->{$year}->{$type}         = $value ? $value : 0;
+  $subprog->{data}->{$year}->{change}        = $change ? $change : 0;
+
+  $programme->{categories}->{$subprogramme}  = $subprog;
+  $department->{categories}->{$programme}    = $prog;
+  $sect->{categories}->{$dept}               = $department;
+  $categories->{$sector}                     = $sect;
+  $upload_rec{root}->{categories}            = $categories;
 
 }
 
