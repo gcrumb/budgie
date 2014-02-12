@@ -3,7 +3,7 @@
 /* Budget controller(s) */
 
 angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
-    .controller('BudgetCtrl', ['$scope', '$location', '$routeParam', 'BudgetFactory', function ($scope, $location, $routeParam, BudgetFactory) {
+    .controller('BudgetCtrl', ['$scope', '$location', '$routeParams', 'BudgetFactory', function ($scope, $location, $routeParams, BudgetFactory) {
 
 	var rawFromCouch = {}; // Keep the complete data set in frontend
 	var rawFromDrill = {}; // Current mashed-up reduced data of interest
