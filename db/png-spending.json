@@ -7840,6 +7840,8 @@
                 "change": 0
             }
         },
-        "name": "Papua New Guinea Spending 2014"
+        "name": "Papua New Guinea Spending 2014",
+	"currency" : "KINA",
+	"multiplier" : 1000
     }
 }

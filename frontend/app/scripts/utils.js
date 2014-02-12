@@ -442,7 +442,7 @@ var getBarChartData = function(data) {
      */
     var reduceFunction = function(memory, object) {
 	var prop = getFirstProperty(object); // the year
-	var cost = parseInt(object[prop]['aggr']) * 1000; // the cost figure
+	var cost = parseInt(object[prop]['aggr']); //* $scope.currency_multiplier; // the cost figure
 
 	barValues = memory[0]['values'].push([prop,cost]);
 	
@@ -929,7 +929,7 @@ String.prototype.contains = function(s) {
 // Truncate a number to ind decimal places
 var truncNb = function(Nb, ind) {
     var _nb = Nb * (Math.pow(10,ind));
-    _nb = Math.floor(_nb);
+    _nb = Math.round(_nb);
     _nb = _nb / (Math.pow(10,ind));
     return _nb;
 };
@@ -943,12 +943,12 @@ var int2roundKMG = function(val) {
 //    val *= 1000;
 
     if (val >= 1e9)        { 
-	_str = truncNb((val/1e9), 1) + ' Billion';
+	_str = truncNb((val/1e9), 2) + ' Billion';
     } else if (val >= 1e6) { 
-	_str = truncNb((val/1e6), 1) + ' Million';
+	_str = truncNb((val/1e6), 2) + ' Million';
     } 
     else if (val >= 1e3) { 
-	_str = truncNb((val/1e3), 1) + ' Thousand';
+	_str = truncNb((val/1e3), 2) + ' Thousand';
     } else { 
 	_str = parseInt(val);
     }

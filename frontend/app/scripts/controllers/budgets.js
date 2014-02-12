@@ -14,6 +14,9 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var current_year = $routeParams.year ? $routeParams.year : '2014';
 	var currentDocument = country + '-' + current_year;
 
+	$scope.budget_currency = '';
+	$scope.currency_multiplier = 1;
+
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
 	$scope.showOthers = false;
 
@@ -32,9 +35,12 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		    // is used within this controller to fullfil the
 		    // features (chart data, further drill paths,
 		    // information box summary data...).
-		    
+
 		    rawFromDrill = drill(rawFromCouch,path);
 		    console.log("Data as processed by drill: ",rawFromDrill);
+
+		    $scope.budget_currency = rawFromCouch.root.currency ? rawFromCouch.root.currency.toUpperCase() : '';
+		    $scope.currency_multiplier = rawFromCouch.root.multiplier ? rawFromCouch.root.multiplier : 1;
 
 		    $scope.breadcrumbs.push(rawFromDrill.name);
 
@@ -92,12 +98,13 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    // This is just here so I have a placeholder 
 	    // for actual, you know, not fugly code
             return '<h3>' + key + '</h3>' +
-		'<p>' + (parseFloat(y.value) * 1000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '<br />KINA</p>';
+		'<p>' + int2roundKMG((parseFloat(y.value) * $scope.currency_multiplier).toString()) + '<br />' + $scope.budget_currency + '</p>';
+//		'<p>' + (parseFloat(y.value) * $scope.currency_multiplier).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '<br />' + $scope.budget_currency + '</p>';
 	};
 
 	$scope.barChartTooltips = function(key, x, y, e, graph) {
             return '<h3>' + x + '</h3>' +
-		'<p>' + int2roundKMG(y) + '<br />KINA</p>';
+		'<p>' + int2roundKMG(y) + '<br />' + $scope.budget_currency + '</p>';
 	};
 
         $scope.xFunction = function(){
