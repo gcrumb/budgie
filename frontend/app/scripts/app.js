@@ -17,7 +17,7 @@ pippDataApp.config(['$routeProvider',  function ($routeProvider) {
     $routeProvider
 	.when('/', {templateUrl: 'views/main.html', controller: 'MainCtrl'})
 	.when('/test', {templateUrl: 'views/test.html', controller: 'TestCtrl'})
-	.when('/budget', {templateUrl: 'views/budget.html', controller: 'BudgetCtrl'})
+	.when('/budget/:country/:year', {templateUrl: 'views/budget.html', controller: 'BudgetCtrl'})
 	.otherwise({redirectTo: '/'});
 
 }]);

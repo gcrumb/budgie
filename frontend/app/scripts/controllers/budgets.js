@@ -3,15 +3,15 @@
 /* Budget controller(s) */
 
 angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
-    .controller('BudgetCtrl', ['$scope', '$location', 'BudgetFactory', function ($scope, $location, BudgetFactory) {
+    .controller('BudgetCtrl', ['$scope', '$location', '$routeParam', 'BudgetFactory', function ($scope, $location, $routeParam, BudgetFactory) {
 
 	var rawFromCouch = {}; // Keep the complete data set in frontend
 	var rawFromDrill = {}; // Current mashed-up reduced data of interest
 	var pathMappings = {}; // Convenient path mappings
 	var path = 'root'; // Initialize path to root of budget data tree
 	var drillableMappings = {"Other": true}; // Current drillable mappings
-	var country = 'png';
-	var current_year = '2014';
+	var country = $routeParams.country ? $routeParams.country : 'png';
+	var current_year = $routeParams.year ? $routeParams.year : '2014';
 	var currentDocument = country + '-' + current_year;
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
