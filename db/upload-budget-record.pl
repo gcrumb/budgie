@@ -38,12 +38,9 @@ my $first = 0;
 $upload_rec{_id}                 = $budget_key;
 $upload_rec{root}->{name}        = $budget_name;
 $upload_rec{level}               = 'National Expenditure';
-
-$upload_rec{root}->{data}        = {
-				    currency   => $budget_currency,
-				    multiplier => $currency_multiplier,
-				   };
-
+$upload_rec{root}->{data}        = {};
+$upload_rec{root}->{currency}    = $budget_currency;
+$upload_rec{root}->{multiplier}  = $currency_multiplier;
 $upload_rec{root}->{categories}  = {};
 
 while (<CSV>){
