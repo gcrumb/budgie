@@ -5,13 +5,29 @@ use Data::Dumper;
 use Store::CouchDB;
 use File::Basename;
 use JSON;
+use Getopt::Long;
 
-my $csv_file    = $ARGV[0] or die &usage();
-my $budget_key  = $ARGV[1] or die &usage();
-my $budget_name = $ARGV[2] or die &usage();
+
+my $csv_file            = '';
+my $budget_key          = '';
+my $budget_name         = '';
+my $budget_currency     = '';
+my $currency_multiplier = 1;
+
+GetOptions ("file|f" => \$csv_file,
+	    "key|k"   => \$budget_key,
+	    "name|n"  => \$budget_name,
+	    "currency|c" => \$budget_currency,
+	    "multiplier|m" => $currency_multiplier,
+	   );
+
+die usage() unless ($csv_file && $budget_key && $budget_name && $budget_currency);
 
 die "File '$csv_file' does not exist\n" unless -f $csv_file;
 die "Cannot read file '$csv_file'\n" unless -r $csv_file;
+
+die "You must specify a currency.\n" unless $budget_currency;
+die "Invalid currency multiplier: $currency_multiplier\n" unless $currency_multiplier >= 1;
 
 my %upload_rec = ();
 
@@ -22,7 +38,12 @@ my $first = 0;
 $upload_rec{_id}                 = $budget_key;
 $upload_rec{root}->{name}        = $budget_name;
 $upload_rec{level}               = 'National Expenditure';
-$upload_rec{root}->{data}        = {};
+
+$upload_rec{root}->{data}        = {
+				    currency   => $budget_currency,
+				    multiplier => $currency_multiplier,
+				   };
+
 $upload_rec{root}->{categories}  = {};
 
 while (<CSV>){
@@ -159,7 +180,9 @@ sub usage {
   print <<EOM;
 $0 usage:
 
-    $0 /path/to/csv-file 'budget_key' 'budget name'
+    $0 --file|f csv_file --key|k budget_key --name|n  budget_name \\
+       --currency|c budget_currency \\
+       [--multiplier|m currency_multiplier]
 
 EOM
 
