@@ -115,6 +115,8 @@ while (<CSV>){
     $sect->{categories}->{$dept}            = $department;
     $categories->{$sector}                  = $sect;
     $upload_rec{root}->{categories}                 = $categories;
+
+    next;
   }
 
   die "Missing subprogramme data from line '$_'!\n" unless (defined $subprogramme && $subprogramme);
@@ -123,14 +125,14 @@ while (<CSV>){
   my $sect       = $categories->{$sector}                       || {};
   my $department = $sect->{categories}->{$dept}                 || {};
   my $prog       = $department->{categories}->{$programme}      || {};
-  my $subprog    = $programme->{categories}->{$subprogramme}    || {};
+  my $subprog    = $prog->{categories}->{$subprogramme}         || {};
 
   $subprog->{level}                          = 'Subprogramme Expenditure';
   $subprog->{name}                           = $name;
   $subprog->{data}->{$year}->{$type}         = $value ? $value : 0;
   $subprog->{data}->{$year}->{change}        = $change ? $change : 0;
 
-  $programme->{categories}->{$subprogramme}  = $subprog;
+  $prog->{categories}->{$subprogramme}       = $subprog;
   $department->{categories}->{$programme}    = $prog;
   $sect->{categories}->{$dept}               = $department;
   $categories->{$sector}                     = $sect;

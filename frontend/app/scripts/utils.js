@@ -56,6 +56,9 @@ var drill = function (budget, path) {
 	var cat = {}; 
 	cat['name'] = raw_categories[category].name;
 	cat['notes'] = raw_categories[category].notes;
+
+	console.debug('DRILLING into' + category + ': ', raw_categories[category]);
+
 	cat['current-data'] = raw_categories[category]['data'][current_year];
 	cat['level'] = raw_categories[category].level;
 	if (_.has(raw_categories[category], "categories")) {
