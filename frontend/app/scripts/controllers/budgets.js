@@ -14,6 +14,12 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var current_year = $routeParams.year ? $routeParams.year : '2014';
 	var currentDocument = country + '-' + current_year;
 
+	// Use this for roll-up / unroll animations.
+	var empty_pie = [{ 
+        "label": "",
+        "value" : 0
+	}];
+
 	$scope.budget_currency = '';
 	$scope.currency_multiplier = 1;
 
@@ -60,7 +66,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    $scope.name = rawFromDrill.name;
 	    $scope.level = rawFromDrill.level;
 	    console.log("Pie Data:", getPieChartData(rawFromDrill.categories));
-	    
+
 	    var pie = getPieChartData(rawFromDrill.categories);
 
 	    // This will continuously populate (well, update when
@@ -99,7 +105,6 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    // for actual, you know, not fugly code
             return '<h3>' + key + '</h3>' +
 		'<p>' + int2roundKMG((parseFloat(y.value) * $scope.currency_multiplier).toString()) + '<br />' + $scope.budget_currency + '</p>';
-//		'<p>' + (parseFloat(y.value) * $scope.currency_multiplier).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '<br />' + $scope.budget_currency + '</p>';
 	};
 
 	$scope.barChartTooltips = function(key, x, y, e, graph) {
