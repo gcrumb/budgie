@@ -7,19 +7,18 @@ use File::Basename;
 use JSON;
 use Getopt::Long;
 
+my $csv_file             = '';
+my $budget_key           = '';
+my $budget_name          = '';
+my $budget_currency      = '';
+my $currency_multiplier  = 1;
 
-my $csv_file            = '';
-my $budget_key          = '';
-my $budget_name         = '';
-my $budget_currency     = '';
-my $currency_multiplier = 1;
-
-GetOptions ("file|f" => \$csv_file,
-	    "key|k"   => \$budget_key,
-	    "name|n"  => \$budget_name,
-	    "currency|c" => \$budget_currency,
-	    "multiplier|m" => $currency_multiplier,
-	   );
+my $result = GetOptions ("file=s"       => \$csv_file,
+			 "key=s"        => \$budget_key,
+			 "name=s"       => \$budget_name,
+			 "currency=s"   => \$budget_currency,
+			 "multiplier=i" => \$currency_multiplier,
+			);
 
 die usage() unless ($csv_file && $budget_key && $budget_name && $budget_currency);
 
