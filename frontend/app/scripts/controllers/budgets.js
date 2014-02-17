@@ -180,6 +180,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		rawFromDrill = drill(rawFromCouch,path);
 	    }	    
 	    $scope.nextPalette();
+
 	    process();
 	    
         });
