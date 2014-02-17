@@ -143,7 +143,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 	$scope.barChartTooltips = function(key, x, y, e, graph) {
             return '<h3>' + x + '</h3>' +
-		'<p>' + int2roundKMG(y) + '<br />' + $scope.budget_currency + '</p>';
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + '<br />' + $scope.budget_currency + '</p>';
 	};
 
         $scope.xFunction = function(){
@@ -269,6 +269,12 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    });
 
 	    $scope.current_palette =  palettes[depth];
+	};
+
+	$scope.formatBarChartTicks = function () {
+            return function(d) {
+		return int2roundM(d.toString());
+            }
 	};
 
 

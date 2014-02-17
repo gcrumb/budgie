@@ -955,3 +955,16 @@ var int2roundKMG = function(val) {
     }
     return _str;
 };
+
+// Convert numbers into x.xx Millions
+var int2roundM = function(val) {
+    
+    var _str = "";
+
+    val = val.replace (/\,/g,'');
+    val = val.replace (/\.0/,'');
+
+    return truncNb((val/1e6), 2);
+ 
+};
+

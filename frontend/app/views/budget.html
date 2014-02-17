@@ -55,9 +55,6 @@
 	 data="pieChartData"
 	 width="500" 
 	 height="200" 
-	 labels="['Foo','Bar','Baz','Quux']" 
-	 classes="['legend-bullet-1','legend-bullet-2','legend-bullet-3','legend-bullet-4']" 
-	 shapes="['circle','circle','circle','circle']" 
 	 columns="5" 
 	 x="10" 
 	 y="0">
@@ -77,6 +74,7 @@
        tooltips="true"
        tooltipContent="barChartTooltips"
        color="colorFunction()"
+       yAxisTickFormat="formatBarChartTicks()"
        margin="{top: 30, right: 0, bottom: 50, left: 100}">
         <svg style="height: 400px;"></svg>
     </nvd3-multi-bar-chart>
@@ -89,8 +87,8 @@
        data="othersBarChartData"
        id="othersBarChart"
        tooltips="true"
-       tooltipContent="barChartTooltips">
        color="colorFunction()"
+       tooltipContent="barChartTooltips">
         <svg style="
 		    padding: 3em;
 		    padding-left: 20em;
