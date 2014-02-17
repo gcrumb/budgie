@@ -20,8 +20,34 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
         "value" : 0
 	}];
 
+	var palettes = [
+	    [
+		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+	    ],
+	    [
+		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
+		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
+	    ],
+	    [
+		'#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', 
+		'#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'
+	    ],
+	    [
+		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+	    ],
+	    [
+		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
+		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
+	    ]
+	];
+
+	var this_level = 0;
+
 	$scope.budget_currency = '';
 	$scope.currency_multiplier = 1;
+	$scope.current_palette = palettes[this_level];
 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
 	$scope.showOthers = false;
@@ -32,10 +58,10 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		    // when the response is available
 
 		    pathMappings = getPathMappings(data);
-		    console.log("Path mappings: ", pathMappings);
+		    console.debug("Path mappings: ", pathMappings);
 
 		    rawFromCouch = data; 
-		    console.log("Data as stored in CouchDB: ",rawFromCouch);
+		    console.debug("Data as stored in CouchDB: ",rawFromCouch);
 
 		    // The drill function returns some raw data which
 		    // is used within this controller to fullfil the
@@ -153,6 +179,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		path = pathMappings[data.label];
 		rawFromDrill = drill(rawFromCouch,path);
 	    }	    
+	    $scope.nextPalette();
 	    process();
 	    
         });
@@ -175,7 +202,8 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 		    rawFromDrill = drill(rawFromCouch,path);
 		    $scope.breadcrumbs = [rawFromDrill.name];
-
+		    $scope.nextPalette();
+		    
 		    process();
 
 		}).
@@ -191,6 +219,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    $scope.breadcrumbs = sliceByStringElement($scope.breadcrumbs,crumb);
 	    path = pathMappings[crumb];
 	    rawFromDrill = drill(rawFromCouch, path);
+	    $scope.nextPalette();
 	    process();
         };	
 
@@ -209,5 +238,30 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    return args;
 
 	};
+
+	$scope.getPalette = function (){
+	    return $scope.current_palette;
+	};
+
+	$scope.colorFunction = function() {
+	    return function(d, i) {
+    		return $scope.current_palette[i];
+	    };
+	}
+
+	$scope.nextPalette = function(){
+	    var depth = -1;
+	    var levels = path.split('.');
+
+	    levels.forEach(function(step){
+		if (step != 'categories'){
+		    depth++;
+		}
+	    });
+
+	    $scope.current_palette = palettes[depth];
+	};
+
+
     }]);
 

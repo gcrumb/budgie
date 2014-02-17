@@ -57,8 +57,6 @@ var drill = function (budget, path) {
 	cat['name'] = raw_categories[category].name;
 	cat['notes'] = raw_categories[category].notes;
 
-	console.debug('DRILLING into' + category + ': ', raw_categories[category]);
-
 	cat['current-data'] = raw_categories[category]['data'][current_year];
 	cat['level'] = raw_categories[category].level;
 	if (_.has(raw_categories[category], "categories")) {
@@ -495,7 +493,7 @@ output:
  * @return {Array} barData ready for use in D3 charts.
  */
 var convertPieToBarData = function(arr) {    
-    var values = _.map(arr,function(item){return [item['key'], item['y'] * 1000];});
+    var values = _.map(arr,function(item){return [item['key'], item['y']];});
     
     return [{"key": "Other", "values": values}];
     
