@@ -1,0 +1,48 @@
+<div class="row header">
+  <img src="/img/island-silhouette.png" alt="PACIFIC ECONOMICS" />
+</div>
+<div class="row">
+  <div class="span12">
+    <!-- h2>{{ level || 'National Budget' }}</h2 -->
+    <h2>Budget Visualiser - Vanuatu Expenses vs Revenues</h2>
+
+    <p>(Millions of Vatu)</p> 
+    <div ng-controller="oneOffChartsCtrl">
+      <nvd3-line-chart
+    	 data="vuRevenueExpenseHistory"
+         id="exampleId"
+         showXAxis="true"
+         showYAxis="true"
+	 showLegend="true"
+	 showControls="true"
+	 interactive="true"
+	 tooltips="true"
+	 tooltipContent="lineChartTooltips"
+	 forcey="[12000,17000]"
+	 xAxisTickFormat="xAxisTickFormatFunction()"
+	 isArea="true"
+         width="600"
+         height="350"
+	 color="colorFunction()"
+	 margin="{left:75,top:20,bottom:0,right:0}">
+        <svg></svg>
+      </nvd3-stacked-area-chart>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div class="row footer">
+<hr />
+<p>
+  <small>Brought to you by the <a href="http://pacificpolitics.com/">Pacific Insititute of Public Policy</a>.</small>
+</p>
+<p>
+  <small>PiPP is the leading independent think tank serving the Pacific islands community. 
+    We exist to stimulate and support informed policy debate in the Pacific.</small>
+</p>
+
+
+</div>

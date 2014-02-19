@@ -280,3 +280,47 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
     }]);
 
+
+// One-off controllers
+
+angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
+    .controller('oneOffChartsCtrl', ['$scope', '$location', '$routeParams', function ($scope, $location, $routeParams) {
+
+	$scope.current_palette = 	    
+	    [
+		'#ef8a62', '#67a9cf', '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+	    ];
+
+
+	$scope.vuRevenueExpenseHistory = [
+	    {
+		"key": "Revenues",
+		"values": [[2011, 12850.6],[2012,13612.4],[2013, 14554.2],[2014,15252.7]]         
+	    },
+	    {
+		"key": "Expenses",
+		"values": [[2011, 13840],[2012,14186.5],[2013,14184.2],[2014,14661.7]]         
+	    }
+   	];
+
+	$scope.xAxisTickFormatFunction = function(){
+	    return function(d){
+		if (d % 1 === 0){
+		    return parseInt(d);
+		}
+	    };
+	};
+
+	$scope.colorFunction = function() {
+	    return function(d, i) {
+    		return $scope.current_palette[i];
+	    };
+	}
+
+	$scope.lineChartTooltips = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>';
+	};
+
+    }]);
