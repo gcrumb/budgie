@@ -1,3 +1,8 @@
+svg {
+    /* override the height setting in nvd3.css */
+    height:300px;
+}
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
@@ -158,6 +163,10 @@ li.breadcrumb-trail span:hover {
   padding:0 10px;
 }
 
+
+svg#budget, svg#donor-vs-govt {
+    height: 100%;
+}
 
 /* Legend */
  

@@ -1,39 +1,79 @@
 <div class="row header">
   <img src="/img/island-silhouette.png" alt="PACIFIC ECONOMICS" />
 </div>
-<div class="row">
-  <div class="span12">
-    <!-- h2>{{ level || 'National Budget' }}</h2 -->
-    <h2>Budget Visualiser - Vanuatu Expenses vs Revenues</h2>
-
-    <p>(Millions of Vatu)</p> 
-    <div ng-controller="oneOffChartsCtrl">
-      <nvd3-line-chart
-    	 data="vuRevenueExpenseHistory"
-         id="exampleId"
-         showXAxis="true"
-         showYAxis="true"
-	 showLegend="true"
-	 showControls="true"
-	 interactive="true"
-	 tooltips="true"
-	 tooltipContent="lineChartTooltips"
-	 forcey="[12000,17000]"
-	 xAxisTickFormat="xAxisTickFormatFunction()"
-	 isArea="true"
-         width="600"
-         height="350"
-	 color="colorFunction()"
-	 margin="{left:75,top:20,bottom:0,right:0}">
-        <svg></svg>
-      </nvd3-stacked-area-chart>
+<div ng-controller="oneOffChartsCtrl">
+  <div class="row">
+    <div class="span12">
+      <!-- h2>{{ level || 'National Budget' }}</h2 -->
+      <h2>Budget Visualiser - Vanuatu Expenses vs Revenues</h2>
+      <p>(Millions of Vatu)</p> 
     </div>
-
-
+    <nvd3-line-chart
+       data="vuRevenueExpenseHistory"
+       id="vu-revenue-expense-history"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="lineChartTooltips"
+       forcey="[12000,16000]"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-line-chart>
+  </div>
+  <div class="row">
+    <h2>Vanuatu Debt</h2>
+    <p>(Millions of Vatu)</p> 
+    <nvd3-multi-bar-chart
+       data="vuDebtHistory"
+       id="vu-debt-history"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="false"
+       tooltips="true"
+       tooltipContent="areaChartTooltips"
+       forcey="[0,21000]"
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       stacked="true"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+  </div>
+  <div class="row">
+    <h2>Vanuatu Donor &amp; Govt. Spending</h2>
+    <p>(Millions of Vatu)</p> 
+    <nvd3-multi-bar-horizontal-chart
+       data="vuDonorVsGovt"
+       id="vu-donor-v-govt"
+       showYAxis="false"
+       showXAxis="false"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="stackedLineTooltips"
+       width="600"
+       height="500"
+       color="colorFunction()"
+       stacked="true"
+       yAxisTickFormat=""
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg id="donor-vs-govt"></svg>
+    </nvd3-multi-bar-chart>
   </div>
 </div>
-
-
 <div class="row footer">
 <hr />
 <p>
