@@ -70,19 +70,40 @@
        stacked="true"
        yAxisTickFormat=""
        margin="{left:75,top:20,bottom:0,right:0}">
-      <svg id="donor-vs-govt"></svg>
-    </nvd3-multi-bar-chart>
+      <svg></svg>
+    </nvd3-multi-bar-horizontal-chart>
   </div>
+  <div class="row">
+    <h2>Vanuatu Growth by Sector</h2>
+    <p>(Percentage change)</p> 
+    <nvd3-line-chart
+       data="vuGDP"
+       id="vu-gdp-by-sector"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="lineChartTooltipsGDP"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg id="last"></svg>
+    </nvd3-line-chart>
+
+  </div>
+
 </div>
 <div class="row footer">
-<hr />
-<p>
-  <small>Brought to you by the <a href="http://pacificpolitics.com/">Pacific Insititute of Public Policy</a>.</small>
-</p>
-<p>
-  <small>PiPP is the leading independent think tank serving the Pacific islands community. 
-    We exist to stimulate and support informed policy debate in the Pacific.</small>
-</p>
-
-
+  <hr />
+  <p>
+    <small>Brought to you by the <a href="http://pacificpolitics.com/">Pacific Insititute of Public Policy</a>.</small>
+  </p>
+  <p>
+    <small>PiPP is the leading independent think tank serving the Pacific islands community. 
+      We exist to stimulate and support informed policy debate in the Pacific.</small>
+  </p>
 </div>

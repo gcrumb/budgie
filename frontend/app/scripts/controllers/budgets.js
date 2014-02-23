@@ -399,6 +399,33 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    "Medical Supplies Stock"
 	];
 
+	$scope.vuGDP = [
+	    {
+		"key": "GDP",
+		"values": [
+		    [2010,1.6],[2011,1.2],[2012,1.8],[2013,3.3],[2014,5.1],[2015,5.9]
+		]
+	    },
+	    {
+		"key": "Ag/Fish/Forestry",
+		"values": [
+		    [2010,4.8],[2011,6.1],[2012,2.2],[2013,1.3],[2014,1.7],[2015,2.5]
+		]
+	    },
+	    {
+		"key": "Industry/Construction",
+		"values": [
+		    [2010,12.6],[2011,-19.4],[2012,-22.1],[2013,0.5],[2014,11.1],[2015,29.8]
+		]
+	    },
+	    {
+		"key": "Services",
+		"values": [
+		    [2010,3.0],[2011,3.2],[2012,4.4],[2013,4.1],[2014,5.4],[2015,5.4]
+		]
+	    }
+	];
+
 	// return only integer values - this is needed to display years in the x axis
 	$scope.xAxisTickFormatFunction = function(){
 	    return function(d){
@@ -425,6 +452,11 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	$scope.lineChartTooltips = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>';
+	};
+
+	$scope.lineChartTooltipsGDP = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + y + '% change<br />in ' + x + '</p>';
 	};
 
 	$scope.areaChartTooltips = function(key, x, y, e, graph) {
