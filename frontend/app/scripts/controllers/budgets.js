@@ -292,9 +292,8 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		'#ef8a62', '#67a9cf', '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
 		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ];
-
-/*
 	
+/*
 	var vu_revenues = [[2011,12850.6],[2012,13612.4],[2013,14554.2],[2014,15252.7]];
 	var vu_values   = [[2011,13840],[2012,14186.5],[2013,14184.2],[2014,14661.7]];
 
@@ -311,25 +310,41 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	var this_item = 0;
 	$interval(function(){
-//	    console.debug(this_item.toString() + ': Adding ', vu_revenues[this_item]);
-	    $scope.vuRevenueExpenseHistory[0].values.push(vu_revenues[this_item]);
-	    $scope.vuRevenueExpenseHistory[1].values.push(vu_values[this_item]);
+	    console.debug(this_item.toString() + ': Adding ', vu_revenues[this_item]);
+	    $scope.$apply(function(){
+		$scope.vuRevenueExpenseHistory[0].values.push(vu_revenues[this_item]);
+		$scope.vuRevenueExpenseHistory[1].values.push(vu_values[this_item]);
+	    });
 	    this_item++;
-//	    console.debug('History: ', $scope.vuRevenueExpenseHistory);
+	    console.debug('History: ', $scope.vuRevenueExpenseHistory);
 	}, 200, vu_revenues.length);
-
-
-	// Data series for the Vanuatu revenue/expense multi-line chart
 */
 
+	$scope.vuUnbudgetedSpending = [
+	    ["Government Scholarship Fund",298000000],
+	    ["Central Payments",27700000],
+	    ["MSG Contribution",22000000],
+	    ["Grant to VTO",20000000],
+	    ["Dept of Labour and Immigration",10000000],
+	    ["Severance payment for DG Foreign Affairs",5000000],
+	    ["Parliamentary Secretary",5000000],
+	    ["Police Operations",4000000],
+	    ["Department of Bio-security",3000000],
+	    ["2017 Games Preparation",2000000],
+	    ["Department Operation",1000000],
+	    ["Ministry of Youth and Sport, Cabinet operational budget",1000000],
+	    ["Ministry of Climate Change",1000000]
+	];
+
+	// Data series for the Vanuatu revenue/expense multi-line chart
 	$scope.vuRevenueExpenseHistory = [
-	    {
-		"key": "Revenues",
-		"values": [[2010,12276],[2011,12850.6],[2012,13612.4],[2013,14554.2],[2014,15252.7]]         
-	    },
 	    {
 		"key": "Expenses",
 		"values": [[2010,13482],[2011,13840],[2012,14186.5],[2013,14184.2],[2014,14661.7]]         
+	    },
+	    {
+		"key": "Revenues",
+		"values": [[2010,12276],[2011,12850.6],[2012,13612.4],[2013,14554.2],[2014,15252.7]]         
 	    }
    	];
 
@@ -490,6 +505,11 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br /> in ' + key + '</p>' +
 		'<p>(' + int2roundKMG((parseFloat(total)).toString()) + ' vatu in total)</p>';
 
+	};
+
+	$scope.pieTooltips = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + int2roundKMG(parseFloat(y.value).toString()) + '<br />VATU</p>';
 	};
 
 

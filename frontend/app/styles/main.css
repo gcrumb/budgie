@@ -3,6 +3,15 @@ svg {
     height:300px;
 }
 
+svg#budget, svg#last {
+    height: 100%;
+}
+
+svg#vu-donor-govt-spending {
+    height:500px;
+    margin-bottom: 3em;
+}
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
@@ -161,11 +170,6 @@ li.breadcrumb-trail span:hover {
 .other.ng-hide {
   opacity:0;
   padding:0 10px;
-}
-
-
-svg#budget, svg#last {
-    height: 100%;
 }
 
 /* Legend */

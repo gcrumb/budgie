@@ -28,6 +28,7 @@
       <svg></svg>
     </nvd3-line-chart>
   </div>
+<div class="row"></div>
   <div class="row">
     <h2>Vanuatu Debt</h2>
     <p>(Millions of Vatu)</p> 
@@ -51,6 +52,7 @@
       <svg></svg>
     </nvd3-multi-bar-chart>
   </div>
+<div class="row"></div>
   <div class="row">
     <h2>Vanuatu Donor &amp; Govt. Spending</h2>
     <p>(Millions of Vatu)</p> 
@@ -70,9 +72,10 @@
        stacked="true"
        yAxisTickFormat=""
        margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
+      <svg id="vu-donor-govt-spending"></svg>
     </nvd3-multi-bar-horizontal-chart>
   </div>
+<div class="row"></div>
   <div class="row">
     <h2>Vanuatu Growth by Sector</h2>
     <p>(Percentage change)</p> 
@@ -91,10 +94,44 @@
        height="350"
        color="colorFunction()"
        margin="{left:75,top:20,bottom:0,right:0}">
-      <svg id="last"></svg>
+      <svg></svg>
     </nvd3-line-chart>
-
   </div>
+<div class="row"></div>
+<div class="row">
+    <h2>Vanuatu Unbudgeted Spending in 2013</h2>
+    <nvd3-pie-chart
+       data="vuUnbudgetedSpending"
+       noData=""
+       id="vu-unbudgeted-spending"
+       showLabels="false"
+       showValues="true"
+       labelType="percent"
+       tooltips="true"
+       tooltipContent="pieTooltips"
+       transitionDuration="1200"
+       width="700"
+       height="700"
+       donut="true"
+       donutRatio="1.5"
+       donutLabelsOutside="false"
+       showLegend="false"
+       color="colorFunction()"
+       margin="{left:-50,top:100,bottom:100,right:100}">
+      <svg id="last"></svg>
+    </nvd3-pie-chart>
+
+    <simple-svg-legend 
+       data="vuUnbudgetedSpending"
+       labels="vuUnbudgetedSpending"
+       width="500" 
+       height="200" 
+       columns="5" 
+       x="10" 
+       y="0">
+    </simple-svg-legend>
+
+<div>
 
 </div>
 <div class="row footer">
