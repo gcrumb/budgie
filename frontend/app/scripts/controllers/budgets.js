@@ -14,6 +14,8 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var current_year = $routeParams.year ? $routeParams.year : '2014';
 	var currentDocument = country + '-' + current_year;
 
+	$scope.showButtons = $routeParams.country ==='png' ? true : false;
+
 	// Use this for roll-up / unroll animations.
 	var empty_pie = [{ 
         "label": "",
@@ -22,16 +24,16 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 	var palettes = [
 	    [
-		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
-		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+		'#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', 
+		'#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'
 	    ],
 	    [
 		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
 		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
 	    ],
 	    [
-		'#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', 
-		'#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'
+		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ],
 	    [
 		"#9edae5", "#17becf", "#dbdb8d", "#bcbd22", "#c7c7c7", "#7f7f7f", "#f7b6d2", "#e377c2", "#c49c94", "#8c564b", "#c5b0d5", 
@@ -340,7 +342,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	$scope.vuRevenueExpenseHistory = [
 	    {
 		"key": "Expenses",
-		"values": [[2010,13482],[2011,13840],[2012,14186.5],[2013,14184.2],[2014,14661.7]]         
+		"values": [[2010,13482],[2011,13830],[2012,14186.5],[2013,14184.2],[2014,14661.7]]         
 	    },
 	    {
 		"key": "Revenues",
@@ -363,23 +365,23 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    {
 		"key" : "Donor Aid",
 		"values": [
-		    ["MoH1",831280000],["MoE1",780723000],["MoE2",702623000],["MIPU",698969000],["MoH2",567094000],
-		    ["Ports",510122000],["PMO",488499000],["TVET",333132000],["MFEM",237952000],["MoJ",237952000],
-		    ["MoH3",232442000],["ICT",187470000],["MIA",172593000],["Meteo",157204000],["VTO",156988000],
-		    ["MIA2",152289000],["MoH4",149000000],["Women",135176000],["Land",106412000],["Court",53376000],
-		    ["Water",51021000],["MoH5",38499000],["Agri",25666000],["MIA3",22873000],["Commerce",20533000],
-		    ["Agri2",19623000],["MoH6",16898000]
+		    ["MoH1",831280],["MoE1",780723],["MoE2",702623],["MIPU",698969],["MoH2",567094],
+		    ["Ports",510122],["PMO",488499],["TVET",333132],["MFEM",237952],["MoJ",237952],
+		    ["MoH3",232442],["ICT",187470],["MIA",172593],["Meteo",157204],["VTO",156988],
+		    ["MIA2",152289],["MoH4",149000],["Women",135176],["Land",106412],["Court",53376],
+		    ["Water",51021],["MoH5",38499],["Agri",25666],["MIA3",22873],["Commerce",20533],
+		    ["Agri2",19623],["MoH6",16898]
 		]
 	    },
 	    {
 		"key" : "Government Spending",
 		"values": [
-		    ["MoH1",792503017],["MoE1",24121329],["MoE2",661884190],["MIPU",421857218],["MoH2",139415181],
-		    ["Ports",359808218],["PMO",83942974],["TVET",28110798],["MFEM",349711457],["MoJ",28979301],
-		    ["MoH3",61055158],["ICT",280444229],["MIA",43487779],["Meteo",138811307],["VTO",23889013],
-		    ["MIA2",201170506],["MoH4",303352323],["Women",36799825],["Land",8235498],["Court",82045610],
-		    ["Water",17794398],["MoH5",49234561],["Agri",33909360],["MIA3",35316274],["Commerce",89162690],
-		    ["Agri2",58117732],["MoH6",219418294]
+		    ["MoH1",792503],["MoE1",24121],["MoE2",661884],["MIPU",421857],["MoH2",139415],
+		    ["Ports",359808],["PMO",83943],["TVET",28111],["MFEM",349711],["MoJ",28979],
+		    ["MoH3",61055],["ICT",280444],["MIA",43488],["Meteo",138811],["VTO",23889],
+		    ["MIA2",201170],["MoH4",303352],["Women",36799],["Land",8235],["Court",82046],
+		    ["Water",17794],["MoH5",49234],["Agri",33909],["MIA3",35316],["Commerce",89163],
+		    ["Agri2",58118],["MoH6",219418]
 		]
 	    }
 	];
@@ -441,6 +443,84 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    }
 	];
 
+	$scope.vuScholarshipOverspend = [
+	    {
+		"key": "Scholarship Budget",
+		values: [
+		    [2012,270],[2013,270],[2014,460]
+		]
+	    },
+	    {
+		"key": "Overspend",
+		values: [
+		    [2012,137],[2013,339],[2014,318]
+		]
+	    }
+	];
+
+	$scope.vuSpendingByCategory = [
+	    {
+		"key": "Scholarship spending",
+		"values":[
+		    ["Scholarships",778]
+		]
+		    },
+	    {
+		"key": "2014 Budget by Selected Category",
+		"values":[
+		    ["Hospital Services",792],["Min. Internal Affairs",608],
+		    ["Min. Agriculture",482],["Min. Foreign Affairs",366],["Min. Ni Vanuatu Business",287],
+		    ["Min. Lands",231],["Medical Supplies",219]
+		]
+	    }
+	];
+
+	var vu_education_trends = [
+	    {
+		"graph": "Average Year Drop Out",
+		"series": [
+		    {
+		    "key": "Primary (Year 1-6)",
+		    "values": [[2008,7],[2009,2],[2010,6],[2011,8],[2012,4]]
+		    },
+		    {
+		    "key": "Secondary (Year 7-13)",
+		    "values": [[2008,27],[2009,38],[2010,40],[2011,44],[2012,34]]
+		    }
+		]		
+	    },
+	    {
+		"graph": "Average Repetition Rate",
+		"series": [
+		    {
+		    "key": "Primary (Year 1-6)",
+		    "values": [[2008,14],[2009,14],[2010,15],[2011,12],[2012,15]]
+		    },
+		    {
+		    "key": "Secondary (Year 7-13)",
+		    "values": [[2008,2],[2009,2],[2010,3],[2011,3],[2012,3]]
+		    }
+		]		
+	    },
+	    {
+		"graph": "Survival to Year 13",
+		"series": [
+		    {
+		    "key": "Secondary",
+		    "values": [[2008,20],[2009,16],[2010,10],[2011,7],[2012,12]]
+		    }
+		]		
+	    }
+	];
+
+	$scope.whichEducationGraph = 0;
+	$scope.EducationGraphHeader = vu_education_trends[$scope.whichEducationGraph = 0].graph;
+
+	$scope.EducationGraph = function() {	    
+	    return vu_education_trends[$scope.whichEducationGraph];
+	};
+
+
 	// return only integer values - this is needed to display years in the x axis
 	$scope.xAxisTickFormatFunction = function(){
 	    return function(d){
@@ -465,9 +545,29 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	}
 
 	$scope.lineChartTooltips = function(key, x, y, e, graph) {
+
+	    var other_index = e.seriesIndex === 0 ? 1 : 0;
+	    var index = x - 2010; // Yep, magic number :-/
+
+	    var gap = $scope.vuRevenueExpenseHistory[1].values[index][1] - $scope.vuRevenueExpenseHistory[0].values[index][1];
+	    
+	    var spending_status = gap < 0 ? 'deficit' : 'surplus';
+
             return '<h3>' + key + '</h3>' +
-		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>';
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>' +
+		'<p>(' + int2roundKMG((gap  * 1000000).toString().replace('-', '')) + ' vatu ' + spending_status + ')</p>';
 	};
+
+	$scope.overspendChartTooltips = function(key, x, y, e, graph) {
+
+	    var index = x - 2012; // Yep, magic number :-/
+	    var percent_overspend = parseFloat($scope.vuScholarshipOverspend[1].values[index][1] / $scope.vuScholarshipOverspend[0].values[index][1] * 100).toFixed(2);
+
+            return '<h3>' + key + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>' +
+		'<p>(' + percent_overspend + '%'   + ' overspent)</p>';
+	};
+
 
 	$scope.lineChartTooltipsGDP = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +
@@ -475,10 +575,15 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	};
 
 	$scope.areaChartTooltips = function(key, x, y, e, graph) {
-	    console.debug('E: ', e);
-	    
             return '<h3>' + key + '</h3>' +
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000000).toString()) + ' VATU<br />in ' + x + '</p>';
+	};
+
+	$scope.vuSelectedCategoryTooltips = function(key, x, y, e, graph) {
+	    var label = x;
+	    label = label.replace(/Min\./, "Ministry of");
+            return '<h3>' + label + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br /></p>';
 	};
 
 	$scope.stackedLineTooltips = function(key, x, y, e, graph) {
@@ -493,7 +598,6 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		    if (search_array[i][0] == x && search_array[i][1].toLocaleString('en') + '.0' == y){
 			var other_index = e.seriesIndex === 0 ? 1 : 0;
 			total = search_array[i][1] + $scope.vuDonorVsGovt[other_index].values[i][1];
-//			console.debug("GOT IT: ", $scope.vuDonorsVsGovtLabels[i]);
 			label = $scope.vuDonorsVsGovtLabels[i];
 		    }
 		}
@@ -503,7 +607,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    
             return '<h3>' + label + '</h3>' +
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br /> in ' + key + '</p>' +
-		'<p>(' + int2roundKMG((parseFloat(total)).toString()) + ' vatu in total)</p>';
+		'<p>(' + int2roundKMG((parseFloat(total) * 1000).toString()) + ' vatu in total)</p>';
 
 	};
 

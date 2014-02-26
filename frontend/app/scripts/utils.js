@@ -940,8 +940,7 @@ var int2roundKMG = function(val) {
     var _str = "";
 
     val = val.replace (/\,/g,'');
-    val = val.replace (/\.0/,'');
-//    val *= 1000;
+    val = val.replace (/\.*/,'');
 
     if (val >= 1e9)        { 
 	_str = truncNb((val/1e9), 2) + ' Billion';

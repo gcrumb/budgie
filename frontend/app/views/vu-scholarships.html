@@ -1,0 +1,65 @@
+<div class="row header">
+  <img src="/img/island-silhouette.png" alt="PACIFIC ECONOMICS" />
+</div>
+<div ng-controller="oneOffChartsCtrl">
+  <div class="row">
+
+    <h2>Overspend on scholarships</h2>
+    <p>(Millions of Vatu)</p> 
+    <nvd3-multi-bar-chart
+       data="vuScholarshipOverspend"
+       id="vu-scholarship-overspend"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="false"
+       tooltips="true"
+       tooltipContent="overspendChartTooltips"
+       forcey="[0,80]"
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       stacked="true"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+
+
+  </div>
+  <div class="row"></div>
+  <div class="row">
+    <h2>2014 Budget by Selected Category</h2>
+    <p>(Millions of Vatu)</p> 
+    <nvd3-multi-bar-chart
+       data="vuSpendingByCategory"
+       id="vu-spending-by-category"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="false"
+       showControls="false"
+       interactive="false"
+       tooltips="true"
+       tooltipContent="vuSelectedCategoryTooltips"
+       forceY="[0,800]"
+       width="800"
+       height="500"
+       rotateLabels="45"
+       grouped="true"
+       color="colorFunction(0)"
+       margin="{left:125,top:20,bottom:50,right:0}">
+      <svg id="last"></svg>
+    </nvd3-multi-bar-chart>
+  </div>
+
+<div class="row footer">
+  <hr />
+  <p>
+    <small>Brought to you by the <a href="http://pacificpolitics.com/">Pacific Insititute of Public Policy</a>.</small>
+  </p>
+  <p>
+    <small>PiPP is the leading independent think tank serving the Pacific islands community. 
+      We exist to stimulate and support informed policy debate in the Pacific.</small>
+  </p>
+</div>
