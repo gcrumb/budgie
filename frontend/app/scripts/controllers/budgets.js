@@ -137,10 +137,15 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	};
 
 	$scope.tooltipContent = function(key, x, y, e, graph) {
-	    // This is just here so I have a placeholder 
-	    // for actual, you know, not fugly code
+
+	    var notes = '';
+	    if (typeof($scope.notes) != 'undefined'){
+		notes = '<p><em>' + $scope.notes + '</em></p>';
+	    }
+
             return '<h3>' + key + '</h3>' +
-		'<p>' + int2roundKMG((parseFloat(y.value) * $scope.currency_multiplier).toString()) + '<br />' + $scope.budget_currency + '</p>';
+		'<p>' + int2roundKMG((parseFloat(y.value) * $scope.currency_multiplier).toString()) + '<br />' + $scope.budget_currency + '</p>' +
+		notes;
 	};
 
 	$scope.barChartTooltips = function(key, x, y, e, graph) {
@@ -477,7 +482,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	var vu_education_trends = [
 	    {
-		"graph": "Average Year Drop Out",
+		"graph": "Average Drop Out Rate",
 		"series": [
 		    {
 		    "key": "Primary (Year 1-6)",
@@ -514,12 +519,22 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	];
 
 	$scope.whichEducationGraph = 0;
-	$scope.EducationGraphHeader = vu_education_trends[$scope.whichEducationGraph = 0].graph;
+	$scope.vuEducationGraphHeader = vu_education_trends[$scope.whichEducationGraph].graph;
+	$scope.vuEducationGraph =  vu_education_trends[$scope.whichEducationGraph].series;
 
-	$scope.EducationGraph = function() {	    
-	    return vu_education_trends[$scope.whichEducationGraph];
+	$scope.nextEducationGraph = function(index){
+	    if (typeof(index) === "number" && index >= 0 && index <= vu_education_trends.length){
+		$scope.whichEducationGraph = index;
+	    }
+	    else {
+		$scope.whichEducationGraph++;
+	    }
+
+	    $scope.whichEducationGraph = $scope.whichEducationGraph >= vu_education_trends.length ? 0 : $scope.whichEducationGraph;
+	    $scope.vuEducationGraph =  vu_education_trends[$scope.whichEducationGraph].series;
+	    $scope.vuEducationGraphHeader = vu_education_trends[$scope.whichEducationGraph].graph;
+
 	};
-
 
 	// return only integer values - this is needed to display years in the x axis
 	$scope.xAxisTickFormatFunction = function(){
@@ -573,6 +588,12 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
             return '<h3>' + key + '</h3>' +
 		'<p>' + y + '% change<br />in ' + x + '</p>';
 	};
+
+	$scope.lineChartTooltipsEducation = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + y + '%<br />in ' + x + '</p>';
+	};
+
 
 	$scope.areaChartTooltips = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +

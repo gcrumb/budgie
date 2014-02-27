@@ -109,7 +109,7 @@ while (<CSV>){
 
     $sect->{categories}->{$dept}           = $department;
     $categories->{$sector}                 = $sect;
-    $upload_rec{root}->{categories}                = $categories;
+    $upload_rec{root}->{categories}        = $categories;
 
     next;
   }
@@ -118,7 +118,7 @@ while (<CSV>){
   unless ($subprogramme){
     die "Missing programme data from line '$_'!\n" unless (defined $programme && $programme);
     
-    my $categories = $upload_rec{root}->{categories}                 || {};
+    my $categories = $upload_rec{root}->{categories}         || {};
     my $sect       = $categories->{$sector}                  || {};
     my $department = $sect->{categories}->{$dept}            || {};
     my $prog       = $department->{categories}->{$programme} || {};
@@ -131,7 +131,7 @@ while (<CSV>){
     $department->{categories}->{$programme} = $prog;
     $sect->{categories}->{$dept}            = $department;
     $categories->{$sector}                  = $sect;
-    $upload_rec{root}->{categories}                 = $categories;
+    $upload_rec{root}->{categories}         = $categories;
 
     next;
   }

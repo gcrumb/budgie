@@ -3,9 +3,32 @@
 </div>
 <div ng-controller="oneOffChartsCtrl">
   <div class="row">
+    <h1>Open Budgets: Vanuatu’s Government Budget in 5 Graphs</h1>
+
+    <p>
+      This is PiPP's first feature on the theme of open budgets. It is designed to further our understanding
+      of public finances, policies and the impact of the spending decisions our governments make. This page 
+      provides a broad overview of the Vanuatu budget. You can delve into the budget in detail using our
+      <a href="/#/budget/vu/2014">interactive pie chart</a>, which shows in how public funds are being allocated 
+      in 2014, right down to the programme level.
+    </p>
+    <p>
+      All of these charts are interactive. Take the time to mouse over them, click around, and you will find they
+      provide a number of useful and interesting ways of presenting the information.
+    </p>
+    </p>
+    <h2>Revenue, Spending and the Deficit</h2>
+    <p>
+      The 2014 budget leaves a surplus - revenues are expected to exceed spending - by almost VUV 600 million. 
+      This follows a series of sizeable deficits from 2007 to 2012. Treasury officials tend to 
+      strive for a balanced budget on the basis that fiscal deficits are likely to cause cash 
+      flow problems.
+    </p>
+  </div>
+  <div class="row">
     <div class="span12">
       <!-- h2>{{ level || 'National Budget' }}</h2 -->
-      <h2>Budget Visualiser - Vanuatu Expenses vs Revenues</h2>
+      <h3>Vanuatu Expenses vs Revenues</h3>
       <p>(Millions of Vatu)</p> 
     </div>
     <nvd3-line-chart
@@ -28,9 +51,25 @@
       <svg></svg>
     </nvd3-line-chart>
   </div>
-<div class="row"></div>
+<div class="row">
+  <h2>Domestic and Foreign Debt</h2>
+  <p>
+    The Vanuatu government has come close to exhausting its ability to take on domestic debt. 
+    The standard sources of commercial banks and Vanuatu National Provident Fund appear uninterested 
+    in taking on more government, in particular those debts of a shorter period. This is a challenge 
+    to the cash-flow management of the government.
+  </p>
+  <p>
+    Reflecting this tight environment, the government asked the Reserve Bank to purchase VUV 100 million in bonds at 
+    the end of 2013.
+  </p>
+  <p>
+    Many potential new lending agreements from external concessional lending, in particular Chinese EXIM bank, are absent 
+    from this data. This is likely to shift Vanuatu’s debt burden significantly.
+  </p>
+</div>
   <div class="row">
-    <h2>Vanuatu Debt</h2>
+    <h3>Vanuatu Debt</h3>
     <p>(Millions of Vatu)</p> 
     <nvd3-multi-bar-chart
        data="vuDebtHistory"
@@ -52,9 +91,15 @@
       <svg></svg>
     </nvd3-multi-bar-chart>
   </div>
-<div class="row"></div>
+<div class="row">
+  <h2>Donor Spending</h2>
+  <p>
+    The government budget books lists around VUV 7 billion worth of donor spending in kind and in cash. 
+    We present it here alongside the government’s own contribution to the same area.
+  </p>
+</div>
   <div class="row">
-    <h2>Vanuatu Donor &amp; Govt. Spending</h2>
+    <h3>Vanuatu Donor &amp; Govt. Spending</h3>
     <p>(Millions of Vatu)</p> 
     <nvd3-multi-bar-horizontal-chart
        data="vuDonorVsGovt"
@@ -75,9 +120,19 @@
       <svg id="vu-donor-govt-spending"></svg>
     </nvd3-multi-bar-horizontal-chart>
   </div>
-<div class="row"></div>
   <div class="row">
-    <h2>Vanuatu Growth by Sector</h2>
+    <h2>Economic Activity</h2>
+
+    <p>
+      Vanuatu’s economic activity has been slowing over recent years reflecting a weakening 
+      donor-driven construction activity, a weakening in the property market and low commodity prices. 
+      The Vanuatu government expects all of these things to change over the coming years, driving a strong 
+      recovery. Domestic inflationary pressures may be on the horizon.
+    </p>
+
+  </div>
+  <div class="row">
+    <h3>Vanuatu Growth by Sector</h3>
     <p>(Percentage change)</p> 
     <nvd3-line-chart
        data="vuGDP"
@@ -97,9 +152,16 @@
       <svg></svg>
     </nvd3-line-chart>
   </div>
-<div class="row"></div>
 <div class="row">
-    <h2>Vanuatu Unbudgeted Spending in 2013</h2>
+  <h2>2013 Budget Performance</h2>
+  <p>
+    The government overspent in a number of areas in 2013. Most notable is the overspending on government scholarships, 
+    which has created a significant change in the Vanuatu government’s education budget over the last few years- this is 
+    discussed in more detail <a href="/#/budget/vu/2014/scholarships">in this case study</a>.
+  </p>
+</div>
+<div class="row">
+    <h3>Vanuatu Unbudgeted Spending in 2013</h3>
     <nvd3-pie-chart
        data="vuUnbudgetedSpending"
        noData=""
