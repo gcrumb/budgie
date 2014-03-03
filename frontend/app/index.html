@@ -29,8 +29,26 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container">
+      <div class="row header">
+	<a href="/"><img src="/img/island-silhouette.png" alt="PACIFIC ECONOMICS" /></a>
+      </div>
 
+      <div class="container" ng-view=""></div>
+
+
+      <div class="row" style="height: 200px;"></div>
+      <div class="row footer">
+	<hr />
+	<p>
+	  <small>Brought to you by the <a href="http://pacificpolitics.com/">Pacific Insititute of Public Policy</a>.</small>
+	</p>
+	<p>
+	  <small>PiPP is the leading independent think tank serving the Pacific islands community. 
+	    We exist to stimulate and support informed policy debate in the Pacific.</small>
+	</p>
+      </div>
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--  <script> -->
     <!--    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->

@@ -35,6 +35,10 @@ body {
     letter-spacing: -1px;
 }
 
+h3 {
+    color: #1f77b4;
+}
+
 .header {
 
     background-color: #fff;

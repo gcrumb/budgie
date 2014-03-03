@@ -2207,6 +2207,242 @@
                 "level": "Sectoral Expenditure",
                 "name": "Constitutional Agencies"
             },
+            "GrantstoInstitutions": {
+                "categories": {
+                    "ChamberofCommerceandIndustry(CCI)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 27999900,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 30000000,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 30000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Chamber of Commerce and Industry (CCI)"
+                    },
+                    "GrantSPBEAandUSP": {
+                        "data": {
+                            "2012": {
+                                "aggr": 75869818,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 74235509,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 134200000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Grant SPBEA and USP"
+                    },
+                    "GranttoVIPA": {
+                        "data": {
+                            "2012": {
+                                "aggr": 38668264,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 38668264,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 38668264,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Grant to VIPA"
+                    },
+                    "GranttoVanuatuNationalArchives": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 10400000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Grant to Vanuatu National Archives"
+                    },
+                    "UtilityRegulatoryAuthority": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 21226099,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 22226099,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Utility Regulatory Authority"
+                    },
+                    "VanuatuAgriculturalResearchandTrainingCentre(VARTC)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 35692438,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 35692438,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 39692438,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Agricultural Research and Training Centre (VARTC)"
+                    },
+                    "VanuatuAgricultureCollege": {
+                        "data": {
+                            "2012": {
+                                "aggr": 82800392,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 82800392,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 82800392,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Agriculture College"
+                    },
+                    "VanuatuBroadcastingandTelevisionCorporation(VBTC)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 60193316,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 60193317,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 60193317,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Broadcasting and Television Corporation (VBTC)"
+                    },
+                    "VanuatuCulturalCentre(VCC)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 26291633,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 26291633,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 26291633,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Cultural Centre (VCC)"
+                    },
+                    "VanuatuMaritimeAdministration(VMA)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 7988,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 15000000,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 15000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Maritime Administration (VMA)"
+                    },
+                    "VanuatuMaritimeCollege": {
+                        "data": {
+                            "2012": {
+                                "aggr": 41255244,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 41255243,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 41255243,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Maritime College"
+                    },
+                    "VanuatuTourismOffice(VTO)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 202000000,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 159989780,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 159989780,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Tourism Office (VTO)"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 590778993,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 585352675,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 660717166,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Grants to Institutions"
+            },
             "MinistryofAgricultureLivestockForestryFisheriesandBiosecurity": {
                 "categories": {
                     "AgriculturalandRuralDevelopment": {
@@ -7073,242 +7309,6 @@
                         "level": "Departmental Expenditure",
                         "name": "Financial And Economic Management"
                     },
-                    "GrantstoInstitutions": {
-                        "categories": {
-                            "ChamberofCommerceandIndustry(CCI)": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 27999900,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 30000000,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 30000000,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Chamber of Commerce and Industry (CCI)"
-                            },
-                            "GrantSPBEAandUSP": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 75869818,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 74235509,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 134200000,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Grant SPBEA and USP"
-                            },
-                            "GranttoVIPA": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 38668264,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 38668264,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 38668264,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Grant to VIPA"
-                            },
-                            "GranttoVanuatuNationalArchives": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 0,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 0,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 10400000,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Grant to Vanuatu National Archives"
-                            },
-                            "UtilityRegulatoryAuthority": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 0,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 21226099,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 22226099,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Utility Regulatory Authority"
-                            },
-                            "VanuatuAgriculturalResearchandTrainingCentre(VARTC)": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 35692438,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 35692438,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 39692438,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Agricultural Research and Training Centre (VARTC)"
-                            },
-                            "VanuatuAgricultureCollege": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 82800392,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 82800392,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 82800392,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Agriculture College"
-                            },
-                            "VanuatuBroadcastingandTelevisionCorporation(VBTC)": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 60193316,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 60193317,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 60193317,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Broadcasting and Television Corporation (VBTC)"
-                            },
-                            "VanuatuCulturalCentre(VCC)": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 26291633,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 26291633,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 26291633,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Cultural Centre (VCC)"
-                            },
-                            "VanuatuMaritimeAdministration(VMA)": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 7988,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 15000000,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 15000000,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Maritime Administration (VMA)"
-                            },
-                            "VanuatuMaritimeCollege": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 41255244,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 41255243,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 41255243,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Maritime College"
-                            },
-                            "VanuatuTourismOffice(VTO)": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 202000000,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 159989780,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 159989780,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Vanuatu Tourism Office (VTO)"
-                            }
-                        },
-                        "data": {
-                            "2012": {
-                                "aggr": 590778993,
-                                "change": 0
-                            },
-                            "2013": {
-                                "aggr": 585352675,
-                                "change": 0
-                            },
-                            "2014": {
-                                "aggr": 660717166,
-                                "change": 0
-                            }
-                        },
-                        "level": "Departmental Expenditure",
-                        "name": "Grants to Institutions"
-                    },
                     "NationalStatistics": {
                         "categories": {
                             "NationalStatisticalCollectionAnalysis&Reporting": {
@@ -7459,80 +7459,6 @@
                         "level": "Departmental Expenditure",
                         "name": "National Statistics"
                     },
-                    "PaymentsonBehalfofGovernment": {
-                        "categories": {
-                            "CentralPayments": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 0,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 311295626,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 130215728,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Central Payments"
-                            },
-                            "FormerLeadersPayment": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 3955973,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 5000000,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 4850000,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Former Leaders Payment"
-                            },
-                            "PublicDebtProvisions": {
-                                "data": {
-                                    "2012": {
-                                        "aggr": 1401663636,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 2530488884,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 2586739713,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Public Debt Provisions"
-                            }
-                        },
-                        "data": {
-                            "2012": {
-                                "aggr": 1405619609,
-                                "change": 0
-                            },
-                            "2013": {
-                                "aggr": 2846784510,
-                                "change": 0
-                            },
-                            "2014": {
-                                "aggr": 2721805441,
-                                "change": 0
-                            }
-                        },
-                        "level": "Departmental Expenditure",
-                        "name": "Payments on Behalf of Government"
-                    },
                     "RevenueCollection": {
                         "categories": {
                             "CustomsandExciseCollections": {
@@ -7666,15 +7592,15 @@
                 },
                 "data": {
                     "2012": {
-                        "aggr": 3523730773,
+                        "aggr": 1527332171,
                         "change": 0
                     },
                     "2013": {
-                        "aggr": 4392077397,
+                        "aggr": 959940212,
                         "change": 0
                     },
                     "2014": {
-                        "aggr": 4331857249,
+                        "aggr": 949334642,
                         "change": 0
                     }
                 },
@@ -11260,6 +11186,80 @@
                 },
                 "level": "Sectoral Expenditure",
                 "name": "Ministry of Youth Development and Training"
+            },
+            "PaymentsonBehalfofGovernment": {
+                "categories": {
+                    "CentralPayments": {
+                        "data": {
+                            "2012": {
+                                "aggr": 0,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 311295626,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 130215728,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Central Payments"
+                    },
+                    "FormerLeadersPayment": {
+                        "data": {
+                            "2012": {
+                                "aggr": 3955973,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 5000000,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 4850000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Former Leaders Payment"
+                    },
+                    "PublicDebtProvisions": {
+                        "data": {
+                            "2012": {
+                                "aggr": 1401663636,
+                                "change": 0
+                            },
+                            "2013": {
+                                "aggr": 2530488884,
+                                "change": 0
+                            },
+                            "2014": {
+                                "aggr": 2586739713,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Public Debt Provisions"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 1405619609,
+                        "change": 0
+                    },
+                    "2013": {
+                        "aggr": 2846784510,
+                        "change": 0
+                    },
+                    "2014": {
+                        "aggr": 2721805441,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Payments on Behalf of Government"
             },
             "PrimeMinistersMinistry": {
                 "categories": {

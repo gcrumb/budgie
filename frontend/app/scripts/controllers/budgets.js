@@ -355,6 +355,18 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    }
    	];
 
+	// Data series for the Vanuatu revenue/expense multi-line chart
+	$scope.vuDebtRepayments = [
+	    {
+		"key": "Interest Payments",
+		"values": [[2011,398],[2012,463],[2013,555],[2014,597]]         
+	    },
+	    {
+		"key": "Foreign Debt Repayments",
+		"values": [[2011,307.2],[2012,335.1],[2013,465.18],[2014,591]]         
+	    }
+   	];
+
 	$scope.vuDebtHistory = [
 	    {
 		"key": "External Debt",
@@ -366,31 +378,77 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    }
 	];
 
-	$scope.vuDonorVsGovt = [
+	var vu_donor_vs_govt_spending = [
 	    {
-		"key" : "Donor Aid",
-		"values": [
-		    ["MoH1",831280],["MoE1",780723],["MoE2",702623],["MIPU",698969],["MoH2",567094],
-		    ["Ports",510122],["PMO",488499],["TVET",333132],["MFEM",237952],["MoJ",237952],
-		    ["MoH3",232442],["ICT",187470],["MIA",172593],["Meteo",157204],["VTO",156988],
-		    ["MIA2",152289],["MoH4",149000],["Women",135176],["Land",106412],["Court",53376],
-		    ["Water",51021],["MoH5",38499],["Agri",25666],["MIA3",22873],["Commerce",20533],
-		    ["Agri2",19623],["MoH6",16898]
+		"graph": "Donor/Government Spending by Ministry",
+		"series": [
+		    {
+			"key" : "Donor Assistance",
+			"values": [
+			    ["Health",1796714],["Education",1854977],["Public Works",1260112],
+			    ["Agriculture",45289],["Lands",106412],["Justice",426504],
+			    ["PMO",675969],["Finance",237952],["Internal Affairs",347755],
+			    ["Commerce",177521],["Meteo",157204]
+			]
+		    },
+		    {
+			"key" : "Government Spending",
+			"values": [
+			    ["Health",1515744],["Education",763351],["Public Works",799460],
+			    ["Agriculture",92027],["Lands",8235],["Justice",147825],
+			    ["PMO",364387],["Finance",349711.4],["Internal Affairs",279974.5],
+			    ["Commerce",113051.7],["Meteo",138811]
+			]
+		    }
 		]
 	    },
 	    {
-		"key" : "Government Spending",
-		"values": [
-		    ["MoH1",792503],["MoE1",24121],["MoE2",661884],["MIPU",421857],["MoH2",139415],
-		    ["Ports",359808],["PMO",83943],["TVET",28111],["MFEM",349711],["MoJ",28979],
-		    ["MoH3",61055],["ICT",280444],["MIA",43488],["Meteo",138811],["VTO",23889],
-		    ["MIA2",201170],["MoH4",303352],["Women",36799],["Land",8235],["Court",82046],
-		    ["Water",17794],["MoH5",49234],["Agri",33909],["MIA3",35316],["Commerce",89163],
-		    ["Agri2",58118],["MoH6",219418]
+		"graph": "Donor/Government Spending by Programme",
+		"series": [ 
+		    {
+			"key" : "Donor Assistance",
+			"values": [
+			    ["MoH1",831280],["MoE1",780723],["MoE2",702623],["MIPU",698969],["MoH2",567094],
+			    ["Ports",510122],["PMO",488499],["TVET",333132],["MFEM",237952],["MoJ",237952],
+			    ["MoH3",232442],["ICT",187470],["MIA",172593],["Meteo",157204],["VTO",156988],
+			    ["MIA2",152289],["MoH4",149000],["Women",135176],["Land",106412],["Court",53376],
+			    ["Water",51021],["MoH5",38499],["Agri",25666],["MIA3",22873],["Commerce",20533],
+			    ["Agri2",19623],["MoH6",16898]
+			]
+		    },
+		    {
+			"key" : "Government Spending",
+			"values": [
+			    ["MoH1",792503],["MoE1",24121],["MoE2",661884],["MIPU",421857],["MoH2",139415],
+			    ["Ports",359808],["PMO",83943],["TVET",28111],["MFEM",349711],["MoJ",28979],
+			    ["MoH3",61055],["ICT",280444],["MIA",43488],["Meteo",138811],["VTO",23889],
+			    ["MIA2",201170],["MoH4",303352],["Women",36799],["Land",8235],["Court",82046],
+			    ["Water",17794],["MoH5",49234],["Agri",33909],["MIA3",35316],["Commerce",89163],
+			    ["Agri2",58118],["MoH6",219418]
+			]
+		    }
 		]
 	    }
 	];
 
+	$scope.whichDonorChart    = 0;
+	$scope.vuDonorChartHeader = vu_donor_vs_govt_spending[$scope.whichDonorChart].graph;
+	$scope.vuDonorVsGovt      = vu_donor_vs_govt_spending[$scope.whichDonorChart].series;
+
+	$scope.nextDonorChart = function(index){
+	    if (typeof(index) === "number" && index >= 0 && index <= vu_donor_vs_govt_spending.length){
+		$scope.whichDonorChart = index;
+	    }
+	    else {
+		$scope.whichDonorChart++;
+	    }
+
+	    $scope.whichDonorChart    = $scope.whichDonorChart >= vu_donor_vs_govt_spending.length ? 0 : $scope.whichDonorChart;
+	    $scope.vuDonorVsGovt      =  vu_donor_vs_govt_spending[$scope.whichDonorChart].series;
+	    $scope.vuDonorChartHeader = vu_donor_vs_govt_spending[$scope.whichDonorChart].graph;
+
+	};
+	
 	$scope.vuDonorsVsGovtLabels = [
 	    "Ministry of Health, Hospital Services",
 	    "Ministry of Education, Director General's Division",
@@ -619,17 +677,27 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		    if (search_array[i][0] == x && search_array[i][1].toLocaleString('en') + '.0' == y){
 			var other_index = e.seriesIndex === 0 ? 1 : 0;
 			total = search_array[i][1] + $scope.vuDonorVsGovt[other_index].values[i][1];
-			label = $scope.vuDonorsVsGovtLabels[i];
+			if ($scope.whichDonorChart === 1){
+			    label = $scope.vuDonorsVsGovtLabels[i];
+			}
 		    }
 		}
 	    }
 
 	    label = label != '' ? label : x;
+	    y = y.replace(/\.0/,"");
+	    var all_commas = /,/g;
+	    y = y.replace(all_commas,"");
 	    
             return '<h3>' + label + '</h3>' +
-		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br /> in ' + key + '</p>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000).toString()) + ' VATU<br /> in ' + key + '</p>' +
 		'<p>(' + int2roundKMG((parseFloat(total) * 1000).toString()) + ' vatu in total)</p>';
 
+	};
+
+	$scope.debtRepaymentTooltips = function(key, x, y, e, graph) {
+	    return '<h3>' + x + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br /> in ' + key + '</p>';
 	};
 
 	$scope.pieTooltips = function(key, x, y, e, graph) {

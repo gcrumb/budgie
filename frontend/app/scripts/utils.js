@@ -369,7 +369,7 @@ var getPieChartData = function(categories) {
 	}
     }
     
-    return groupOthers(pieData,15); // will only group if needed
+    return groupOthers(pieData,16); // will only group if needed
   
 }
 
@@ -939,7 +939,8 @@ var int2roundKMG = function(val) {
     
     var _str = "";
 
-    val = val.replace (/\,/g,'');
+    var all_commas = /,/g;
+    val = val.replace(all_commas,"");
     val = val.replace (/\.*/,'');
 
     if (val >= 1e9)        { 
