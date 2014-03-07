@@ -2486,44 +2486,6 @@
                                 "name": "Commodities"
                             },
                             "FoodProduction": {
-                                "categories": {
-                                    "Food Production": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 10826678,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 13742945,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 18162316,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Food Production"
-                                    },
-                                    "Technical": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Technical"
-                                    }
-                                },
                                 "data": {
                                     "2012": {
                                         "aggr": 10826678,
@@ -3742,46 +3704,6 @@
             "MinistryofCommerceIndustryTourismandNi-VanuatuBusiness": {
                 "categories": {
                     "CabinetSupport": {
-                        "categories": {
-                            "PortfolioCoordination": {
-                                "categories": {
-                                    "Cabinet Operations": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 56814309,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 46151455,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 45482146,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Cabinet Operations"
-                                    }
-                                },
-                                "data": {
-                                    "2012": {
-                                        "aggr": 56814309,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 46151455,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 45482146,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Portfolio Coordination"
-                            }
-                        },
                         "data": {
                             "2012": {
                                 "aggr": 56814309,
@@ -6413,88 +6335,50 @@
                 "categories": {
                     "BorderControlandEnforcement": {
                         "categories": {
-                            "BorderControl": {
-                                "categories": {
-                                    "Customs Border Control": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 33257525,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 33225407,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 36449701,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Customs Border Control"
-                                    },
-                                    "Customs Border Control - Santo": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 11525747,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 9843325,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 9680511,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Customs Border Control - Santo"
-                                    }
-                                },
+                            "CustomsBorderControl": {
                                 "data": {
                                     "2012": {
-                                        "aggr": 44783272,
+                                        "aggr": 33257525,
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": 43068732,
+                                        "aggr": 33225407,
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": 46130212,
+                                        "aggr": 36449701,
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Border Control"
+                                "name": "Customs Border Control"
                             },
-                            "InvestigationandLegal": {
+                            "CustomsBorderControl-Santo": {
                                 "data": {
                                     "2012": {
-                                        "aggr": 7091619,
+                                        "aggr": 11525747,
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": 17836597,
+                                        "aggr": 9843325,
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": 0,
+                                        "aggr": 9680511,
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Investigation and Legal"
+                                "name": "Customs Border Control - Santo"
                             }
                         },
                         "data": {
                             "2012": {
-                                "aggr": 51874891,
+                                "aggr": 44783272,
                                 "change": 0
                             },
                             "2013": {
-                                "aggr": 60905329,
+                                "aggr": 43068732,
                                 "change": 0
                             },
                             "2014": {
@@ -7610,64 +7494,6 @@
             "MinistryofForeignAffairsandExternalTrade": {
                 "categories": {
                     "CabinetSupport": {
-                        "categories": {
-                            "PortfolioCoordination": {
-                                "categories": {
-                                    "Cabinet Operations": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 38545847,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 37082938,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 45397598,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Cabinet Operations"
-                                    },
-                                    "Office of the DG": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 13670371,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 17531036,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 14795257,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Office of the DG"
-                                    }
-                                },
-                                "data": {
-                                    "2012": {
-                                        "aggr": 52216218,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 54613974,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 60192855,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Portfolio Coordination"
-                            }
-                        },
                         "data": {
                             "2012": {
                                 "aggr": 52216218,
@@ -8167,6 +7993,24 @@
                         "categories": {
                             "CommunityHealthServices": {
                                 "categories": {
+                                    "Community Health Malampa Province": {
+                                        "data": {
+                                            "2012": {
+                                                "aggr": 72678045,
+                                                "change": 0
+                                            },
+                                            "2013": {
+                                                "aggr": 68087633,
+                                                "change": 0
+                                            },
+                                            "2014": {
+                                                "aggr": 66751429,
+                                                "change": 0
+                                            }
+                                        },
+                                        "level": "Subprogramme Expenditure",
+                                        "name": "Community Health Malampa Province"
+                                    },
                                     "Community Health Penama Province": {
                                         "data": {
                                             "2012": {
@@ -8185,6 +8029,42 @@
                                         "level": "Subprogramme Expenditure",
                                         "name": "Community Health Penama Province"
                                     },
+                                    "Community Health Sanma Province": {
+                                        "data": {
+                                            "2012": {
+                                                "aggr": 64613102,
+                                                "change": 0
+                                            },
+                                            "2013": {
+                                                "aggr": 58885557,
+                                                "change": 0
+                                            },
+                                            "2014": {
+                                                "aggr": 57827657,
+                                                "change": 0
+                                            }
+                                        },
+                                        "level": "Subprogramme Expenditure",
+                                        "name": "Community Health Sanma Province"
+                                    },
+                                    "Community Health Shefa Province": {
+                                        "data": {
+                                            "2012": {
+                                                "aggr": 59406051,
+                                                "change": 0
+                                            },
+                                            "2013": {
+                                                "aggr": 56293377,
+                                                "change": 0
+                                            },
+                                            "2014": {
+                                                "aggr": 55198285,
+                                                "change": 0
+                                            }
+                                        },
+                                        "level": "Subprogramme Expenditure",
+                                        "name": "Community Health Shefa Province"
+                                    },
                                     "Community Health Tafea Province": {
                                         "data": {
                                             "2012": {
@@ -8202,6 +8082,24 @@
                                         },
                                         "level": "Subprogramme Expenditure",
                                         "name": "Community Health Tafea Province"
+                                    },
+                                    "Community Health Torba Province": {
+                                        "data": {
+                                            "2012": {
+                                                "aggr": 33043326,
+                                                "change": 0
+                                            },
+                                            "2013": {
+                                                "aggr": 32999972,
+                                                "change": 0
+                                            },
+                                            "2014": {
+                                                "aggr": 32227957,
+                                                "change": 0
+                                            }
+                                        },
+                                        "level": "Subprogramme Expenditure",
+                                        "name": "Community Health Torba Province"
                                     }
                                 },
                                 "data": {
@@ -8223,60 +8121,6 @@
                             },
                             "HospitalServices": {
                                 "categories": {
-                                    "Community Health Sanma Province": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Community Health Sanma Province"
-                                    },
-                                    "Community Health Shefa Province": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Community Health Shefa Province"
-                                    },
-                                    "Community Health Torba Province": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Community Health Torba Province"
-                                    },
                                     "Director - Curative & Hospital Services": {
                                         "data": {
                                             "2012": {
@@ -9117,79 +8961,59 @@
                     },
                     "ShippingServices": {
                         "categories": {
-                            "PortsAdministration": {
-                                "categories": {
-                                    "Government Contribution for Projects": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 10000000,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 24460496,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Government Contribution for Projects"
+                            "GovernmentContributionforProjects": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
                                     },
-                                    "Ports & Marine": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 138002912,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 130422184,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 111633722,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Ports & Marine"
+                                    "2013": {
+                                        "aggr": 10000000,
+                                        "change": 0
                                     },
-                                    "Tug boat Maintenance": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 0,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 14500000,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 15315000,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Tug boat Maintenance"
+                                    "2014": {
+                                        "aggr": 232859496,
+                                        "change": 0
                                     }
                                 },
+                                "level": "Programme Expenditure",
+                                "name": "Government Contribution for Projects"
+                            },
+                            "Ports&Marine": {
                                 "data": {
                                     "2012": {
                                         "aggr": 138002912,
                                         "change": 0
                                     },
                                     "2013": {
-                                        "aggr": 154922184,
+                                        "aggr": 130422184,
                                         "change": 0
                                     },
                                     "2014": {
-                                        "aggr": 359808218,
+                                        "aggr": 111633722,
                                         "change": 0
                                     }
                                 },
                                 "level": "Programme Expenditure",
-                                "name": "Ports Administration"
+                                "name": "Ports & Marine"
+                            },
+                            "TugboatMaintenance": {
+                                "data": {
+                                    "2012": {
+                                        "aggr": 0,
+                                        "change": 0
+                                    },
+                                    "2013": {
+                                        "aggr": 14500000,
+                                        "change": 0
+                                    },
+                                    "2014": {
+                                        "aggr": 15315000,
+                                        "change": 0
+                                    }
+                                },
+                                "level": "Programme Expenditure",
+                                "name": "Tug boat Maintenance"
                             }
                         },
                         "data": {
@@ -9207,7 +9031,7 @@
                             }
                         },
                         "level": "Departmental Expenditure",
-                        "name": "Shipping Services"
+                        "name": "Ports Administration"
                     },
                     "VanuatuMeterologicalServices": {
                         "data": {
@@ -10118,46 +9942,6 @@
             "MinistryofLandsGeologyandMines": {
                 "categories": {
                     "CabinetSupport": {
-                        "categories": {
-                            "PortfolioCoordination": {
-                                "categories": {
-                                    "Cabinet Operations": {
-                                        "data": {
-                                            "2012": {
-                                                "aggr": 39289578,
-                                                "change": 0
-                                            },
-                                            "2013": {
-                                                "aggr": 37483871,
-                                                "change": 0
-                                            },
-                                            "2014": {
-                                                "aggr": 36473688,
-                                                "change": 0
-                                            }
-                                        },
-                                        "level": "Subprogramme Expenditure",
-                                        "name": "Cabinet Operations"
-                                    }
-                                },
-                                "data": {
-                                    "2012": {
-                                        "aggr": 39289578,
-                                        "change": 0
-                                    },
-                                    "2013": {
-                                        "aggr": 37483871,
-                                        "change": 0
-                                    },
-                                    "2014": {
-                                        "aggr": 36473688,
-                                        "change": 0
-                                    }
-                                },
-                                "level": "Programme Expenditure",
-                                "name": "Portfolio Coordination"
-                            }
-                        },
                         "data": {
                             "2012": {
                                 "aggr": 39289578,

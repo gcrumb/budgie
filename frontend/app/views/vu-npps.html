@@ -1,0 +1,40 @@
+<div ng-controller="oneOffChartsCtrl">
+<div class="row">
+  <div class="span12">
+    
+
+    <h1><em>Open Budgets</em>: New Policy Proposals - Vanuatu's
+    Spending Priorities</h1>
+
+    <p>
+    Intro para...
+    </p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="span12">
+
+    <h3>New Policy Proposals</h3>
+    <p>(Millions of Vatu)</p> 
+    <nvd3-multi-bar-chart
+       data="vuNPPs"
+       id="vu-new-policy-proposals"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="false"
+       tooltips="true"
+       tooltipContent=""
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       stacked="true"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+ 
+    <p><em><span style="line-height: 1.5em;">Source: Vanuatu Government Budget; PiPP Staff Estimates</span></em></p>
+  </div>
+  </div>

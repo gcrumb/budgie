@@ -290,7 +290,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 // One-off charts controller
 angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
-    .controller('oneOffChartsCtrl', ['$scope', '$location', '$routeParams', '$interval', function ($scope, $location, $routeParams, $interval) {
+    .controller('oneOffChartsCtrl', ['$scope', '$location', '$routeParams', '$BudgetFactory', function ($scope, $location, $routeParams, BudgetFactory) {
 
 	// Pushed a brewer palette pair into the first two positions.
 	// Otherwise, it's the nvd3 default 20 colour palette
@@ -527,16 +527,38 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		"values":[
 		    ["Scholarships",778]
 		]
-		    },
+	    },
 	    {
 		"key": "2014 Budget by Selected Category",
 		"values":[
 		    ["Hospital Services",792],["Min. Internal Affairs",608],
-		    ["Min. Agriculture",482],["Min. Foreign Affairs",366],["Min. Ni Vanuatu Business",287],
+		    ["Min. Agriculture",482],["Min. Foreign Affairs",366],["Min. Trade",287],
 		    ["Min. Lands",231],["Medical Supplies",219]
 		]
 	    }
 	];
+
+	var vu_npps = [
+	    {
+		"graph": "2012",
+		"series": [
+		    {
+		    "key": "Tier1",
+		    "values": [["a",195],["b",200],["c",300]]
+		    },
+		    {
+		    "key": "Tier2",
+		    "values": [["a",150],["b",250],["c",350]]
+		    },
+		    {
+		    "key": "Tier3",
+		    "values": [["a",0],["b",275],["c",375]]
+		    }
+		]		
+	    }
+	];
+
+	$scope.vuNPPs = vu_npps[0].series;
 
 	var vu_education_trends = [
 	    {
