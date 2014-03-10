@@ -1,0 +1,583 @@
+{
+    "_id": "vu-npps-2014",
+    "level": "National Expenditure",
+    "root": {
+        "categories": {
+            "ClimateChangeAdaptationGeo-hazardsMeteorologyandEnergyCabinet": {
+                "categories": {
+                    "CorporateServicesunit": {
+                        "data": {
+                            "2014": {
+                                "aggr": 13656238,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Corporate Services unit"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 13656238,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Climate Change Adaptation Geo-hazards Meteorology and Energy Cabinet"
+            },
+            "ConsitutionalAgencies": {
+                "categories": {
+                    "CitizenshipOffice-AdditionalstafffortheCitizenshipOffice": {
+                        "data": {
+                            "2014": {
+                                "aggr": 3000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Citizenship Office- Additional staff for the Citizenship Office"
+                    },
+                    "Judiciary-TerminationofEmployment": {
+                        "data": {
+                            "2014": {
+                                "aggr": 10974796,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Judiciary-Termination of Employment "
+                    },
+                    "Parliament-EstablishmentofTwoNewStandingCommittees-ForeignAffairs&ExternalTrade/Integrity&Ethics": {
+                        "data": {
+                            "2014": {
+                                "aggr": 7348500,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Parliament-Establishment of  Two New Standing Committees- Foreign Affairs & External Trade / Integrity & Ethics"
+                    },
+                    "Parliament-SupplementaryStaffRecruitmentCosttoOfficesoftheSpeakerandDeputyLeaderofLeaderofOpposition": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Parliament-Supplementary Staff Recruitment Cost to Offices of the Speaker and Deputy Leader of Leader of Opposition"
+                    },
+                    "PublicSolicitor-AdditionalFundingforPSOSantoMalekula&Tanna'sOperationalBudget": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2150000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Public Solicitor-Additional Funding for PSO Santo Malekula & Tanna's Operational Budget"
+                    },
+                    "PublicSolicitor-RecruitmentofTwo(2)NewSupportStaffsforPSOMalekula&Tanna": {
+                        "data": {
+                            "2014": {
+                                "aggr": 1766080,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Public Solicitor-Recruitment of Two (2) New Support Staffs for PSO Malekula & Tanna"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 27239376,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Consitutional Agencies"
+            },
+            "MinistryofAgricultureLivestockForestryFisheriesandBiosecurity": {
+                "categories": {
+                    "Bio-securityVanuatuCapacityStrengtheningProject": {
+                        "data": {
+                            "2014": {
+                                "aggr": 5000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Bio-security Vanuatu Capacity Strengthening Project"
+                    },
+                    "InternationalFisheriesUnit": {
+                        "data": {
+                            "2014": {
+                                "aggr": 15000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "International Fisheries Unit"
+                    },
+                    "SeveranaceEntitlementforFisheriesDevelopmentOfficer-AgeRetirement": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Severanace Entitlement for Fisheries Development Officer - Age Retirement"
+                    },
+                    "SeverancePayoutforDepartmentofLivestockRetiringStaff": {
+                        "data": {
+                            "2014": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Severance Payout for Department of Livestock Retiring Staff"
+                    },
+                    "StrengtheningLivestockExtensionServices": {
+                        "data": {
+                            "2014": {
+                                "aggr": 4000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Strengthening Livestock Extension Services"
+                    },
+                    "VanuatuExtensionServices": {
+                        "data": {
+                            "2014": {
+                                "aggr": 8200000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Extension Services"
+                    },
+                    "VanuatuSeafoodVerificationStandards&Certifications": {
+                        "data": {
+                            "2014": {
+                                "aggr": 3566480,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Seafood Verification Standards & Certifications"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 47766480,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Agriculture Livestock Forestry Fisheries and Biosecurity"
+            },
+            "MinistryofCommerceIndustryandTourism": {
+                "categories": {
+                    "ContributiontoTVETTourismMentoringProgramme": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Contribution to TVET Tourism Mentoring Programme "
+                    },
+                    "GovernmentContributiontoNZFundingtoTourismSectorunderJointCommitment.": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Government Contribution to NZ Funding to Tourism Sector under Joint Commitment. "
+                    },
+                    "ImplementationofTourismCouncilsActNo.23of2012": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Implementation of Tourism Councils Act No. 23 of 2012"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 6000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Commerce Industry and Tourism"
+            },
+            "MinistryofEducationandYouthandSports": {
+                "categories": {
+                    "VanuatuGovernmentScholarshipFund": {
+                        "data": {
+                            "2014": {
+                                "aggr": 150000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Government Scholarship Fund"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 150000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Education  and Youth and Sports  "
+            },
+            "MinistryofFinanceandEconomicManagement": {
+                "categories": {
+                    "ExciseComplianceUnit": {
+                        "data": {
+                            "2014": {
+                                "aggr": 5000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Excise Compliance Unit"
+                    },
+                    "Government2/3ofMarketingBudget(VTO)": {
+                        "data": {
+                            "2014": {
+                                "aggr": 20000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Government 2/3 of Marketing Budget (VTO)"
+                    },
+                    "ProjectOfficer(Electricity&Water)": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Project Officer (Electricity& Water)"
+                    },
+                    "RenovationExtension&ExpansionoftheSantoCustomsBuilding": {
+                        "data": {
+                            "2014": {
+                                "aggr": 5111954,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Renovation Extension & Expansion of the Santo Customs Building"
+                    },
+                    "VARTC-IncreaseSalary(MinimumWagespluscostofRestructuresstaffsalaries2014)": {
+                        "data": {
+                            "2014": {
+                                "aggr": 4000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "VARTC-Increase Salary (Minimum Wages plus cost of Restructures staff salaries 2014)"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 36111954,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Finance and Economic Management"
+            },
+            "MinistryofForeignAffairsandExternalTrade": {
+                "categories": {
+                    "FoodProcessingRecurrentTopUp": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Food Processing Recurrent Top Up"
+                    },
+                    "IntellectualPropertyOffice": {
+                        "data": {
+                            "2014": {
+                                "aggr": 1300000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Intellectual Property Office"
+                    },
+                    "MSGContributionTop-up": {
+                        "data": {
+                            "2014": {
+                                "aggr": 22959080,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "MSG Contribution Top-up"
+                    },
+                    "TopUpDepartmentofExternalTradeOperationalBudget": {
+                        "data": {
+                            "2014": {
+                                "aggr": 3000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Top Up Department of External Trade Operational Budget"
+                    },
+                    "WTOmembershipfee": {
+                        "data": {
+                            "2014": {
+                                "aggr": 11000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "WTO membership fee"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 40259080,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Foreign Affairs and External Trade"
+            },
+            "MinistryofHealth": {
+                "categories": {
+                    "MOH2014RetirementofStaff(Priority2)": {
+                        "data": {
+                            "2014": {
+                                "aggr": 40200000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "MOH 2014 Retirement of Staff (Priority 2)"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 40200000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Health"
+            },
+            "MinistryofInfrastructureandPublicUtilities": {
+                "categories": {
+                    "Port-VilaUrbandevelopmentproject": {
+                        "data": {
+                            "2014": {
+                                "aggr": 66739425,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Port-Vila Urban development project"
+                    },
+                    "Port-vilaLapetasiMulti-purposeInternationalwharf": {
+                        "data": {
+                            "2014": {
+                                "aggr": 8929000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Port-vila Lapetasi Multi-purpose International wharf"
+                    },
+                    "VanuatuInter-islandshippingsupportprogram": {
+                        "data": {
+                            "2014": {
+                                "aggr": 193999000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Inter-island shipping support program"
+                    },
+                    "VanuatuMaritimeSafetyAdministration": {
+                        "data": {
+                            "2014": {
+                                "aggr": 14400000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Maritime Safety Administration"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 284067425,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Infrastructure and Public Utilities"
+            },
+            "MinistryofInternalAffairs": {
+                "categories": {
+                    "PSCApprovedAgeRetirement": {
+                        "data": {
+                            "2014": {
+                                "aggr": 25000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "PSC Approved Age Retirement"
+                    },
+                    "PresidentialElection": {
+                        "data": {
+                            "2014": {
+                                "aggr": 7000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Presidential Election"
+                    },
+                    "Secretary-PoliceServiceCommission": {
+                        "data": {
+                            "2014": {
+                                "aggr": 1600000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Secretary - Police Service Commission"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 33600000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Internal Affairs"
+            },
+            "MinistryofJusticeandCommunityService": {
+                "categories": {
+                    "AdditionalOperationalCostoftheDepartmentofCorrectionalServices": {
+                        "data": {
+                            "2014": {
+                                "aggr": 7682000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Additional Operational Cost of the Department of Correctional Services"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 7682000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Justice and Community Service"
+            },
+            "MinistryofYouthDevelopmentandTraining": {
+                "categories": {
+                    "VAN2017MiniGames": {
+                        "data": {
+                            "2014": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "VAN2017 Mini Games"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 10000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Youth Development and Training"
+            },
+            "PrimeMinister'sOffice": {
+                "categories": {
+                    "IncreaseofPrimeMinister'sOfficialEntertainmentFunds": {
+                        "data": {
+                            "2014": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Increase of Prime Minister's Official Entertainment Funds"
+                    },
+                    "PoliceRecruits33officers": {
+                        "data": {
+                            "2014": {
+                                "aggr": 19500000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Police Recruits 33 officers"
+                    },
+                    "Salary/WagesandOperationalBudgetforParliamentarySecretarytothePrimeMinister": {
+                        "data": {
+                            "2014": {
+                                "aggr": 13000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Salary / Wages and Operational Budget for Parliamentary Secretary to the Prime Minister"
+                    }
+                },
+                "data": {
+                    "2014": {
+                        "aggr": 34500000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Prime Minister's Office"
+            }
+        },
+        "currency": "VATU",
+        "data": {
+            "2014": {
+                "aggr": 731082553,
+                "change": 0
+            }
+        },
+        "multiplier": 1,
+        "name": "Vanuatu New Policy Proposals - 2014"
+    }
+}

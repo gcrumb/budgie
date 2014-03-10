@@ -1,0 +1,301 @@
+{
+    "_id": "vu-npps-2013",
+    "level": "National Expenditure",
+    "root": {
+        "categories": {
+            "ConsitutionalAgencies": {
+                "categories": {
+                    "Malvatumauri-MembersGratuity": {
+                        "data": {
+                            "2013": {
+                                "aggr": 7750000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Malvatumauri- Members Gratuity"
+                    },
+                    "MalvatumauriIslandCouncilElections": {
+                        "data": {
+                            "2013": {
+                                "aggr": 4000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Malvatumauri Island Council Elections"
+                    },
+                    "OmbudsmanOffice:SeverancePayfortheOmbudsman&RetiredStaff": {
+                        "data": {
+                            "2013": {
+                                "aggr": 12203422,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Ombudsman Office: Severance Pay for the Ombudsman & Retired Staff"
+                    },
+                    "ParliamentTopUpRepallowance": {
+                        "data": {
+                            "2013": {
+                                "aggr": 13574600,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Parliament Top Up Rep allowance"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 37528022,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Consitutional Agencies"
+            },
+            "MinistryofCommerceIndustryandTourism": {
+                "categories": {
+                    "GovernmentContributiontoAusAidFundingtoTVETTourismMentoringProjectinMalampaSanmaandotherProvinces": {
+                        "data": {
+                            "2013": {
+                                "aggr": 2000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Government Contribution to AusAid Funding to TVET Tourism Mentoring Project in Malampa Sanma and other Provinces"
+                    },
+                    "GovernmentContributiontoNZFundingtoTourismSectorunderJointCommitment": {
+                        "data": {
+                            "2013": {
+                                "aggr": 7210963,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Government Contribution to NZ Funding to Tourism Sector under Joint Commitment"
+                    },
+                    "OfficialpremisesfortheOfficeoftheChiefTradeAdvisor": {
+                        "data": {
+                            "2013": {
+                                "aggr": 6800000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Official premises for the Office of the Chief Trade Advisor"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 16010963,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Commerce Industry and Tourism"
+            },
+            "MinistryofHealth": {
+                "categories": {
+                    "2013RetirementofStaff": {
+                        "data": {
+                            "2013": {
+                                "aggr": 84601935,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "2013 Retirement of Staff"
+                    },
+                    "HealthMedicalSupplies-RecurrentTopUp": {
+                        "data": {
+                            "2013": {
+                                "aggr": 50000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Health Medical Supplies-Recurrent Top Up"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 134601935,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Health"
+            },
+            "MinistryofInfrastructureandPublicUtilities": {
+                "categories": {
+                    "VanuatuInterIslandShippingProject": {
+                        "data": {
+                            "2013": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Vanuatu Inter Island Shipping Project"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 10000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Infrastructure and Public Utilities"
+            },
+            "MinistryofInternalAffairs": {
+                "categories": {
+                    "DepartmentofImmigration:Retirementpackage": {
+                        "data": {
+                            "2013": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Department of Immigration: Retirement package"
+                    },
+                    "NationalLibrary&Akaev": {
+                        "data": {
+                            "2013": {
+                                "aggr": 6000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "National Library & Akaev"
+                    },
+                    "PortVilaMunicipalCouncilElection": {
+                        "data": {
+                            "2013": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Port Vila Municipal Council Election"
+                    },
+                    "Provincialaffairs:severance": {
+                        "data": {
+                            "2013": {
+                                "aggr": 11117686,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Provincial affairs: severance"
+                    },
+                    "TORBAPROVINCIALCOUNCILELECTION": {
+                        "data": {
+                            "2013": {
+                                "aggr": 13600000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "TORBA PROVINCIAL COUNCIL ELECTION"
+                    },
+                    "TannaBi-Election": {
+                        "data": {
+                            "2013": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Tanna Bi-Election"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 60717686,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Internal Affairs"
+            },
+            "MinistryofLandsGeologyandMines": {
+                "categories": {
+                    "RetirementandRedundancyofStaff": {
+                        "data": {
+                            "2013": {
+                                "aggr": 15972714,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Retirement and Redundancy of Staff"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 15972714,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Lands Geology and Mines"
+            },
+            "PrimeMinister'sOffice": {
+                "categories": {
+                    "Governmentcontributionforoperationbudget": {
+                        "data": {
+                            "2013": {
+                                "aggr": 100000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Government contribution for operation budget"
+                    },
+                    "OGCIOEstablishment": {
+                        "data": {
+                            "2013": {
+                                "aggr": 25000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "OGCIO Establishment"
+                    },
+                    "VPMU": {
+                        "data": {
+                            "2013": {
+                                "aggr": 26262509,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "VPMU"
+                    }
+                },
+                "data": {
+                    "2013": {
+                        "aggr": 151262509,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Prime Minister's Office"
+            }
+        },
+        "currency": "VATU",
+        "data": {
+            "2013": {
+                "aggr": 426465618,
+                "change": 0
+            }
+        },
+        "multiplier": 1,
+        "name": "Vanuatu New Policy Proposals - 2013"
+    }
+}

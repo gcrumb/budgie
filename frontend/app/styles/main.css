@@ -7,6 +7,11 @@ svg#budget, svg#last {
     height: 100%;
 }
 
+svg#npps {
+    margin-left: -200px;
+    min-height: 400px;
+}
+
 svg#vu-donor-govt-spending {
     height:500px;
     margin-bottom: 3em;

@@ -1,0 +1,243 @@
+{
+    "_id": "vu-npps-2012",
+    "level": "National Expenditure",
+    "root": {
+        "categories": {
+            "ConsitutionalAgencies": {
+                "categories": {
+                    "MPAllocations(NotFormallySubmittedtoMBC)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 52000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "MP Allocations (Not Formally Submitted to MBC)"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 52000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Consitutional Agencies"
+            },
+            "MinistryofCommerceIndustryandTourism": {
+                "categories": {
+                    "AdditionalRecurrentbudgetforoperations": {
+                        "data": {
+                            "2012": {
+                                "aggr": 60010220,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Additional Recurrent budget for operations"
+                    },
+                    "EmploymentCentre(VanuatuWeekinNoumea)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 5000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Employment Centre (Vanuatu Week in Noumea)"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 65010220,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Commerce Industry and Tourism"
+            },
+            "MinistryofEducation": {
+                "categories": {
+                    "TeachersSalaryandAllowances": {
+                        "data": {
+                            "2012": {
+                                "aggr": 137969254,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Teachers Salary and Allowances"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 137969254,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Education "
+            },
+            "MinistryofForeignAffairs": {
+                "categories": {
+                    "HeadsofMissionsBriefing": {
+                        "data": {
+                            "2012": {
+                                "aggr": 5000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Heads of Missions Briefing"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 5000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Foreign Affairs"
+            },
+            "MinistryofHealth": {
+                "categories": {
+                    "Effecton2012Budgetof2011SupplementaryAppropriationpassedinSeptember2011": {
+                        "data": {
+                            "2012": {
+                                "aggr": 38417075,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Effect on 2012 Budget of 2011 Supplementary Appropriation passed in September 2011"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 38417075,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Health"
+            },
+            "MinistryofInternalAffairs": {
+                "categories": {
+                    "ImprovedCommunityPolicingtoremoteandhotspotsareasinVanuatuandequipmentandofficesupplies": {
+                        "data": {
+                            "2012": {
+                                "aggr": 47330302,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Improved Community Policing to remote and hotspots areas in Vanuatu and equipment and office supplies"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 47330302,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Internal Affairs"
+            },
+            "MinistryofJusticeandSocialWelfare": {
+                "categories": {
+                    "DevelopmentoftheErangorangoCorrectionalSite": {
+                        "data": {
+                            "2012": {
+                                "aggr": 155560228,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Development of the Erangorango Correctional Site"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 155560228,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Ministry of Justice and Social Welfare"
+            },
+            "PrimeMinister'sOffice": {
+                "categories": {
+                    "Cabinetadditionalrequest": {
+                        "data": {
+                            "2012": {
+                                "aggr": 12000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Cabinet additional request"
+                    },
+                    "DSPPACadditionaloperations": {
+                        "data": {
+                            "2012": {
+                                "aggr": 3000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "DSPPAC additional operations"
+                    },
+                    "KavaSubsidy": {
+                        "data": {
+                            "2012": {
+                                "aggr": 50000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "Kava Subsidy"
+                    },
+                    "NPPSpecialRequestfromPrimeMinister(AdditionalFundsforCDF)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 10000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "NPP Special Request from Prime Minister (Additional Funds for CDF)"
+                    },
+                    "NPPSpecialRequestfromPrimeMinister(CopraSubsidy)": {
+                        "data": {
+                            "2012": {
+                                "aggr": 42000000,
+                                "change": 0
+                            }
+                        },
+                        "level": "Departmental Expenditure",
+                        "name": "NPP Special Request from Prime Minister (Copra Subsidy)"
+                    }
+                },
+                "data": {
+                    "2012": {
+                        "aggr": 117000000,
+                        "change": 0
+                    }
+                },
+                "level": "Sectoral Expenditure",
+                "name": "Prime Minister's Office"
+            }
+        },
+        "currency": "VATU",
+        "data": {
+            "2012": {
+                "aggr": 618287079,
+                "change": 0
+            }
+        },
+        "multiplier": 1,
+        "name": "Vanuatu New Policy Proposals - 2012"
+    }
+}

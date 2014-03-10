@@ -11,9 +11,9 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var path = 'root'; // Initialize path to root of budget data tree
 	var drillableMappings = {"Other": true}; // Current drillable mappings
 	var country = $routeParams.country ? $routeParams.country : 'png';
-	var current_year = $routeParams.year ? $routeParams.year : '2014';
 	var currentDocument = country + '-' + current_year;
 
+	$scope.current_year = $routeParams.year ? $routeParams.year : '2014';
 	$scope.showButtons = $routeParams.country ==='png' ? true : false;
 
 	// Use this for roll-up / unroll animations.
@@ -78,7 +78,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		    // features (chart data, further drill paths,
 		    // information box summary data...).
 
-		    rawFromDrill = drill(rawFromCouch,path);
+		    rawFromDrill = drill(rawFromCouch,path, $scope.current_year);
 		    console.log("Data as processed by drill: ",rawFromDrill);
 
 		    $scope.budget_currency = rawFromCouch.root.currency ? rawFromCouch.root.currency.toUpperCase() : '';
@@ -192,7 +192,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		    $scope.breadcrumbs.push(data.label);
 		}
 		path = pathMappings[data.label];
-		rawFromDrill = drill(rawFromCouch,path);
+		rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
 	    }	    
 	    $scope.nextPalette();
 
@@ -207,7 +207,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	$scope.recordSelect = function (which){
 
 	    $scope.radioModel = which;
-	    currentDocument = country + '-' + current_year;
+	    currentDocument = country + '-' + $scope.current_year;
 	    currentDocument = which !== 'spending' ? currentDocument + '-' + which : currentDocument;
 
 	    var my_budget = BudgetFactory.get(currentDocument).
@@ -216,7 +216,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		    path = 'root';
 		    rawFromCouch = data; 
 
-		    rawFromDrill = drill(rawFromCouch,path);
+		    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
 		    $scope.breadcrumbs = [rawFromDrill.name];
 		    $scope.nextPalette();
 		    
@@ -234,7 +234,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    $scope.showOthers = false;
 	    $scope.breadcrumbs = sliceByStringElement($scope.breadcrumbs,crumb);
 	    path = pathMappings[crumb];
-	    rawFromDrill = drill(rawFromCouch, path);
+	    rawFromDrill = drill(rawFromCouch, path, $scope.current_year);
 	    $scope.nextPalette();
 	    process();
         };	
@@ -300,33 +300,6 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ];
 	
-/*
-	var vu_revenues = [[2011,12850.6],[2012,13612.4],[2013,14554.2],[2014,15252.7]];
-	var vu_values   = [[2011,13840],[2012,14186.5],[2013,14184.2],[2014,14661.7]];
-
-	$scope.vuRevenueExpenseHistory = [
-	    {
-		"key": "Revenues",
-		"values": []
-	    },
-	    {
-		"key": "Expenses",
-		"values": []
-	    }
-   	];
-
-	var this_item = 0;
-	$interval(function(){
-	    console.debug(this_item.toString() + ': Adding ', vu_revenues[this_item]);
-	    $scope.$apply(function(){
-		$scope.vuRevenueExpenseHistory[0].values.push(vu_revenues[this_item]);
-		$scope.vuRevenueExpenseHistory[1].values.push(vu_values[this_item]);
-	    });
-	    this_item++;
-	    console.debug('History: ', $scope.vuRevenueExpenseHistory);
-	}, 200, vu_revenues.length);
-*/
-
 	$scope.vuUnbudgetedSpending = [
 	    ["Government Scholarship Fund",298000000],
 	    ["Central Payments",27700000],
@@ -367,6 +340,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    }
    	];
 
+	// Data series for the Vanuatu debt chart
 	$scope.vuDebtHistory = [
 	    {
 		"key": "External Debt",
@@ -538,27 +512,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    }
 	];
 
-	var vu_npps = [
-	    {
-		"graph": "2012",
-		"series": [
-		    {
-		    "key": "Tier1",
-		    "values": [["a",195],["b",200],["c",300]]
-		    },
-		    {
-		    "key": "Tier2",
-		    "values": [["a",150],["b",250],["c",350]]
-		    },
-		    {
-		    "key": "Tier3",
-		    "values": [["a",0],["b",275],["c",375]]
-		    }
-		]		
-	    }
-	];
-
-	$scope.vuNPPs = vu_npps[0].series;
+//	$scope.vuNPPs = vu_npps[0].series;
 
 	var vu_education_trends = [
 	    {
@@ -726,6 +680,169 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
             return '<h3>' + key + '</h3>' +
 		'<p>' + int2roundKMG(parseFloat(y.value).toString()) + '<br />VATU</p>';
 	};
+
+
+    }]);
+
+
+angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
+    .controller('NPPCtrl', ['$scope', '$location', '$routeParams', 'BudgetFactory', function ($scope, $location, $routeParams, BudgetFactory) {
+
+	var rawFromCouch = {}; // Keep the complete data set in frontend
+	var rawFromDrill = {}; // Current mashed-up reduced data of interest
+	var pathMappings = {}; // Convenient path mappings
+	var path = 'root'; // Initialize path to root of budget data tree
+
+	$scope.current_year = $routeParams.year ? $routeParams.year : 2014;
+	var currentDocument = 'vu-npps-' + $scope.current_year.toString();
+
+	$scope.vuNPPs              = [];
+	$scope.budget_currency     = 'VATU';
+	$scope.currency_multiplier = 1;
+
+	var palettes = [
+	    [
+		'#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', 
+		'#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'
+	    ],
+	    [
+		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
+		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
+	    ],
+	    [
+		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+	    ],
+	    [
+		"#9edae5", "#17becf", "#dbdb8d", "#bcbd22", "#c7c7c7", "#7f7f7f", "#f7b6d2", "#e377c2", "#c49c94", "#8c564b", "#c5b0d5", 
+		"#9467bd", "#ff9896", "#d62728", "#98df8a", "#2ca02c", "#ffbb78", "#ff7f0e", "#aec7e8", "#1f77b4"
+	    ],
+	    [
+		"#de9ed6", "#ce6dbd", "#a55194", "#7b4173", "#e7969c", "#d6616b", "#ad494a", "#843c39", "#e7cb94", "#e7ba52", "#bd9e39", 
+		"#8c6d31", "#cedb9c", "#b5cf6b", "#8ca252", "#637939", "#9c9ede", "#6b6ecf", "#5254a3", "#393b79"
+	    ],	    
+	    [
+		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+	    ],
+	    [
+		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
+		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
+	    ]
+	];
+
+	$scope.current_palette     = palettes[parseFloat($scope.current_year) - 2012];
+
+	var budget = BudgetFactory.get(currentDocument).
+		success(function(data, status, headers, config) {
+		    // this callback will be called asynchronously
+		    // when the response is available
+
+		    pathMappings = getPathMappings(data);
+		    console.debug("Path mappings: ", pathMappings);
+
+		    rawFromCouch = data; 
+		    console.debug("Data as stored in CouchDB: ",rawFromCouch);
+
+		    // The drill function returns some raw data which
+		    // is used within this controller to fullfil the
+		    // features (chart data, further drill paths,
+		    // information box summary data...).
+
+		    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
+		    console.log("Data as processed by drill: ",rawFromDrill);
+
+		    process();
+
+		}).
+		error(function(data, status, headers, config) {
+		    // called asynchronously if an error occurs
+		    // or server returns response with an error status.
+		});
+
+	var process = function () {
+	    
+	    // Pie chart side
+	    $scope.name = rawFromDrill.name;
+	    $scope.level = rawFromDrill.level;
+	    console.log("Pie Data:", getPieChartData(rawFromDrill.categories));
+
+	    var pie = getPieChartData(rawFromDrill.categories);
+
+	    if (path === 'root'){
+		$scope.pieChartData = pie;
+	    }
+	    else {
+		$scope.vuNPPs = pie;
+	    }
+	};
+
+	$scope.tooltipContent = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y.value) * $scope.currency_multiplier).toString()) + '<br />' + $scope.budget_currency + '</p>' +
+		'<p><em>(Click for full listing)</em></p>';
+	};
+
+	$scope.barChartTooltips = function(key, x, y, e, graph) {
+            return '<h3>' + x + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + '<br />' + $scope.budget_currency + '</p>';
+	};
+
+        $scope.xFunction = function(){
+            return function(d) {
+                return d.key;
+            };
+        };
+
+        $scope.yFunction = function(){
+            return function(d) {
+                return d.y;
+            };
+        };
+
+        $scope.$on('elementClick.directive', function(event,data){
+	    
+	    path = pathMappings[data.label];
+//	    console.debug('Data label: ', data.label);
+	    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
+	    process();
+	    
+        });
+
+	$scope.radioModel =  $scope.current_year.toString();
+
+	$scope.recordSelect = function (which){
+
+	    $scope.radioModel = which.toString();
+	    console.debug('Current year: ', $scope.radioModel);
+
+	    currentDocument = 'vu-npps-' + $scope.radioModel;
+
+	    var my_budget = BudgetFactory.get(currentDocument).
+		success(function(data, status, headers, config) {
+		    $scope.current_year    = which.toString();
+		    $scope.current_palette = palettes[parseFloat($scope.current_year) - 2012];
+		    pathMappings           = getPathMappings(data);
+		    path                   = 'root';
+		    rawFromCouch           = data; 
+
+		    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
+		    $scope.breadcrumbs = [rawFromDrill.name];
+		    process();
+
+		}).
+		error(function(data, status, headers, config) {
+		    // called asynchronously if an error occurs
+		    // or server returns response with an error status.
+		});
+
+	};
+
+	$scope.colorFunction = function() {
+	    return function(d, i) {
+    		return $scope.current_palette[i];
+	    };
+	}
 
 
     }]);

@@ -1,40 +1,55 @@
-<div ng-controller="oneOffChartsCtrl">
-<div class="row">
-  <div class="span12">
-    
+<div ng-controller="NPPCtrl">
 
-    <h1><em>Open Budgets</em>: New Policy Proposals - Vanuatu's
-    Spending Priorities</h1>
-
-    <p>
-    Intro para...
-    </p>
-  </div>
-  </div>
   <div class="row">
-  <div class="span12">
+    <div class="span12">
+     <h1><em>Open Budgets</em>: New Policy Proposals - Vanuatu's
+      Spending Priorities</h1>
 
-    <h3>New Policy Proposals</h3>
-    <p>(Millions of Vatu)</p> 
-    <nvd3-multi-bar-chart
-       data="vuNPPs"
-       id="vu-new-policy-proposals"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="true"
-       showControls="true"
-       interactive="false"
-       tooltips="true"
-       tooltipContent=""
-       isArea="true"
-       width="600"
-       height="350"
-       color="colorFunction()"
-       stacked="true"
-       margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
-    </nvd3-multi-bar-chart>
- 
-    <p><em><span style="line-height: 1.5em;">Source: Vanuatu Government Budget; PiPP Staff Estimates</span></em></p>
-  </div>
-  </div>
+      <p>
+      Intro para...
+      </p>
+      <h3>New Policy Proposals - {{current_year}}</h3>
+      <div class="choose-your-poison">
+        <div class="btn-group">
+	  <button type="button" btn-radio="'2012'"  ng-model="radioModel" class="btn" ng-click="recordSelect('2012')">2012</button>
+	  <button type="button" btn-radio="'2013'"  ng-model="radioModel" class="btn" ng-click="recordSelect('2013')">2013</button>
+	  <button type="button" btn-radio="'2014'"  ng-model="radioModel" class="btn" ng-click="recordSelect('2014')">2014</button>
+	</div>
+      </div>
+      <p>(Millions of Vatu)</p> 
+    </div>
+  </div>    
+  <div class="row">
+    <div class="span8" style="margin-right: -4em;">
+    <nvd3-pie-chart
+      data="pieChartData"
+      noData=""
+      id="pieChartNPPs"
+      showLabels="false"
+      showValues="true"
+      labelType="percent"
+      tooltips="true"
+      tooltipContent="tooltipContent"
+      transitionDuration="1200"
+      x="xFunction()"
+      y="yFunction()"
+      width="700"
+      height="700"
+      donut="false"
+      donutRatio="1.5"
+      donutLabelsOutside="false"
+      showLegend="false"
+      color="colorFunction()"
+      margin="{left:-400,top:0,bottom:150,right:0}">
+      <svg id="npps"></svg>
+      </nvd3-pie-chart>
+     <p><em><span style="line-height: 1.5em;">Source: Vanuatu Government Budget; PiPP Staff Estimates</span></em></p>
+   </div>
+   <div class="span4" style="background-color: #eee; margin: 0.5em;
+      border: 1px dotted #dfdfdf; min-height: 400px">
+     <ul style="list-style-type:none;" class="npp-list fade-in" ng-repeat="npp in vuNPPs | orderBy:npp.y:reverse">
+       <li class="npp-list-item fade-in">{{npp.key}}: {{npp.y}} VATU</li> 
+     </ul>
+   </div>
+ </div>
+</div>

@@ -27,10 +27,7 @@
  * @param {String} path String representing the path to the are of
  * interest. For example, 'root.categories.depart-health'
  */
-var drill = function (budget, path) {
-
-    // var current_year = budget['_id'].match('[0-9]{4}');
-    var current_year = 2014;
+var drill = function (budget, path, current_year) {
 
     // Work on a copy of the data to not mutate original.
     var budget_copy = JSON.parse(JSON.stringify(budget));
@@ -89,8 +86,7 @@ var sort_categories = function (a,b){
 	return 0;
     }
 
-    return -1;
-    
+    return -1;    
 }
 
 /**

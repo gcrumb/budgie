@@ -49,6 +49,11 @@ while (<CSV>){
   # Check for column headings
   next if $year =~ /year/i;
 
+  unless (defined $name && $name){
+    $name = (defined $dept && $dept) ? $dept : $sector;
+    chomp $name;
+  }
+
   $sector    =~ s!\s+!!g;
   $dept      =~ s!\s+!!g;
   $programme =~ s!\s+!!g;
