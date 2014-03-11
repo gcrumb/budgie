@@ -11,10 +11,12 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var path = 'root'; // Initialize path to root of budget data tree
 	var drillableMappings = {"Other": true}; // Current drillable mappings
 	var country = $routeParams.country ? $routeParams.country : 'png';
-	var currentDocument = country + '-' + current_year;
 
 	$scope.current_year = $routeParams.year ? $routeParams.year : '2014';
 	$scope.showButtons = $routeParams.country ==='png' ? true : false;
+
+	var currentDocument = country + '-' + $scope.current_year;
+
 
 	// Use this for roll-up / unroll animations.
 	var empty_pie = [{ 
@@ -290,7 +292,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 // One-off charts controller
 angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
-    .controller('oneOffChartsCtrl', ['$scope', '$location', '$routeParams', '$BudgetFactory', function ($scope, $location, $routeParams, BudgetFactory) {
+    .controller('oneOffChartsCtrl', ['$scope', '$location', '$routeParams', function ($scope, $location, $routeParams) {
 
 	// Pushed a brewer palette pair into the first two positions.
 	// Otherwise, it's the nvd3 default 20 colour palette
@@ -846,3 +848,69 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
 
 
     }]);
+
+angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAnimate'])
+    .controller('budgetTimeline', ['$scope', '$location', '$routeParams', function ($scope, $location, $routeParams) {
+
+	$scope.width  = '100%';
+	$scope.height = '520';
+	
+	$scope.timelineData = {
+	    "timeline":
+	    {
+		"headline":"Vanuatu Budget Timeline",
+		"type":"default",
+		"text":"<p>The budget-making process goes on year-round, with numerous important activities coming together to build this important document...</p>",
+		"date": [
+		    {
+			"startDate":"2014,1,10",
+			"endDate":"2014,1,22",
+			"headline":"Activity 1",
+			"text":"<p>This is the first activity</p>",
+			"tag":"Finance Dept.",
+			"asset": {
+			    "headline": "This is a headline!",
+			    "credit":"Credit Name Goes Here",
+			    "caption":"Caption text goes here"
+			}
+		    },
+		    {
+			"startDate":"2014,06,10",
+			"endDate":"2014,06,15",
+			"headline":"Activity 2",
+			"text":"<p>This is the second activity. This descriptive section is pretty much of arbitrary length and content....</p>",
+			"tag":"Donors",
+			"asset": {
+			    "headline": "This is a headline, too!",
+			    "credit":"Credit Name Goes Here",
+			    "caption":"Caption text goes here"
+			}
+		    }
+
+		],
+		"era": [
+		    {
+			"startDate":"2011,12,10",
+			"endDate":"2011,12,11",
+			"headline":"Headline Goes Here",
+			"tag":"This is Optional"
+		    }
+		    
+		]
+		
+	    }
+	};
+
+	$scope.newTimeline = function (){
+	    createStoryJS({
+		type: 'timeline',
+		embed_id: 'budgetTimeline',
+		width: $scope.width,
+		height: $scope.height,
+		source: $scope.timelineData
+	    });
+	};
+
+	$scope.newTimeline();
+
+}]);

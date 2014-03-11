@@ -3,10 +3,12 @@
 // Create a new module for the PiPP Data Application
 var pippDataApp = angular.module('pippDataApp',
                                  ['pippDataApp.services.resources',
+				  'pippDataApp.directives.budgetTimeline',
 				  'pippDataApp.controllers.main',
 				  'pippDataApp.controllers.budgets',
 				  'pippDataApp.controllers.one-off-charts',
 				  'pippDataApp.controllers.npps',
+				  'pippDataApp.controllers.budget-timeline',
 				  'ngRoute', 'ngResource',
 				  'nvd3ChartDirectives']);
 
@@ -23,6 +25,7 @@ pippDataApp.config(['$routeProvider',  function ($routeProvider) {
         .when('/budget/vu/2014/at-a-glance', {templateUrl: 'views/vu-revenue-vs-expense.html', controller: 'oneOffChartsCtrl'})
         .when('/budget/vu/2014/scholarships', {templateUrl: 'views/vu-scholarships.html', controller: 'oneOffChartsCtrl'})
         .when('/budget/vu/npps/:year', {templateUrl: 'views/vu-npps.html', controller: 'NPPCtrl'})
+        .when('/budget/vu/2014/budget-timeline', {templateUrl: 'views/vu-budget-timeline.html', controller: 'budgetTimeline'})
 	.otherwise({redirectTo: '/'});
 
 }]);

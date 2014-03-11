@@ -14,7 +14,8 @@
     "angular-animate": "1.2.0",
     "underscore": "~1.5.2",
     "angularjs-nvd3-directives": "git@github.com:ghachey/angularjs-nvd3-directives.git#~0.0.2-beta",
-    "angular-ui-bootstrap": "~0.7.0"
+    "angular-ui-bootstrap": "~0.7.0",
+    "TimelineJS": "git@github.com:NUKnightLab/TimelineJS.git"
   },
   "devDependencies": {
     "angular-mocks": "1.2.0",
