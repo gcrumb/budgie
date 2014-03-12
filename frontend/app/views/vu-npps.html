@@ -6,7 +6,15 @@
       Spending Priorities</h1>
 
       <p>
-      Intro para...
+      New Policy Proposals are the means by which the government of
+      Vanuatu determines what new programmes and activities will
+      receive allocations during the coming year. 
+      </p>
+      <p>
+      Hover over each of the pie slices to see the department name and the
+      amount of new money being allocated to it. Click on the pie
+      slice to see a detailed list of new policy proposals associated
+      with that department.
       </p>
       <h3>New Policy Proposals - {{current_year}}</h3>
       <div class="choose-your-poison">
@@ -47,7 +55,7 @@
    </div>
    <div class="span4" style="background-color: #eee; margin: 0.5em;
       border: 1px dotted #dfdfdf; min-height: 400px">
-     <p class="yearly-aggregate">Total new spending: {{annual_total}} VATU</p>
+     <p class="yearly-aggregate">Total new spending in {{current_year}}: {{annual_total}} VATU</p>
      <ul style="list-style-type:none;" class="npp-list fade-in" ng-repeat="npp in vuNPPs | orderBy:npp.y:reverse">
        <li class="npp-list-item
       fade-in"><strong>{{npp.key}}:</strong><br /> {{int2roundKMG(npp.y)}} VATU</li> 

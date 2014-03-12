@@ -26,6 +26,7 @@ pippDataApp.config(['$routeProvider',  function ($routeProvider) {
         .when('/budget/vu/2014/scholarships', {templateUrl: 'views/vu-scholarships.html', controller: 'oneOffChartsCtrl'})
         .when('/budget/vu/npps/:year', {templateUrl: 'views/vu-npps.html', controller: 'NPPCtrl'})
         .when('/budget/vu/2014/budget-timeline', {templateUrl: 'views/vu-budget-timeline.html', controller: 'budgetTimeline'})
+        .when('/budget/png/2014/at-a-glance', {templateUrl: 'views/png-at-a-glance.html', controller: 'oneOffChartsCtrl'})
 	.otherwise({redirectTo: '/'});
 
 }]);

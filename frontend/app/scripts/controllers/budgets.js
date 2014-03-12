@@ -291,7 +291,6 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
     }]);
 
-
 // One-off charts controller
 angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
     .controller('oneOffChartsCtrl', ['$scope', '$location', '$routeParams', function ($scope, $location, $routeParams) {
@@ -303,6 +302,14 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		'#ef8a62', '#67a9cf', '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
 		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ];
+
+	/* 
+
+           ************************ 
+	   Vanuatu graphs
+           ************************ 
+
+	*/
 	
 	$scope.vuUnbudgetedSpending = [
 	    ["Government Scholarship Fund",298000000],
@@ -516,8 +523,6 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    }
 	];
 
-//	$scope.vuNPPs = vu_npps[0].series;
-
 	var vu_education_trends = [
 	    {
 		"graph": "Average Drop Out Rate",
@@ -574,6 +579,141 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	};
 
+	/* 
+
+           ************************ 
+	   Papua New Guinea graphs
+           ************************ 
+
+	*/
+
+	$scope.pngSpendingVSRevenue = [
+	    {
+		"key" : "Growth in Spending",
+		"values": [
+		    [2013,21],[2014,14],[2015,2],[2016,4],[2017,5],[2018,6]
+		]
+	    },
+	    {
+		"key" : "Growth in Tax Revenue",
+		"values": [
+		    [2013,6],[2014,13],[2015,9],[2016,14],[2017,9],[2018,9]
+		]
+	    }
+	];
+
+	$scope.pngDeficit = [
+	    {
+		"key": "Deficit",
+		"values": [
+		    [2013,-2737],[2014,-2353],[2015,-1315],[2016,-1206.4],[2017,-1068.2],[2018,-1134.4]
+		]
+	    }				
+	];
+
+	$scope.pngDebt = [
+	    {
+		"key": "Fiscal Responsibility Line",
+		"values": [
+		    [2012,35],[2013,35],[2014,35],[2015,35],[2016,35]
+		]
+	    },
+	    {
+		"key": "Debt Load",
+		"values": [
+		    [2012,26.4],[2013,33.5],[2014,35.2],[2015,29.3],[2016,29.9]
+		]
+	    }	
+	];
+
+	$scope.pngBorrowing = [
+	    {
+		"key": "Borrowing",
+		"values": [
+		    [2012,161.9],[2013,482.1],[2014,647.8],[2015,445.9],[2016,297.1],[2017,182.1],[2018,21.2]
+		]
+	    }				
+
+	];
+
+	$scope.pngGDP = [
+	    {
+		"key": "Ag/Forests/Fish",
+		"values": [
+		    [2012,-0.5],[2013,0.2],[2014,1.3],[2015,1.3],[2016,0.9]
+		]
+	    },
+	    {
+		"key": "Oil & Gas",
+		"values": [
+		    [2012,-0.3],[2013,0],[2014,4],[2015,17.2],[2016,0]
+		]
+	    },
+	    {
+		"key": "Mining",
+		"values": [
+		    [2012,-0.1],[2013,0.7],[2014,0.7],[2015,0.2],[2016,0]
+		]
+	    },
+	    {
+		"key": "Manufacturing",
+		"values": [
+		    [2012,0.9],[2013,0.3],[2014,0.3],[2015,0.4],[2016,0.3]
+		]
+	    },
+	    {
+		"key": "Utilities",
+		"values": [
+		    [2012,0.1],[2013,0.1],[2014,0.1],[2015,0.1],[2016,0.1]
+		]
+	    },
+	    {
+		"key": "Construction",
+		"values": [
+		    [2012,4.6],[2013,2.6],[2014,-1.5],[2015,0.8],[2016,0.4]
+		]
+	    },
+	    {
+		"key": "Wholesale/Retail",
+		"values": [
+		    [2012,1.7],[2013,0.5],[2014,0.4],[2015,0.5],[2016,0.4]
+		]
+	    },
+	    {
+		"key": "Transport/Communications",
+		"values": [
+		    [2012,1],[2013,0.3],[2014,0.3],[2015,0.3],[2016,0.3]
+		]
+	    },
+	    {
+		"key": "Finance/Real Estate",
+		"values": [
+		    [2012,0.5],[2013,0.3],[2014,0.2],[2015,0.2],[2016,0.2]
+		]
+	    },
+	    {
+		"key": "Social/Personal Services",
+		"values": [
+		    [2012,0.2],[2013,0.6],[2014,0.4],[2015,0.3],[2016,0.3]
+		]
+	    }
+	]
+
+	$scope.pngExports = [
+	    {
+		"key": "Mineral Exports",
+		"values": [
+		    [2012,10203.7],[2013,9954.6],[2014,12343.8],[2015,22796.7],[2016,23598.7]
+		]
+	    },
+	    {
+		"key": "Ag/Forest/Fish Exports",
+		"values": [
+		    [2012,2970.9],[2013,2453.8],[2014,2534.1],[2015,2742.5],[2016,2635.1]
+		]
+	    }
+	];
+
 	// return only integer values - this is needed to display years in the x axis
 	$scope.xAxisTickFormatFunction = function(){
 	    return function(d){
@@ -627,11 +767,15 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		'<p>' + y + '% change<br />in ' + x + '</p>';
 	};
 
+	$scope.lineChartTooltipsDebtGDP = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + y + '% of GDP<br />in ' + x + '</p>';
+	};
+
 	$scope.lineChartTooltipsEducation = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +
 		'<p>' + y + '%<br />in ' + x + '</p>';
 	};
-
 
 	$scope.areaChartTooltips = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +
@@ -683,6 +827,23 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	$scope.pieTooltips = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +
 		'<p>' + int2roundKMG(parseFloat(y.value).toString()) + '<br />VATU</p>';
+	};
+
+	$scope.pngDeficitTooltips = function(key, x, y, e, graph) {
+
+	    // Handle negatives.
+	    var minus = y.indexOf('-') === 0 ? '-' : '';
+	    var amount = y.toString().replace(/\-/,"");
+	    amount = amount.replace(/,/g,"");
+
+            return '<h3>' + key + '</h3>' +
+		'<p>' + minus + int2roundKMG((parseFloat(amount) * 1000000).toString()) + ' KINA<br />in ' + x + '</p>';
+
+	};
+
+	$scope.pngBorrowingTooltips = function(key, x, y, e, graph) {
+            return '<h3>' + key + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' KINA<br />in ' + x + '</p>';
 	};
 
 

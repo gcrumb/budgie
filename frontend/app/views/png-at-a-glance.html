@@ -1,0 +1,230 @@
+<div ng-controller="oneOffChartsCtrl">
+  <div class="row">
+    <div class="span12">
+
+      <h1>Open Budgets: Papua New Guinea's 2014 budget in 6 graphs</h1>
+      <p>
+      This feature on the theme of open budgets is designed to further our understanding of public finances, 
+      policies and the impact of the spending decisions our
+      governments make. This page provides a broad overview of the
+      Papua New Guinea 2014 budget. You can delve into the budget in
+      detail using our <a href="/#/budget/png/2014">interactive pie chart</a>, 
+      which shows in how public funds are being allocated in 2014, right down to the programme level.
+      </p>
+      <p>
+      All of these charts are interactive. Take the time to mouse over them, click around, and you will find they provide a number of useful 
+      and interesting ways of presenting the information.
+      </p>
+      
+      <h2>Spending vs Revenue</h2>
+
+      <blockquote>
+      <i>
+      Commentary on the spending vs revenue projections...
+      </i>
+      </blockquote> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <h3>Growth in Revenue and Spending</h3>
+    <p>(Percentage growth)</p> 
+    <nvd3-line-chart
+       data="pngSpendingVSRevenue"
+       id="png-spending-vs-revenue"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="lineChartTooltipsGDP"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       forceY=[0,25]
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-line-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h2>Deficit</h2>
+
+      <blockquote>
+      <i>
+      Commentary on the deficit projections...
+      </i>
+      </blockquote> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <h3>Projected Deficits</h3>
+    <p>(Millions of Kina)</p> 
+    <nvd3-multi-bar-chart
+       data="pngDeficit"
+       id="png-deficit"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="false"
+       showControls="false"
+       interactive="false"
+       forceY=[0,-3000]
+       tooltips="true"
+       tooltipContent="pngDeficitTooltips"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h2>The Debt Tightrope</h2>
+
+      <blockquote>
+      <i>
+      Commentary on the debt burden...
+      </i>
+      </blockquote> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <h3>Debt Load</h3>
+    <p>(Percentage of GDP)</p> 
+    <nvd3-line-chart
+       data="pngDebt"
+       id="png-debt"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="lineChartTooltipsDebtGDP"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       forceY=[25,40]
+       isArea="false"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-line-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h2>Net External Borrowing</h2>
+
+      <blockquote>
+      <i>
+      Commentary on borrowing and whether it bears any relation to reality...
+      </i>
+      </blockquote> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <h3>External Borrowing</h3>
+    <p>(Millions of Kina)</p> 
+    <nvd3-line-chart
+       data="pngBorrowing"
+       id="png-borrowing"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="false"
+       showControls="false"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="pngBorrowingTooltips"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       forceY=[0,700]
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-line-chart>
+    </div>
+  </div>
+ <div class="row">
+    <div class="span12">
+      <h2>GDP - The LNG Story</h2>
+
+      <blockquote>
+      <i>
+      Commentary on the GDP growth projections...
+      </i>
+      </blockquote> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <h3>Gross Domestic Product - Contributors by Sector</h3>
+    <p>(Percent Growth)</p> 
+    <nvd3-multi-bar-horizontal-chart
+       data="pngGDP"
+       id="png-gdp"
+       stacked="true"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       forceY=[-2,22]
+       tooltips="true"
+       tooltipContent="lineChartTooltipsGDP"
+       width="800"
+       height="400"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h2>Exports</h2>
+
+      <blockquote>
+      <i>
+      Commentary on the export figures...
+      </i>
+      </blockquote> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <h3>Exports by Selected Sector</h3>
+    <p>(Millions of Kina)</p> 
+    <nvd3-multi-bar-chart
+       data="pngExports"
+       id="png-exports"
+       stacked="true"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="pngDeficitTooltips"
+       forceY=[0,27000]
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+    </div>
+  </div>
+
+</div>
