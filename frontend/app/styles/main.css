@@ -202,3 +202,31 @@ li.breadcrumb-trail span:hover {
     display: inline;
     color: #000;
 }
+
+.yearly-aggregate {
+    color: #1f77b4;
+    width: 80%;
+    background: #f9f9f9;
+    border: 1px dotted #ccc;
+    border-bottom: 1px dotted #aaa;
+    border-right: 1px dotted #aaa;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+li.npp-list-item {
+    width: 80%;
+    background: #f4f4f4;
+    border: 1px dotted #ccc;
+    border-bottom: 1px dotted #aaa;
+    border-right: 1px dotted #aaa;
+    padding: 0.5em;
+    margin: 1em;
+    margin-bottom: 0.25em;
+    margin-top: 0;
+    text-align: left;
+    font-size: 9pt;
+}

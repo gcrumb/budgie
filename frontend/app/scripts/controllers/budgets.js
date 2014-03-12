@@ -13,7 +13,9 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var country = $routeParams.country ? $routeParams.country : 'png';
 
 	$scope.current_year = $routeParams.year ? $routeParams.year : '2014';
-	$scope.showButtons = $routeParams.country ==='png' ? true : false;
+
+	// Don't want to cut the functionality just yet...
+	$scope.showButtons = $routeParams.country ==='razzle-dazzle' ? true : false;
 
 	var currentDocument = country + '-' + $scope.current_year;
 
@@ -701,6 +703,7 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
 	$scope.vuNPPs              = [];
 	$scope.budget_currency     = 'VATU';
 	$scope.currency_multiplier = 1;
+	$scope.annual_total        = '';
 
 	var palettes = [
 	    [
@@ -753,7 +756,7 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
 
 		    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
 		    console.log("Data as processed by drill: ",rawFromDrill);
-
+		    $scope.annual_total = int2roundKMG(rawFromDrill['data'][$scope.current_year]['aggr'].toString());
 		    process();
 
 		}).
@@ -805,7 +808,6 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
         $scope.$on('elementClick.directive', function(event,data){
 	    
 	    path = pathMappings[data.label];
-//	    console.debug('Data label: ', data.label);
 	    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
 	    process();
 	    
@@ -815,6 +817,7 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
 
 	$scope.recordSelect = function (which){
 
+	    $scope.vuNPPs = [];
 	    $scope.radioModel = which.toString();
 	    console.debug('Current year: ', $scope.radioModel);
 
@@ -829,7 +832,8 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
 		    rawFromCouch           = data; 
 
 		    rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
-		    $scope.breadcrumbs = [rawFromDrill.name];
+		    console.debug("RAW: ", rawFromDrill);
+		    $scope.annual_total = int2roundKMG(rawFromDrill['data'][$scope.current_year]['aggr'].toString());
 		    process();
 
 		}).
@@ -846,6 +850,9 @@ angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate', 'le
 	    };
 	}
 
+	$scope.int2roundKMG = function(y){
+	    return int2roundKMG(y.toString());
+	};
 
     }]);
 
@@ -853,7 +860,7 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
     .controller('budgetTimeline', ['$scope', '$location', '$routeParams', function ($scope, $location, $routeParams) {
 
 	$scope.width  = '100%';
-	$scope.height = '520';
+	$scope.height = '600';
 	
 	$scope.timelineData = {
 	    "timeline":
@@ -863,37 +870,96 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 		"text":"<p>The budget-making process goes on year-round, with numerous important activities coming together to build this important document...</p>",
 		"date": [
 		    {
-			"startDate":"2014,1,10",
-			"endDate":"2014,1,22",
-			"headline":"Activity 1",
-			"text":"<p>This is the first activity</p>",
-			"tag":"Finance Dept.",
-			"asset": {
-			    "headline": "This is a headline!",
-			    "credit":"Credit Name Goes Here",
-			    "caption":"Caption text goes here"
-			}
+			"startDate":"2014,04,15",
+			"endDate":"2014,04,26",
+			"headline":"Budget Policy Statement",
+			"text":"<p>Budget Policy Statement is submitted to Minister and Director General of Finance and then published.</p>",
+			"tag":"Finance Dept."
 		    },
 		    {
-			"startDate":"2014,06,10",
-			"endDate":"2014,06,15",
-			"headline":"Activity 2",
-			"text":"<p>This is the second activity. This descriptive section is pretty much of arbitrary length and content....</p>",
-			"tag":"Donors",
-			"asset": {
-			    "headline": "This is a headline, too!",
-			    "credit":"Credit Name Goes Here",
-			    "caption":"Caption text goes here"
-			}
+			"startDate":"2014,04,29",
+			"endDate":"2014,04,29",
+			"headline":"Donor Consultations",
+			"text":"<p>Government officials meet with donors to confer on policy priorities, providing an opportunity to align and better coordinate their work.</p>",
+			"tag":"Donors"
+		    },
+		    {
+			"startDate":"2014,05,13",
+			"endDate":"2014,05,17",
+			"headline":"Ministry Ceilings Established",
+			"text":"<p>The Council of Ministers meets to establish funding limits for their respective ministries.</p>",
+			"tag":"Council of Ministers"
+		    },
+		    {
+			"startDate":"2014,6,28",
+			"endDate":"2014,6,28",
+			"headline":"Ministry Budget Submissions",
+			"text":"<p>Individual ministries submit their preliminary budget submissions to the ministry of finance</p>",
+			"tag":"Finance Dept."
+		    },
+		    {
+			"startDate":"2014,07,31",
+			"endDate":"2014,07,31",
+			"headline":"HALF YEAR ECONOMIC AND FISCAL UPDATE",
+			"text":"<p>The department of finance publishes its updated budget position, adjusting the current year's budget as necessary in order to reflect progress in the first six months.</p>",
+			"tag":"Finance Dept."
+		    },
+		    {
+			"startDate":"2014,08,19",
+			"endDate":"2014,08,23",
+			"headline":"Donor Consultations",
+			"text":"<p>Government and donors meet again to finalise their spending plans for the coming year.</p>",
+			"tag":"Donors"
+		    },
+		    {
+			"startDate":"2014,08,26",
+			"endDate":"2014,08,30",
+			"headline":"Budget Committee Meets",
+			"text":"<p>The Ministerial Budget Committee meets to consider the final draft of the budget estimates for 2015.</p>",
+			"tag":"Budget Committee"
+		    },
+		    {
+			"startDate":"2014,08,26",
+			"endDate":"2014,08,30",
+			"headline":"Submission to Council of Ministers",
+			"text":"<p>The finalised 2015 budget is submitted to the Council of Ministers</p>",
+			"tag":"Council of Ministers"
+		    },
+		    {
+			"startDate":"2014,08,26",
+			"endDate":"2014,08,30",
+			"headline":"Appropriation Bill Drafted",
+			"text":"<p>The budget is passed to the State Law Office in order that the 2015 Appropriation Bill can be prepared.</p>",
+			"tag":"Finance Dept."
+		    },
+		    {
+			"startDate":"2014,09,2",
+			"endDate":"2014,09,2",
+			"headline":"Bill passed to MPs",
+			"text":"<p>The finished 2015 Appropriation Bill is circulated to members of parliament.</p>",
+			"tag":"Finance Dept."
+		    },
+		    {
+			"startDate":"2014,09,23",
+			"endDate":"2014,10,2",
+			"headline":"Budget Books Prepared",
+			"text":"<p>The budget books, which explain in detail the financial plans of the government, are prepared in both French and English.</p>",
+			"tag":"Finance Dept."
+		    },
+		    {
+			"startDate":"2014,10,14",
+			"endDate":"2014,10,18",
+			"headline":"Budget Books Distributed",
+			"text":"<p>The printed budget books are circulated to members of parliament.</p>",
+			"tag":"Finance Dept."
 		    }
-
 		],
 		"era": [
 		    {
-			"startDate":"2011,12,10",
-			"endDate":"2011,12,11",
-			"headline":"Headline Goes Here",
-			"tag":"This is Optional"
+			"startDate":"2014,1,1",
+			"endDate":"2014,12,31",
+			"headline":"Vanuatu's financial year is the same as the calendar year",
+			"tag":"FINANCIAL YEAR"
 		    }
 		    
 		]
@@ -907,7 +973,8 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 		embed_id: 'budgetTimeline',
 		width: $scope.width,
 		height: $scope.height,
-		source: $scope.timelineData
+		source: $scope.timelineData,
+		font: "Helvetica"
 	    });
 	};
 

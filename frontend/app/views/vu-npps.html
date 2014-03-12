@@ -47,8 +47,10 @@
    </div>
    <div class="span4" style="background-color: #eee; margin: 0.5em;
       border: 1px dotted #dfdfdf; min-height: 400px">
+     <p class="yearly-aggregate">Total new spending: {{annual_total}} VATU</p>
      <ul style="list-style-type:none;" class="npp-list fade-in" ng-repeat="npp in vuNPPs | orderBy:npp.y:reverse">
-       <li class="npp-list-item fade-in">{{npp.key}}: {{npp.y}} VATU</li> 
+       <li class="npp-list-item
+      fade-in"><strong>{{npp.key}}:</strong><br /> {{int2roundKMG(npp.y)}} VATU</li> 
      </ul>
    </div>
  </div>
