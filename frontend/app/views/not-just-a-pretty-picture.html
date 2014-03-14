@@ -1,0 +1,110 @@
+<hr>
+<div ng-controller="oneOffChartsCtrl">
+
+	<h1>Not just a pretty picture</h1>
+	<h3>Open data is good for governments, and it’s good for society too</h3>
+
+	<p>
+	Last year, we launched Pacific Economics, a website devoted to
+	publishing budget-related data for Pacific island economies. We
+	started with Papua New Guinea’s 2014 budget. PNG’s budget books,
+	with their detailed and easy to understand layout, proved easy to
+	translate into a donut chart that allows visitors to drill down into
+	the nitty-gritty details of how their money is spent, where income
+	comes from, and how the national debt is accumulating.
+	</p>
+	<h3 style="font-size:10pt;">Papua New Guinea Gross Domestic Product - Contributors by Sector</h3>
+	<p style="font-size:9pt;">(Percent Growth)</p> 
+	<nvd3-multi-bar-horizontal-chart
+	data="pngGDP"
+	id="png-gdp"
+	stacked="true"
+	showXAxis="true"
+	showYAxis="true"
+	showLegend="false"
+	showControls="false"
+	interactive="true"
+	forceY=[-2,22]
+	tooltips="true"
+	tooltipContent="lineChartTooltipsGDP"
+	width="400"
+	height="200"
+	color="colorFunction()"
+	margin="{left:75,top:0,bottom:0,right:0}">
+	<svg></svg>
+	</nvd3-multi-bar-chart>
+	<hr />
+	<p style="margin-top:-5em;"> Now we’ve added Vanuatu’s budget details. With significant
+	assistance from the staff and management of the department of
+	finance, PiPP has been able to create another budget donut that
+	drills even deeper into the details of Vanuatu’s spending
+	priorities. Finance staff have been so generous, in fact, that we’ve
+	been able to supplement this treasure trove with an entire series of
+	interactive graphs detailing the country’s revenues, expenses, its
+	debt load and numerous other useful and fascinating details.  </p>
+	<p> But this site is not just for wonks. By visualising the data in
+	ways that help non-economists grasp the impact of budgeting
+	decisions, we hope to make it easier for people from all walks of
+	life to better understand how government decisions affect their
+	day-to-day existence.  </p>
+
+	<p> All of these charts are
+	interactive. They reward clicking and mousing around by providing
+	additional details and deeper insight into the material. Most
+	importantly, they provide context. When we see, for example, that
+	Vanuatu’s ministry of education receives more than twice as much
+	government spending as health, the government’s choice of priorities
+	becomes clearer. And when we contrast that with the chart showing
+	donor spending by sector, we can see how the disparity is
+	compensated by outside assistance.
+  </p>
+<p>
+Economics and public finance is not a zero sum game; that is, taking a
+million vatu from one department doesn’t necessarily deprive another
+department of the same million. But the plain fact is that, even in
+the richest countries, there are only so many dollars available to be
+spent. Overspending today creates debt tomorrow. Sooner or later,
+every country needs to learn to live within its means.  As we will see
+in upcoming features on this site, even the best of intentions don’t
+always have the best possible effect.
+</p>
+
+<p>
+Political economy – that is, the study of how best to manage a
+country’s finances in order to achieve its policy goals – is a
+fascinating, important, and decidedly subtle undertaking. Trade-offs
+are often agonisingly difficult. Could money allocated to scholarships
+have saved lives if it had been spend on hospital services? Will
+taking on new debt to fund infrastructure projects just create another
+construction bubble, where the jobs blossom and disappear again within
+a few short years? Is it worth doing anyway because of the enduring
+value of the infrastructure itself?
+</p>
+<p>
+One thing is clear: These are hard decisions, and they’re the ones we
+expect our leaders to make. But these decisions cannot be made in a
+vacuum. Pacific islanders are starved of good information to inform
+these crucial policy questions. But if more governments were to follow
+PNG and Vanuatu’s example, not simply by publishing their budget
+books, but by making the data available in open, easy to use (and
+re-use) formats, they enrich the public dialogue.
+</p>
+
+<p>
+By basing our views and our arguments on good old facts and
+figures, we provide ourselves with an opportunity to step beyond hand
+waving and noble, but ultimately useless, slogans. When we are all
+able to point to the same numbers, and to be assured that the numbers
+are good, we can finally have a useful discussion that can lead beyond
+generalities and vague principles to real progress.  We may not agree
+with every conclusion (we almost certainly will not – but that’s why
+we have politics and democracies). But we will at least be able to
+move beyond simple disagreement to engagement on critically important
+decisions.
+</p>
+<p>
+<strong>Dan McGarry<br />
+Chief technologist<br />
+Pacific Institute of Public Policy
+</p>
+</div>

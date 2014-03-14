@@ -6,15 +6,26 @@
       Spending Priorities</h1>
 
       <p>
-      New Policy Proposals are the means by which the government of
-      Vanuatu determines what new programmes and activities will
-      receive allocations during the coming year. 
+      In practice for the Vanuatu government, New Policy Proposals
+      (NPPs) represent the main changes to spending within a budget.
+      The Ministerial Budget Committee deliberate over these
+      priorities for the coming year, some of which will be
+      longer-term (recurrent) commitments, some will be one-off
+      activities.
       </p>
       <p>
-      Hover over each of the pie slices to see the department name and the
-      amount of new money being allocated to it. Click on the pie
-      slice to see a detailed list of new policy proposals associated
-      with that department.
+      If you want to know what main spending decisions were made in the
+      last three budgets as stated by the government, this is a good
+      place to start. Understanding, and sometimes questioning, how
+      these decisions fit with development plans is central to
+      engaging, influencing and holding account those responsible for
+      managing public funds.
+      </p>
+      <p>
+      To use this resource, hover over each of the pie slices to see
+      the department name and the amount of new money being allocated
+      to it. Click on the pie slice to see a detailed list of new
+      policy proposals associated with that department.
       </p>
       <h3>New Policy Proposals - {{current_year}}</h3>
       <div class="choose-your-poison">
@@ -55,10 +66,11 @@
    </div>
    <div class="span4" style="background-color: #eee; margin: 0.5em;
       border: 1px dotted #dfdfdf; min-height: 400px">
-     <p class="yearly-aggregate">Total new spending in {{current_year}}: {{annual_total}} VATU</p>
-     <ul style="list-style-type:none;" class="npp-list fade-in" ng-repeat="npp in vuNPPs | orderBy:npp.y:reverse">
-       <li class="npp-list-item
-      fade-in"><strong>{{npp.key}}:</strong><br /> {{int2roundKMG(npp.y)}} VATU</li> 
+     <p class="yearly-aggregate fade-in">Total new spending approved for
+      {{current_year}}: <span style="color:#000;">{{annual_total}} VATU</span></p>
+     <h3 class="fade-in" style="text-align:center; font-size:9pt;line-height:1em;padding:1em;padding-top:0.25em;margin-top:0;">{{name.indexOf('Vanuatu') != 0 ? name : ''}}</h3>
+     <ul class="npp-list nav nav-pills nav-stacked" style="list-style-type:none;" ng-repeat="npp in vuNPPs | orderBy:npp.y:reverse">
+       <li class="npp-list-item"><strong>{{npp.key}}:</strong><br /> {{int2roundKMG(npp.y)}} VATU</li> 
      </ul>
    </div>
  </div>

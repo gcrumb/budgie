@@ -9,17 +9,16 @@
 </div>
 <div class="row">
   <div class="span12">
-    <!-- h2>{{ level || 'National Budget' }}</h2 -->
-    <h2>Budget Visualiser</h2>
+    <h2>{{country_name}} Spending Wheel</h2>
   </div>
   <div class="span12">
-    <h3>How to use the spending wheel</h3>
-    <p>This spending wheel provides a detailed, drill-down view of
+    <h3>Discover how the government of {{country_name}} spends its money</h3>
+    <blockquote>This spending wheel provides a detailed, drill-down view of
     annual spending. Hover over any of the individual pie slices, and
     you will see the name and amount of money allocated to a
     particular area. Click on the area to view both any subsidiary
     sections as well as a three year history of spending for that
-    area.</p>
+    area.</blockquote>
   </div>
   <div class="span8">
 
@@ -105,4 +104,12 @@
     </nvd3-multi-bar-chart>
   </div>
 
+</div>
+<div class="row">
+  <div class="span12">
+    <hr />
+    <p style="text-align:right;margin-top:2em;color:#999;"><small>*The
+    data displayed on this page contains the payments approved by
+    parliament in the appropriation bill.</small></p>
+  </div>
 </div>

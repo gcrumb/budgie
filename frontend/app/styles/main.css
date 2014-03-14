@@ -95,13 +95,6 @@ h3 {
     color: #468;
 }
 
-
-hr {
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-
 small {
     font-size: 8pt;
 }
@@ -142,7 +135,7 @@ li.breadcrumb-trail span:hover {
  classes together to avoid any CSS-specificity
  conflicts
 */
-.breadcrumb-trail.ng-enter.ng-enter-active {
+.breadcrumb-trail.ng-enter.ng-enter-active, .fade-in.ng-enter.ng-enter-active {
  /* The animation code itself */
  opacity: 1;
 }
@@ -153,10 +146,14 @@ li.breadcrumb-trail span:hover {
 }
 
 /* Animations */
-.fade-in.ng-enter.ng-enter-active {
-  -webkit-animation: enter_sequence 0.3s linear; /* Safari/Chrome */
-  animation: enter_sequence 0.3s linear; /* IE10+ and Future Browsers */
+.fade-in.ng-enter,fade-in.ng-leave {
+ -webkit-transition: 1s linear all; /* Safari/Chrome */
+ transition: 1s linear all; /* All other modern browsers and IE10+ */
+ 
+ /* The animation preparation code */
+ opacity: 0;
 }
+
 @-webkit-keyframes enter_sequence {
   from { opacity:0; }
   to { opacity:1; }
@@ -182,6 +179,30 @@ li.breadcrumb-trail span:hover {
   opacity:0;
   padding:0 10px;
 }
+
+.npp-list.ng-enter, 
+.npp-list.ng-leave
+{ 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+    opacity: 0;
+} 
+ 
+.npp-list.ng-enter.npp-list.ng-enter-active, 
+.npp-list.ng-leave {
+    opacity: 1;
+}
+ 
+.npp-list.ng-leave.npp-list.ng-leave-active,
+.npp-list.ng-enter {
+    opacity: 0;
+}
+
 
 /* Legend */
  
@@ -229,4 +250,28 @@ li.npp-list-item {
     margin-top: 0;
     text-align: left;
     font-size: 9pt;
+}
+
+.resource-list,  .resource-list-sublist {
+		list-style-type: none;
+}
+
+.resource-list-sublist-item {
+		margin-top:1em;
+		background: #f9f9f9;
+		border-top: 1px dotted #eee;
+		padding-left: 0.5em;
+}
+
+p {
+		font-family: "helvetica neue",helvetica,arial;
+		text-align: justify;
+}
+.footer p{
+		text-align:right;
+}
+
+.navbar-inverse {
+		color: #FFF;
+		background: #444;
 }
