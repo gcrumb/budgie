@@ -372,54 +372,54 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	var vu_donor_vs_govt_spending = [
 	    {
-		"graph": "Donor/Government Spending by Ministry",
-		"series": [
-		    {
-			"key" : "Donor Assistance",
-			"values": [
-			    ["Health",1796714],["Education",1854977],["Public Works",1260112],
-			    ["Agriculture",45289],["Lands",106412],["Justice",426504],
-			    ["PMO",675969],["Finance",237952],["Internal Affairs",347755],
-			    ["Commerce",177521],["Meteo",157204]
-			]
-		    },
-		    {
-			"key" : "Government Spending",
-			"values": [
-			    ["Health",1515744],["Education",763351],["Public Works",799460],
-			    ["Agriculture",92027],["Lands",8235],["Justice",147825],
-			    ["PMO",364387],["Finance",349711.4],["Internal Affairs",279974.5],
-			    ["Commerce",113051.7],["Meteo",138811]
-			]
-		    }
-		]
+					"graph": "Donor/Government Spending by Ministry",
+					"series": [
+							{
+									"key" : "Donor Assistance",
+									"values": [
+											["Health",1796714],["Education",1854977],["Public Works",1260112],
+											["Agriculture",45289],["Lands",106412],["Justice",426504],
+											["PMO",675969],["Finance",237952],["Internal Affairs",347755],
+											["Commerce",177521],["Meteo",157204],["Youth Dev.",333132]
+									]
+							},
+							{
+									"key" : "Government Spending",
+									"values": [
+											["Health",1642204],["Education",4177925],["Public Works",1546657],
+											["Agriculture",482791],["Lands",231599],["Justice",52050],
+											["PMO",1275492],["Finance",949330],["Internal Affairs",608452],
+											["Commerce",113052],["Meteo",234984],["Youth Dev.",153551]
+									]
+							}
+					]
 	    },
 	    {
-		"graph": "Donor/Government Spending by Programme",
-		"series": [ 
-		    {
-			"key" : "Donor Assistance",
-			"values": [
-			    ["MoH1",831280],["MoE1",780723],["MoE2",702623],["MIPU",698969],["MoH2",567094],
-			    ["Ports",510122],["PMO",488499],["TVET",333132],["MFEM",237952],["MoJ",237952],
-			    ["MoH3",232442],["ICT",187470],["MIA",172593],["Meteo",157204],["VTO",156988],
-			    ["MIA2",152289],["MoH4",149000],["Women",135176],["Land",106412],["Court",53376],
-			    ["Water",51021],["MoH5",38499],["Agri",25666],["MIA3",22873],["Commerce",20533],
-			    ["Agri2",19623],["MoH6",16898]
-			]
-		    },
-		    {
-			"key" : "Government Spending",
-			"values": [
-			    ["MoH1",792503],["MoE1",24121],["MoE2",661884],["MIPU",421857],["MoH2",139415],
-			    ["Ports",359808],["PMO",83943],["TVET",28111],["MFEM",349711],["MoJ",28979],
-			    ["MoH3",61055],["ICT",280444],["MIA",43488],["Meteo",138811],["VTO",23889],
-			    ["MIA2",201170],["MoH4",303352],["Women",36799],["Land",8235],["Court",82046],
-			    ["Water",17794],["MoH5",49234],["Agri",33909],["MIA3",35316],["Commerce",89163],
-			    ["Agri2",58118],["MoH6",219418]
-			]
-		    }
-		]
+					"graph": "Donor/Government Spending by Programme",
+					"series": [ 
+							{
+									"key" : "Donor Assistance",
+									"values": [
+											["MoH1",831280],["MoE1",780723],["MoE2",702623],["MIPU",698969],["MoH2",567094],
+											["Ports",510122],["PMO",488499],["TVET",333132],["MFEM",237952],["MoJ",237952],
+											["MoH3",232442],["ICT",187470],["MIA",172593],["Meteo",157204],["VTO",156988],
+											["MIA2",152289],["MoH4",149000],["Women",135176],["Land",106412],["Court",53376],
+											["Water",51021],["MoH5",38499],["Agri",25666],["MIA3",22873],["Commerce",20533],
+											["Agri2",19623],["MoH6",16898]
+									]
+							},
+							{
+									"key" : "Government Spending",
+									"values": [
+											["MoH1",792503],["MoE1",24121],["MoE2",661884],["MIPU",421857],["MoH2",139415],
+											["Ports",359808],["PMO",83943],["TVET",28111],["MFEM",349711],["MoJ",28979],
+											["MoH3",61055],["ICT",280444],["MIA",43488],["Meteo",138811],["VTO",23889],
+											["MIA2",201170],["MoH4",303352],["Women",36799],["Land",8235],["Court",82046],
+											["Water",17794],["MoH5",49234],["Agri",33909],["MIA3",35316],["Commerce",89163],
+											["Agri2",58118],["MoH6",219418]
+									]
+							}
+					]
 	    }
 	];
 
