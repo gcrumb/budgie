@@ -17,14 +17,14 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    'png': 'Papua New Guinea',
 	    'tl': 'Timor Leste'
 	};
-	$scope.country_name = countries[country];
+	$scope.country_name = $scope.country_name ? $scope.country_name : countries[country];
 
 	$scope.current_year = $routeParams.year ? $routeParams.year : '2014';
 
 	// Don't want to cut the functionality just yet...
 	$scope.showButtons = $routeParams.country ==='razzle-dazzle' ? true : false;
 
-	var currentDocument = country + '-' + $scope.current_year;
+	$scope.currentDocument = $scope.currentDocument? $scope.currentDocument : country + '-' + $scope.current_year;
 
 
 	// Use this for roll-up / unroll animations.
@@ -73,7 +73,7 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	$scope.breadcrumbs = []; // Initialize breadcrumbs 
 	$scope.showOthers = false;
 
-	var budget = BudgetFactory.get(currentDocument).
+	var budget = BudgetFactory.get($scope.currentDocument).
 		success(function(data, status, headers, config) {
 		    // this callback will be called asynchronously
 		    // when the response is available
@@ -218,10 +218,10 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	$scope.recordSelect = function (which){
 
 	    $scope.radioModel = which;
-	    currentDocument = country + '-' + $scope.current_year;
-	    currentDocument = which !== 'spending' ? currentDocument + '-' + which : currentDocument;
+	    $scope.currentDocument = country + '-' + $scope.current_year;
+	    $scope.currentDocument = which !== 'spending' ? $scope.currentDocument + '-' + which : $scope.currentDocument;
 
-	    var my_budget = BudgetFactory.get(currentDocument).
+	    var my_budget = BudgetFactory.get($scope.currentDocument).
 		success(function(data, status, headers, config) {
 		    pathMappings = getPathMappings(data);
 		    path = 'root';
@@ -313,13 +313,14 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	/* 
 
            ************************ 
-	   Vanuatu graphs
+					 Vanuatu graphs
            ************************ 
 
 	*/
 	
 	$scope.vuUnbudgetedSpending = [
 	    ["Government Scholarship Fund",298000000],
+			["Creation of New Ministries", 53118826],
 	    ["Central Payments",27700000],
 	    ["MSG Contribution",22000000],
 	    ["Grant to VTO",20000000],
@@ -787,7 +788,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	$scope.lineChartTooltipsGDP = function(key, x, y, e, graph) {
             return '<h3>' + key + '</h3>' +
-		'<p>' + y + '% change<br />in ' + x + '</p>';
+		'<p>' + y + '% points<br />in ' + x + '</p>';
 	};
 
 	$scope.lineChartTooltipsDebtGDP = function(key, x, y, e, graph) {
@@ -1190,16 +1191,17 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 	};
 
 	$scope.newTimeline = function (){
+			console.debug("Welp, at least it's running...");
 	    createStoryJS({
-		type: 'timeline',
-		embed_id: 'budgetTimeline',
-		width: $scope.width,
-		height: $scope.height,
-		source: $scope.timelineData,
-		font: "Helvetica"
+					type: 'timeline',
+					embed_id: 'budgetTimeline',
+					width: $scope.width,
+					height: $scope.height,
+					source: $scope.timelineData,
+					font: "Helvetica"
 	    });
 	};
-
+				
 	$scope.newTimeline();
 
 }]);

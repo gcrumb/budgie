@@ -4,7 +4,7 @@ angular.module('pippDataApp.directives.budgetTimeline').directive('budgetTimelin
 	function ($sourceData) {
 	return {
 	    restrict: 'AE',
-	    template: '<div id="budgetTimeline"></div>',
+	    template: '<div id="budgetTimeline">Hello, World!</div>',
 	    scope: {
 		sourceData: '@',
 		width: '@',

@@ -9,7 +9,8 @@ svg#budget, svg#last {
 
 svg#npps {
     margin-left: -200px;
-    min-height: 400px;
+		float: left;
+    height: 550px;
 }
 
 svg#vu-donor-govt-spending {
@@ -249,7 +250,7 @@ li.npp-list-item {
     margin-bottom: 0.25em;
     margin-top: 0;
     text-align: left;
-    font-size: 9pt;
+    font-size: 8pt;
 }
 
 .resource-list,  .resource-list-sublist {
@@ -263,6 +264,10 @@ li.npp-list-item {
 		padding-left: 0.5em;
 }
 
+.resource-list-sublist-item {
+
+}
+
 p {
 		font-family: "helvetica neue",helvetica,arial;
 		text-align: justify;
@@ -274,4 +279,45 @@ p {
 .navbar-inverse {
 		color: #FFF;
 		background: #444;
+}
+
+p.source {
+		text-align:right;
+		margin-top:2em;
+		color:#999;
+		font-size: 8pt;
+		font-style: italic;
+}
+
+.footnotes {
+		padding: 2em;
+		font-size: 10pt;
+		background: #f7fafc;
+		border-top: 1px dotted #999;
+		border-bottom: 1px dotted #eee;
+}
+
+.footnotes h1 {
+		font-size: 11pt;
+}
+
+.footnotes h2 {
+		font-size: 10pt;
+}
+
+.sidebar {
+		font-size: 9pt;
+		background: #f7fafc;
+}
+
+.sidebar h3 {
+		font-size: 11pt;
+		color: #888;
+}
+
+.intro {
+		color: #666;
+		font-size: 14pt;
+		line-height: 1.5em;
+		font-style: italic;
 }

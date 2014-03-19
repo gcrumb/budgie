@@ -1,29 +1,43 @@
 <div ng-controller="oneOffChartsCtrl">
   <div class="row">
-    <div class="span12">
+    <div class="span8">
 
-      <h1>Open Budgets: Vanuatu’s 2014 government budget in 6 graphs</h1>
-      <p>
-      This is PiPP's first feature on the theme of open budgets. It is designed to further our understanding of public finances, 
-      policies and the impact of the spending decisions our governments make. This page provides a broad overview of the Vanuatu 
-      budget. You can delve into the budget in detail using our <a href="/#/budget/vu/2014">interactive pie chart</a>, 
-      which shows in how public funds are being allocated in 2014, right down to the programme level.
-      </p>
-      <p>
-      All of these charts are interactive. Take the time to mouse over them, click around, and you will find they provide a number of useful 
-      and interesting ways of presenting the information.
-      </p>
-      
+      <h1>Open Budgets: Vanuatu’s 2014 Budget at a glance</h1>
+			<p class="intro"> The
+      decisions governments make in their budgets have
+      implications on the delivery of public services, how revenues
+			will be raised, and how much, now and in
+      the future. Equally important is the fact that these
+      decisions have consequence for the broader economy. How are the
+      government's decisions likely to impact on economic activity and inflation?
+      On the plans of future governments - is the government debt burden likely
+      to be a future problem? </p>
+
+			<p class="intro"> All of these charts are
+      interactive. Take the time to mouse over them, click around, and
+      you will find they provide a number of useful and interesting
+      ways of presenting the information.  </p>
+   </div>
+	 <div class="fade-in" ng-include src="'/views/sidebar.html'">
+	 </div>
+  </div>
+	<div class="row">
+		<div class="span12">
       <h2>Economic Activity</h2>
 
       <blockquote>
       <i>
-      The government’s assessment of the state of the economy provides the backdrop for the creation of their budget. It not only gives 
-      officials an idea of how government revenues are likely to perform but also is used to shape the governments decisions about how much 
-      to tax, spend and borrow. For the rest of us, it gives an indication of which way economic opportunities may be moving.
-      </i>
-      </blockquote> 
-    </div>
+			The government’s assessment of the state of the economy provides
+			the backdrop for the creation of their budget. It not only gives
+			officials an idea of how government revenues are likely to
+			perform but also is used to shape the governments decisions
+			about how much to tax, spend and borrow. For the rest of us, it
+			gives an indication of which way economic opportunities may be
+			moving.
+			</i>
+			</blockquote> 
+
+		</div>
   </div>
   <div class="row">
     <div class="span12">
@@ -46,24 +60,25 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-line-chart>
-    </div>
+			<p class="source">Source: Vanuatu Government Budget 2014</p>
+		</div>
   </div>
   <div class="row">
     <div class="span12">
     <p>
       In the lead up to 2008 Vanuatu’s economy experienced unprecedented economic growth following a period of reform and government 
-      stability. Donor investment, tourism growth, a booming property sector and the liberalization of the telecoms industry drove 
+      stability. Donor investment, tourism growth, a booming property sector and the liberalisation of the telecoms industry drove 
       Vanuatu’s economy at historically <a href="http://www.pacificpolicy.org/wp-content/uploads/2012/05/D10-PiPP.pdf">high growth rates</a>.
     </p>
     <p>
-      With the global financial crisis came the collapse in property investment, low commodity prices and, for a while, slower than projected 
-      growth in tourism numbers. As a result, banks were left with increasing numbers of non-performing loans. Below we see the impact of slowing 
+      With the global financial crisis came a collapse in property investment, low commodity prices and, for a while, slower than projected 
+      growth in tourism numbers. As a result, banks were left with increasing numbers of non-performing loans. Above, we see the impact of slowing 
       donor activity and property investment on the construction sector. The agricultural sector, providing the incomes for the majority of the 
       population, has suffered from swings in commodity prices and the lows experienced from 2011.
     </p>
     <p>
       The government’s outlook remains optimistic with the prospect of a large up-scaling in donor activity around the corner and a recovery 
-      in commodity prices- such as copra. Knowing precisely when this donor activity will kick off remains a challenge for the government. 
+      in commodity prices such as copra. Knowing precisely when this donor activity will kick off remains a challenge for the government. 
       However, when this activity occurs, inflation could rise rapidly.
     </p>
     </div>
@@ -73,9 +88,9 @@
     <h2>2013 Budget Performance</h2>
     <blockquote>
       <i>
-	Unplanned spending shows the areas of public spending that come under pressure during the course of the year, either because of a 
-	lack of planning or because of political pressures to spend outside of the budget. These can sometimes undermine government’s own 
-	stated priorities.
+			Unplanned spending shows the areas of public spending that come under pressure during the course of the year, either because of a 
+			lack of planning or because of political pressures. These can sometimes undermine government’s own 
+			stated priorities.
       </i>
     </blockquote>
     </div>
@@ -103,15 +118,17 @@
        margin="{left:-50,top:100,bottom:130,right:100}">
       <svg></svg>
     </nvd3-pie-chart>
+			<p class="source">Source: Vanuatu Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
     <p>
-      The government has a number of unplanned areas of spending in 2013, which totaled to VUV 400 million. Most notable is the 
-      sizable overspending on government scholarships for the second year running. This has created a significant change in the 
-      Vanuatu government’s education budget over the last few years- this is discussed in more detail 
-      <a href="/#/budget/vu/2014/scholarships">in this case study</a>.
+      The government has a number of unplanned areas of spending in 2013, which totaled to VUV 453 million. Most notable are the 
+      sizable overspending on government scholarships for the second
+			year running and the creation of two ministries. This has created a significant change in the 
+      Vanuatu government’s education budget over the last few years-
+			an issue which is discussed in more detail <a href="/#/budget/vu/2014/scholarships">in this case study</a>.
     </p>
     </div>
   </div>
@@ -152,6 +169,7 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-line-chart>
+		<p class="source">Source: Vanuatu Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
@@ -162,9 +180,10 @@
     </p>
     <p>
       Given the small size of the revenue base and the limited domestic borrowing opportunities – including of short maturities - 
-      the government works towards balancing the government budget. However, the nature of the political and capacity challenges 
-      make shaping an active fiscal policy – running a surplus in good times and deficit in bad - is more difficult for Vanuatu 
-      than for other countries.
+      the government works towards balancing the government
+			budget. However, the nature of the political challenges make
+			shaping an active fiscal policy – running a surplus in good
+			times and deficit in bad - is more difficult for Vanuatu than for other countries.
     </p>
     <p>
       Revenue growth remains a long-term challenge of the Vanuatu government if it wishes to maintain and build on the quality 
@@ -207,6 +226,7 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-multi-bar-chart>
+			<p class="source">Source: Vanuatu Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
@@ -242,15 +262,24 @@
        margin="{left:75,top:20,bottom:60,right:0}">
       <svg></svg>
     </nvd3-multi-bar-chart>
+			<p class="source">Source: Vanuatu Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
-    <p>
-      By the government forecasts, from 2011 to 2014 interest repayments have increased by half and foreign debt repayment has almost doubled. 
-      Over the same time revenues, increased by less than a fifth, meaning that these repayments are eating into government budgets. For the 
-      Vanuatu government, at present their investments are not providing a direct financial return to prevent this.
-    </p>
+			<p>
+			By the government forecasts, from 2011 to 2014 interest
+			repayments have increased by half and foreign debt repayment
+			has almost doubled. Over the same time revenues, increased by
+			less than a fifth, meaning that these repayments are eating
+			into government budgets. As highlighted by PiPP in a recent
+			<a
+  href="http://pacificpolicy.org/blog/2013/10/24/unsure-refuge-predatory-lending-practices-are-leading-some-pacific-island-countries-toward-insolvency/">discussion
+  paper</a>
+			and subsequently <a href="http://www.imf.org/external/np/sec/pr/2014/pr1483.htm">by the IMF</a> in their most
+			recent mission, taking on further concessional loans may put
+			pressure government finances.
+			</p>
     </div>
   </div>
 
@@ -285,23 +314,43 @@
        interactive="true"
        tooltips="true"
        tooltipContent="stackedLineTooltips"
-       width="600"
+       width="700"
        height="500"
        color="colorFunction()"
        stacked="true"
        yAxisTickFormat=""
-       margin="{left:75,top:20,bottom:0,right:0}">
+       margin="{left:85,top:20,bottom:0,right:0}">
       <svg id="vu-donor-govt-spending"></svg>
     </nvd3-multi-bar-horizontal-chart>
+			<p class="source">Source: Vanuatu Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
     <p>
-      The government budget books list around VUV 7 billion worth of donor spending in kind and in cash. This is presented alongside 
-      the government’s own contribution to the same areas. The data is not comprehensive but provides an indication of donor priorities 
-      for the coming year and their relative importance compared to resourced dedicated by the Vanuatu government. Click on the 
-      individual streams to see how donor and government spending priorities contrast with and complement one another.
-    </p>
+			The government budget books list around VUV 7 billion worth of
+			donor spending in kind and in cash. This is presented alongside
+			the government’s own contribution to the same areas. At
+			present donors and the Government of Vanuatu do not tend
+			to meet as <a
+			href="/#/budget/vu/2014/budget-timeline">scheduled</a>
+			to discuss aligning spending priorities.
+			</p>
+			<p>
+			Human resource/capacity constraints in the Government of Vanuatu
+			create difficulties in spending donor funds within the budget
+			period. Over recent years the government deposits within the
+			Reserve Bank of Vanuatu have increased rapidly reflecting the
+			realities of delivering donor projects and the challenges this
+			presents to getting the money out the door.
+			</p>
+			<p>
+			The data is not comprehensive but provides an indication of
+			donor priorities for the coming year and their relative
+			importance compared to resourced dedicated by the Vanuatu
+			government. Click on the individual streams to see how donor and
+			government spending priorities contrast with and complement one
+			another.
+			</p>
     </div>
   </div>

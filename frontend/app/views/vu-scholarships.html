@@ -1,78 +1,101 @@
 <div ng-controller="oneOffChartsCtrl">
   <div class="row">
-    <div class="span12">
+    <div class="span8">
 
+			<h1><em>Open Budgets</em>: The Case of Government Scholarships in Vanuatu</h1>
+			<p class="intro">
+				The challenges facing government service delivery tend to come
+				from a combination of lack of funds (is there enough money going
+				to this area?), weak management public finances (is the money
+				going to the right place?) and the decisions around policy
+				approaches (even if enough money is getting to the right place,
+				is this the best way to get the outcomes we are looking for- 'a
+				Just, an Educated, Healthy and Wealthy Vanuatu'). Opening up the
+				government budget permits us to begin painting this picture and
+				to allow a broader audience to partake in discussions that tend
+				to take place behind closed doors. The issue of scholarships in
+				Vanuatu is a good example of this kind of discussion.
+			</p>
 
-    <h1><em>Open Budgets</em>: The Case of Government Scholarships in Vanuatu</h1>
-
-    <p>
-      For <a href="http://www.dailypost.vu/content/scholarship-office-must-take-responsibility-its-failure">Vanuatu</a> and the 
-      <a href="http://www.radioaustralia.net.au/international/radio/program/pacific-beat/solomon-islands-commission-to-investigate-scholarship-program/1263324">Solomon Islands</a>, 
-      the issue of government-sponsored scholarships, an aspirational policy to expand opportunities for youth, has become increasingly entangled in their more surreptitious role 
-      as a tool of patronage for Ministers and MPs. Over recent years scholarships have become part of the political toolkit to secure coalitions and maintain government numbers: 
-      stick with us and we can provide your children with scholarships.
-    </p>
-    <p>
-      This use of scholarships has unintentionally transformed the face of the government budget, creating a rapidly increasing area of overspend that Treasury 
-      officials struggle to contain. In the space of three years, Vanuatu has seen its scholarship spending more than triple without any explicit change in 
-      policy or budget. Spending on scholarships in 2014 is now expected to be VUV 500 million more than what was budgeted in 2012 and can be seen as one 
-      of the most notable changes in spending priorities since the Vanuatu Government’s <a href="http://www.dailypost.vu/content/crp-failure-any-point-view">Comprehensive Reform Programme</a>.
-    </p>
+		</div>
+		<div class="fade-in" ng-include src="'/views/sidebar.html'">
+		</div>
+	</div>
+	<div class="row">
+		<div class="span12">			
+			<p>
+				For <a href="http://www.dailypost.vu/content/scholarship-office-must-take-responsibility-its-failure">Vanuatu</a> and the 
+				<a href="http://www.radioaustralia.net.au/international/radio/program/pacific-beat/solomon-islands-commission-to-investigate-scholarship-program/1263324">Solomon Islands</a>, 
+				the issue of government-sponsored scholarships, an aspirational policy to expand opportunities for youth, has become increasingly entangled in their more surreptitious role 
+				as a tool of patronage for Ministers and MPs. Over recent years scholarships have become part of the political toolkit to secure coalitions and maintain government numbers: 
+				stick with us and we can provide your children with scholarships.
+			</p>
+			<p>
+				This use of scholarships has unintentionally transformed the face of the government budget, creating a rapidly increasing area of overspend that Treasury 
+				officials struggle to contain. In the space of three years, Vanuatu has seen its scholarship spending more than triple without any explicit change in 
+				policy or budget. Spending on scholarships in 2014 is now expected to be VUV 500 million more than what was budgeted in 2012 and can be seen as one 
+				of the most notable changes in spending priorities since the Vanuatu Government’s <a href="http://www.academia.edu/1606964/The_Emperors_Tailor_An_Assessment_of_Vanuatus_Comprehensive_Reform_Programme">Comprehensive Reform Programme</a>.
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span12">
+			
+			<h3>Overspend on scholarships</h3>
+			<p>(Millions of Vatu)</p> 
+			<nvd3-multi-bar-chart
+				data="vuScholarshipOverspend"
+				id="vu-scholarship-overspend"
+				showXAxis="true"
+				showYAxis="true"
+				showLegend="true"
+				showControls="true"
+				interactive="false"
+				tooltips="true"
+				tooltipContent="overspendChartTooltips"
+				forcey="[0,80]"
+				isArea="true"
+				width="600"
+				height="350"
+				color="colorFunction()"
+				stacked="true"
+				margin="{left:75,top:20,bottom:0,right:0}">
+				<svg></svg>
+			</nvd3-multi-bar-chart>
+			
+			<p class="source">Source: Vanuatu Government Budget; PiPP Staff Estimates</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
-
-    <h3>Overspend on scholarships</h3>
-    <p>(Millions of Vatu)</p> 
-    <nvd3-multi-bar-chart
-       data="vuScholarshipOverspend"
-       id="vu-scholarship-overspend"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="true"
-       showControls="true"
-       interactive="false"
-       tooltips="true"
-       tooltipContent="overspendChartTooltips"
-       forcey="[0,80]"
-       isArea="true"
-       width="600"
-       height="350"
-       color="colorFunction()"
-       stacked="true"
-       margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
-    </nvd3-multi-bar-chart>
- 
-    <p><em><span style="line-height: 1.5em;">Source: Vanuatu Government Budget; PiPP Staff Estimates</span></em></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-    <p>
-      This overspending is yet another challenge for the overburdened managers of Vanuatu’s public finances. 
-      Yet it's difficult to challenge this kind of mismanagement of funds. It is too easy to sidestep the issue claiming it as an ambitious realignment 
-      of government policy to focus on higher education- the money, after all, is being used for our children. It is perhaps for this reason that, 
-      government scholarships in Vanuatu, despite being seen as an example of corruption, do not muster the same level of anger as siphoning 
-      of funds, for example, to the supporters of political parties.
-    </p>
-    <p>
-      If we measure a policy by ambition and ambition by money, tripling scholarship spending does represent a success of a sort, even if it was the product of complicated, 
-      closed doors, political processes. However, government policies should be measured by the their outcomes, the costs of achieving these (both in term of money 
-      and how else we could have used these funds) and whether the resources are fairly divvied up. By these standards, does this level of spending, by chance, 
-      reflect a solid policy to invest in youth as the leaders and workforce of the future?
-    </p>
-    <h2>Understanding the trade-offs</h2>
-    <p>
-      The costs of scholarships must be set against the question that inspires much of the economics profession, as well as those who want to hold their 
-      government to account: is there a better way to spend our public money?
-    </p>
-    <p>
-      One first consideration is how much does the programme cost. What are we sacrificing to place this additional VUV 500 million into scholarships? 
-      At VUV 778 million (318 million more than budgeted in 2014) this programme now costs half the Ministry of Health government budget and 
-      actually is more costly than running eight of Vanuatu’s thirteen ministries.
-    </p>
+			<p>
+				This overspending is yet another challenge for the overburdened managers of Vanuatu’s public finances. 
+				Yet it's difficult to challenge this kind of mismanagement of funds. It is too easy to sidestep the issue claiming it as an ambitious realignment 
+				of government policy to focus on higher education- the money, after all, is being used for our children. It is perhaps for this reason that, 
+				government scholarships in Vanuatu, despite being seen as an example of corruption, do not muster the same level of anger as siphoning 
+				of funds, for example, to the supporters of political parties.
+			</p>
+			<p>
+				If we measure a policy by ambition and ambition by money, tripling scholarship spending does represent a success of a sort, even if it was the product of complicated, 
+				closed doors, political processes. However, government policies should be measured by the their outcomes, the costs of achieving these (both in term of money 
+				and how else we could have used these funds) and whether the resources are fairly divvied up. By these standards, does this level of spending, by chance, 
+				reflect a solid policy to invest in youth as the leaders and workforce of the future?
+			</p>
+			<h2>Understanding the trade-offs</h2>
+			<p>
+				The costs of scholarships must be set against the question that
+				inspires much of the economics profession, as well as those who
+				want to hold their government to account: is there a better way to
+				spend our public money? What are we sacrificing to place this
+				additional VUV 500 million into scholarships?</p>
+			
+			<p>It is first worth considering how this overspending have
+				transformed the face of the budget and how much this programme
+				now costs.  At VUV 778 million (318 million more than budgeted
+				in 2014) this programme is now equivalent to half the Ministry
+				of Health government budget and actually is more costly than
+				running eight of Vanuatu’s thirteen ministries.</p>
+			
     </div>
   </div>
   <div class="row">
@@ -80,119 +103,168 @@
     <h3>2014 Budget by Selected Category</h3>
     <p>(Millions of Vatu)</p> 
     <nvd3-multi-bar-chart
-       data="vuSpendingByCategory"
-       id="vu-spending-by-category"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="false"
-       showControls="false"
-       interactive="false"
-       tooltips="true"
-       tooltipContent="vuSelectedCategoryTooltips"
-       forceY="[0,800]"
-       width="600"
-       height="350"
-       rotateLabels="45"
-       grouped="true"
-       color="colorFunction(0)"
-       margin="{left:75,top:20,bottom:20,right:0}">
+      data="vuSpendingByCategory"
+      id="vu-spending-by-category"
+      showXAxis="true"
+      showYAxis="true"
+      showLegend="false"
+      showControls="false"
+      interactive="false"
+      tooltips="true"
+      tooltipContent="vuSelectedCategoryTooltips"
+      forceY="[0,800]"
+      width="600"
+      height="350"
+      rotateLabels="45"
+      grouped="true"
+      color="colorFunction(0)"
+      margin="{left:75,top:20,bottom:20,right:0}">
       <svg></svg>
     </nvd3-multi-bar-chart>
-
-    <p><em><span style="line-height: 1.5em;">Source: Vanuatu Government Budget</span></em></p>
+		
+    <pclass="source">Source: Vanuatu Government Budget</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
-    <p>
-      From the perspective of the education this means we have seen an implicit shifting of priorities of successive governments 
-      from primary and secondary to tertiary education. The latter now consumes over 20% of the Ministry of Education budget, 
-      compared with less than 5% in 2008 (see here to explore the <a href="/#/budget/vu/2014">education budget</a>). 
-      This raises important questions of fairness even before we even consider how well this money is used.
-    </p>
-    <p>
-      This issue is further underscored when we consider how well the scholarship programme functions as part of broader education policy. 
-      After all, if scholarships are administered fairly and offer significant benefits, an additional VUV 500 million to the scholarship 
-      kitty may not be an unreasonable decision. Unfortunately, there is reason to believe that additional funds for scholarships are not 
-      a good investment for Vanuatu or those students who take them on. This implies that this sizeable sum may have found greater benefits elsewhere.
-    </p>
-    <p>
-      The result of Ministerial discretion over the administration of scholarships is that too many students are accepted that do not reach the 
-      required academic standards. This is not just a matter of fairness it also has broader implications in that many fail to complete their 
-      degrees or are forced to repeat years- this is costly and helps no one; certainly not the youth that were perhaps nudged along the wrong learning path.
-    </p>
-    <p>
-      For those who are successful, job opportunities remain stubbornly hard to come across, as scholarship policy is not targeted towards skills 
-      gaps. Businesses continue to complain that students aim for easier courses that tend to be lack relevance for the work force. So perhaps most 
-      worrying is that the statistics from other areas of education remain poor. If you start school, you currently have about a 1 in 10 chance that 
-      you will make it through to the end of secondary - this statistic does not appear to be getting better quickly.
-    </p>
-    <p>
-      The problems facing primary and secondary education are not just related to money. Amongst other things it is a problem of poor accountability 
-      of funds, rundown infrastructure and pockets of poor quality of teaching- these can be found discussed Vanuatu Education Sector Public Expenditure 
-      Review, published at the end of 2012. However, what this report also highlights is that the government’s goals of universal primary education (UPE) 
-      and basic education (UBE), are difficult to meet on the basis they would require an extra VUV 510 million in the Department of Education’s recurrent 
-      budget from 2013-2017 &emdash; ironically, the same amount that has subsequently been added to the scholarships budget. It is these kind of decisions that mean 
-      the government’s own goals for primary education will continue to be encumbered by a lack of places for the official primary school age group.
-    </p>
+			<p>
+				From the perspective of the education this means we have seen an implicit shifting of priorities of successive governments 
+				from primary and secondary to tertiary education. The latter now consumes over 20% of the Ministry of Education budget, 
+				compared with less than 5% in 2008 (see here to explore the <a href="/#/budget/vu/2014">education budget</a>). 
+				This raises important questions of fairness even before we even consider how well this money is used.
+			</p>
+			<p>This issue is further underscored when we consider how well the
+				scholarship programme functions as part of broader education
+				policy. After all, if scholarships are administered fairly and
+				offer significant benefits, an additional VUV 500 million to the
+				scholarship kitty may not be an unreasonable
+				decision. Unfortunately, there is reason to believe that
+				additional funds for scholarships are not a good investment for
+				Vanuatu or those students who take them on. This is particularly
+				true when we consider that the government of Vanuatu is expected
+				to receive VUV 700 million from donor-sponsored scholarships and
+				that, with a little support, Ni-Vanuatu children could get access
+				to the large array of scholarships on offer around the world. This
+				strongly implies that this sizeable sum dedicated by the
+				government has may have found greater benefits elsewhere. </p>
+			
+			<p>
+				The result of Ministerial discretion over the administration of
+				scholarships is that too many students are accepted that do not
+				reach the required academic standards- a problem less common for
+				externally funded scholarships. This is not just a matter of
+				fairness it also has broader implications in that many fail to
+				complete their degrees or are forced to repeat years- this is
+				costly and helps no one; certainly not the youth that were perhaps
+				nudged along the wrong learning path. </p>
+			
+			<p>
+				For those who are successful, job opportunities remain stubbornly hard to come across, as scholarship policy is not targeted towards skills 
+				gaps. Businesses continue to complain that students aim for easier courses that tend to be lack relevance for the work force. So perhaps most 
+				worrying is that the statistics from other areas of education
+				remain poor. If you start school, you currently have about a 1
+				in 10 chance that you will make it through to the end of
+				secondary - this statistic does not appear to be getting better quickly.    </p>
+			
+			<p>The problems facing primary and secondary education are not
+				just related to money. Amongst other things it is a problem of
+				poor accountability of funds, rundown infrastructure and pockets
+				of poor quality of teaching- these can be found discussed
+				Vanuatu Education Sector Public Expenditure Review, published at
+				the end of 2012. However, what this report also highlights is
+				that the government’s goals of universal primary education (UPE)
+				and basic education (UBE), are difficult to meet on the basis
+				they would require an extra VUV 510 million in the Department of
+				Education’s recurrent budget from 2013-2017 &mdash; ironically,
+				the same amount that has subsequently been added to the
+				scholarships budget. It is these kind of decisions that mean the
+				government’s own goals for primary education will continue to be
+				encumbered by a lack of places for the official primary school
+      age group.</p>
+			
     </div>
   </div>
   <div class="row">
     <div class="span12">
-    <h3>{{ vuEducationGraphHeader }}</h3>
-    <div style="margin-left: 1em;" class="choose-your-poison">
-      <div class="btn-group btn-group-sm">
-        <button type="button" btn-radio="0" ng-model="whichEducationGraph" class="btn btn-default" ng-click="nextEducationGraph(0)">Drop Out Rates</button>
-        <button type="button" btn-radio="1" ng-model="whichEducationGraph" class="btn btn-default" ng-click="nextEducationGraph(1)">Repetition Rates</button>
-        <button type="button" btn-radio="2" ng-model="whichEducationGraph" class="btn btn-default" ng-click="nextEducationGraph(2)">Survival to Year 13</button>
-      </div>
-    </div>
-    <p>(Percent)</p> 
-    <nvd3-line-chart
-       data="vuEducationGraph"
-       id="vu-education-outcomes"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="true"
-       showControls="true"
-       interactive="true"
-       tooltips="true"
-       tooltipContent="lineChartTooltipsEducation"
-       xAxisTickFormat=""
-       forceY="[0,50]"
-       width="600"
-       height="350"
-       color="colorFunction()"
-       margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
-    </nvd3-line-chart>
-
-    <p><em><span style="line-height: 1.5em;">Source: Ministry of Education Annual Statistical Digest</span></em></p>
+			<h3>{{ vuEducationGraphHeader }}</h3>
+			<div style="margin-left: 1em;" class="choose-your-poison">
+				<div class="btn-group btn-group-sm">
+					<button type="button" btn-radio="0" ng-model="whichEducationGraph" class="btn btn-default" ng-click="nextEducationGraph(0)">Drop Out Rates</button>
+					<button type="button" btn-radio="1" ng-model="whichEducationGraph" class="btn btn-default" ng-click="nextEducationGraph(1)">Repetition Rates</button>
+					<button type="button" btn-radio="2" ng-model="whichEducationGraph" class="btn btn-default" ng-click="nextEducationGraph(2)">Survival to Year 13</button>
+				</div>
+			</div>
+			<p>(Percent)</p> 
+			<nvd3-line-chart
+				data="vuEducationGraph"
+				id="vu-education-outcomes"
+				showXAxis="true"
+				showYAxis="true"
+				showLegend="true"
+				showControls="true"
+				interactive="true"
+				tooltips="true"
+				tooltipContent="lineChartTooltipsEducation"
+				xAxisTickFormat=""
+				forceY="[0,50]"
+				width="600"
+				height="350"
+				color="colorFunction()"
+				margin="{left:75,top:20,bottom:0,right:0}">
+				<svg></svg>
+			</nvd3-line-chart>
+			<p class="source">Source: Ministry of Education Annual Statistical Digest</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
-    <p>
-      What this means is that the current education system still struggles to offer Ni-Vanuatu the skills to find work and compete against 
-      an increasingly international workforce not just from Australia but also from as far afield as Mauritius, the Philippines and China. Most 
-      indicators suggest that this not moving so quickly. From the opening up of Vanuatu government budget, aside from the budget constraints 
-      facing lower levels of schooling, we also now know that spending from both the donors and government on technical and vocational training 
-      (TVET), the area designed to provide practical skills for workforce, is only a quarter of that spent on technical and higher education. 
-      If we wish to see tangible benefits in this area, investments in education are worthwhile- however expanding government scholarships at 
-      this rate is unlikely to be the place to start.
-    </p>
-    <p>
-      The rapid growth in scholarship overspending for the last few years cannot be ignored for much longer &emdash; diversion of funds to this area is 
-      diversion of funds from elsewhere... and for little benefit. Perhaps for good reason, such additional spending on scholarships does not 
-      form part of the government’s Priority Action Agenda that calls for “a Just, an Educated, Healthy and Wealthy Vanuatu”. However, if we wish 
-      to realign spending with these government priorities, the mechanics that underpin the overspending on scholarships are easy to fix. After 
-      all, this requires little more than limiting scholarship numbers, enforcing strict educational standards and removing ministerial discretion. 
-      Yet as with a great deal of areas, finding the political will is less easy.
-    </p>
-    <p>
-      Few tend to bemoan giving extra money to the young to pursue further education, even if the spending is politically driven, unplanned and 
-      administered unfairly. At some point this has to change. Down the line, we do not wish to be asking how much we have sacrificed to fund an 
-      unfair scheme that struggles to serve its purpose.
-    </p>
-  </div>
-</div>
+			<p>
+				What this means is that the current education system still struggles to offer Ni-Vanuatu the skills to find work and compete against 
+				an increasingly international workforce not just from Australia but also from as far afield as Mauritius, the Philippines and China. Most 
+				indicators suggest that this not moving so quickly. From the opening up of Vanuatu government budget, aside from the budget constraints 
+				facing lower levels of schooling, we also now know that spending from both the donors and government on technical and vocational training 
+				(TVET), the area designed to provide practical skills for workforce, is only a quarter of that spent on technical and higher education. 
+				If we wish to see tangible benefits in this area, investments in education are worthwhile- however expanding government scholarships at 
+				this rate is unlikely to be the place to start.
+			</p>
+			<p>
+				The rapid growth in scholarship overspending for the last few years cannot be ignored for much longer &emdash; diversion of funds to this area is 
+				diversion of funds from elsewhere... and for little benefit. Perhaps for good reason, such additional spending on scholarships does not 
+				form part of the government’s Priority Action Agenda that calls for 'a Just, an Educated, Healthy and Wealthy Vanuatu'. However, if we wish 
+				to realign spending with these government priorities, the mechanics that underpin the overspending on scholarships are easy to fix. After 
+				all, this requires little more than limiting scholarship numbers, enforcing strict educational standards and removing ministerial discretion. 
+				Yet as with a great deal of areas, finding the political will is less easy.
+			</p>
+			<p>
+				Few tend to bemoan giving extra money to the young to pursue further education, even if the spending is politically driven, unplanned and 
+				administered unfairly. At some point this has to change. Down the line, we do not wish to be asking how much we have sacrificed to fund an 
+				unfair scheme that struggles to serve its purpose.
+			</p>
+		</div>
+		<div class="row">
+			<div class="span12 footnotes">
+				<h1>Sources</h1>
+				<ul>
+					<li>
+						Vanuatu Government Budget 2014
+					</li>
+					<li>
+						Ministry of Education Annual Statistical Digest 2012
+					</li>
+					<li>
+						Ministry of Education Annual Report 2012
+					</li>
+					<li>
+						Vanuatu Government Planning Long, Acting Short: Action Agenda for 2013 – 2016
+					</li>
+					<li>
+						Government of the Republic of Vanuatu Priorities and Action Agenda 2006 – 2015
+					</li>
+					<li>
+						2012 Update: Re-committing to Reform to achieve “a Just, an
+						Educated, Healthy and Wealthy Vanuatu”
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>

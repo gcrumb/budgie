@@ -1,9 +1,9 @@
 <div ng-controller="oneOffChartsCtrl">
   <div class="row">
-    <div class="span12">
+    <div class="span8">
 
-      <h1>Open Budgets: Papua New Guinea's 2014 budget in 6 graphs</h1>
-      <p>
+      <h1>Open Budgets: Papua New Guinea's 2014 budget at a glance</h1>
+      <p class="intro">
       This feature on the theme of open budgets is designed to further our understanding of public finances, 
       policies and the impact of the spending decisions our
       governments make. This page provides a broad overview of the
@@ -11,22 +11,168 @@
       detail using our <a href="/#/budget/png/2014">interactive pie chart</a>, 
       which shows in how public funds are being allocated in 2014, right down to the programme level.
       </p>
-      <p>
+      <p class="intro">
       All of these charts are interactive. Take the time to mouse over them, click around, and you will find they provide a number of useful 
       and interesting ways of presenting the information.
       </p>
-      
-      <h2>Spending vs Revenue</h2>
+    </div>
+		<div ng-include="'/views/sidebar.html'">
+		</div>
+	</div>
+	<div class="row">
+    <div class="span12">
+      <h2>GDP - The LNG Story</h2>
 
       <blockquote>
       <i>
-      Commentary on the spending vs revenue projections...
-      </i>
-      </blockquote> 
+			The government’s assessment of the state of the economy provides the
+			backdrop for the creation of their budget. It not only gives
+      officials an idea of how government revenues are likely
+			to perform but also is used to shape the governments decisions
+			about how much to tax, spend and borrow. For the rest of us,
+			it gives an indication of which way economic opportunities may
+      be moving.
+			</i>
+      </blockquote>
+			<p>
+			The prospects for economic growth over coming years may look
+			impressive at first glance, however it is clear that the lion’s
+			share of the economic activity will be driven directly by the
+			start of LNG production. While economic activity in agriculture,
+			forestry and fisheries is likely to perform better in 2014,
+			activity outside the mining sector remains particularly slow.
+			In 2014 non-mining GDP is expected to grow by just 1.6 percent.
+			</p>
     </div>
   </div>
   <div class="row">
     <div class="span12">
+    <h3>Gross Domestic Product - Contributors by Sector</h3>
+    <p>(Percent Points)</p> 
+    <nvd3-multi-bar-horizontal-chart
+       data="pngGDP"
+       id="png-gdp"
+       stacked="true"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       forceY=[-2,22]
+       tooltips="true"
+       tooltipContent="lineChartTooltipsGDP"
+       width="800"
+       height="400"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+			<p class="source">Source: Papua New Guinea Government Budget 2014</p>
+		</div>
+  </div>
+  <div class="row">
+    <div class="span12">
+			<p>LNG production will drive an initial 70 percent increase in
+      mineral exports, moving the PNG economy towards becoming a net
+      exporter of goods and services. Yet over the next five years
+      from 2013, agricultural, forestry, fishing exports are expected
+      to expand by a modest 10 percent. Here lays a central challenge
+      facing the PNG government: can the revenues from LNG exports be
+      carefully managed to share the benefits of this economic growth?
+      Partly this requires that increases in government spending must
+      be converted into meaningful improvements in public
+      services.</p>
+		</div>
+	</div>
+		<div class="row">
+    <div class="span12">
+    <h3>Exports by Selected Sector</h3>
+    <p>(Millions of Kina)</p> 
+    <nvd3-multi-bar-chart
+       data="pngExports"
+       id="png-exports"
+       stacked="true"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="pngDeficitTooltips"
+       forceY=[0,27000]
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+			<p class="source">Source: Papua New Guinea Government Budget 2014</p>
+    </div>
+  </div>
+	<div class="row">
+		<div class="span12">
+     <h2>Spending vs Revenue- More today, less tomorrow</h2>
+
+      <blockquote>
+      <i>
+			These tend to be the headline figures to come out of
+			any government budget. Importantly, it gives an indication
+			of whether the government is spending more than it receives
+			in revenues or vice-versa. If the government spends more
+			than it receives it has a budget deficit and must fill
+			this hole through borrowing.
+			</i>
+      </blockquote>
+			<p>
+			The 2014 PNG budget seems to push further the philosophy
+			presented in the previous budgets of spending more today for
+			less tomorrow. This can be seen not just in the faster than
+			planned growth in spending of the last two years, but also
+			in the projections for the next five years which require
+			a rapid tightening in spending. These plans appear, at
+			first glance, somewhat optimistic.
+			</p>
+			<p>
+			Growth in revenue and spending plans for the PNG government
+			paint an interesting picture. In 2013 spending was increased
+			by over 20 percent to invest in ‘key enablers’ of development
+			(including health, education, infrastructure, law and order), opening up
+			a sizeable budget deficit.  This deficit was justified as a
+			measure to help stimulate economic activity prior to the
+			start of LNG production.
+			</p>
+			<p>
+			In 2014 the government offered another significant jump in
+			spending. However, this year revenue is expected to buck the
+			overall trend in the economy and perform well due to increased
+			compliance and efficiency savings. Such drivers of revenue
+      growth can sometimes (but not always) indicate that the budget
+			is coming under pressure - a sign that political pressures may
+			be on increased spending, leaving officials to fill the funding
+			hole as best they can to appear fiscally responsibly.
+			Revenues in 2014 will therefore have to be carefully managed to
+			ensure they do not undershoot expectations, creating a larger
+			hole in the budget and forcing further borrowing.
+			</p>
+			<p>
+      In 2015, the PNG government is faced with a significant
+      challenge of hitting hard on the spending brakes to limit
+      the size of the budget deficit. Given PNG’s debt situation
+      (see below) and the upcoming economic activity, this strategy
+      of aligning the budget with its medium term targets is
+      appropriate. We know however, from the experience of PNG and
+      other countries in the region, that such plans are likely to come
+      under significant political pressure. This is particularly
+      likely when we see that 2015 is expected to have just 2 percent
+      increase in spending (less than inflation) at a time while
+      revenue growth is above 9 percent. This will become clearer
+      when the 2015 budget is presented at the end of the year,
+      but in any case, it provides another interesting test of
+      practicalities of managing an active fiscal policy.
+			</p>
+		</div>
+	</div>
+	<div class="span12">
     <h3>Growth in Revenue and Spending</h3>
     <p>(Percentage growth)</p> 
     <nvd3-line-chart
@@ -48,17 +194,7 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-line-chart>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-      <h2>Deficit</h2>
-
-      <blockquote>
-      <i>
-      Commentary on the deficit projections...
-      </i>
-      </blockquote> 
+			<p class="source">Source: Papua New Guinea Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
@@ -82,6 +218,7 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-multi-bar-chart>
+			<p class="source">Source: Papua New Guinea Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
@@ -90,9 +227,29 @@
 
       <blockquote>
       <i>
-      Commentary on the debt burden...
-      </i>
-      </blockquote> 
+			To finance budget deficits the government takes on debt. Taking
+      on some form of debt is necessary for the smooth running of
+      government operations. However, if it’s not carefully managed,
+      debt can have important implications by increasing vulnerability
+      to economic shocks, while repayments can eat quickly into the
+      funding of other government services. Debt- to-GDP (total debt
+      as a proportion of what the country produces) tends to be an
+      important indicator.
+			</i>
+      </blockquote>
+			<p>
+			At the same time as the 2014 Budget was tabled,
+      legislation was passed for the amendment of the Fiscal
+      Responsibility Act to give further room for borrowing though
+      moving the Debt/GDP limits from 30 to 35 percent. According to
+      the government’s own projections debt indicators should just
+      about remain within these new bounds, however this relies on
+      robust revenue receipts and economic growth projections. If
+      either of these projections is not met, debt as a proportion of
+      GDP will be significantly higher and likely move the government
+      even further from their original limits of fiscal
+      responsibility.
+			</p>
     </div>
   </div>
   <div class="row">
@@ -118,19 +275,21 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-line-chart>
+			<p class="source">Source: Papua New Guinea Government Budget 2014</p>
     </div>
   </div>
   <div class="row">
-    <div class="span12">
-      <h2>Net External Borrowing</h2>
-
-      <blockquote>
-      <i>
-      Commentary on borrowing and whether it bears any relation to reality...
-      </i>
-      </blockquote> 
-    </div>
-  </div>
+		<div class="span12">
+			<p>The story of government debt reflects the spending and revenue
+			raising decisions discussed above. In 2014 external concessional
+			loans saw a marked increase but is forecast to fall rapidly. At
+      first glance it seems fairly unlikely that these projections
+			will be met given the pressures to take on
+			<a
+			href="http://pacificpolicy.org/wp-content/uploads/2013/10/DS25_UNSURE_REFUGE.pdf">concessional
+			loans</a> in the region.</p>
+		</div>
+	</div>
   <div class="row">
     <div class="span12">
     <h3>External Borrowing</h3>
@@ -154,77 +313,74 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-line-chart>
+			<p class="source">Source: Papua New Guinea Government Budget 2014</p>
     </div>
   </div>
- <div class="row">
-    <div class="span12">
-      <h2>GDP - The LNG Story</h2>
+	<div class="row">
+		<div class="span12 footnotes">
+			<h1>Accessing PNG government budget information</h1>
+			<p>
+			The latest PNG budget information can be accessed <a href="http://www.treasury.gov.pg/html/national_budget/national_budget.html">here</a>. 
+			</p>
+			<ul>
+				<li>
+				Volume 1 provides a summary of the key aspects of the budget
+				</li>
+				<li>
+				Volume 2 presents all the individual spending and revenue- raising plans
+				</li>
+				<li>
+				Volume 3 offers a summary of the key investment decisions
+				</li>
+			</ul>
+			<h2>Government Planning and Assessment</h2>
 
-      <blockquote>
-      <i>
-      Commentary on the GDP growth projections...
-      </i>
-      </blockquote> 
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-    <h3>Gross Domestic Product - Contributors by Sector</h3>
-    <p>(Percent Growth)</p> 
-    <nvd3-multi-bar-horizontal-chart
-       data="pngGDP"
-       id="png-gdp"
-       stacked="true"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="true"
-       showControls="true"
-       interactive="true"
-       forceY=[-2,22]
-       tooltips="true"
-       tooltipContent="lineChartTooltipsGDP"
-       width="800"
-       height="400"
-       color="colorFunction()"
-       margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
-    </nvd3-multi-bar-chart>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-      <h2>Exports</h2>
+			<p>Underpinning the government budget is an array of plans and
+			assessments. Ideally such documents should inform many of the
+			decisions that are taken in the government budget.</p>
+			
+			<ul>
+				<li>
+				<a
+				href="http://www.treasury.gov.pg/html/legislation/files/acts/PNGFRA_No%5b1%5d.9-2006.pdf">Papua
+				New Guinea Fiscal Responsibility Act</a>:
+				This provides the limits for fiscal responsibility for the PNG government.
+				</li>
+				<li>
+				<a href="http://www.treasury.gov.pg/html/national_budget/files/2013/budget_documents/Related Budget Documents/2014 Budget Strategy Paper.pdf">Budget
+				Strategy Paper (2014)</a>: Planning for the 2014 budget
+				</li>
+				<li>
+				<a
+				href="http://www.treasury.gov.pg/html/national_budget/files/2013/budget_documents/Related
+				Budget Documents/2013.myefo.report.pdf">Mid
+				Year Economic and Fiscal Outlook (MYEFO) 2013</a>: Progress on the 2013 Budget.
+				</li>
+			</ul>
 
-      <blockquote>
-      <i>
-      Commentary on the export figures...
-      </i>
-      </blockquote> 
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-    <h3>Exports by Selected Sector</h3>
-    <p>(Millions of Kina)</p> 
-    <nvd3-multi-bar-chart
-       data="pngExports"
-       id="png-exports"
-       stacked="true"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="true"
-       showControls="true"
-       interactive="true"
-       tooltips="true"
-       tooltipContent="pngDeficitTooltips"
-       forceY=[0,27000]
-       width="600"
-       height="350"
-       color="colorFunction()"
-       margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
-    </nvd3-multi-bar-chart>
-    </div>
-  </div>
+			<h2>Planning for the Future</h2>
+			<ul>
+				<li>
+				Medium Term Fiscal Strategy (2013-2017): Longer term budget planning
+				</li>
+				<li>
+				<a
+				href="http://www.treasury.gov.pg/html/publications/files/pub_files/2011/2011-2015.png.mtdp.pdf">Medium
+				Term Development Plan (2011-2015)</a>: Directing spending priorities
+				</li>
+				<li>
+				<a
+				href="http://www.treasury.gov.pg/html/publications/files/pub_files/2011/png-development-strategic-plan.2010-2030.pdf">PNG
+				Development Strategic Plan (2010-2030)</a>: Overarching development plan
+				</li>
+				<li>
+				<a
+				href="http://www.treasury.gov.pg/html/publications/files/pub_files/2011/2011.png.vision.2050.pdf">Vision
+				2050</a>: Overarching development plan
+				</li>
+			</ul>
 
+
+		</div>
+	</div>
 </div>
