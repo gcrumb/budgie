@@ -8,7 +8,6 @@
     </div>
 </div>
 <div class="row">
-  <div class="span8">
     <h1>{{country_name}} Spending Wheel</h1>
     <h3>Discover how the government of {{country_name}} spends its money</h3>
     <p class="intro">This spending wheel provides a detailed, drill-down view of
@@ -17,9 +16,6 @@
     particular area. Click on the area to view both any subsidiary
     sections as well as a three year history of spending for that
     area.</p>
-  </div>
-	<div class="fade=in" ng-include src="'/views/sidebar.html'">
-	</div>
 </div>
 <div class="row">
 </div>
@@ -84,6 +80,7 @@
        tooltipContent="barChartTooltips"
        color="colorFunction()"
        yAxisTickFormat="formatBarChartTicks()"
+			 rotateLabels="60"
        margin="{top: 30, right: 0, bottom: 50, left: 100}">
         <svg style="height: 400px;"></svg>
     </nvd3-multi-bar-chart>
@@ -109,6 +106,29 @@
   </div>
 
 </div>
+<div class="row">
+	<div class="span12 fade-in" ng-show="showPercentage">
+    <h3>Percentage of {{historyLabel}} Spending</h3>
+		<nvd3-line-chart
+      isArea="true"
+			data="percentageHistory"
+			id="historylinechart"
+			interactive="true"
+      tooltips="true"
+			tooltipContent="percentageHistoryTooltips"
+      forceY="[0,100]"
+      xAxisTickFormat="formatLineChartTicks()"
+			color="colorFunction()"
+      width="800"
+      showxaxis="true"
+      showyaxis="true"
+			margin="{top: 30, right: 0, bottom: 50, left: 100}">
+			<svg></svg>
+    </nvd3-line-chart>
+
+	</div>
+</div>
+
 <div class="row">
   <div class="span12">
     <hr />

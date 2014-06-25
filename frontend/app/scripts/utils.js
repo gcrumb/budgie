@@ -1,8 +1,22 @@
 /**
- * @license Put name and version
- * (c) 2013-2014 Nasara Holdings. http://nasara.com
- * License: Put license here.
- */
+ * @license GPLv2
+ * (c) 2013-2014 Nasara Holdings.
+ * License:     This file is part of Budgie.
+
+    Budgie is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 2 of the License, or
+    (at your option) any later version.
+
+    Budgie is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Budgie.  If not, see <http://www.gnu.org/licenses/>.
+
+***** */
 
 'use strict';
 
@@ -35,8 +49,9 @@ var drill = function (budget, path, current_year) {
     // Extract budget segment of interest in its raw form. This will
     // contain all raw data from point of interest all the way up the
     // tree.
-    console.debug('PATH: ' + path);
     var budget_segment = _.deep(budget_copy,path);
+
+		//console.debug('Budget segment: ', budget_segment);
 
     // Go through categories of this segment of interest, mash-up data
     // in a convenient way for use in controller: only include name,
@@ -44,24 +59,24 @@ var drill = function (budget, path, current_year) {
 
     var raw_categories = budget_segment.categories;
     var categories = [];
-    console.log('Raw categories: ', raw_categories);
 
     for (var category in raw_categories) {
-	// cat is a local variable to hold the newly mashed-up data
-	// for a given category. It will populate the categories
-	// variable above
-	var cat = {}; 
-	cat['name'] = raw_categories[category].name;
-	cat['notes'] = raw_categories[category].notes;
+				// cat is a local variable to hold the newly mashed-up data
+				// for a given category. It will populate the categories
+				// variable above
+				var cat = {}; 
+				cat['name'] = raw_categories[category].name;
+				cat['notes'] = raw_categories[category].notes;
+				
+				cat['current-data'] = raw_categories[category]['data'][current_year];
+				cat['level'] = raw_categories[category].level;
+				if (_.has(raw_categories[category], "categories")) {
+						cat['drillable'] = true;
+				} else {
+						cat['drillable'] = false;
+				}
 
-	cat['current-data'] = raw_categories[category]['data'][current_year];
-	cat['level'] = raw_categories[category].level;
-	if (_.has(raw_categories[category], "categories")) {
-	    cat['drillable'] = true;
-	} else {
-	    cat['drillable'] = false;
-	}
-	categories.push(cat);
+				categories.push(cat);
     }
 
     categories.sort(sort_categories);
@@ -72,7 +87,6 @@ var drill = function (budget, path, current_year) {
     // categories above will be set instead of the raw categories
     // (which may or may not contain an arbitrary number of data
     // further up the tree)
-
     return _.deep(budget_segment, 'categories', categories);
 
 };
@@ -80,218 +94,15 @@ var drill = function (budget, path, current_year) {
 var sort_categories = function (a,b){
 
     if (parseFloat(a['current-data']['aggr']) < parseFloat(b['current-data']['aggr'])){
-	return 1;
+				return 1;
     }
     if (parseFloat(a['current-data']['aggr']) == parseFloat(b['current-data']['aggr'])){
-	return 0;
+				return 0;
     }
 
     return -1;    
 }
 
-/**
- * Simple usage examples with sample PNG budget.
- **/
-
-var sample_budget = {
-    "_id": "png-2013",
-    "_rev": "1-521793c5646a4f9e4da35e9404717662",
-    "root": {
-        "name": "PNG Budget",
-        "data": {
-            "2013": {
-                "devel": 1000000000,
-                "recur": 1000000000,
-                "aggr": null,
-                "change": 4.2,
-                "notes": "Important points here",
-                "more": "data as needed"
-            },
-            "2012": {
-                "devel": 0,
-                "recur": 1000000000,
-                "aggr": 12300000000,
-                "notes": "Important points here",
-                "more": "data as needed"
-            },
-            "2011": {
-                "recur": 1000000000,
-                "aggr": null,
-                "notes": "Important points here",
-                "more": "data as needed"
-            }
-        },
-        "level": "Departmental Expenditure",
-        "categories": {
-            "depart-health": {
-                "name": "Department for Health",
-                "data": {
-                    "2013": {
-                        "devel": 1000000000,
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "change": 4.2,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2012": {
-                        "devel": 0,
-                        "recur": 1000000000,
-                        "aggr": 12300000000,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2011": {
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    }
-                },
-                "level": "Program Expenditure",
-                "categories": {
-                    "progr-curry-eating": {
-                        "name": "Program for Curry Eating",
-                        "data": {
-                            "2013": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2012": {
-                                "aggr": 1000000,
-                                "program_type": "development",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2011": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            }
-                        },
-                        "level": "Sub-program Expenditure",
-                        "categories": {
-                            "sub-progr-spicy-curry": {
-                                "name": "Sub-program for Spicy Curry",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            },
-                            "sub-progr-mild-curry": {
-                                "name": "Sub-program for Mild Curry",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "depart-edu": {
-                "name": "Department for Education",
-                "data": {
-                    "2013": {
-                        "devel": 1000000000,
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "change": 4.2,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2012": {
-                        "devel": 0,
-                        "recur": 1000000000,
-                        "aggr": 12300000000,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    },
-                    "2011": {
-                        "recur": 1000000000,
-                        "aggr": null,
-                        "notes": "Important points here",
-                        "more": "data as needed"
-                    }
-                },
-                "level": "Program Expenditure",
-                "categories": {
-                    "progr-arts": {
-                        "name": "Program for Arts",
-                        "data": {
-                            "2013": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2012": {
-                                "aggr": 1000000,
-                                "program_type": "development",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            },
-                            "2011": {
-                                "aggr": 1000000,
-                                "program_type": "recurrent",
-                                "notes": "Important points here",
-                                "more": "data as needed"
-                            }
-                        },
-                        "level": "Sub-program Expenditure",
-                        "categories": {
-                            "sub-progr-painting": {
-                                "name": "Sub-program for Painting",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            },
-                            "sub-progr-lang": {
-                                "name": "Sub-program for Languages",
-                                "data": {
-                                    "2013": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    },
-                                    "2011": {
-                                        "aggr": 1000000,
-                                        "notes": "Important points here"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-
-//drill(budget,'root.categories.depart-edu.categories.progr-arts');
-//drill(budget,'root.categories.depart-edu');
-//drill(budget,'root.categories.depart-health.categories.progr-curry-eating');
 
 /**
  * @description
@@ -355,14 +166,15 @@ var getPieChartData = function(categories) {
 
     // Just using 'aggr' for now...
     for(var i=0; i<categories.length; i++) {
-	var aggr = categories[i]['current-data'].aggr;
-	if (aggr) { // Only push data if there is some
-	    pieData.push(
-		{key: categories[i].name, 
-		 y: parseFloat(aggr) // Still receiving string; GRRRRRRR...
-		}
-	    );
-	}
+				var aggr = categories[i]['current-data'].aggr;
+				if (aggr) { // Only push data if there is some
+						pieData.push(
+								{
+										key: categories[i].name, 
+										y: parseFloat(aggr) 
+								}
+						);
+				}
     }
     
     return groupOthers(pieData,16); // will only group if needed
@@ -424,10 +236,10 @@ var getBarChartData = function(data) {
 
     var barValues = [];
     var barData = [
-	{
+				{
             "key": "Expenditure",
             "values": barValues
-	}
+				}
     ];
 
     /**
@@ -438,12 +250,48 @@ var getBarChartData = function(data) {
      * before trying to get values and pushing them to the set.
      */
     var reduceFunction = function(memory, object) {
-	var prop = getFirstProperty(object); // the year
-	var cost = parseInt(object[prop]['aggr']); //* $scope.currency_multiplier; // the cost figure
+				var prop = getFirstProperty(object); // the year
+				var cost = parseInt(object[prop]['aggr']); //* $scope.currency_multiplier; // the cost figure
+				
+				barValues = memory[0]['values'].push([prop,cost]);
+				
+				return 	barData;
+    }
 
-	barValues = memory[0]['values'].push([prop,cost]);
-	
-	return 	barData;
+    // Not the most purest use of reduce with some imperative stuff
+    // mixed in, but working for now
+    return _.reduce(data_as_array, reduceFunction, barData);
+
+}
+
+var getPercentageHistory = function (data){
+
+    // First turn the object into array so it can easily be reduced to
+    // a form convenient for D3 charts.
+    var data_as_array = objectToArray(data);
+
+    var barValues = [];
+    var barData = [
+				{
+            "key": "Percentage",
+            "values": barValues
+				}
+    ];
+
+    /**
+     * Reduce function that consolidates new bar chart data from the next 
+     * object (i.e. next year)
+     * 
+     * Eventually will have to check for the existance of cost figures 
+     * before trying to get values and pushing them to the set.
+     */
+    var reduceFunction = function(memory, object) {
+				var prop = getFirstProperty(object); // the year
+				var cost = parseInt(object[prop]['percentage']);
+				
+				barValues = memory[0]['values'].push([prop,cost]);
+				
+				return 	barData;
     }
 
     // Not the most purest use of reduce with some imperative stuff

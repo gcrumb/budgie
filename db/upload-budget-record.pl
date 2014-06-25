@@ -162,6 +162,37 @@ while (<CSV>){
 
 }
 
+# Need to recurse through the entire object, inserting each category's percentage of the parent total.
+my $category_list = $upload_rec{root}->{categories};
+foreach my $cat (keys %$category_list){
+	$upload_rec{'root'}->{'categories'}->{$cat} = get_percentages($upload_rec{'root'}->{'data'}, $upload_rec{'root'}->{'categories'}->{$cat});
+}
+
+sub get_percentages{
+
+	my $parent = shift or return;
+	my $child  = shift or return;
+
+	if (exists $child->{categories}){
+		my $category_list = $child->{categories};
+		foreach my $cat (keys %$category_list){
+			$child->{'categories'}->{$cat} = get_percentages($child->{'data'}, $child->{'categories'}->{$cat});
+		}
+	}
+
+	my $data = $child->{data};
+	foreach my $year (keys %$data){
+		if (exists $parent->{$year}->{aggr} && $parent->{$year}->{aggr} && $child->{data}->{$year}->{aggr} != 0 ){
+			$child->{'data'}->{$year}->{percentage} = sprintf("%.2f", ($child->{data}->{$year}->{aggr} / $parent->{$year}->{aggr}) * 100) + 0;
+		}
+		else {
+			$child->{'data'}->{$year}->{percentage} = 0;
+		}
+	}
+
+	return $child;
+}
+
 print to_json(\%upload_rec);
 
 sub get_notes {

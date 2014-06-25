@@ -1,0 +1,113 @@
+<html>
+	<head>
+
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/topojson.v1.min.js"></script>
+		
+		<script>
+		 
+d3.json("/scripts/vanuatu-villages-2.json", function(error, vu) {
+ 	 console.log(vu);
+
+    var width = 900,
+       height = 600;
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+   var map_scale = 6000;
+   var projection = d3.geo.mercator().scale(map_scale)
+                     .center([168.3,-17.7])
+                     .translate([550,500]);
+
+		var path = d3.geo.path().projection(projection);
+
+		svg = d3.select("#output").append("svg")
+		    .attr("width", width)
+		    .attr("height", height)
+		    .call(d3.behavior.zoom()
+		    .on("zoom", redraw))
+		    .append("g");
+
+			//draw topojson
+			d3.select("#drop").remove();
+			svg.append("path")
+	      	  .datum(topojson.mesh(vu))
+	          .attr("d", path);
+
+    svg.selectAll(".vanuatu_islands")
+          .data(topojson.feature(vu, vu.objects.vanuatu_islands).features)
+          .enter().append("path")
+          .attr("class", function(d) { console.debug("D: ", d); return "vanuatu_islands " + d.id; })
+          .attr("d", path);
+
+
+    svg.append("path")
+        .datum(topojson.feature(vu, vu.objects.vanuatu_islands))
+        .attr("d", path)
+        .attr("class", "place");
+/*
+    svg.selectAll(".place-label")
+        .data(topojson.feature(vu, vu.objects.vanuatu_places).features)
+        .enter().append("text")
+        .attr("class", "place-label")
+        .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+        .attr("dy", ".5em")
+        .attr("dx", ".5em")
+        .text(function(d) { return d.properties.name; });
+
+
+    svg.selectAll(".island-label")
+        .data(topojson.feature(vu, vu.objects.vanuatu_islands).features)
+        .enter().append("text")
+        .attr("class", "island-label")
+        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+        .attr("dy", ".5em")
+        .attr("dx", ".5em")
+        .text(function(d) { return d.properties.name; });
+*/
+
+    function redraw() {
+	      var s = d3.event.scale;
+	      var t = d3.event.translate;
+	      svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
+
+        svg.selectAll("path.place")
+           .style("stroke-width", 1 / s).attr("d", path.pointRadius(4/s));
+
+    }
+
+});
+
+
+
+		</script>
+
+<style type="text/css">
+   .subunit.VUT { fill: #cdd; }
+   .island-label {
+     fill: #577;
+     fill-opacity: .6;
+     font-family:helvetica,arial,sans-serif;
+     font-size: 2pt;
+     margin-left: 1em;
+     position: relative;
+     left: 10px;
+   }
+
+   path.place {
+     fill: #788;
+     fill-opacity: .6;
+     stroke-width: .35px;
+   }
+
+</style>
+
+  <title>Geo test</title>
+	</head>
+	<body>
+		<h1>Howdy!</h1>
+		<div id="output" style="border:1px solid #000;width:900px;height:600px;"></div>
+
+</body>

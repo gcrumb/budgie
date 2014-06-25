@@ -1,0 +1,91 @@
+<div ng-init="currentDocument='png-2014';country_name='Papua New Guinea';">
+<div ng-controller="BudgetCtrl">
+<div class="row">
+    <h3>Discover how the government of {{country_name}} spends its money</h3>
+    <p class="intro">This spending wheel provides a detailed, drill-down view of
+    annual spending. Hover over any of the individual pie slices, and
+    you will see the name and amount of money allocated to a
+    particular area. Click on the area to view both any subsidiary
+    sections as well as a three year history of spending for that
+    area.</p>
+</div>
+<div class="row">
+</div>
+<div class="row">
+    <h3 class="fade-in">{{ name }}</h3>
+
+    <p>
+      <ul class="breadcrumbs">
+	<li class="breadcrumb-trail fade-in" ng-repeat="b in breadcrumbs" ng-click="reloadBreadcrumbs(b)"><i class="icon-hand-right"></i> <span class="trail-item">{{ b }}</span></li>
+      </ul>
+    </p>
+
+  <div style="width=100%;">
+  <div class="alignright" style="width:270px;padding:0;margin:0;">
+    <!-- h4 class="fade-in">{{ name.length ? name + ' History' : '' }}</h4 -->
+    
+    {{ notes }}
+    <p style="margin:0;margin-top:-2em;float:right;padding:0;"><small><em>(Millions)</em></small></p>
+    <nvd3-multi-bar-chart
+       showControls="false"
+       data="stackedBarChartData"
+       id="stackedBarChart"
+       tooltips="true"
+       tooltipContent="barChartTooltips"
+       color="colorFunction()"
+       yAxisTickFormat="formatBarChartTicks()"
+       margin="{top: 30, right: 0, bottom: 20, left:150}">
+        <svg style="height: 400px;width=100px;"></svg>
+    </nvd3-multi-bar-chart>
+
+  </div>
+  <div class="alignleft" style="margin:0;padding:0;">
+    <nvd3-pie-chart
+       data="pieChartData"
+       noData=""
+       id="pieChartBudget"
+       showLabels="false"
+       showValues="true"
+       labelType="percent"
+       tooltips="true"
+       tooltipContent="tooltipContent"
+       transitionDuration="1200"
+       x="xFunction()"
+       y="yFunction()"
+       width="500"
+       height="500"
+       donut="true"
+       donutRatio="1.5"
+       donutLabelsOutside="false"
+       showLegend="false"
+       color="colorFunction()"
+       margin="{left:100,top:50,bottom:50,right:20}">
+
+      <svg style="width:500px;"></svg>
+    </nvd3-pie-chart>  
+  </div>
+</div>
+  
+  <div style="margin-left:-3em;" class="fade-in" ng-show="showOthers">
+    <h3>Other</h3>
+    <nvd3-multi-bar-horizontal-chart
+       data="othersBarChartData"
+       id="othersBarChart"
+       tooltips="true"
+       color="colorFunction()"
+       tooltipContent="barChartTooltips"
+       height="400"
+       margin="{left:250,top:50,bottom:50,right:100}">
+       <svg></svg>
+    </nvd3-multi-bar-chart>
+  </div>
+
+</div>
+<div class="row">
+    <hr />
+    <p class="source">* The
+    data displayed on this page contains the payments approved by
+    parliament in the appropriation bill.</p>
+</div>
+</div>
+</div>

@@ -10,22 +10,22 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	var pathMappings = {}; // Convenient path mappings
 	var path = 'root'; // Initialize path to root of budget data tree
 	var drillableMappings = {"Other": true}; // Current drillable mappings
-	var country = $routeParams.country ? $routeParams.country : 'png';
+	var country = $scope.country ? $scope.country : $routeParams.country;
 
 	var countries = {
-	    'vu': 'Vanuatu',
+	    'vu':  'Vanuatu',
 	    'png': 'Papua New Guinea',
-	    'tl': 'Timor Leste'
+	    'tl':  'Timor Leste',
+			'ki':  'Kiribati'
 	};
+
 	$scope.country_name = $scope.country_name ? $scope.country_name : countries[country];
+	$scope.current_year = $scope.current_year ? $scope.current_year : $routeParams.year;
 
-	$scope.current_year = $routeParams.year ? $routeParams.year : '2014';
-
+	console.debug("Current year" , $scope.current_year);
 	// Don't want to cut the functionality just yet...
 	$scope.showButtons = $routeParams.country ==='razzle-dazzle' ? true : false;
-
 	$scope.currentDocument = $scope.currentDocument? $scope.currentDocument : country + '-' + $scope.current_year;
-
 
 	// Use this for roll-up / unroll animations.
 	var empty_pie = [{ 
@@ -35,32 +35,32 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 	var palettes = [
 	    [
-		'#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', 
-		'#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'
+					'#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#e6550d', '#fd8d3c', '#fdae6b', '#fdd0a2', '#31a354', '#74c476', '#a1d99b', 
+					'#c7e9c0', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'
 	    ],
 	    [
-		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
-		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
+					'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
+					'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
 	    ],
 	    [
-		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
-		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+					'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+					'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ],
 	    [
-		"#9edae5", "#17becf", "#dbdb8d", "#bcbd22", "#c7c7c7", "#7f7f7f", "#f7b6d2", "#e377c2", "#c49c94", "#8c564b", "#c5b0d5", 
-		"#9467bd", "#ff9896", "#d62728", "#98df8a", "#2ca02c", "#ffbb78", "#ff7f0e", "#aec7e8", "#1f77b4"
+					"#9edae5", "#17becf", "#dbdb8d", "#bcbd22", "#c7c7c7", "#7f7f7f", "#f7b6d2", "#e377c2", "#c49c94", "#8c564b", "#c5b0d5", 
+					"#9467bd", "#ff9896", "#d62728", "#98df8a", "#2ca02c", "#ffbb78", "#ff7f0e", "#aec7e8", "#1f77b4"
 	    ],
 	    [
-		"#de9ed6", "#ce6dbd", "#a55194", "#7b4173", "#e7969c", "#d6616b", "#ad494a", "#843c39", "#e7cb94", "#e7ba52", "#bd9e39", 
-		"#8c6d31", "#cedb9c", "#b5cf6b", "#8ca252", "#637939", "#9c9ede", "#6b6ecf", "#5254a3", "#393b79"
+					"#de9ed6", "#ce6dbd", "#a55194", "#7b4173", "#e7969c", "#d6616b", "#ad494a", "#843c39", "#e7cb94", "#e7ba52", "#bd9e39", 
+					"#8c6d31", "#cedb9c", "#b5cf6b", "#8ca252", "#637939", "#9c9ede", "#6b6ecf", "#5254a3", "#393b79"
 	    ],	    
 	    [
-		'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
-		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+					'#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
+					'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ],
 	    [
-		'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
-		'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
+					'#393b79', '#5254a3', '#6b6ecf', '#9c9ede', '#637939', '#8ca252', '#b5cf6b', '#cedb9c', '#8c6d31', '#bd9e39', '#e7ba52', 
+					'#e7cb94', '#843c39', '#ad494a', '#d6616b', '#e7969c', '#7b4173', '#a55194', '#ce6dbd', '#de9ed6'
 	    ]
 	];
 
@@ -123,27 +123,42 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 	    // drillable mappings once on page load and be done with
 	    // it. In Dan's words, I took the path of least resistance :)
 	    rawFromDrill.categories.forEach(function(elem) {
-		drillableMappings[elem.name] = elem.drillable;
+					drillableMappings[elem.name] = elem.drillable;
 	    });
 
 	    console.log("Drillables: ", drillableMappings);
 
 	    if( Object.prototype.toString.call( pie ) === '[object Array]' ) {
-		// No grouping into "others"
-		$scope.pieChartData = pie;
-		// No gat "others" bar chart data
-		$scope.othersBarChartData = undefined;
+					// No grouping into "others"
+					$scope.pieChartData = pie;
+					// No gat "others" bar chart data
+					$scope.othersBarChartData = undefined;
 	    } else {
-		// With "others" group
-		$scope.pieChartData = pie['top'];
-		// Others bar chart
-		$scope.othersBarChartData = pie['Other'];
+					// With "others" group
+					$scope.pieChartData = pie['top'];
+					// Others bar chart
+					$scope.othersBarChartData = pie['Other'];
 	    }
 
 	    // Information box and bar chart side. 
 	    $scope.notes = rawFromDrill.notes;
 	    $scope.stackedBarChartData = getBarChartData(rawFromDrill.data);
+			$scope.showPercentage = false;
+			if ((country === 'ki') && typeof($scope.level) != 'undefined'){
+					$scope.showPercentage = true;
+					$scope.percentageHistory = getPercentageHistory(rawFromDrill.data);
+			}
 
+			if ($scope.breadcrumbs[$scope.breadcrumbs.length - 1] === $scope.name){
+					$scope.historyLabel = $scope.breadcrumbs[$scope.breadcrumbs.length - 2];
+			}
+			else {
+					$scope.historyLabel = $scope.breadcrumbs[$scope.breadcrumbs.length - 1];
+			}
+
+			if (typeof($scope.historyLabel) != 'undefined') {
+					$scope.historyLabel.replace(/Spending/, '');
+			}
 
 	};
 
@@ -164,52 +179,52 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + '<br />' + $scope.budget_currency + '</p>';
 	};
 
-        $scope.xFunction = function(){
-            return function(d) {
-                return d.key;
-            };
-        };
+  $scope.xFunction = function(){
+      return function(d) {
+          return d.key;
+      };
+  };
 
-        $scope.yFunction = function(){
-            return function(d) {
-                return d.y;
-            };
-        };
+  $scope.yFunction = function(){
+      return function(d) {
+          return d.y;
+      };
+  };
 
-        $scope.$on('tooltipShow.directive', function(event){
-            //console.log('scope.tooltipShow', event);
-        });
+  $scope.$on('tooltipShow.directive', function(event){
+      //console.log('scope.tooltipShow', event);
+  });
 
-        $scope.$on('tooltipHide.directive', function(event){
-            //console.log('scope.tooltipHide', event);
-        });
+  $scope.$on('tooltipHide.directive', function(event){
+      //console.log('scope.tooltipHide', event);
+  });
+				
+  $scope.$on('stateChange.directive', function(event){
+      //console.log('stateChange.directive', event);
+  });
 
-        $scope.$on('stateChange.directive', function(event){
-            //console.log('stateChange.directive', event);
-        });
-
-        $scope.$on('elementClick.directive', function(event,data){
+  $scope.$on('elementClick.directive', function(event,data){
 	    
-	    $scope.showOthers = false;
+			$scope.showOthers = false;
 
 	    // change if logic here...but first get things working
 	    if (data.label === 'Other') {
-		console.log("Path: ", path);
-		$scope.showOthers = true;
+					console.log("Path: ", path);
+					$scope.showOthers = true;
 	    } else {
-		console.log("Before push: ", rawFromDrill);
-		
-		if (drillableMappings[data.label] === true) {
-		    $scope.breadcrumbs.push(data.label);
-		}
-		path = pathMappings[data.label];
-		rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
+					console.log("Before push: ", rawFromDrill);
+					
+					if (drillableMappings[data.label] === true) {
+							$scope.breadcrumbs.push(data.label);
+					}
+					path = pathMappings[data.label];
+					rawFromDrill = drill(rawFromCouch,path,$scope.current_year);
 	    }	    
 	    $scope.nextPalette();
-
+			
 	    process();
-	    
-        });
+
+  });
 
 	$scope.radioModel =  'spending';
 
@@ -241,21 +256,14 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 	};
 
-        $scope.reloadBreadcrumbs = function(crumb){
-	    $scope.showOthers = false;
-	    $scope.breadcrumbs = sliceByStringElement($scope.breadcrumbs,crumb);
-	    path = pathMappings[crumb];
-	    rawFromDrill = drill(rawFromCouch, path, $scope.current_year);
-	    $scope.nextPalette();
-	    process();
-        };	
-
-
-        $scope.LegendController = function($scope){
-	    //NOOP
-	    console.debug("FOO");
-
-        };
+	$scope.reloadBreadcrumbs = function(crumb){
+			$scope.showOthers = false;
+			$scope.breadcrumbs = sliceByStringElement($scope.breadcrumbs,crumb);
+			path = pathMappings[crumb];
+			rawFromDrill = drill(rawFromCouch, path, $scope.current_year);
+			$scope.nextPalette();
+			process();
+  };	
 
 	$scope.getLabels = function(args){
 
@@ -291,12 +299,24 @@ angular.module('pippDataApp.controllers.budgets', ['ui.bootstrap', 'ngAnimate', 
 
 	$scope.formatBarChartTicks = function () {
             return function(d) {
-		return int2roundM(d.toString());
+								return int2roundM(d.toString());
+            }
+	};
+
+	$scope.formatLineChartTicks = function () {
+            return function(d) {
+								return d % 1 === 0 ? d : '';
             }
 	};
 
 
-    }]);
+	$scope.percentageHistoryTooltips = function(key, x, y, e, graph) {
+      return '<h3>' + $scope.name + '</h3>' +
+					'<p>' + y + '% of Overall ' + $scope.historyLabel + ' Spending<br />' + 
+					'in ' + x + '</p>';
+	};
+
+}]);
 
 // One-off charts controller
 angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAnimate', 'legendDirectives'])
@@ -797,8 +817,9 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	};
 
 	$scope.lineChartTooltipsEducation = function(key, x, y, e, graph) {
-            return '<h3>' + key + '</h3>' +
-		'<p>' + y + '%<br />in ' + x + '</p>';
+			console.debug('BOO!');
+      return '<h3>' + key + '</h3>' +
+					'<p>' + y + '%<br />in ' + x + '</p>';
 	};
 
 	$scope.areaChartTooltips = function(key, x, y, e, graph) {
@@ -870,8 +891,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' KINA<br />in ' + x + '</p>';
 	};
 
-
-    }]);
+}]);
 
 
 angular.module('pippDataApp.controllers.npps', ['ui.bootstrap', 'ngAnimate'])
@@ -1055,12 +1075,13 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 		"text":"<p>The budget-making process goes on year-round, with numerous important activities coming together to build this important document...</p>",
 		"date": [
 		    {
-			"startDate":"2014,04,15",
+						"startDate":"2014,04,15",
 			"endDate":"2014,04,26",
 			"headline":"Budget Policy Statement",
-			"text":"<p>Budget Policy Statement is submitted to Minister and Director General of Finance and then published." +
-			    " <em>The release of this document should give an insight into the government’s key priorities for the coming year.</em></p>",
-			"tag":"Finance Dept."
+			"text":"<p>Budget Policy Statement is submitted to Minister and Director General of Finance and then " + 
+								'<a href="http://www.doft.gov.vu/index.php/widgetkit/budget-policy-statements">published</a>.' +
+								" <em>The release of this document should give an insight into the government’s key priorities for the coming year.</em></p>",
+						"tag":"Finance Dept."
 		    },
 		    {
 			"startDate":"2014,04,29",
@@ -1077,7 +1098,7 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 			"text":"<p>2014 Ministry budget ceilings are approved by the Ministerial Budget Committee and then the Council Of Ministers." +
 			    " In practice Vanuatu sees little movement in budget ceilings.</p>" +
 			    "<p>Using the established budget ceilings individual ministries submit their preliminary budget submissions to the ministry of finance " +
-			    "They also consider whether they wish to bid for <a href='/#/budget/vu/npps/2014'>New Policy Proposals</a>" +
+			    "They also consider whether they wish to bid for <a href='/?page_id=574'>New Policy Proposals</a>" +
 			    " - new pots of money to fund ministerial programs and initiatives.</p>",
 			"tag":"Council of Ministers"
 		    },
@@ -1102,10 +1123,12 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 			"startDate":"2014,07,31",
 			"endDate":"2014,07,31",
 			"headline":"HALF YEAR ECONOMIC AND FISCAL UPDATE",
-			"text":"<p>The department of finance publishes its updated budget position, adjusting the current year's budget as necessary in order to " +
-			    " reflect progress during the first six months of the year." +
-			    " This is an assessment of the economy and budget is performing over the first half of the year. " + 
-			    "Essentially, this is a way of making sure things are on track for the current budget.</p>",
+			"text":"<p>The department of finance publishes its " +
+								'<a href="http://www.doft.gov.vu/index.php/administration-finance-treasury/half-yearly-economic-and-fiscal-report">updated budget position</a>' +
+								", adjusting the current year's budget as necessary in order to " +
+								" reflect progress during the first six months of the year." +
+								" This is an assessment of the economy and budget is performing over the first half of the year. " + 
+								"Essentially, this is a way of making sure things are on track for the current budget.</p>",
 			"tag":"Finance Dept."
 		    },
 		    {
@@ -1126,7 +1149,7 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 			    "Following the presentation MBC members question them.</p>" +
 			    "<p>The Ministerial Budget Committee then meets to consider the final draft of the budget estimates for 2015.</p>" +
 			    " <p>While aiming for a fiscally prudent budget (often for a balanced one in Vanuatu's case), " +
-			    " the MBC begins discussions of those <a href='/#/budget/vu/npps/2014'>New Policy Proposals</a> to be undertaken in next year’s budget.</p>",
+			    " the MBC begins discussions of those <a href='/?page_id=57'>New Policy Proposals</a> to be undertaken in next year’s budget.</p>",
 			"tag":"Council of Ministers"
 		    },
 		    {
@@ -1157,8 +1180,8 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 			"endDate":"2014,10,2",
 			"headline":"Budget Books Prepared",
 			"text":"<p>The budget books, which explain in detail the financial plans of the government, are prepared in both French and English. " +
-			    " The three volumes include the <a href='/#/budget/vu/2014/at-a-glance'>fiscal strategy report</a>, " +
-			    " a detailed list of <a href='/#/budget/vu/2014/'>budget appropriations/estimates</a>, and the budget narrative.</p>",
+			    " The three volumes include the <a href='/?page_id=28'>fiscal strategy report</a>, " +
+			    " a detailed list of <a href='/?page_id=98'>budget appropriations/estimates</a>, and the budget narrative.</p>",
 			"tag":"Finance Dept."
 		    },
 		    {
@@ -1191,7 +1214,6 @@ angular.module('pippDataApp.controllers.budget-timeline', ['ui.bootstrap', 'ngAn
 	};
 
 	$scope.newTimeline = function (){
-			console.debug("Welp, at least it's running...");
 	    createStoryJS({
 					type: 'timeline',
 					embed_id: 'budgetTimeline',
