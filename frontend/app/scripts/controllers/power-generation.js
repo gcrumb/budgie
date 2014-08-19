@@ -5,10 +5,16 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	// We're actually using only the first three items in this array.
 	$scope.current_palette = 	    
 	    [
+		'#ef8a62', '#2ca02c', '#c5b0d5', '#8c564b', 
+		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
+	    ];
+/*
+	$scope.current_palette = 	    
+	    [
 		'#ef8a62', '#67a9cf', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
 		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ];
-
+*/
 	/* 
 
            ************************************************ 
@@ -162,21 +168,24 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 			series.forEach(function(item){
 					var y = item['Average bill 2014'] / $scope.conversion_rate;
 
-//					if (item.Country === $scope.country){
-//							highlight.push (
-//									[item.Country,  parseFloat(y).toFixed(2) ]
-//							);
-//					}
-//					else {
+					if (item.Country === $scope.country){
+							highlight.push (
+									[item.Country,  parseFloat(y).toFixed(2) ]
+							);
+					}
+					else {
 							listing.push (
 									[item.Country,  parseFloat(y).toFixed(2) ]
 							);
-//					}
+					}
 
 			});
-			console.debug ('OUTPUT: ', JSON.stringify({"key": $scope.country, "values": highlight}));
+			console.debug ('OUTPUT: ', JSON.stringify([
+					{"key": $scope.country, "values": highlight},
+					{"key": power_consumption_ranking[$scope.whichPowerChart].graph, "values": listing}
+			]));
 			return [
-//					{"key": $scope.country, "values": highlight},
+					{"key": $scope.country, "values": highlight},
 					{"key": power_consumption_ranking[$scope.whichPowerChart].graph, "values": listing}
 			];
 	};
