@@ -170,12 +170,12 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 
 					if (item.Country === $scope.country){
 							highlight.push (
-									[item.Country,  parseFloat(y).toFixed(2) ]
+									[item.Country,  y ]
 							);
 					}
 					else {
 							listing.push (
-									[item.Country,  parseFloat(y).toFixed(2) ]
+									[item.Country,  y ]
 							);
 					}
 
