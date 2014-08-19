@@ -180,21 +180,19 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 					}
 
 			});
-			console.debug ('OUTPUT: ', JSON.stringify([
-					{"key": $scope.country, "values": highlight},
-					{"key": power_consumption_ranking[$scope.whichPowerChart].graph, "values": listing}
-			]));
+
 			return [
 					{"key": $scope.country, "values": highlight},
 					{"key": power_consumption_ranking[$scope.whichPowerChart].graph, "values": listing}
 			];
+
 	};
 
 	var get_currency = function (conversion_rate){
 			$scope.conversions.forEach(function(item){
 					if (item.exchange === conversion_rate){
 							$scope.displayCurrency = item.currency;
-							console.debug("Currency: ", item.currency);
+							//console.debug("Currency: ", item.currency);
 							return item.currency;
 					}
 			});
@@ -250,6 +248,35 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	    };
 	}
 
+	var get_country_data = function(country_name){
+			var series = power_consumption_ranking[$scope.whichPowerChart].series;
+
+			var country_data = [];
+
+			series.forEach(function (item) {
+					if (item.Country === country_name){
+							country_data = item;
+					}
+			});
+
+			return country_data;
+	};
+
+	function ordinal_suffix_of(i) {
+			var j = i % 10,
+					k = i % 100;
+			if (j == 1 && k != 11) {
+					return i + "st";
+			}
+			if (j == 2 && k != 12) {
+					return i + "nd";
+			}
+			if (j == 3 && k != 13) {
+					return i + "rd";
+			}
+			return i + "th";
+	}
+
 	/*
 
 	  *****************
@@ -264,6 +291,8 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	    var total  = 0;
 			var prefix = '';
 
+			var country_data = get_country_data(x);
+
 			if (typeof $scope.displayCurrency !== 'undefined'){
 					prefix = $scope.displayCurrency.match('D') ? '$' : '';
 			}
@@ -275,11 +304,22 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 					y = parseFloat(y.replace(/,/g,'')).toLocaleString('EN');
 			}
 
+			var direction = ' unchanged from ';
+			if (country_data['Ranking 2014'] > country_data['Ranking 2013']){
+					direction = ' down from ';
+			}
+			else if (country_data['Ranking 2014'] < country_data['Ranking 2013']){
+					direction = ' up from ';
+			}
+
 	    label = label != '' ? label : x;
 			return '<h3>' + label + '</h3>' +
-					'<p>' + prefix + y + ' ' + $scope.displayCurrency + '<br /> for ' 
+					'<p>' + prefix + y + ' ' + $scope.displayCurrency + '<br /> average monthly spend <br /> for ' 
 					+ power_consumption_ranking[$scope.whichPowerChart].graph 
-					+ '<br />  in 2014</p>';
+					+ '<br />  in 2014<br />'
+					+ '<small>(ranked ' + ordinal_suffix_of(country_data['Ranking 2014']) 
+					+ ' in the Pacific, ' + direction + ordinal_suffix_of(country_data['Ranking 2013']) 
+					+ ' in 2013)</small></p>';
 
 	};
 
