@@ -1,0 +1,66 @@
+<div ng-controller="powerGenerationCtrl">
+  <div class="row">
+    <div class="span12">
+			<h1>Power generation in the Pacific</h1>
+			<p>
+				Intro....
+			</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+			<h3>{{ powerChartHeader }}</h3>
+			<div style="margin-left: 1em;" class="choose-your-poison">
+				<div class="btn-group btn-group-sm">
+					<button type="button btn-info" btn-radio="0" ng-model="whichPowerChart" class="btn btn-default" ng-click="nextPowerChart(0)">Average Business Consumers</button>
+					<button type="button btn-info" btn-radio="1" ng-model="whichPowerChart" class="btn btn-default" ng-click="nextPowerChart(1)">Average Domestic Consumers</button>
+					<button type="button btn-info" btn-radio="2" ng-model="whichPowerChart" class="btn btn-default" ng-click="nextPowerChart(2)">Low Income Domestic Consumers</button>
+				</div>
+				<div>
+					<select class="selectpicker btn-info" ng-model="conversion_rate" ng-options="conversion.exchange as conversion.Country for conversion in conversions">
+					</select>
+				</div>			
+			</div>
+			<p><strong>(Using: {{currency}})</strong></p> 
+	    <nvd3-multi-bar-chart
+				data="powerChart"
+				id="power-chart"
+        stacked="true"
+				showXAxis="true"
+				showYAxis="true"
+        showLegend="false"
+				showControls="false"
+				interactive="true"
+				width="600"
+				height="550"
+				rotateLabels="60"
+				color="colorFunction()"
+        tooltips="true"
+        tooltipcontent="powerTooltips"
+				margin="{left:75,top:90,bottom:0,right:0}">
+				<svg style="height: 800px;"></svg>
+			</nvd3-multi-bar-chart>
+
+			<p class="source">Source: Some source</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+			<p>
+				Conclusion....
+			</p>
+		</div>
+		<div class="row">
+			<div class="span12 footnotes">
+				<h1>Sources</h1>
+				<ul>
+					<li>
+						Footnote 1
+					</li>
+					<li>
+						Footnote 2
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
