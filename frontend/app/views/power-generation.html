@@ -10,18 +10,20 @@
   <div class="row">
     <div class="span12">
 			<h3>{{ powerChartHeader }}</h3>
+				<div style="margin-left: 1em;">
+					<label for='country_select'>Select a supplier's currency for comparison</label>
+					<select id="country_select" class="selectpicker btn-info" ng-model="country" ng-options="conversion.Country as conversion.Country for conversion in conversions">
+						<option value="1">--- Select a currency ---</option>
+					</select>
+				</div>			
 			<div style="margin-left: 1em;" class="choose-your-poison">
 				<div class="btn-group btn-group-sm">
 					<button type="button btn-info" btn-radio="0" ng-model="whichPowerChart" class="btn btn-default" ng-click="nextPowerChart(0)">Average Business Consumers</button>
 					<button type="button btn-info" btn-radio="1" ng-model="whichPowerChart" class="btn btn-default" ng-click="nextPowerChart(1)">Average Domestic Consumers</button>
 					<button type="button btn-info" btn-radio="2" ng-model="whichPowerChart" class="btn btn-default" ng-click="nextPowerChart(2)">Low Income Domestic Consumers</button>
 				</div>
-				<div>
-					<select class="selectpicker btn-info" ng-model="conversion_rate" ng-options="conversion.exchange as conversion.Country for conversion in conversions">
-					</select>
-				</div>			
+   			<p class="fade-in"><strong>(Using: {{ displayCurrency }})</strong></p> 
 			</div>
-			<p class="fade-in"><strong>(Using: {{ displayCurrency }} - {{ conversion_rate }})</strong></p> 
 	    <nvd3-multi-bar-chart
 				data="powerChart"
 				id="power-chart"

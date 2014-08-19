@@ -154,25 +154,34 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 			// Belt and suspenders
 			$scope.conversion_rate = $scope.conversion_rate ? $scope.conversion_rate : 1;
 
-			var output = [];
+			// Dimension the array ahead of time, just because
+			//var output = [[], []];
+			var highlight = [];
+			var listing   = [];
 
 			series.forEach(function(item){
 					var y = item['Average bill 2014'] / $scope.conversion_rate;
-					output.push (
+
+//					if (item.Country === $scope.country){
+//							highlight.push (
+//									[item.Country,  parseFloat(y).toFixed(2) ]
+//							);
+//					}
+//					else {
+							listing.push (
 									[item.Country,  parseFloat(y).toFixed(2) ]
-					);
+							);
+//					}
+
 			});
-			console.debug ('OUTPUT: ', [{"key":  power_consumption_ranking[$scope.whichPowerChart].graph, "values": output}]);
-			return [{"key":  power_consumption_ranking[$scope.whichPowerChart].graph, "values": output}];
+			console.debug ('OUTPUT: ', JSON.stringify({"key": $scope.country, "values": highlight}));
+			return [
+//					{"key": $scope.country, "values": highlight},
+					{"key": power_consumption_ranking[$scope.whichPowerChart].graph, "values": listing}
+			];
 	};
 
-	$scope.conversion_rate  = $scope.conversions[7].exchange;
-	$scope.whichPowerChart  = 2;
-	$scope.powerChartHeader = power_consumption_ranking[$scope.whichPowerChart].graph;
-	$scope.powerChart       = $scope.getPowerData(power_consumption_ranking[$scope.whichPowerChart].series);
-
-	var get_currency     = function (conversion_rate){
-
+	var get_currency = function (conversion_rate){
 			$scope.conversions.forEach(function(item){
 					if (item.exchange === conversion_rate){
 							$scope.displayCurrency = item.currency;
@@ -182,7 +191,20 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 			});
 	};
 
-	$scope.displayCurrency        = get_currency($scope.conversion_rate);
+	var get_conversion_rate = function(country) {
+			$scope.conversions.forEach(function(this_country){
+					if (this_country.Country === country){
+							$scope.conversion_rate = this_country.exchange;
+					}
+			});
+	};
+
+	$scope.country = 'Vanuatu UNELCO';
+	$scope.conversion_rate  = 1;
+	$scope.whichPowerChart  = 2;
+	$scope.powerChartHeader = power_consumption_ranking[$scope.whichPowerChart].graph;
+	$scope.powerChart       = $scope.getPowerData(power_consumption_ranking[$scope.whichPowerChart].series);
+	$scope.displayCurrency  = get_currency($scope.conversion_rate);
 
 	$scope.nextPowerChart = function(index){
 	    if (typeof(index) === "number" && index >= 0 && index <= power_consumption_ranking.length){
@@ -191,17 +213,16 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	    else {
 					$scope.whichPowerChart++;
 	    }
-	    $scope.vuPowerChartHeader = power_consumption_ranking[index].graph;
-			console.debug("HEADER: ", power_consumption_ranking[index].graph);
+	    $scope.powerChartHeader = power_consumption_ranking[index].graph;
 			$scope.powerChart         = $scope.getPowerData(power_consumption_ranking[index].series);
 			
 	};
 
-	$scope.$watch('conversion_rate', function(newVal, oldVal){
+	$scope.$watch('country', function(newVal, oldVal){
 			$scope.powerChartHeader = power_consumption_ranking[$scope.whichPowerChart].graph;
 			$scope.powerChart       = $scope.getPowerData(power_consumption_ranking[$scope.whichPowerChart].series);
-			$scope.displayCurrency  = get_currency($scope.conversion_rate);
-			console.debug("UPDATE", $scope.powerChartHeader, get_currency($scope.conversion_rate));
+			get_conversion_rate(newVal);
+			get_currency($scope.conversion_rate);
 	});
 
 	/*
@@ -211,22 +232,6 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	  *****************
 
 	 */
-
-	// return only integer values - this is needed to display years in the x axis
-	$scope.xAxisTickFormatFunction = function(){
-	    return function(d){
-		if (d % 1 === 0){
-		    return parseInt(d);
-		}
-	    };
-	};
-
-	// For the horizontal bar chart
-	$scope.formatHBarChartTicks = function () {
-            return function(d) {
-								return int2roundM(d.toString());
-            }
-	};
 
 	// Define which palette to use. See the note above about colour choices.
 	$scope.colorFunction = function() {
@@ -254,9 +259,8 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 					prefix = $scope.displayCurrency.match('D') ? '$' : '';
 			}
 			if (prefix === '$'){
-//					y = parseFloat(y.replace(/,/g,'')).toFixed(2).toLocaleString('en-US', {style: "currency", currency: "USD"});
+					// Any other automated conversion results in, effectively, this
 					y += '0';
-					console.debug('Y: ', y);
 			}
 			else {
 					y = parseFloat(y.replace(/,/g,'')).toLocaleString('EN');
