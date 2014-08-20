@@ -264,7 +264,7 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 
 	function ordinal_suffix_of(i) {
 			// special case for this ranking only.
-			if (i === 24){
+			if (i === $scope.powerChart[1].values.length + 1){
 					return 'last';
 			}
 
