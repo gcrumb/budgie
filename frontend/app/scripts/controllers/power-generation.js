@@ -8,19 +8,11 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 		'#ef8a62', '#2ca02c', '#c5b0d5', '#8c564b', 
 		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
 	    ];
-/*
-	$scope.current_palette = 	    
-	    [
-		'#ef8a62', '#67a9cf', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', 
-		'#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5'
-	    ];
-*/
-	/* 
 
+	/* 
            ************************************************ 
         					 Power Consumption costs regionally
            ************************************************ 
-
 	*/
 	
 	$scope.conversions = [
@@ -188,12 +180,11 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 
 	};
 
-	var get_currency = function (conversion_rate){
+	var get_currency = function (country){
 			$scope.conversions.forEach(function(item){
-					if (item.exchange === conversion_rate){
+//					console.debug(item.Country === country ? 'YEP: ' : 'NOPE: ', item.Country, country, item.currency);
+					if (item.Country === country){
 							$scope.displayCurrency = item.currency;
-							//console.debug("Currency: ", item.currency);
-							return item.currency;
 					}
 			});
 	};
@@ -211,7 +202,8 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	$scope.whichPowerChart  = 2;
 	$scope.powerChartHeader = power_consumption_ranking[$scope.whichPowerChart].graph;
 	$scope.powerChart       = $scope.getPowerData(power_consumption_ranking[$scope.whichPowerChart].series);
-	$scope.displayCurrency  = get_currency($scope.conversion_rate);
+	$scope.displayCurrency  = 'VUV';
+	get_currency($scope.country);
 
 	$scope.nextPowerChart = function(index){
 	    if (typeof(index) === "number" && index >= 0 && index <= power_consumption_ranking.length){
@@ -221,15 +213,16 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 					$scope.whichPowerChart++;
 	    }
 	    $scope.powerChartHeader = power_consumption_ranking[index].graph;
-			$scope.powerChart         = $scope.getPowerData(power_consumption_ranking[index].series);
+			$scope.powerChart       = $scope.getPowerData(power_consumption_ranking[index].series);
 			
 	};
 
 	$scope.$watch('country', function(newVal, oldVal){
+			console.debug(oldVal, newVal);
+			get_conversion_rate(newVal);
+			get_currency(newVal);
 			$scope.powerChartHeader = power_consumption_ranking[$scope.whichPowerChart].graph;
 			$scope.powerChart       = $scope.getPowerData(power_consumption_ranking[$scope.whichPowerChart].series);
-			get_conversion_rate(newVal);
-			get_currency($scope.conversion_rate);
 	});
 
 	/*
