@@ -22,7 +22,7 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 			{"Country":"Western Samoa","exchange":40.16, "currency": "WST"},
 			{"Country":"PNG","exchange":38.29, "currency": "PGK"},
 			{"Country":"New-Caledonia","exchange":1.03, "currency": "CFP"},
-			{"Country":"Kirbati","exchange":87.80, "currency": "AUD"},
+			{"Country":"Kiribati","exchange":87.80, "currency": "AUD"},
 			{"Country":"Tuvalu","exchange":87.80, "currency": "AUD"},
 			{"Country":"Niue","exchange":81.26, "currency": "NZD"},
 			{"Country":"Nauru","exchange":87.80, "currency": "AUD"},
@@ -182,7 +182,6 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 
 	var get_currency = function (country){
 			$scope.conversions.forEach(function(item){
-//					console.debug(item.Country === country ? 'YEP: ' : 'NOPE: ', item.Country, country, item.currency);
 					if (item.Country === country){
 							$scope.displayCurrency = item.currency;
 					}
@@ -218,7 +217,6 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	};
 
 	$scope.$watch('country', function(newVal, oldVal){
-			console.debug(oldVal, newVal);
 			get_conversion_rate(newVal);
 			get_currency(newVal);
 			$scope.powerChartHeader = power_consumption_ranking[$scope.whichPowerChart].graph;
