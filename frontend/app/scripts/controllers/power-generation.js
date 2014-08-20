@@ -263,6 +263,11 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 	};
 
 	function ordinal_suffix_of(i) {
+			// special case for this ranking only.
+			if (i === 24){
+					return 'last';
+			}
+
 			var j = i % 10,
 					k = i % 100;
 			if (j == 1 && k != 11) {
@@ -304,12 +309,12 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 					y = parseFloat(y.replace(/,/g,'')).toLocaleString('EN');
 			}
 
-			var direction = ' unchanged from ';
+			var direction = ' unchanged since ';
 			if (country_data['Ranking 2014'] > country_data['Ranking 2013']){
-					direction = ' down from ';
+					direction = ' down from ' + ordinal_suffix_of(country_data['Ranking 2013']) + ' in ';
 			}
 			else if (country_data['Ranking 2014'] < country_data['Ranking 2013']){
-					direction = ' up from ';
+					direction = ' up from ' + ordinal_suffix_of(country_data['Ranking 2013']) + ' in ';
 			}
 
 	    label = label != '' ? label : x;
@@ -318,8 +323,8 @@ angular.module('pippDataApp.controllers.power-generation', ['ui.bootstrap', 'ngA
 					+ power_consumption_ranking[$scope.whichPowerChart].graph 
 					+ '<br />  in 2014<br />'
 					+ '<small>(ranked ' + ordinal_suffix_of(country_data['Ranking 2014']) 
-					+ ' in the Pacific, ' + direction + ordinal_suffix_of(country_data['Ranking 2013']) 
-					+ ' in 2013)</small></p>';
+					+ ' in the Pacific, ' + direction 
+					+ ' 2013)</small></p>';
 
 	};
 
