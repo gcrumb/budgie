@@ -1,0 +1,68 @@
+<div ng-controller="oneOffChartsCtrl">
+  <div class="row">
+    <div class="span8">
+
+      <p class="intro">
+      All of these charts are interactive. Take the time to mouse over them, click around, and you will find they provide a number of useful 
+      and interesting ways of presenting the information.
+      </p>
+    </div>
+		<div ng-include="'/views/sidebar.html'">
+		</div>
+	</div>
+	<div class="row">
+    <div class="span12">
+      <h1>Open Budgets: Papua New Guinea's updated fiscal outlook</h1>
+      <p class="intro">
+			 Much has been made over the last couple of days over an analysis we published on Papua
+			New Guinea's updated financial outlook. What's really in it?
+			</p>
+
+      <blockquote>
+      <i>
+			The government’s assessment of the state of the economy provides the
+			backdrop for the creation of their budget. It not only gives
+      officials an idea of how government revenues are likely
+			to perform but also is used to shape the governments decisions
+			about how much to tax, spend and borrow. For the rest of us,
+			it gives an indication of which way economic opportunities may
+      be moving. The numbers below are not ours - they belong to the
+			Treasury department of the government of Papua New Guinea.
+			</i>
+      </blockquote>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h3> Expenses vs Revenues</h3>
+      <div style="margin-left: 1em;" class="choose-your-poison">
+			  <div class="btn-group btn-group-sm">
+					<button type="button" btn-radio="0" ng-model="whichPNGFinancials" class="btn btn-default" ng-click="nextPNGFinancial(0)">2014 Budget Estimate</button>
+					<button type="button" btn-radio="1" ng-model="whichPNGFinancials" class="btn btn-default" ng-click="nextPNGFinancial(1)">Revised Estimate</button>
+				</div>
+				</div>
+      <p>(Millions of Vatu)</p> 
+    </div>
+    <nvd3-line-chart
+       data="pngUpdateGraph"
+       id="pg-revenue-expense-update"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="true"
+       interactive="true"
+       tooltips="true"
+		   forceY="[9000,15500]"
+       tooltipContent="lineChartTooltips"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-line-chart>
+		<p class="source">Source: Papua New Guinea Treasury</p>
+    </div>
+  </div>
+</div>

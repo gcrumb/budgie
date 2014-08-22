@@ -536,18 +536,18 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	$scope.vuSpendingByCategory = [
 	    {
-		"key": "Scholarship spending",
-		"values":[
-		    ["Scholarships",778]
-		]
+					"key": "Scholarship spending",
+					"values":[
+							["Scholarships",778]
+					]
 	    },
 	    {
-		"key": "2014 Budget by Selected Category",
-		"values":[
-		    ["Hospital Services",792],["Min. Internal Affairs",608],
-		    ["Min. Agriculture",482],["Min. Foreign Affairs",366],["Min. Trade",287],
-		    ["Min. Lands",231],["Medical Supplies",219]
-		]
+					"key": "2014 Budget by Selected Category",
+					"values":[
+							["Hospital Services",792],["Min. Internal Affairs",608],
+							["Min. Agriculture",482],["Min. Foreign Affairs",366],["Min. Trade",287],
+							["Min. Lands",231],["Medical Supplies",219]
+					]
 	    }
 	];
 
@@ -741,6 +741,55 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 		]
 	    }
 	];
+
+	var pngUpdatedFinancials = [
+			{
+					"graph": "2014 Budget",
+					"series": [
+							{
+									"key": "Total Revenue & Grants",
+									"values": [[2013,9832.7],[2014,12688.5]]
+							},
+							{
+									"key": "Spending and Net Lending",
+									"values": [[2013,12505.1],[2014,15041.5]]
+							}
+					]		
+	    },
+			{
+					"graph": "2014 Revised",
+					"series": [
+							{
+									"key": "Total Revenue & Grants",
+									"values": [[2013,9832.7],[2014,12316.0]]
+							},
+							{
+									"key": "Spending and Net Lending",
+									"values": [[2013,12505.1],[2014,15041.5]]
+							}
+					]		
+	    }	
+	];
+
+	$scope.whichPNGFinancials = 0;
+	$scope.pngUpdateHeader = pngUpdatedFinancials[$scope.whichPNGFinancials].graph;
+	$scope.pngUpdateGraph  = pngUpdatedFinancials[$scope.whichPNGFinancials].series;
+
+	$scope.nextPNGFinancial = function(index){
+	    if (typeof(index) === "number" && index >= 0 && index <= pngUpdatedFinancials.length){
+					$scope.whichPNGFinancials = index;
+	    }
+	    else {
+					$scope.whichPNGFinancials++;
+	    }
+
+	    $scope.whichPNGFinancials = $scope.whichPNGFinancials >= pngUpdatedFinancials.length ? 0 : $scope.whichPNGFinancials;
+	    $scope.pngUpdateGraph     = pngUpdatedFinancials[$scope.whichPNGFinancials].series;
+	    $scope.pngUpdateHeader    = pngUpdatedFinancials[$scope.whichPNGFinancials].graph;
+
+	};
+
+
 
 	/*
 
