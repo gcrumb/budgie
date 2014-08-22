@@ -26,49 +26,16 @@
       <h3>PNG's Growing spending to income gap</h3>
       <div style="margin-left: 1em;" class="choose-your-poison">
 			  <div class="btn-group btn-group-sm">
-					<button type="button" btn-radio="0" ng-model="whichPNGFinancials" class="btn btn-default" ng-click="nextPNGFinancial(0)">2014 Budget Estimate</button>
-					<button type="button" btn-radio="1" ng-model="whichPNGFinancials" class="btn btn-default" ng-click="nextPNGFinancial(1)">Revised Estimate</button>
+					<button type="button" btn-radio="0" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(0)" title="Originally presented in late 2013">2014 Budget Estimate</button>
+					<button type="button" btn-radio="1" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(1)" title="Following the mid-year fiscal update">Revised Estimate</button>
+					<button type="button" btn-radio="2" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(2)" title="*with uncertain revenues removed">Revised Estimate*</button>
 				</div>
 				</div>
       <p>(Millions of Vatu)</p> 
     </div>
-    <nvd3-line-chart
-       data="pngUpdateGraph"
-       id="pg-revenue-expense-update"
-       showXAxis="true"
-       showYAxis="true"
-       showLegend="true"
-       showControls="true"
-       interactive="true"
-       tooltips="true"
-		   forceY="[9000,15500]"
-       tooltipContent="lineChartTooltips"
-       xAxisTickFormat="xAxisTickFormatFunction()"
-       isArea="true"
-       width="600"
-       height="350"
-       color="colorFunction()"
-       margin="{left:75,top:20,bottom:0,right:0}">
-      <svg></svg>
-    </nvd3-line-chart>
-		<p class="source">Source: Papua New Guinea Treasury</p>
-    </div>
-  </div>
-	<div class="row">
-    <div class="span12">
-      <p class="intro">
-			That divergence may not seem like a lot, but consider the following:
-			</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
-      <h3>PNG National Deficit</h3>
-      <p>(Millions of Kina)</p> 
-    </div>
     <nvd3-multi-bar-chart
-       data="pngDebtUpdate"
-       id="pg-debt-update"
+       data="pngDebtGraph"
+       id="pg-debt-graph"
        showXAxis="true"
        showYAxis="true"
        showLegend="true"
@@ -76,15 +43,16 @@
 		   grouped="true"
        interactive="true"
        tooltips="true"
+		   forceY="[0,-4000]"
        tooltipContent="lineChartTooltips"
        xAxisTickFormat="xAxisTickFormatFunction()"
        isArea="true"
        width="600"
        height="350"
-       color="colorFunction()"
+       color="debtColours()"
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
-    </nvd3-multi-bar-chart>
+    </nvd3-bar-chart>
 		<p class="source">* With uncertain revenues removed <hr style="width:30%;text-align:right;" /></p>
 		<p class="source">Source: Papua New Guinea Treasury</p>
     </div>

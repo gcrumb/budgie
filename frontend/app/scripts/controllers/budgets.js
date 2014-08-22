@@ -795,18 +795,76 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	$scope.pngDebtUpdate = [
 			{
-					"series" : "2014 Budget",
+					"key" : "2014 Budgeted",
 					"values" :	[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2353.0],[2015,-1315.0],[2016,-1206.4]]
 			},
 			{
-					"series" : "2014 Revised",
+					"key" : "2014 Revised",
 					"values" :[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2725.0],[2015,-1315.0],[2016,-1206.4]]
 			},
 			{
-					"series" : "2014 Revised*",
+					"key" : "2014 Revised*",
 					"values" : [[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-3612.0],[2015,-1315.0],[2016,-1206.4]]
 			}
 	];
+
+//	var pngDebtUpdate= $scope.pngDebtUpdate;
+
+	var pngDebtUpdate = [
+			{
+					graph: "2014 Original Forecast",
+					series: [
+							{
+									"key" : "2014 Budgeted",
+									"values" :	[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2353.0],[2015,-1315.0],[2016,-1206.4]]
+							}
+					]
+			},
+			{
+					graph: "2014 Revised",
+					series: [
+							{
+									"key" : "2014 Revised",
+									"values" :[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2725.0],[2015,-1315.0],[2016,-1206.4]]
+							}
+					]
+			},
+			{
+					graph: "2014 Revised*",
+					series: [
+							{
+									"key" : "2014 Revised*",
+									"values" : [[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-3612.0],[2015,-1315.0],[2016,-1206.4]]
+							}
+					]
+			}
+	];
+
+	$scope.debtColours = function (){
+	    return function(d, i) {
+					var severity = ['FFB8C4', 'F27489', 'FA3253'];
+					return severity[$scope.whichPNGDebt];
+	    };
+	};
+
+	$scope.whichPNGDebt = 0;
+	$scope.pngDebtHeader = pngDebtUpdate[$scope.whichPNGDebt].graph;
+	$scope.pngDebtGraph  = pngDebtUpdate[$scope.whichPNGDebt].series;
+
+	$scope.nextPNGDebt = function(index){
+	    if (typeof(index) === "number" && index >= 0 && index <= pngDebtUpdate.length){
+					$scope.whichPNGDebt = index;
+	    }
+	    else {
+					$scope.whichPNGDebt++;
+	    }
+
+	    $scope.whichPNGDebt = $scope.whichPNGDebt >= pngDebtUpdate.length ? 0 : $scope.whichPNGDebt;
+	    $scope.pngDebtGraph     = pngDebtUpdate[$scope.whichPNGDebt].series;
+	    $scope.pngDebtHeader    = pngDebtUpdate[$scope.whichPNGDebt].graph;
+
+	};
+
 	/*
 
 	  *****************
@@ -896,7 +954,6 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	};
 
 	$scope.lineChartTooltipsEducation = function(key, x, y, e, graph) {
-			console.debug('BOO!');
       return '<h3>' + key + '</h3>' +
 					'<p>' + y + '%<br />in ' + x + '</p>';
 	};
