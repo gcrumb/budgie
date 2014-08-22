@@ -783,21 +783,27 @@ var int2roundKMG = function(val) {
     
     var _str = "";
 
+		val = typeof val !== 'undefined' ? val : '';
+
+		var is_negative = val.match(/^-/);
+
     var all_commas = /,/g;
     val = val.replace(all_commas,"");
     val = val.replace (/\.*/,'');
+		val = val.replace ('-','');
 
     if (val >= 1e9)        { 
-	_str = truncNb((val/1e9), 2) + ' Billion';
+				_str = truncNb((val/1e9), 2) + ' Billion';
     } else if (val >= 1e6) { 
-	_str = truncNb((val/1e6), 2) + ' Million';
+				_str = truncNb((val/1e6), 2) + ' Million';
     } 
     else if (val >= 1e3) { 
-	_str = truncNb((val/1e3), 2) + ' Thousand';
+				_str = truncNb((val/1e3), 2) + ' Thousand';
     } else { 
-	_str = parseInt(val);
+				_str = parseInt(val);
     }
-    return _str;
+
+    return is_negative ? '-' + _str : _str;
 };
 
 // Convert numbers into x.xx Millions
