@@ -808,6 +808,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 			}
 	];
 
+/*
 	var pngDebtUpdate = [
 			{
 					graph: "2014 Original Forecast",
@@ -833,6 +834,36 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 							{
 									"key" : "2014 Revised*",
 									"values" : [[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-3612.0],[2015,-1315.0],[2016,-1206.4]]
+							}
+					]
+			}
+	];
+*/
+	var pngDebtUpdate = [
+			{
+					graph: "2014 Original Forecast",
+					series: [
+							{
+									"key" : "2014 Budgeted",
+									"values" :	[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2353.0]]
+							}
+					]
+			},
+			{
+					graph: "2014 Revised",
+					series: [
+							{
+									"key" : "2014 Revised",
+									"values" :[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2725.0]]
+							}
+					]
+			},
+			{
+					graph: "2014 Revised*",
+					series: [
+							{
+									"key" : "2014 Revised*",
+									"values" : [[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-3612.0]]
 							}
 					]
 			}
