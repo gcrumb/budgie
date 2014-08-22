@@ -842,7 +842,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	$scope.debtColours = function (){
 	    return function(d, i) {
-					var severity = ['FFB8C4', 'F27489', 'FA3253'];
+					var severity = ['FAB1B1', 'D17D8B', 'A3152D'];
 					return severity[$scope.whichPNGDebt];
 	    };
 	};
