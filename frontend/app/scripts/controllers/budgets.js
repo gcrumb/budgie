@@ -920,7 +920,6 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	    var other_index = e.seriesIndex === 0 ? 1 : 0;
 	    var index = x - 2011; // Yep, magic number :-/
-//			console.debug ("checking: ", pngDebtUpdate[0].series[0].values[index][1], pngDebtUpdate[$scope.whichPNGDebt].series[0].values[index][1]);
 
 	    var gap = pngDebtUpdate[0].series[0].values[index][1] - pngDebtUpdate[$scope.whichPNGDebt].series[0].values[index][1];
 
@@ -928,15 +927,15 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 					var divergence = $scope.whichPNGDebt === 0 ? '' : '<p>( No change from the original estimate)</p>';
 
-            return '<h3>' + x + ' Deficit</h3>' +
-							'<p>' + int2roundKMG((parseFloat(y.replace(/,/g,'')) * 1000000).toString()) + ' KINA (' + y + ')<br />in ' + x + '</p>' +
+          return '<h3>' + x + ' Deficit</h3>' +
+							'<p>' + int2roundKMG((parseFloat(y.replace(/,/g,'')) * 1000000).toString()) + ' KINA<br />in ' + x + '</p>' +
 							divergence;
 			}
 
 	    var spending_status = gap > 0 ? 'increase' : 'reduction';
 
       return '<h3>' + x + ' Deficit</h3>' +
-					'<p>' + int2roundKMG((parseFloat(y.replace(/,/g,'')) * 1000000).toString().replace('-','')) + ' KINA (' + y + ')<br />in ' + x + '</p>' +
+					'<p>' + int2roundKMG((parseFloat(y.replace(/,/g,'')) * 1000000).toString().replace('-','')) + ' KINA<br />in ' + x + '</p>' +
 					'<p>(' + int2roundKMG((gap  * 1000000).toString().replace('-', '')) + ' kina ' + spending_status + ' from the original estimate)</p>';
 
 	};

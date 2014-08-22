@@ -1,7 +1,7 @@
 <div ng-controller="oneOffChartsCtrl">
 	<div class="row">
     <div class="span12">
-      <h1>Open Budgets: Papua New Guinea's growing deficit</h1>
+      <h1>Open Budgets: The Gap Widens in Papua New Guinea</h1>
       <p class="intro">
 			 Much has been made over the last couple of days over an analysis we published on Papua
 			New Guinea's updated financial outlook. What's really in it?
@@ -23,12 +23,12 @@
   </div>
   <div class="row">
     <div class="span12">
-      <h3>PNG's Growing spending to income gap</h3>
+      <h3>PNG's Growing Deficit</h3>
       <div style="margin-left: 1em;" class="choose-your-poison">
 			  <div class="btn-group btn-group-sm">
 					<button type="button" btn-radio="0" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(0)" title="Originally presented in late 2013">2014 Budget Estimate</button>
-					<button type="button" btn-radio="1" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(1)" title="Following July's mid-year fiscal update">Revised Estimate</button>
-					<button type="button" btn-radio="2" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(2)" title="*with uncertain revenues removed">Revised Estimate*</button>
+					<button type="button" btn-radio="1" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(1)" title="Following July's mid-year fiscal update">Revised Estimate - Mid-Year Report</button>
+					<button type="button" btn-radio="2" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(2)" title="*see note below">Revised Estimate*</button>
 				</div>
 				</div>
       <p style="margin-left: 1em;">(Millions of KINA)</p> 
@@ -53,7 +53,12 @@
        margin="{left:75,top:20,bottom:0,right:0}">
       <svg></svg>
     </nvd3-bar-chart>
-		<p class="source">* With uncertain revenues removed <hr style="width:30%;text-align:right;" /></p>
+		<p class="source">
+		* "In addition there is a risk that anticipated revenues from State Own Enterprises (SOEs)
+		dividends (K287 million) and assets sales (K600 million) do not materialise." - Mid Year
+		Fiscal and Economic Update, Treasury Department of PNG
+		<hr style="width:30%;text-align:right;" />
+		</p>
 		<p class="source">Source: Papua New Guinea Treasury</p>
     </div>
   </div>
