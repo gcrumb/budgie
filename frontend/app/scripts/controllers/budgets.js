@@ -753,6 +753,10 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 							{
 									"key": "Spending and Net Lending",
 									"values": [[2013,12505.1],[2014,15041.5]]
+							},
+							{
+									"key": "Revised Revenue Estimate",
+									"values": [[2013,9832.7],[2014,12316.0]]
 							}
 					]		
 	    },
@@ -789,8 +793,20 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	};
 
-
-
+	$scope.pngDebtUpdate = [
+			{
+					"series" : "2014 Budget",
+					"values" :	[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2353.0],[2015,-1315.0],[2016,-1206.4]]
+			},
+			{
+					"series" : "2014 Revised",
+					"values" :[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2725.0],[2015,-1315.0],[2016,-1206.4]]
+			},
+			{
+					"series" : "2014 Revised*",
+					"values" : [[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-3612.0],[2015,-1315.0],[2016,-1206.4]]
+			}
+	];
 	/*
 
 	  *****************
@@ -838,6 +854,20 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 	    var gap = $scope.vuRevenueExpenseHistory[1].values[index][1] - $scope.vuRevenueExpenseHistory[0].values[index][1];
 	    
 	    var spending_status = gap < 0 ? 'deficit' : 'surplus';
+
+            return '<h3>' + key + '</h3>' +
+		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>' +
+		'<p>(' + int2roundKMG((gap  * 1000000).toString().replace('-', '')) + ' vatu ' + spending_status + ')</p>';
+	};
+
+	$scope.pngUpdateTooltips = function(key, x, y, e, graph) {
+
+	    var other_index = e.seriesIndex === 0 ? 1 : 0;
+	    var index = x - 2010; // Yep, magic number :-/
+
+	    var gap = $scope.vuRevenueExpenseHistory[1].values[index][1] - $scope.vuRevenueExpenseHistory[0].values[index][1];
+	    
+	    var spending_status = gap < 0 ? 'surplus' : 'deficit';
 
             return '<h3>' + key + '</h3>' +
 		'<p>' + int2roundKMG((parseFloat(y) * 1000000).toString()) + ' VATU<br />in ' + x + '</p>' +

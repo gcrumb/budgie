@@ -54,4 +54,39 @@
 		<p class="source">Source: Papua New Guinea Treasury</p>
     </div>
   </div>
+	<div class="row">
+    <div class="span12">
+      <p class="intro">
+			That divergence may not seem like a lot, but consider the following:
+			</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h3>PNG National Debt</h3>
+      <p>(Millions of Kina)</p> 
+    </div>
+    <nvd3-multi-bar-chart
+       data="pngDebtUpdate"
+       id="pg-debt-update"
+       showXAxis="true"
+       showYAxis="true"
+       showLegend="true"
+       showControls="false"
+		   grouped="true"
+       interactive="true"
+       tooltips="true"
+       tooltipContent="lineChartTooltips"
+       xAxisTickFormat="xAxisTickFormatFunction()"
+       isArea="true"
+       width="600"
+       height="350"
+       color="colorFunction()"
+       margin="{left:75,top:20,bottom:0,right:0}">
+      <svg></svg>
+    </nvd3-multi-bar-chart>
+		<p class="source">* With uncertain revenues removed <hr style="width:30%;text-align:right;" /></p>
+		<p class="source">Source: Papua New Guinea Treasury</p>
+    </div>
+  </div>
 </div>
