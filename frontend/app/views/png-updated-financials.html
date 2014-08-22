@@ -27,11 +27,11 @@
       <div style="margin-left: 1em;" class="choose-your-poison">
 			  <div class="btn-group btn-group-sm">
 					<button type="button" btn-radio="0" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(0)" title="Originally presented in late 2013">2014 Budget Estimate</button>
-					<button type="button" btn-radio="1" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(1)" title="Following the mid-year fiscal update">Revised Estimate</button>
+					<button type="button" btn-radio="1" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(1)" title="Following July's mid-year fiscal update">Revised Estimate</button>
 					<button type="button" btn-radio="2" ng-model="whichPNGDebt" class="btn btn-default" ng-click="nextPNGDebt(2)" title="*with uncertain revenues removed">Revised Estimate*</button>
 				</div>
 				</div>
-      <p>(Millions of Vatu)</p> 
+      <p style="margin-left: 1em;">(Millions of KINA)</p> 
     </div>
     <nvd3-multi-bar-chart
        data="pngDebtGraph"
@@ -44,7 +44,7 @@
        interactive="true"
        tooltips="true"
 		   forceY="[0,-4000]"
-       tooltipContent="lineChartTooltips"
+       tooltipContent="pngUpdateTooltips"
        xAxisTickFormat="xAxisTickFormatFunction()"
        isArea="true"
        width="600"
