@@ -808,37 +808,6 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 			}
 	];
 
-/*
-	var pngDebtUpdate = [
-			{
-					graph: "2014 Original Forecast",
-					series: [
-							{
-									"key" : "2014 Budgeted",
-									"values" :	[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2353.0],[2015,-1315.0],[2016,-1206.4]]
-							}
-					]
-			},
-			{
-					graph: "2014 Revised",
-					series: [
-							{
-									"key" : "2014 Revised",
-									"values" :[[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-2725.0],[2015,-1315.0],[2016,-1206.4]]
-							}
-					]
-			},
-			{
-					graph: "2014 Revised*",
-					series: [
-							{
-									"key" : "2014 Revised*",
-									"values" : [[2011,-65.7],[2012,-480.9],[2013,-2672.4],[2014,-3612.0],[2015,-1315.0],[2016,-1206.4]]
-							}
-					]
-			}
-	];
-*/
 	var pngDebtUpdate = [
 			{
 					graph: "2014 Original Forecast",
@@ -956,7 +925,7 @@ angular.module('pippDataApp.controllers.one-off-charts', ['ui.bootstrap', 'ngAni
 
 	    if (gap === 0){
 
-					var divergence = $scope.whichPNGDebt === 0 ? '' : '<p>( No change from the original estimate)</p>';
+					var divergence = '';
 
           return '<h3>' + x + ' Deficit</h3>' +
 							'<p>' + int2roundKMG((parseFloat(y.replace(/,/g,'')) * 1000000).toString()) + ' KINA<br />in ' + x + '</p>' +
